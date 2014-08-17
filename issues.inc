@@ -1,5 +1,5 @@
 <?php
-require_once 'api/api.php';
+require_once 'api/api.inc';
 
 //timeline
 $string = file_get_contents("http://v.democracy.tw/test/news.json");
@@ -33,22 +33,22 @@ shuffle($recommendation);
         <title><?=$user['title']?> | 2014 綠黨政治代理人</title>
         <meta name="description" content="Enter Description">
 
-         <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
-         <link rel="stylesheet" type="text/css" href="css/main.css?<?=time()?>">
-         <link rel="stylesheet" type="text/css" href="timeline/files/css/timeline_themegp.css?<?=time()?>" />
+         <link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
+         <link rel="stylesheet" type="text/css" href="/css/main.css?<?=time()?>">
+         <link rel="stylesheet" type="text/css" href="/timeline/files/css/timeline_themegp.css?<?=time()?>" />
 
          <!-- Remove responsive.css is non-responsive needed -->
-         <link rel="stylesheet" type="text/css" href="css/responsive.css?<?=time()?>">
-         <link rel="stylesheet" type="text/css" href="css/flexslider.css">
-         <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-         <link rel="stylesheet" type="text/css" href="js/fancybox/jquery.fancybox.css?v=2.1.4" media="screen" />
-         <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />         
-         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>         
+         <link rel="stylesheet" type="text/css" href="/css/responsive.css?<?=time()?>">
+         <link rel="stylesheet" type="text/css" href="/css/flexslider.css">
+         <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
+         <link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox.css?v=2.1.4" media="screen" />
+         <link rel="stylesheet" type="text/css" href="/rs-plugin/css/settings.css" media="screen" />         
+         <script src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>         
          
     </head>
     <body>
     	
-	<? require_once 'api/header.php'; ?>
+	<? require_once 'api/header.inc'; ?>
     	
     	
     <div class="outter-wrapper">	
@@ -213,7 +213,7 @@ shuffle($recommendation);
                 			<h3><strong>相關新聞</strong></h3>
                 			<div class="mosaic-block fade">
                 				<a href="#" class="mosaic-overlay link" title="新聞標題"></a><div class="mosaic-backdrop">
-                				<div class="corner-date">8/26</div><img src="img/small_thumb3.jpg" alt="Mock" /></div>
+                				<div class="corner-date">8/26</div><img src="/img/small_thumb3.jpg" alt="Mock" /></div>
                 			</div>
                 			<h3 class="title"><a href="#">新聞標題</a></h3>
                 			<p>媒體曝光的消息媒體曝光的消息媒體曝光的消息媒體曝光的消息媒體曝光的消息媒體曝光的消息
@@ -233,38 +233,38 @@ shuffle($recommendation);
 
 			    		<!-- Start thumbnail -->
 			    		<div class="mosaic-block half fade">
-			    			<a href="img/thumb-1.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
-			    			<div class="mosaic-backdrop"><img src="img/thumb-1.jpg" alt="Start" /></div>
+			    			<a href="/img/thumb-1.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
+			    			<div class="mosaic-backdrop"><img src="/img/thumb-1.jpg" alt="Start" /></div>
 			    		</div>
 			    		
 			    		<!-- Start thumbnail -->	
 			    		<div class="mosaic-block half last fade">
-			    			<a href="img/thumb-2.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
-			    			<div class="mosaic-backdrop"><img src="img/thumb-2.jpg" alt="Mock" /></div>
+			    			<a href="/img/thumb-2.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
+			    			<div class="mosaic-backdrop"><img src="/img/thumb-2.jpg" alt="Mock" /></div>
 			    		</div>
 			    		
 			    		<!-- Start thumbnail -->
 			    		<div class="mosaic-block half fade">
-			    			<a href="img/thumb-3.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
-			    			<div class="mosaic-backdrop"><img src="img/thumb-3.jpg" alt="Mock" /></div>
+			    			<a href="/img/thumb-3.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
+			    			<div class="mosaic-backdrop"><img src="/img/thumb-3.jpg" alt="Mock" /></div>
 			    		</div>
 			    		
 			    		<!-- Start thumbnail -->
 			    		<div class="mosaic-block half last fade">
-			    			<a href="img/thumb-4.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
-			    			<div class="mosaic-backdrop"><img src="img/thumb-4.jpg" alt="Mock" /></div>
+			    			<a href="/img/thumb-4.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
+			    			<div class="mosaic-backdrop"><img src="/img/thumb-4.jpg" alt="Mock" /></div>
 			    		</div>
 			    		
 			    		<!-- Start thumbnail -->
 			    		<div class="mosaic-block half fade">
-			    			<a href="img/thumb-5.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
-			    			<div class="mosaic-backdrop"><img src="img/thumb-5.jpg" alt="Mock" /></div>
+			    			<a href="/img/thumb-5.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
+			    			<div class="mosaic-backdrop"><img src="/img/thumb-5.jpg" alt="Mock" /></div>
 			    		</div>
 			    		
 			    		<!-- Start thumbnail -->	
 			    		<div class="mosaic-block half last fade">
-			    			<a href="img/thumb-6.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
-			    			<div class="mosaic-backdrop"><img src="img/thumb-6.jpg" alt="Mock" /></div>
+			    			<a href="/img/thumb-6.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
+			    			<div class="mosaic-backdrop"><img src="/img/thumb-6.jpg" alt="Mock" /></div>
 			    		</div>
 			    			
 			    			
@@ -318,7 +318,7 @@ shuffle($recommendation);
 				<h3>最新訊息</h3>
                 			<div class="mosaic-block fade">
                 				<a href="#" class="mosaic-overlay link" title="新聞標題"></a><div class="mosaic-backdrop">
-                				<div class="corner-date">8/26</div><img src="img/small_thumb3.jpg" alt="Mock" /></div>
+                				<div class="corner-date">8/26</div><img src="/img/small_thumb3.jpg" alt="Mock" /></div>
                 			</div>
                 			<h3 class="title"><a href="#">新聞標題</a></h3>
 			</div> 
@@ -375,28 +375,28 @@ shuffle($recommendation);
 		
 	<!-- /////////////////// --> 
 	<!-- Start Scripts -->
-		<!--<script type="text/javascript" src="js/vendor/jquery-1.8.3.min.js"></script>-->
+		<!--<script type="text/javascript" src="/js/vendor/jquery-1.8.3.min.js"></script>-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 		        				
-	<script type="text/javascript" src="js/fitvids.min.js"></script>
-	<script type="text/javascript" src="js/fancybox/jquery.fancybox.js?v=2.1.4"></script>
-	<script type="text/javascript" src="js/placeholder.js"></script>
-	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-	<script type="text/javascript" src="js/mosaic.1.0.1.min.js"></script>
-	<script type="text/javascript" src="js/cleantabs.jquery.js"></script>
+	<script type="text/javascript" src="/js/fitvids.min.js"></script>
+	<script type="text/javascript" src="/js/fancybox/jquery.fancybox.js?v=2.1.4"></script>
+	<script type="text/javascript" src="/js/placeholder.js"></script>
+	<script type="text/javascript" src="/js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="/js/mosaic.1.0.1.min.js"></script>
+	<script type="text/javascript" src="/js/cleantabs.jquery.js"></script>
 
-	<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-	<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-	<script type="text/javascript" src="js/rs-slider.js"></script>
+	<script type="text/javascript" src="/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+	<script type="text/javascript" src="/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+	<script type="text/javascript" src="/js/rs-slider.js"></script>
 
-	<script type="text/javascript" src="js/contact.js"></script>
-	<script type="text/javascript" src="js/jquery.form.js"></script>
-	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
-	<script type="text/javascript" src="js/twphone.js"></script>
+	<script type="text/javascript" src="/js/contact.js"></script>
+	<script type="text/javascript" src="/js/jquery.form.js"></script>
+	<script type="text/javascript" src="/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="/js/twphone.js"></script>
 
-	<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
-	<script type="text/javascript" src="js/jquery.scrollUp.min.js"></script>
-	<script type="text/javascript" src="js/selectivizr-min.js"></script>
+	<script type="text/javascript" src="/js/jquery.stellar.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.scrollUp.min.js"></script>
+	<script type="text/javascript" src="/js/selectivizr-min.js"></script>
 	
 	<script src="js/kkcountdown.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
@@ -413,16 +413,16 @@ shuffle($recommendation);
             });
         </script>
 
-	<script type="text/javascript" src="js/fittext.js"></script>	
+	<script type="text/javascript" src="/js/fittext.js"></script>	
     <script type="text/javascript">
 		// FitText.js
 		fitText(document.getElementById('promise'), 0.83)
 	</script>
-	<script type="text/javascript" src="js/purl.js"></script>
+	<script type="text/javascript" src="/js/purl.js"></script>
 	
-	<script type="text/javascript" src="js/main.js?<?=time?>"></script>
+	<script type="text/javascript" src="/js/main.js?<?=time?>"></script>
 
-    <script type="text/javascript" src="timeline/files/javascript/timeline.js"></script>			
+    <script type="text/javascript" src="/timeline/files/javascript/timeline.js"></script>			
 									
         <script type="text/javascript">
             $(document).ready(function() {

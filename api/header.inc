@@ -51,9 +51,9 @@
     	<div class="wrapper">
     	    <header class="clearfix">
 
-    	    	<!--<a href="index.html" class="logo"><img src="images/gp_badge.png?v2" alt="Logo" /> <span>綠黨政治代理人公約</span></a>-->
+    	    	<!--<a href="index.html" class="logo"><img src="/images/gp_badge.png?v2" alt="Logo" /> <span>綠黨政治代理人公約</span></a>-->
     	    	
-    	    	<a href="politician.php" class="logo"><img src="images/gp_badge.png?v2" alt="Logo" /> <span id="logo-word"></span></a>
+    	    	<a href="politician.php" class="logo"><img src="/images/gp_badge.png?v2" alt="Logo" /> <span id="logo-word"></span></a>
     	        <span class="stickname" id="thisname"><?=$user['title']?></span>
     	    	
     	        <nav id="nav-wrap">
@@ -61,15 +61,15 @@
     	        	
     	            	<li class="nav-parent"><a href="bio.php" id="first-nav">認識<?=$user['title']?></a>
 							<ul>
-		    	                <li><a href="bio.php">簡介</a></li>
-    			                <li><a href="issues.php">政見</a></li>
-		    	                <li><a href="contact.html">政治代理人公約</a></li>
-		    	                <li><a href="endorsements.php">各界推薦</a></li>
+		    	                <li><a href="/test/bio">簡介</a></li>
+    			                <li><a href="/test/issues">政見</a></li>
+		    	                <li><a href="/test/contact.html">政治代理人公約</a></li>
+		    	                <li><a href="/test/endorsements">各界推薦</a></li>
     			                <li><a class="nav-parent" href="contact.html">活動行程</a></li>
     			            </ul>
     			        </li>
     	                
-    	            	<li class="nav-parent last donate"><a href="index.html"><em class="icon-heart"></em> 捐款支持</a>
+    	            	<li class="nav-parent last donate"><a href="/"><em class="icon-heart"></em> 捐款支持</a>
     	            		<ul>
     	            		    <li><a href="http://make-lemonade.co/themes/kause/charity">線上捐款</a></li>
     	            			<li><a href="finance.php">捐款徵信</a></li>

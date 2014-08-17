@@ -1,5 +1,5 @@
 <?php
-require_once 'api/api.php';
+require_once 'api/api.inc';
 
 //timeline
 $string = file_get_contents("http://v.democracy.tw/test/news.json");
@@ -47,7 +47,7 @@ shuffle($recommendation);
     </head>
     <body>
     	
-	<? require_once 'api/header.php'; ?>
+	<? require_once 'api/header.inc'; ?>
     	
     	
     <div class="outter-wrapper">	

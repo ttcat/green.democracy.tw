@@ -1,6 +1,6 @@
 <?php
 
-require_once 'api/Mobile_Detect.php';
+require_once 'api/Mobile_Detect.inc';
 $detect = new Mobile_Detect;
 
 
