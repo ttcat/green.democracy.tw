@@ -1,18 +1,19 @@
 <?php
 require_once 'api/api.inc';
+global $u;
 
 //timeline
-$string = file_get_contents("http://v.democracy.tw/test/news.json");
+$string = file_get_contents("http://v.democracy.tw/{$u}/news.json");
 $newsfeeds = json_decode($string,true);
 $newsfeeds = $newsfeeds['nodes'];
 
 //個人資料
-$string = file_get_contents("http://v.democracy.tw/test/site.json");
+$string = file_get_contents("http://v.democracy.tw/{$u}/site.json");
 $user = json_decode($string,true);
 $user = $user['nodes'][0]['node'];
 
 //推薦
-$string = file_get_contents("http://v.democracy.tw/test/people.json");
+$string = file_get_contents("http://v.democracy.tw/{$u}/people.json");
 $recommendation = json_decode($string,true);
 $recommendation = $recommendation['nodes'];
 
