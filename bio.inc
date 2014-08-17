@@ -33,16 +33,16 @@ shuffle($recommendation);
         <title><?=$user['title']?> | 2014 綠黨政治代理人</title>
         <meta name="description" content="Enter Description">
 
-         <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
-         <link rel="stylesheet" type="text/css" href="css/main.css?<?=time()?>">
-         <link rel="stylesheet" type="text/css" href="timeline/files/css/timeline_themegp.css?<?=time()?>" />
+         <link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
+         <link rel="stylesheet" type="text/css" href="/css/main.css?<?=time()?>">
+         <link rel="stylesheet" type="text/css" href="/timeline/files/css/timeline_themegp.css?<?=time()?>" />
 
          <!-- Remove responsive.css is non-responsive needed -->
-         <link rel="stylesheet" type="text/css" href="css/responsive.css?<?=time()?>">
-         <link rel="stylesheet" type="text/css" href="css/flexslider.css">
-         <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-         <link rel="stylesheet" type="text/css" href="js/fancybox/jquery.fancybox.css?v=2.1.4" media="screen" />
-         <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />         
+         <link rel="stylesheet" type="text/css" href="/css/responsive.css?<?=time()?>">
+         <link rel="stylesheet" type="text/css" href="/css/flexslider.css">
+         <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
+         <link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox.css?v=2.1.4" media="screen" />
+         <link rel="stylesheet" type="text/css" href="/rs-plugin/css/settings.css" media="screen" />         
          <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>         
          
     </head>
