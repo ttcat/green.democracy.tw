@@ -22,4 +22,18 @@ if(!preg_match("[/^\x80-\xff]","$str")) {
 
 }
 
+
+//個人資料
+$string = file_get_contents("http://v.democracy.tw/{$u}/site.json");
+$user = json_decode($string,true);
+$user = $user['nodes'][0]['node'];
+
+//推薦
+$string = file_get_contents("http://v.democracy.tw/{$u}/endorsment.json");
+$recommendation = json_decode($string,true);
+$recommendation = $recommendation['nodes'];
+
+shuffle($recommendation);
+
+
 ?>
