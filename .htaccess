@@ -1,3 +1,5 @@
+php_flag display_errors on
+
 #
 # Apache/PHP/Drupal settings:
 #
