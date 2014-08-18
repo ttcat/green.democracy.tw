@@ -58,7 +58,7 @@ require_once 'api/api.inc';
 						
 						<p>
 						<blockquote>
-						<strong>公民參政共同監督意願書</strong></br></br>
+						<? //<strong>公民參政共同監督意願書</strong></br></br> ?>
 						
 						<div class="half">
 	                       	<img src="<?=$en['photo']?>" alt="mock" width="100%">
