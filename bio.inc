@@ -61,7 +61,7 @@ shuffle($recommendation);
 				
 
 				<!-- add here-->
-				<h2>簡介 new</h2>
+				<h2>簡介 new2</h2>
 						<hr>
 						
 						姓名
