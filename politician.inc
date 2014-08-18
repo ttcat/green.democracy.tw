@@ -242,15 +242,15 @@ shuffle($recommendation);
 
 			?>
                     {
-                        type:    '<=$cats[$feed['category']][0]?>';
+                        type:    '<?=$cats[$feed['category']][0]?>';
                         date:     '<?=date('Y-m-d' ,strtotime($feed['date']))?>',
                         dateFormat:  'YYYY-MM-DD',
-                        title:    '<=$cats[$feed['category']][1]?>';
+                        title:    '<?=$cats[$feed['category']][1]?>';
                         
 				        <? if($feed['Sticky'] != "No") { ?>star: true,<? } ?>	//置頂
 				        <? if($feed['Photo']) { ?>image: '<?=$str_media?>', <? } ?> // 照片
 				        
-                        height:   <=$cats[$feed['category']][2]?>,	//slider 200, gallery 300, video/iframe 300
+                        height:   <?=$cats[$feed['category']][2]?>,	//slider 200, gallery 300, video/iframe 300
                         speed:    5000,
 
 						<? if($feed['category'] == 'video') { ?>url: '<?=$feed['videolink']?>',<? } ?>
