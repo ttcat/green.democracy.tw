@@ -237,7 +237,10 @@ shuffle($recommendation);
 					$parse_result = '';
 					$parse_result = parse_url($feed['link']);
 					$parse_current = parse_url($_SERVER['REQUEST_URI']);
-					
+
+					print_r($parse_result);
+					print_r($parse_current);
+									
 					if($parse_result['host'] != $parse_current['host'] ) { $target = 'target="blank"'; } else { $target = ''; }
 										
 					//<span class="icon-"></span>
