@@ -65,7 +65,7 @@
                 			<h3><strong>相關新聞</strong></h3>
                 			<div class="mosaic-block fade">
                 				<a href="#" class="mosaic-overlay link" title="新聞標題"></a><div class="mosaic-backdrop">
-                				<div class="corner-date">8/26</div><img src="img/small_thumb3.jpg" alt="Mock" /></div>
+                				<div class="corner-date">8/26</div><img src="/img/small_thumb3.jpg" alt="Mock" /></div>
                 			</div>
                 			<h3 class="title"><a href="#">新聞標題</a></h3>
                 			<p>媒體曝光的消息媒體曝光的消息媒體曝光的消息媒體曝光的消息媒體曝光的消息媒體曝光的消息
@@ -85,38 +85,38 @@
 
 			    		<!-- Start thumbnail -->
 			    		<div class="mosaic-block half fade">
-			    			<a href="img/thumb-1.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
-			    			<div class="mosaic-backdrop"><img src="img/thumb-1.jpg" alt="Start" /></div>
+			    			<a href="/img/thumb-1.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
+			    			<div class="mosaic-backdrop"><img src="/img/thumb-1.jpg" alt="Start" /></div>
 			    		</div>
 			    		
 			    		<!-- Start thumbnail -->	
 			    		<div class="mosaic-block half last fade">
-			    			<a href="img/thumb-2.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
-			    			<div class="mosaic-backdrop"><img src="img/thumb-2.jpg" alt="Mock" /></div>
+			    			<a href="/img/thumb-2.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
+			    			<div class="mosaic-backdrop"><img src="/img/thumb-2.jpg" alt="Mock" /></div>
 			    		</div>
 			    		
 			    		<!-- Start thumbnail -->
 			    		<div class="mosaic-block half fade">
-			    			<a href="img/thumb-3.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
-			    			<div class="mosaic-backdrop"><img src="img/thumb-3.jpg" alt="Mock" /></div>
+			    			<a href="/img/thumb-3.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
+			    			<div class="mosaic-backdrop"><img src="/img/thumb-3.jpg" alt="Mock" /></div>
 			    		</div>
 			    		
 			    		<!-- Start thumbnail -->
 			    		<div class="mosaic-block half last fade">
-			    			<a href="img/thumb-4.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
-			    			<div class="mosaic-backdrop"><img src="img/thumb-4.jpg" alt="Mock" /></div>
+			    			<a href="/img/thumb-4.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
+			    			<div class="mosaic-backdrop"><img src="/img/thumb-4.jpg" alt="Mock" /></div>
 			    		</div>
 			    		
 			    		<!-- Start thumbnail -->
 			    		<div class="mosaic-block half fade">
-			    			<a href="img/thumb-5.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
-			    			<div class="mosaic-backdrop"><img src="img/thumb-5.jpg" alt="Mock" /></div>
+			    			<a href="/img/thumb-5.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
+			    			<div class="mosaic-backdrop"><img src="/img/thumb-5.jpg" alt="Mock" /></div>
 			    		</div>
 			    		
 			    		<!-- Start thumbnail -->	
 			    		<div class="mosaic-block half last fade">
-			    			<a href="img/thumb-6.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
-			    			<div class="mosaic-backdrop"><img src="img/thumb-6.jpg" alt="Mock" /></div>
+			    			<a href="/img/thumb-6.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
+			    			<div class="mosaic-backdrop"><img src="/img/thumb-6.jpg" alt="Mock" /></div>
 			    		</div>
 			    			
 			    			
