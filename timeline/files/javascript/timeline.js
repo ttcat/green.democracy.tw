@@ -180,7 +180,7 @@ function Timeline(element, data, undefined) {
                 }
 
                 if (element_data.readmore !== null) {
-                    $('<div>').addClass('readmore').html('<a href="' + element_data.readmore + element_data.taget + '">' + SELF._readmore_text + '</a>').appendTo(element_box);
+                    $('<div>').addClass('readmore').html('<a href="' + element_data.readmore + '" ' + element_data.taget + '>' + SELF._readmore_text + '</a>').appendTo(element_box);
                 }
 
 
@@ -203,7 +203,7 @@ function Timeline(element, data, undefined) {
                 }
 
                 if (element_data.readmore !== null) {
-                    $('<div>').addClass('readmore').html('<a href="' + element_data.readmore + element_data.taget + '">' + SELF._readmore_text + '</a>').appendTo(element_box);
+                    $('<div>').addClass('readmore').html('<a href="' + element_data.readmore + '" ' + element_data.taget + '>' + SELF._readmore_text + '</a>').appendTo(element_box);
                 }
 
                 break;
@@ -231,7 +231,7 @@ function Timeline(element, data, undefined) {
                 }
 
                 if (element_data.readmore !== null) {
-                    $('<div>').addClass('readmore').html('<a href="' + element_data.readmore + element_data.taget + '">' + SELF._readmore_text + '</a>').appendTo(element_box);
+                    $('<div>').addClass('readmore').html('<a href="' + element_data.readmore + '" ' + element_data.taget + '>' + SELF._readmore_text + '</a>').appendTo(element_box);
                 }
 
                 break;
@@ -262,7 +262,7 @@ function Timeline(element, data, undefined) {
                 }
 
                 if (element_data.readmore !== null) {
-                    $('<div>').addClass('readmore').html('<a href="' + element_data.readmore + element_data.taget + '">' + SELF._readmore_text + '</a>').appendTo(element_box);
+                    $('<div>').addClass('readmore').html('<a href="' + element_data.readmore + '" ' + element_data.taget + '>' + SELF._readmore_text + '</a>').appendTo(element_box);
                 }
 
 
@@ -298,7 +298,7 @@ function Timeline(element, data, undefined) {
                 }
 
                 if (element_data.readmore !== null) {
-                    $('<div>').addClass('readmore').html('<a href="' + element_data.readmore + element_data.taget + '">' + SELF._readmore_text + '</a>').appendTo(element_box);
+                    $('<div>').addClass('readmore').html('<a href="' + element_data.readmore + '" ' + element_data.taget + '>' + SELF._readmore_text + '</a>').appendTo(element_box);
                 }
 
 
