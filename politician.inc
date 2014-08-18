@@ -2,7 +2,7 @@
 require_once 'api/api.inc';
 
 //timeline
-$string = file_get_contents("http://v.democracy.tw/test/news.json");
+$string = file_get_contents("http://v.democracy.tw/{$u}/news.json");
 $newsfeeds = json_decode($string,true);
 $newsfeeds = $newsfeeds['nodes'];
 
