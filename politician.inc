@@ -236,13 +236,7 @@ shuffle($recommendation);
 					
 					$parse_result = '';
 					$parse_result = parse_url($feed['link']);
-					
-					print_r($parse_result['host']);
-					print_r($_SERVER['HTTP_HOST']);
-					
 					if($parse_result['host'] != $_SERVER['HTTP_HOST'] ) { $target = 'target="blank"'; } else { $target = ''; }
-					print_r($target);
-										
 					//<span class="icon-"></span>
 					$feed['title'] = '<a href="'.$feed['link'].'" '.$target.'>' . $feed['title'] . '</a>';
 				}
