@@ -214,10 +214,10 @@ shuffle($recommendation);
 			if(!$feed['category']) $feed['category'] = 'newsfeed';
 
 			$cats = array(
-		    "newsfeed" => array("blog_post", "選舉動態");
-		    "slider" => array("slider", "選舉動態", 200);
-		    "video" => array("iframe", "選舉動態", 300);
-		    "newsclip" => array("news", "相關新聞");
+			    "newsfeed" => array("blog_post", "選舉動態"),
+			    "slider" => array("slider", "選舉動態", 200),
+			    "video" => array("iframe", "選舉動態", 300),
+		    	"newsclip" => array("news", "相關新聞"),
 			);
 
 			if($feed['media']) { 
