@@ -1,5 +1,5 @@
 <?php
-
+date_default_timezone_set("Asia/Taipei");
 require_once 'api/Mobile_Detect.inc';
 $detect = new Mobile_Detect;
 
