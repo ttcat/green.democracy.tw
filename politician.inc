@@ -71,158 +71,8 @@ shuffle($recommendation);
 
                 </div>
 				
-				
-				
 				<!-- Start Main Sidebar  -->
-				<aside class="right-aside fourth last">
-			    	
-			    	<? if($user['issues']) { ?>
-				    	<div class="clearfix aside-focus">
-                			<h3><strong>政見主要關注</strong></h3>
-                			<ul class="statistics">
-                				<li><em class="icon-globe"></em> <span>全球化貿易</span></li>
-                				<li><em class="icon-flag"></em> <span style="color:black;">性/別與同志</span></li>
-                				<li><em class="icon-legal"></em> <span style="color:black;">法律與人權</span></li>
-                			</ul>	
-                			<p><a class="more">了解目前的政見</a></p>
-                		</div>
-				    <? } ?>
-				    
-				    	                		
-			    	<? if($user['recommendation']) { ?>                		
-                		<!-- Quote Widget -->
-				    	<div class="clearfix aside-recom">
-                			<h3><strong>各界推薦</strong></h3>
-                			<blockquote><?=$recommendation[0]['node']['contents']?><cite>- <?=$recommendation[0]['node']['title']?></cite></blockquote>
-                		</div>
-					<? } ?>	
-					
-			    	<? if($user['fundraising']) { ?>                		
-				    	<div class="clearfix aside-donate">
-                			<h3><strong>募款</strong></h3>
-                			<p>捐款的短話捐款的短話捐款的短話捐款的短話捐款的短話捐款的短話</p>
-
-                			<ol class="graphs">
-                				<li><div class="per-60 btn-style2"> 1,203,234<span>60%</span></div></li>                				
-                			</ol>
-                			                			
-                			<a href="#" class="btn small-btn "><em class="icon-heart"></em>線上捐款</a><p></p>
-                		</div>	
-
-                	<hr>
-					<? } ?>
-
-			    	<? if($user['gotv']) { ?>                		
-
-                		<!-- Email Signup Widget -->
-				    	<div class="clearfix aside-signup">
-                			<h3 id="promise"><strong>承諾 <span time="1417219200" class="petition_count kkcount-down"></span> 天後投票</strong></h3>
-                			<p>登記為本選區的選民、訂閱且隨時關注<?=$user['title']?>最新消息，並承諾在 <span class="highlight">11/29</span> 一定去投票！</p>
-                			<form id="contactform" class="quick-contact" action="php/processForm.php" method="post">                			
-                				<table class="tableless">
-                					<tr><td><input type="text" id="name" name="name" placeholder="姓名" /></td></tr>
-                					<tr><td><input type="email"id="email" name="email" placeholder="Email" value="" /></td></tr>
-                					<tr><td><input type="text" id="phone" name="phone" placeholder="手機號碼" value="" maxlength="10" /></td></tr>                					
-                					<tr><td><input type="text" id="message" name="message" placeholder="選區，例如%高雄市三民區%"></td></tr>
-                					<tr><td>
-									<input name="button" class="btn small-btn" type="submit" value="送出" id="send" /><br/></td></tr>
-                				</table>
-                			</form>
-                			<div id="response"></div>
-                		</div>
-                					    	
-			    	<hr/>
-					<? } ?>
-
-			    	<? if($user['news']) { ?>                		
-
-                		<!-- Start Text Widget -->     
-				    	<div class="clearfix aside-news">
-                			<h3><strong>相關新聞</strong></h3>
-                			<div class="mosaic-block fade">
-                				<a href="#" class="mosaic-overlay link" title="新聞標題"></a><div class="mosaic-backdrop">
-                				<div class="corner-date">8/26</div><img src="img/small_thumb3.jpg" alt="Mock" /></div>
-                			</div>
-                			<h3 class="title"><a href="#">新聞標題</a></h3>
-                			<p>媒體曝光的消息媒體曝光的消息媒體曝光的消息媒體曝光的消息媒體曝光的消息媒體曝光的消息
-                			&#8230;<a class="more">更多</a></p>
-                		</div>
-                		
-                <hr class="aside-news">
-                <? } ?>
-                
-                
-				<? if($user['gallery']) { ?>                		                		
-			    	<!-- Start Gallery Widget -->
-			    	
-			    	<div class="clearfix gallery aside-gallery">
-
-                	<h3><strong>Gallery</strong></h3>
-
-			    		<!-- Start thumbnail -->
-			    		<div class="mosaic-block half fade">
-			    			<a href="img/thumb-1.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
-			    			<div class="mosaic-backdrop"><img src="img/thumb-1.jpg" alt="Start" /></div>
-			    		</div>
-			    		
-			    		<!-- Start thumbnail -->	
-			    		<div class="mosaic-block half last fade">
-			    			<a href="img/thumb-2.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
-			    			<div class="mosaic-backdrop"><img src="img/thumb-2.jpg" alt="Mock" /></div>
-			    		</div>
-			    		
-			    		<!-- Start thumbnail -->
-			    		<div class="mosaic-block half fade">
-			    			<a href="img/thumb-3.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
-			    			<div class="mosaic-backdrop"><img src="img/thumb-3.jpg" alt="Mock" /></div>
-			    		</div>
-			    		
-			    		<!-- Start thumbnail -->
-			    		<div class="mosaic-block half last fade">
-			    			<a href="img/thumb-4.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
-			    			<div class="mosaic-backdrop"><img src="img/thumb-4.jpg" alt="Mock" /></div>
-			    		</div>
-			    		
-			    		<!-- Start thumbnail -->
-			    		<div class="mosaic-block half fade">
-			    			<a href="img/thumb-5.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
-			    			<div class="mosaic-backdrop"><img src="img/thumb-5.jpg" alt="Mock" /></div>
-			    		</div>
-			    		
-			    		<!-- Start thumbnail -->	
-			    		<div class="mosaic-block half last fade">
-			    			<a href="img/thumb-6.jpg" class="mosaic-overlay fancybox" data-fancybox-group="SidebarGallery" title="Insert Your Title"></a>
-			    			<div class="mosaic-backdrop"><img src="img/thumb-6.jpg" alt="Mock" /></div>
-			    		</div>
-			    			
-			    			
-						<p><a class="more">更多</a></p>
-	
-			    	</div>
-
-                <hr class="aside-gallery">                		
-				<? } ?>
-				
-				
-			    	
-				    	<div class="clearfix aside-contact">
-				    	
-                			<h3><strong>聯繫<?=$user['title']?></strong></h3>
-							<? if($user['fb']) { ?><div class="fb-like-box" style="margin-left: -10px; margin-bottom: 5px; margin-top: -5px;" data-href="<?=$user['fb']?>" data-width="200" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div><? } ?>
-							<ul class="link-list">
-    	       					<? if($user['website']) { ?><li><a href="#">網站名稱</a></li><? } ?>
-    	       					<? if($user['phone']) { ?><li><a href="tel:<?=$user['phone']?>"><?=$user['phone']?></a></li><? } ?>
-    	       					<? if($user['address']) { ?><li><a href="https://www.google.com.tw/maps/search/<?=$user['address']?>/?hl=zh-TW" target="blank"><?=$user['address']?></a></li><? } ?>
-    	       					
-    	       					<? if($user['email']) { ?><li><a href="emailto:<?=$user['email']?>"><?=$user['email']?></a></li><? } ?>
-    	       				</ul>
-                		</div>
-			    	
-			    	
-			    		<a href="#" target="_blank">回到選舉動態首頁</a>
-
-			    			    	
-				</aside> 
+					<? require_once 'api/sidebar.inc'; ?>
 				<!-- Finish Sidebar -->
 
         	</div> <!-- #main -->
@@ -299,7 +149,8 @@ shuffle($recommendation);
 			</div>
 	 </footer> 	
 	 <!-- End Footer -->
-    
+
+
 		
 	<!-- /////////////////// --> 
 	<!-- Start Scripts -->
@@ -349,63 +200,67 @@ shuffle($recommendation);
 	<script type="text/javascript" src="js/main.js?<?=time?>"></script>
 
     <script type="text/javascript" src="timeline/files/javascript/timeline.js"></script>			
-									
+
         <script type="text/javascript">
             $(document).ready(function() {
             
                 var init_data = [
 
-			<?  foreach ($newsfeeds as $k => $feed) { 
+	<?  foreach ($newsfeeds as $k => $feed) { 
 
 			$feed = $feed['node'];
-				
+
+
+			if(!$feed['category']) $feed['category'] = 'newsfeed';
+
+			$cats = array(
+		    "newsfeed" => array("blog_post", "選舉動態");
+		    "slider" => array("slider", "選舉動態", 200);
+		    "video" => array("iframe", "選舉動態", 300);
+		    "newsclip" => array("news", "相關新聞");
+			);
+
+			if($feed['media']) { 
+				$media = explode("|", $feed['media']);	
+				$str_media = "['" . impolde("','", $media) . "']";					
+			}
+
+			if($feed['category'] == 'slider') { 
+				$media = explode("|", $feed['Photo']);	
+				$str_media = "['" . impolde("','", $media) . "']";					
+			}else{
+				$str_media = $feed['Photo'];
+			}
+			
+			
+			if($feed['link']) {
+					if($feed['category'] == 'newsclip') { $target = 'target="blank"'; } else { $target = ''; }
+					//<span class="icon-"></span>
+					$feed['title'] = '<a href="'.$feed['link'].'" '.$target.'>' . $feed['title'] . '</a>';
+				}
+
+
 			?>
                     {
-                        type:     'blog_post',
-                        date:     '<?=date('Y-m-d' ,strtotime($feed['post date']))?>',
+                        type:    '<=$cats[$feed['category']][0]?>';
+                        date:     '<?=date('Y-m-d' ,strtotime($feed['date']))?>',
                         dateFormat:  'YYYY-MM-DD',
-                        title:    '選舉動態',
-				        <? if($feed['Sticky'] == "是") { ?>star: true,<? } ?>
-				        <? if($feed['Photo']) { ?>image:       '<?=$feed['Photo']?>', <? } ?>
+                        title:    '<=$cats[$feed['category']][1]?>';
+                        
+				        <? if($feed['Sticky'] != "No") { ?>star: true,<? } ?>	//置頂
+				        <? if($feed['Photo']) { ?>image: '<?=$str_media?>', <? } ?> // 照片
 				        
-                        content:  '<h3><?=$feed['title']?></h3><p><?=SL(str_replace("\n","",$feed['content']),150)?></p>'
+                        height:   <=$cats[$feed['category']][2]?>,	//slider 200, gallery 300, video/iframe 300
+                        speed:    5000,
+
+						<? if($feed['category'] == 'video') { ?>url: '<?=$feed['videolink']?>',<? } ?>
+                        content:  '<h3><?=$feed['title']?></h3><p><?=SL(str_replace("\n","",$feed['content']),250)?></p>',
+                        <? if($feed['link']) { ?>readmore:    '<?=$feed['link']?>'<? } ?>
+                        
                     },
 			<? } ?>                    
 <? /*                    
-                    {
-                        type:     'blog_post',
-                        date:     '2013-11-09',
-                        dateFormat:  'YYYY-MM-DD',                        
-                        title:    '選舉動態',
-				        image:       'img/thumb-1.jpg',
-                        content:  '<h3>一張圖片選舉動態短文</h3><p>今天天氣很好，掃街一整天。今天天氣很好，掃街一整天。今天天氣很好，掃街一整天。今天天氣很好，掃街一整天。今天天氣很好，掃街一整天。今天天氣很好，掃街一整天。</p>',
-				                                
-                    },
-                                        
-					{
-                        type:     'slider',
-                        date:     '2010-12-10',
-                        title:    '選舉動態',
-                        dateFormat:  'YYYY-MM-DD',                                                
-                        height:   200,
-                        images:   ['img/face2.jpg', 'images/paper.jpg'],
-                        content:  '<h3><a href="#"><span class="icon-"></span> 多張圖片的選舉動態</a></h3><p>新聞短文新聞短文新聞短文新聞短文新聞短文新聞短文新聞短文新聞短文新聞短文新聞短文新聞短文新聞短文新聞短文</p>',                        
-                        speed:    5000,
-				        readmore:    'http://www.example.com'
-                        
-                    },
-                    
-                    {
-                        type:     'iframe',
-                        date:     '2012-08-12',
-                        title:    'VIDEO',
-                        height:   300,
-                        url:      'http://www.youtube.com/embed/0ZQBRsEyN1E?wmode=opaque',
-                        content:  '<h3><a href="#"><span class="icon-"></span> 競選影片出爐！</a></h3>',
-				        readmore:    'http://www.example.com'                  
-                        
-                    },
-
+                                                            
                     {
                         type:     'gallery',
                         date:     '2011-04-12',
@@ -434,18 +289,6 @@ shuffle($recommendation);
                         dateFormat:  'YYYY-MM-DD',                        
                         title:    '政見',
                         content:  '<h3><a href="#"><span class="icon-globe"></span> 政見短文政見短文政見短文政見短文政見短文</a></h3><p>政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見政見</p>',
-				        readmore:    'http://www.example.com'
-				                                
-                    },
-
-
-                    {
-                        type:     'news',
-                        date:     '2013-11-09',
-                        dateFormat:  'YYYY-MM-DD',                        
-                        title:    '相關新聞',
-				        image:       'img/thumb-1.jpg',
-                        content:  '<h3><a href="#"><span class="icon-"></span> 新聞標題新聞標題新聞標題新聞標題</a></h3><p>新聞短文新聞短文新聞短文新聞短文新聞短文新聞短文新聞短文新聞短文新聞短文新聞短文新聞短文新聞短文新聞短文</p>',
 				        readmore:    'http://www.example.com'
 				                                
                     },
