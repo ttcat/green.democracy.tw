@@ -96,7 +96,7 @@ shuffle($recommendation);
 				<h3>最新訊息</h3>
                 			<div class="mosaic-block fade">
                 				<a href="#" class="mosaic-overlay link" title="新聞標題"></a><div class="mosaic-backdrop">
-                				<div class="corner-date">8/26</div><img src="img/small_thumb3.jpg" alt="Mock" /></div>
+                				<div class="corner-date">8/26</div><img src="/img/small_thumb3.jpg" alt="Mock" /></div>
                 			</div>
                 			<h3 class="title"><a href="#">新聞標題</a></h3>
 			</div> 
@@ -242,10 +242,10 @@ shuffle($recommendation);
 
 			?>
                     {
-                        type:    '<?=$cats[$feed['category']][0]?>';
+                        type:    '<?=$cats[$feed['category']][0]?>',
                         date:     '<?=date('Y-m-d' ,strtotime($feed['date']))?>',
                         dateFormat:  'YYYY-MM-DD',
-                        title:    '<?=$cats[$feed['category']][1]?>';
+                        title:    '<?=$cats[$feed['category']][1]?>',
                         
 				        <? if($feed['Sticky'] != "No") { ?>star: true,<? } ?>	//置頂
 				        <? if($feed['Photo']) { ?>image: '<?=$str_media?>', <? } ?> // 照片
