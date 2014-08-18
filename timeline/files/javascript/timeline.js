@@ -114,10 +114,12 @@ function Timeline(element, data, undefined) {
         content:     null,             // blog_post
         image:       null,             // blog_post
         readmore:    null,             // blog_post
+		taget: null,
         height:      300,              //             gallery    slider   iframe
         images:      [],               //             gallery    slider
         speed:       5000,             //                        slider
         url:         null              //                                 iframe
+        
     };
 
     this._prepareData = function() {
