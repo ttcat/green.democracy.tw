@@ -59,7 +59,7 @@
     	        <nav id="nav-wrap">
     	        	<ul class="nav" id="nav">
     	        	
-    	            	<li class="nav-parent"><a href="bio.php" id="first-nav">認識<?=$user['title']?></a>
+    	            	<li class="nav-parent"><a href="/<?=$u?>/bio" id="first-nav">認識<?=$user['title']?></a>
 							<ul>
 		    	                <li><a href="/<?=$u?>/bio">簡介</a></li>
     			                <li><a href="/<?=$u?>/issues">政見</a></li>
