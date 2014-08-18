@@ -6,7 +6,7 @@ $detect = new Mobile_Detect;
 
 function SL($str,$len,$name=null){
 
-if(!eregi("[^\x80-\xff]","$str")){
+if(!preg_match("[/^\x80-\xff]","$str")){
 	$len = $len;
 }else{
 	$len = $len +2;
