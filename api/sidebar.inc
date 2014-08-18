@@ -17,7 +17,7 @@
                 		<!-- Quote Widget -->
 				    	<div class="clearfix aside-recom">
                 			<h3><strong>各界推薦</strong></h3>
-                			<blockquote><?=$recommendation[0]['node']['contents']?><cite>- <?=$recommendation[0]['node']['title']?></cite></blockquote>
+                			<blockquote><?=$recommendation[0]['node']['content']?><cite>- <?=$recommendation[0]['node']['title']?></cite></blockquote>
                 		</div>
 					<? } ?>	
 					
