@@ -50,7 +50,7 @@ require_once 'api/api.inc';
 			    			$total_en = count($endorsment);
 			    			$v = 0;
 			    		
-			    		foreach ($endorsment => $key as $en) {
+			    		foreach ($endorsment as $key => $en) {
 			    			
 			    			$v ++;
 				    		$en = $en['node'];
