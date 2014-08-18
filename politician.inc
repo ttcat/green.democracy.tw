@@ -205,7 +205,60 @@ shuffle($recommendation);
             $(document).ready(function() {
             
                 var init_data = [
-                 
+
+	<?  foreach ($newsfeeds as $k => $feed) { 
+
+			$feed = $feed['node'];
+
+
+			if(!$feed['category']) $feed['category'] = 'newsfeed';
+
+			$cats = array(
+		    "newsfeed" => array("blog_post", "選舉動態");
+		    "slider" => array("slider", "選舉動態", 200);
+		    "video" => array("iframe", "選舉動態", 300);
+		    "newsclip" => array("news", "相關新聞");
+			);
+
+			if($feed['media']) { 
+				$media = explode("|", $feed['media']);	
+				$str_media = "['" . impolde("','", $media) . "']";					
+			}
+
+			if($feed['category'] == 'slider') { 
+				$media = explode("|", $feed['Photo']);	
+				$str_media = "['" . impolde("','", $media) . "']";					
+			}else{
+				$str_media = $feed['Photo'];
+			}
+			
+			
+			if($feed['link']) {
+					if($feed['category'] == 'newsclip') { $target = 'target="blank"'; } else { $target = ''; }
+					//<span class="icon-"></span>
+					$feed['title'] = '<a href="'.$feed['link'].'" '.$target.'>' . $feed['title'] . '</a>';
+				}
+
+
+			?>
+                    {
+                        type:    '<=$cats[$feed['category']][0]?>';
+                        date:     '<?=date('Y-m-d' ,strtotime($feed['date']))?>',
+                        dateFormat:  'YYYY-MM-DD',
+                        title:    '<=$cats[$feed['category']][1]?>';
+                        
+				        <? if($feed['Sticky'] != "No") { ?>star: true,<? } ?>	//置頂
+				        <? if($feed['Photo']) { ?>image: '<?=$str_media?>', <? } ?> // 照片
+				        
+                        height:   <=$cats[$feed['category']][2]?>,	//slider 200, gallery 300, video/iframe 300
+                        speed:    5000,
+
+						<? if($feed['category'] == 'video') { ?>url: '<?=$feed['videolink']?>',<? } ?>
+                        content:  '<h3><?=$feed['title']?></h3><p><?=SL(str_replace("\n","",$feed['content']),250)?></p>',
+                        <? if($feed['link']) { ?>readmore:    '<?=$feed['link']?>'<? } ?>
+                        
+                    },
+			<? } ?>                    
 <? /*                    
                                                             
                     {
