@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	// Responsive Menu.js
-	$('#nav-wrap').prepend('<div id="menu-icon"><span><img src="img/hamburger@2x.png"/></span><b style="color:#FFF" id="nav-word"></b></div>');
+	$('#nav-wrap').prepend('<div id="menu-icon"><span><img src="/img/hamburger@2x.png"/></span><b style="color:#FFF" id="nav-word"></b></div>');
 	$("#menu-icon").on("click", function(){
 		$("#nav").slideToggle('medium', function() {
 		    if ($('#nav').is(':visible'))
