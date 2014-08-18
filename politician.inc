@@ -206,13 +206,8 @@ shuffle($recommendation);
             
                 var init_data = [
 
-	<?  foreach ($newsfeeds as $k => $feed) { 
-
-			$feed = $feed['node'];
-
-
-			if(!$feed['category']) $feed['category'] = 'newsfeed';
-
+	<?  
+	
 			$cats = array(
 			    "newsfeed" => array("blog_post", "選舉動態",200),
 			    "slider" => array("slider", "選舉動態", 200),
@@ -220,21 +215,31 @@ shuffle($recommendation);
 		    	"newsclip" => array("news", "相關新聞",200),
 			);
 
+		foreach ($newsfeeds as $k => $feed) { 
+
+			$feed = $feed['node'];
+			if(!$feed['category']) $feed['category'] = 'newsfeed';
+
 			if($feed['media']) { 
 				$media = explode("|", $feed['media']);	
 				$str_media = "['" . impolde("','", $media) . "']";					
 			}
 
 			if($feed['category'] == 'slider') { 
-				$media = explode("|", $feed['Photo']);	
+				$media = explode("|", $feed['photo']);	
 				$str_media = "['" . impolde("','", $media) . "']";					
 			}else{
-				$str_media = $feed['Photo'];
+				$str_media = $feed['photo'];
 			}
 			
-			
 			if($feed['link']) {
-					if($feed['category'] == 'newsclip') { $target = 'target="blank"'; } else { $target = ''; }
+					
+					$parse_result = '';
+					$parse_result = parse_url($feed['link']);
+					$parse_current = parse_url($_SERVER['REQUEST_URI']);
+					
+					if($parse_result['host'] != $parse_current['host'] ) { $target = 'target="blank"'; } else { $target = ''; }
+										
 					//<span class="icon-"></span>
 					$feed['title'] = '<a href="'.$feed['link'].'" '.$target.'>' . $feed['title'] . '</a>';
 				}
@@ -247,8 +252,8 @@ shuffle($recommendation);
                         dateFormat:  'YYYY-MM-DD',
                         title:    '<?=$cats[$feed['category']][1]?>',
                         
-				        <? if($feed['Sticky'] != "No") { ?>star: true,<? } ?>	//置頂
-				        <? if($feed['Photo']) { ?>image: '<?=$str_media?>', <? } ?> // 照片
+				        <? if($feed['sticky'] != "No") { ?>star: true,<? } ?>	//置頂
+				        <? if($feed['photo']) { ?>image: '<?=$str_media?>', <? } ?> // 照片
 				        
                         height:   <?=$cats[$feed['category']][2]?>,	//slider 200, gallery 300, video/iframe 300
                         speed:    5000,
