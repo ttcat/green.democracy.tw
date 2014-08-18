@@ -34,7 +34,7 @@ $user = $user['nodes'][0]['node'];
 $string = file_get_contents("http://v.democracy.tw/{$u}/endorsment.json");
 $recommendation = json_decode($string,true);
 $recommendation = $recommendation['nodes'];
-
+$endorsment = $recommendation;
 shuffle($recommendation);
 
 

@@ -46,55 +46,33 @@ require_once 'api/api.inc';
 				<h2>各界推薦</h2>
 						<hr>
 						
+			    	<? if($endorsment) { 
+			    			$total_en = count($endorsment);
+			    			$v = 0;
+			    		
+			    		foreach ($endorsment => $key as $en) {
+			    			
+			    			$v ++;
+				    		$en = $en['node'];
+			    	?>                		
+						
 						<p>
 						<blockquote>
 						<strong>公民參政共同監督意願書</strong></br></br>
 						
 						<div class="half">
-	                       	<img src="/img/thumb-1.jpg" alt="mock" width="100%" height="140px">
-	                       	<span class="wp-caption-text">擔任主婦聯盟合作社生態解說員</span>
+	                       	<img src="<?=$en['photo']?>" alt="mock" width="100%">
+	                       	<span class="wp-caption-text">photo desc</span>
 	                    </div>
-	                    被監督人 張明麗君 對於食安議題關注甚深、熱心公益，在基隆七堵地區推動共同購買，為本社基隆市七堵區綠葉山莊共同購買班創班班長，同時為本社解說員、基隆地區社員代表；平日在組織活動中，對於綠色生活之觀念皆能實踐、身體力行。<br/></br>
-						該君為實踐公民參政理想，並將食農議題、永續環境理念廣佈於基隆地區，決定代表綠黨投入2014年基隆市市議員選舉，作為一個長期關注台灣食農議題的社運團體，我們樂觀其成，並願意扮演監督者的角色，與社會各界共同監督，真正落實公民參政的理念。<br/></br>此致<br/></br>
-						<cite>- 台灣主婦聯盟生活消費合作社</cite>
+	                    <?=$en['content']?>
+						<cite>- <?=$en['title']?> / <?=$en['professional-title']?></cite>
     	                </blockquote>
     	                </p>
-	
-						<hr>	
+					<? if($v < $total_en) { ?><hr><? } ?>
 
-						<p>
-						<blockquote>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, acilisis in, egeet quam. " <cite>- James Dean</cite>
-    	                </blockquote>
-    	                </p>
-	
-						<hr>	
-
-						<p>
-						<blockquote>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, acilisis in, egeet quam. " <cite>- James Dean</cite>
-    	                </blockquote>
-    	                </p>
-	
-						<hr>	
-
-						<p>
-						<blockquote>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, acilisis in, egeet quam. " <cite>- James Dean</cite>
-    	                </blockquote>
-    	                </p>
-	
-						<hr>	
-
-						<p>
-						<blockquote>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, acilisis in, egeet quam. " <cite>- James Dean</cite>
-    	                </blockquote>
-    	                </p>
-	
-						<hr>	
-
-						<p>
-						<blockquote>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, acilisis in, egeet quam. " <cite>- James Dean</cite>
-    	                </blockquote>
-    	                </p>
-    	                
+					<? } //end foreach
+					} //end if?>
+				
     	                    	                    	                    	                    	                
 				<!-- add here-->
 				</div>
