@@ -114,7 +114,7 @@ function Timeline(element, data, undefined) {
         content:     null,             // blog_post
         image:       null,             // blog_post
         readmore:    null,             // blog_post
-		taget: null,
+		target: null,
         height:      300,              //             gallery    slider   iframe
         images:      [],               //             gallery    slider
         speed:       5000,             //                        slider
@@ -182,7 +182,7 @@ function Timeline(element, data, undefined) {
                 }
 
                 if (element_data.readmore !== null) {
-                    $('<div>').addClass('readmore').html('<a href="' + element_data.readmore + '" ' + element_data.taget + '>' + SELF._readmore_text + '</a>').appendTo(element_box);
+                    $('<div>').addClass('readmore').html('<a href="' + element_data.readmore + '" ' + element_data.target + '>' + SELF._readmore_text + '</a>').appendTo(element_box);
                 }
 
 
@@ -205,7 +205,7 @@ function Timeline(element, data, undefined) {
                 }
 
                 if (element_data.readmore !== null) {
-                    $('<div>').addClass('readmore').html('<a href="' + element_data.readmore + '" ' + element_data.taget + '>' + SELF._readmore_text + '</a>').appendTo(element_box);
+                    $('<div>').addClass('readmore').html('<a href="' + element_data.readmore + '" ' + element_data.target + '>' + SELF._readmore_text + '</a>').appendTo(element_box);
                 }
 
                 break;
@@ -233,7 +233,7 @@ function Timeline(element, data, undefined) {
                 }
 
                 if (element_data.readmore !== null) {
-                    $('<div>').addClass('readmore').html('<a href="' + element_data.readmore + '" ' + element_data.taget + '>' + SELF._readmore_text + '</a>').appendTo(element_box);
+                    $('<div>').addClass('readmore').html('<a href="' + element_data.readmore + '" ' + element_data.target + '>' + SELF._readmore_text + '</a>').appendTo(element_box);
                 }
 
                 break;
@@ -264,7 +264,7 @@ function Timeline(element, data, undefined) {
                 }
 
                 if (element_data.readmore !== null) {
-                    $('<div>').addClass('readmore').html('<a href="' + element_data.readmore + '" ' + element_data.taget + '>' + SELF._readmore_text + '</a>').appendTo(element_box);
+                    $('<div>').addClass('readmore').html('<a href="' + element_data.readmore + '" ' + element_data.target + '>' + SELF._readmore_text + '</a>').appendTo(element_box);
                 }
 
 
@@ -300,7 +300,7 @@ function Timeline(element, data, undefined) {
                 }
 
                 if (element_data.readmore !== null) {
-                    $('<div>').addClass('readmore').html('<a href="' + element_data.readmore + '" ' + element_data.taget + '>' + SELF._readmore_text + '</a>').appendTo(element_box);
+                    $('<div>').addClass('readmore').html('<a href="' + element_data.readmore + '" ' + element_data.target + '>' + SELF._readmore_text + '</a>').appendTo(element_box);
                 }
 
 
