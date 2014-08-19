@@ -174,7 +174,7 @@ $newsfeeds = $newsfeeds['nodes'];
 				        <? if($feed['category'] == 'slider') { 
 					        if($feed['photo']) { ?>images: '<?=$str_media?>', <? } ?> // 照片
 					    <? } else{ ?>
-					        <? if($feed['photo']) { ?>image: '<?=$str_media?>', <? } ?> // 照片				        				        
+					        <? if($feed['photo']) { ?>image:  <?=$str_media?>, <? } ?> // 照片				        				        
 					    <? } ?>
 					    
                         height:   <?=$cats[$feed['category']][2]?>,	//slider 200, gallery 300, video/iframe 300
