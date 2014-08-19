@@ -41,7 +41,7 @@ $all_feeds = array_merge($newsfeeds, $events, $issues, $gallery, $endorsment);
 
 $i = 0;
 foreach($all_feeds as $key => $v) {
-	$v['node']['sort_id'] = $i;
+	$v['node']['sort_id'] = 'sort-'.$i;
 	$all_feeds_new[] = $v;
 	$i ++;
 }
@@ -57,7 +57,6 @@ function aasort ($array, $key) {
     $ret=array();
 
     foreach ($array as $ii => $va) {
-    	print_r($va['node']['sort_id']);
         $sorter[$va['node']['sort_id']] = $va['node'][$key]; //depends on format of array
     }
     
