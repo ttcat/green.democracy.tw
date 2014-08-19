@@ -27,7 +27,7 @@ $gallery = json_decode($string, true);
 $gallery = $gallery['nodes'];
 
 foreach($gallery as $key => $v) {
-	$gallery[$key]['date'] = date("Y-m-d" ,strtotime($v['post date']));
+	$gallery[$key]['node']['date'] = date("Y-m-d" ,strtotime($v['node']['post date']));
 }
 	
 
