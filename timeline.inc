@@ -59,7 +59,8 @@ function aasort ($array, $key) {
     foreach ($array as $ii => $va) {
         $sorter[$va['node']['sort_id']] = $va['node'][$key]; //depends on format of array
     }
-    
+
+	print_r(json_encode($sorter));    
     rsort($sorter); //DESC by vaule
 	print_r(json_encode($sorter));
     
