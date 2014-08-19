@@ -61,8 +61,7 @@ function aasort ($array, $key) {
     }
 
 	print_r(json_encode($sorter));    
-    rsort($sorter); //DESC by vaule
-	print_r(json_encode($sorter));
+    arsort($sorter); //DESC by vaule
     
     //if($_GET['order'] == 'ascending') { asort($sorter); }
     //asort($sorter, SORT_NUMERIC);
