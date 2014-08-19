@@ -199,7 +199,7 @@ require_once 'api/api.inc';
             	console.log(current_url);
 
             	current_url = current_url.split('/');
-            	current_nid = current_url[2];
+            	current_nid = current_url[3];
             	console.log(current_nid);
             	
 	            if(current_url) {
