@@ -140,7 +140,7 @@ $rows = aasort($all_feeds_new,"date");
 
 
 
-<? /*                    
+/*                    
                                                             
                     {
                         type:     'gallery',
