@@ -71,7 +71,35 @@ $rows = aasort($all_feeds_new,"date");
 
 			$feed = $feed['node'];
 			
+			if($feed['type'] == "News") { 
 			
+				if( ! $feed['category']) $feed['category'] = 'newsfeed';
+
+				if($feed['category'] == 'slider') { 
+					$media = explode("|", $feed['photo']);	
+				}
+				$json_this_feed['type'] = $cats[ $feed['category'] ][0];
+				$json_this_feed['title'] = $cats[$feed['category']][1];
+				$json_this_feed['height'] = $cats[$feed['category']][2];				
+			}else{
+				$json_this_feed['type'] = $cats[ $feed['type'] ][0];
+				$json_this_feed['title'] = $cats[$feed['type']][1];
+				$json_this_feed['height'] = $cats[$feed['type']][2];
+			}
+
+			
+
+			$feed['content'] = SL(str_replace("\n","",$feed['content']),250);
+
+			$event_time = '';
+			//event 加上按鈕
+			if($feed['type'] == 'Event') { 
+				$feed['content'] .= '<a href="'. $feed['link'] .'" class="btn small-btn"><em class="icon-chevron-sign-right"></em>我要參加！</a>'; 
+				$event_time = '<h6>' . $feed['eventtime']  . ' / ' . $feed['location'] .'</h6>';
+				}
+
+            $json_this_feed['content'] = '<h3>' . $feed['title'] . '</h3><p>' . $event_time . $feed['content']  . '</p>';
+            if($target) { $json_this_feed['target'] = 'target="blank"'; }else{ $json_this_feed['target'] = ''; } 
 
 
 			$json[] = $json_this_feed;
