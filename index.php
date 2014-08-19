@@ -3,17 +3,14 @@ global $u;
 $q = ltrim($_SERVER['REQUEST_URI'], '/');
 $q = preg_replace('/[^a-zA-Z0-9]\//', '', $q);
 
-list($u, $f, $key, $vaule) = explode('/', $q, 4);
+list($u, $f, $key, $value) = explode('/', $q, 4);
 
 	if($key == 'nid') {	
-		print_r($value);
 	 	$value = explode('?' ,$value, 2);
-		print_r($value);	 	
-	 	$nid = $value[0];
-//		if(is_numeric($value[0])) {	
-//			$nid = filter_var($value[0], FILTER_SANITIZE_NUMBER_INT);
-//			$query_this_page = $value[1]; //參數待處理 sql-injection
-//		}
+		if(is_numeric($value[0])) {	
+			$nid = filter_var($value[0], FILTER_SANITIZE_NUMBER_INT);
+			$query_this_page = $value[1]; //參數待處理 sql-injection
+		}
 	}
 	
 	if($f == 'api') {
