@@ -49,8 +49,8 @@ foreach($all_feeds as $key => $v) {
 
 $rows = aasort_2($all_feeds,"date");
 
-//print_r(json_encode($all_feeds, true));
-print_r(json_encode($rows, true));
+print_r(json_encode($all_feeds, true));
+//print_r(json_encode($rows, true));
 
 	
 function aasort_2 ($array, $key) {
