@@ -147,7 +147,7 @@ $newsfeeds = $newsfeeds['nodes'];
 
 			if($feed['category'] == 'slider') { 
 				$media = explode("|", $feed['photo']);	
-				$str_media = "[\"" . implode("\",\"", $media) . "\"]";
+				$str_media = "[\"" . implode("\",\"", $media) . "\", \"http://v.democracy.tw/sites/default/files/styles/news/public/ellen/files/dsc00987.jpg?itok=8Ax_z80V\"]";
 			}else{
 				$str_media = $feed['photo'];
 			}
