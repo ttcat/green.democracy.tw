@@ -64,7 +64,7 @@ $rows = aasort($all_feeds_new,"date");
 		    	"FAQ" => array("blog_post", "政見", 200),
 		    	"Person" => array("blog_post", "各界推薦", 200),
 		    	"Event" => array("blog_post", "活動行程", 200),
-		    	"gallery" => array("blog_post", "相簿", 300),
+		    	"gallery" => array("gallery", "相簿", 300),
 			);
 
 		foreach ($rows as $k => $feed) { 
