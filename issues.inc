@@ -67,8 +67,8 @@ $issues = $issues['nodes'];
 
     	                	      	<p><?=$issue['content']?></p>
 
-								<p><span class="issues-tags meta"><span class=" icon-tags"></span> <?=$issue['tag']?><span></p>
-    	                	      <div class=" issues-like fb-like" data-href="http://green.democracy.tw/<?=$u?>/issues/nid/<?=$issue['nid']?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+									<p><span class="issues-tags meta"><span class=" icon-tags"></span> <?=$issue['tag']?><span></p>
+    	                	      	<div class="issues-like fb-like" data-href="http://green.democracy.tw/<?=$u?>/issues/nid/<?=$issue['nid']?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" style="display:inline-block"></div>
 
     	                	      </div>
     	                	    </li>
