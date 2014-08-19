@@ -66,7 +66,7 @@ $(document).ready(function() {
 	    if($(this).attr('hash-id')) { 
 	    
 			if (history.pushState) {
-			    var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?nid=' + $(this).attr('hash-id');
+			    var newurl = window.location.protocol + "//" + window.location.host + '/issues/nid/' + $(this).attr('hash-id');
 			    window.history.pushState({path:newurl},'',newurl);
 			}	    
 	    
