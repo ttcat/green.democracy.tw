@@ -51,10 +51,10 @@ function aasort_2 ($array, $key) {
         $sorter[$ii] = $va['node'][$key]; //depends on format of array
     }
     
-    //if($_GET['order'] == 'descending') { arsort($sorter); }
+    arsort($sorter); //DESC
     //if($_GET['order'] == 'ascending') { asort($sorter); }
     //asort($sorter, SORT_NUMERIC);
-    rsort($sorter);
+    //rsort($sorter);
 	
     foreach ($sorter as $ii => $va) {
     	if($va) {
@@ -67,9 +67,9 @@ function aasort_2 ($array, $key) {
     }
         
     $array=$ret;
-    foreach ($top_array as $k => $value) {
-    	array_unshift($array, $value);
-    }
+    //foreach ($top_array as $k => $value) {
+    	//array_unshift($array, $value);
+    //}
     
     return $array;
 }
