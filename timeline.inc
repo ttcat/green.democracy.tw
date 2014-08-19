@@ -104,11 +104,12 @@ $rows = aasort($all_feeds_new,"date");
 
 			if($feed['sticky'] == "Yes") { $json_this_feed['star'] = true; }	//置頂
 
+			//<span class="icon-"></span> 標題前面加上 icon
+
 			if($feed['link']) {					
 				$parse_result = '';
 				$parse_result = parse_url($feed['link']);
 				if($parse_result['host'] != $_SERVER['HTTP_HOST'] ) { $target = 'target="blank"'; } else { $target = ''; }
-				//<span class="icon-"></span>
 				$feed['title'] = '<a href="'.$feed['link'].'" '.$target.'>' . $feed['title'] . '</a>';
 				$json_this_feed['readmore'] = $feed['link'];
 			}
@@ -131,7 +132,10 @@ $rows = aasort($all_feeds_new,"date");
             if($target) { $json_this_feed['target'] = 'target="blank"'; }else{ $json_this_feed['target'] = ''; } 
 
 
+			
+			//分頁控制在此
 			$json[] = $json_this_feed;
+			
 
 		} //end foreach	
 
