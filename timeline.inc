@@ -140,13 +140,22 @@ $rows = aasort($all_feeds_new,"date");
 	
 	print_r(json_encode($json, true));
 
+
+
+
 function aasort ($array, $key) {
 
     $sorter=array();
     $ret=array();
 
     foreach ($array as $ii => $va) {
-        $sorter[$va['node']['sort_id']] = $va['node'][$key]; //depends on format of array
+    	
+    	if($va['node']['sticky'] != null && $va['node']['sticky'] != "No" ) {
+        	$sorter[$va['node']['sort_id']] = '9' . $va['node'][$key]; //depends on format of array
+        }else{
+        	$sorter[$va['node']['sort_id']] = $va['node'][$key]; //depends on format of array        
+        }
+        
     }
 
     arsort($sorter); //DESC by vaule with key
