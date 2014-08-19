@@ -78,11 +78,11 @@ $rows = aasort($all_feeds_new,"date");
 				if($feed['category'] == 'slider') { 
 					$media = explode("|", $feed['photo']);	
 				}
-				$json_this_feed['type'] = $cats[ $feed['category']][0] ];
+				$json_this_feed['type'] = $cats[ $feed['category'] ][0];
 				$json_this_feed['title'] = $cats[$feed['category']][1];
 				$json_this_feed['height'] = $cats[$feed['category']][2];				
 			}else{
-				$json_this_feed['type'] = $cats[ $feed['type']][0] ];
+				$json_this_feed['type'] = $cats[ $feed['type'] ][0];
 				$json_this_feed['title'] = $cats[$feed['type']][1];
 				$json_this_feed['height'] = $cats[$feed['type']][2];
 			}
