@@ -38,9 +38,40 @@ foreach($gallery as $key => $v) {
 //combian_arrays
 
 $all_feeds = array_merge($newsfeeds, $events, $issues, $gallery, $endorsment);
+$rows = aasort_2($all_feeds,"date"); }
+	
+function aasort_2 ($array, $key) {
+    $sorter=array();
+    $ret=array();
 
-print_r(json_encode($all_feeds, true));
+    foreach ($array as $ii => $va) {
+        $sorter[$ii]=$va[$key];
+    }
+    
+    //if($_GET['order'] == 'descending') { arsort($sorter); }
+    //if($_GET['order'] == 'ascending') { asort($sorter); }
+    //asort($sorter, SORT_NUMERIC);
+    rsort($sorter);
+	
+    foreach ($sorter as $ii => $va) {
+    	if($va) {
+    		foreach ($array as $key => $value) {
+    			if($value['id'] == $va) {
+			        $ret[$ii]=$value;
+    			}
+    		}	        
+	    }
+    }
+        
+    $array=$ret;
+    foreach ($top_array as $k => $value) {
+    	array_unshift($array, $value);
+    }
+    
+    return $array;
+}
 
+print_r(json_encode($rows, true));
 
 exit;
 
