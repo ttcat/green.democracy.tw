@@ -10,29 +10,29 @@ $newsfeeds = $newsfeeds['nodes'];
 
 //政見
 
-$string = file_get_contents('http://v.democracy.tw/{$u}/event.json');
+$string = file_get_contents('http://v.democracy.tw/test/event.json');
 $events = json_decode($string, true);
 $events = $events['nodes'];
 
 //活動
 
-$string = file_get_contents('http://v.democracy.tw/{$u}/issue.json');
+$string = file_get_contents('http://v.democracy.tw/test/issue.json');
 $issues = json_decode($string, true);
 $issues = $issues['nodes'];
 
 //相簿
 
-$string = file_get_contents('http://v.democracy.tw/{$u}/galleries.json');
+$string = file_get_contents('http://v.democracy.tw/test/galleries.json');
 $gallery = json_decode($string, true);
 $gallery = $gallery['nodes'];
 
 //推薦
-
+//$endorsment
 
 
 //combian_arrays
 
-$all_feeds = array_merge($newsfeeds, $events, $issues, $gallery);
+$all_feeds = array_merge($newsfeeds, $events, $issues, $gallery, $endorsment);
 
 print_r($all_feeds);
 
