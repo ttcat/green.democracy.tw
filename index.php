@@ -14,11 +14,7 @@ list($u, $f, $key, $vaule) = explode('/', $q, 4);
 	}
 	
 	if($f == 'api') {
-	 	print_r($f);
-	 	print_r($key);
-	 	print_r($value);	 	
-	 	$key = explode('?' ,$value, 2);
-	 		 	
+	 	$key = explode('?' ,$key, 2);
 	 	if($key[	0] == 'timeline') {
 	 		$timeline_page_query = $key[1]; //參數待處理 sql-injection
 	 		include_once('api/timeline.inc');
