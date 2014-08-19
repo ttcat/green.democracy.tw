@@ -149,10 +149,12 @@ function aasort ($array, $key) {
     $ret=array();
 
     foreach ($array as $ii => $va) {
-    	
+
+        print_r($va);    	
     	if($va['node']['sticky'] != null && $va['node']['sticky'] != "No" ) {
+        	
         	$sorter[$va['node']['sort_id']] = '9' . $va['node'][$key]; //depends on format of array
-        	print_r($sorter);
+        	
         }else{
         	$sorter[$va['node']['sort_id']] = $va['node'][$key]; //depends on format of array        
         }
