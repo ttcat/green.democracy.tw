@@ -60,8 +60,8 @@ function aasort ($array, $key) {
         $sorter[$va['node']['sort_id']] = $va['node'][$key]; //depends on format of array
     }
 
-	print_r(json_encode($sorter));    
     arsort($sorter); //DESC by vaule
+	print_r(json_encode($sorter));    
     
     //if($_GET['order'] == 'ascending') { asort($sorter); }
     //asort($sorter, SORT_NUMERIC);
