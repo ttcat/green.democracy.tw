@@ -32,13 +32,14 @@ foreach($gallery as $key => $v) {
 	
 
 //推薦
-//$endorsment
+//$endorsment already get from api.icnc
 
 
-//combian_arrays
-
+//combian_all arrays
 $all_feeds = array_merge($newsfeeds, $events, $issues, $gallery, $endorsment);
 
+
+//sorting
 $i = 0;
 foreach($all_feeds as $key => $v) {
 	$v['node']['sort_id'] = 'sort-'.$i;
@@ -47,41 +48,8 @@ foreach($all_feeds as $key => $v) {
 }
 
 $rows = aasort($all_feeds_new,"date");
-
 //print_r(json_encode($all_feeds_new, true));
-print_r(json_encode($rows, true));
-
-	
-function aasort ($array, $key) {
-    $sorter=array();
-    $ret=array();
-
-    foreach ($array as $ii => $va) {
-        $sorter[$va['node']['sort_id']] = $va['node'][$key]; //depends on format of array
-    }
-
-    arsort($sorter); //DESC by vaule
-    
-    //if($_GET['order'] == 'ascending') { asort($sorter); }
-    //asort($sorter, SORT_NUMERIC);
-    //rsort($sorter);
-	
-    foreach ($sorter as $ii => $va) {
-    	if($va) {
-    		foreach ($array as $k => $value) {
-    			if($value['node']['sort_id'] == $ii) {
-			        $ret[]=$value;
-    			}
-    		}	        
-	    }
-    }
-        
-    $array=$ret;    
-    return $array;
-}
-
-
-exit;
+//print_r(json_encode($rows, true));
 
 
 
@@ -92,63 +60,86 @@ exit;
 			    "slider" => array("slider", "選舉動態", 200),
 			    "video" => array("iframe", "選舉動態", 300),
 		    	"newsclip" => array("news", "相關新聞",200),
+
+		    	"FAQ" => array("blog_post", "政見", 200),
+		    	"Person" => array("blog_post", "各界推薦", 200),
+		    	"Event" => array("blog_post", "活動行程", 200),
+		    	"gallery" => array("blog_post", "相簿", 300),
 			);
 
-		foreach ($newsfeeds as $k => $feed) { 
+		foreach ($rows as $k => $feed) { 
 
 			$feed = $feed['node'];
-			if(!$feed['category']) $feed['category'] = 'newsfeed';
+			
+			if($feed['type'] == "News") { 
+			
+				if( ! $feed['category']) $feed['category'] = 'newsfeed';
+
+				if($feed['category'] == 'slider') { 
+					$media = explode("|", $feed['photo']);	
+				}
+				$json_this_feed['type'] = $cats[ $feed['category']][0] ];
+				$json_this_feed['title'] = $cats[$feed['category']][1];
+				$json_this_feed['height'] = $cats[$feed['category']][2];				
+			}else{
+				$json_this_feed['type'] = $cats[ $feed['type']][0] ];
+				$json_this_feed['title'] = $cats[$feed['type']][1];
+				$json_this_feed['height'] = $cats[$feed['type']][2];
+			}
 
 			if($feed['media']) { 
 				$media = explode("|", $feed['media']);	
-				$str_media = "[\"" . implode("\",\"", $media) . "\"]";
 			}
 
-			if($feed['category'] == 'slider') { 
-				$media = explode("|", $feed['photo']);	
-				$str_media = "[\"" . implode("\",\"", $media) . "\"]";
+			if($feed['category'] == 'slider' || $feed['category'] == 'slider') { 
+		        $json_this_feed['images'] = $media;
 			}else{
-				$str_media = $feed['photo'];
+				if($feed['photo']) { 
+			       $json_this_feed['image'] = $feed['photo'];
+				}
 			}
 			
-			
-			
-			
-			if($feed['link']) {
-					
-					$parse_result = '';
-					$parse_result = parse_url($feed['link']);
-					if($parse_result['host'] != $_SERVER['HTTP_HOST'] ) { $target = 'target="blank"'; } else { $target = ''; }
-					//<span class="icon-"></span>
-					$feed['title'] = '<a href="'.$feed['link'].'" '.$target.'>' . $feed['title'] . '</a>';
+			$json_this_feed['date'] = date('Y-m-d' ,strtotime($feed['date']));
+			$json_this_feed['dateFormat'] = 'YYYY-MM-DD';
+			$json_this_feed['speed'] = 5000;
+
+			if($feed['sticky'] != "No") { $json_this_feed['star'] = true;	//置頂
+
+			if($feed['link']) {					
+				$parse_result = '';
+				$parse_result = parse_url($feed['link']);
+				if($parse_result['host'] != $_SERVER['HTTP_HOST'] ) { $target = 'target="blank"'; } else { $target = ''; }
+				//<span class="icon-"></span>
+				$feed['title'] = '<a href="'.$feed['link'].'" '.$target.'>' . $feed['title'] . '</a>';
+				$json_this_feed['readmore'] = $feed['link'];
+			}
+
+			if($feed['category'] == 'video') { 
+				$json_this_feed['url'] = $feed['videolink'];
+			}
+
+			$feed['content'] = SL(str_replace("\n","",$feed['content']),250);
+
+			$event_time = '';
+			//event 加上按鈕
+			if($feed['type'] == 'Event') { 
+				$feed['content'] .= '<a href="'. $feed['link'] .'" class="btn small-btn"><em class="icon-chevron-sign-right"></em>我要參加！</a>'; 
+				$event_time = '<h6>' . $feed['eventtime']  . ' / ' . $feed['location'] .'</h6>';
 				}
 
+            $json_this_feed['content'] = '<h3>' . $feed['title'] . '</h3><p>' . $event_time . $feed['content']  . '</p>',
+            if($target) { $json_this_feed['target'] = 'target="blank"'; }else{ $json_this_feed['target'] = ''; } 
 
-			?>
-                    {
-                        type:    '<?=$cats[$feed['category']][0]?>',
-                        date:     '<?=date('Y-m-d' ,strtotime($feed['date']))?>',
-                        dateFormat:  'YYYY-MM-DD',
-                        title:    '<?=$cats[$feed['category']][1]?>',
-                        
-				        <? if($feed['sticky'] != "No") { ?>star: true,<? } ?>	//置頂
 
-				        <? if($feed['category'] == 'slider') { 
-					        if($feed['photo']) { ?>images: <?=$str_media?>, <? } ?> // 照片
-					    <? } else{ ?>
-					        <? if($feed['photo']) { ?>image: '<?=$str_media?>', <? } ?> // 照片				        				        
-					    <? } ?>
-					    
-                        height:   <?=$cats[$feed['category']][2]?>,	//slider 200, gallery 300, video/iframe 300
-                        speed:    5000,
+			$json[] = $json_this_feed;
 
-						<? if($feed['category'] == 'video') { ?>url: '<?=$feed['videolink']?>',<? } ?>
-                        content:  '<h3><?=$feed['title']?></h3><p><?=SL(str_replace("\n","",$feed['content']),250)?></p>',
-                        <? if($feed['link']) { ?>readmore:    '<?=$feed['link']?>', <? } ?>
-                        <? if($target) { ?>target: 'target="blank"'<? }else{ ?>target: '', <? } ?>
-                        
-                    },
-			<? } ?>                    
+		} //end foreach	
+
+	
+	print_r(json_encode($json, true));
+
+
+
 <? /*                    
                                                             
                     {
@@ -167,7 +158,6 @@ exit;
                         date:     '2013-11-09',
                         dateFormat:  'YYYY-MM-DD',                        
                         title:    '活動行程',
-				        image:       'img/thumb-1.jpg',
                         content:  '<h3><a href="#"><span class="icon-calendar-empty"></span> 活動：募款晚會</a></h3><h6>2014.09.10 / 高雄市</h6><p>Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla varius blandit sit, Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus lorem ipsum dolor sit amet, consectetur adipiscing elit&#8230;</p><a href="#" class="btn small-btn"><em class="icon-chevron-sign-right"></em>我要參加！</a>',
 				        readmore:    'http://www.example.com'
                     },
@@ -183,4 +173,30 @@ exit;
 				                                
                     },
 
-*/ ?>
+*/ 
+
+
+function aasort ($array, $key) {
+    $sorter=array();
+    $ret=array();
+
+    foreach ($array as $ii => $va) {
+        $sorter[$va['node']['sort_id']] = $va['node'][$key]; //depends on format of array
+    }
+
+    arsort($sorter); //DESC by vaule with key
+    	
+    foreach ($sorter as $ii => $va) {
+    	if($va) {
+    		foreach ($array as $k => $value) {
+    			if($value['node']['sort_id'] == $ii) {
+			        $ret[]=$value;
+    			}
+    		}	        
+	    }
+    }
+        
+    $array=$ret;    
+    return $array;
+}
+?>
