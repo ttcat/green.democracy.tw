@@ -8,7 +8,7 @@
                 				<li><em class="icon-flag"></em> <span style="color:black;">性/別與同志</span></li>
                 				<li><em class="icon-legal"></em> <span style="color:black;">法律與人權</span></li>
                 			</ul>	
-                			<p><a class="more">了解目前的政見</a></p>
+                			<p><a class="more" herf="/<?=$u?>/issues>了解目前的政見</a></p>
                 		</div>
 				    <? } ?>
 				    
