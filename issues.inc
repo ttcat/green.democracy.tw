@@ -1,10 +1,8 @@
 <?php
-require_once 'api/api.inc';
 global $u;
 global $nid;
 
-
-print_r($nid);
+require_once 'api/api.inc';
 
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -197,9 +195,12 @@ print_r($nid);
             	var agoto;
 
 				var url = $.url(); // parse the current page URL
-				console.log(url);
+				
             	
-            	var current_nid = url.data.param.query.nid;
+            	var current_url = url.data.param.relative;
+            	current_url.split('/');
+            	current_nid = current_url[2];
+            	console.log(current_nid);
             	
 	            if(current_nid) {
 
