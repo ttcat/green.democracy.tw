@@ -102,11 +102,11 @@ $rows = aasort($all_feeds_new,"date");
 				}
 			}
 			
-			$json_this_feed['date'] = date('Y-m-d' ,strtotime($feed['date']));
+			$json_this_feed['date'] = date('Y-m-d' , strtotime($feed['date']));
 			$json_this_feed['dateFormat'] = 'YYYY-MM-DD';
 			$json_this_feed['speed'] = 5000;
 
-			if($feed['sticky'] != "No") { $json_this_feed['star'] = true; }	//置頂
+			if($feed['sticky'] == "Yes") { $json_this_feed['star'] = true; }	//置頂
 
 			if($feed['link']) {					
 				$parse_result = '';
@@ -152,7 +152,7 @@ function aasort ($array, $key) {
 
     foreach ($array as $ii => $va) {
 
-    	if($va['node']['sticky'] != "No" ) {        	
+    	if($va['node']['sticky'] = "Yes" ) { 
         	$sorter[$va['node']['sort_id']] = '9' . $va['node'][$key]; //depends on format of array
         }else{
         	$sorter[$va['node']['sort_id']] = $va['node'][$key]; //depends on format of array        
@@ -166,7 +166,7 @@ function aasort ($array, $key) {
     	if($va) {
     		foreach ($array as $k => $value) {
     			if($value['node']['sort_id'] == $ii) {
-			        $ret[]=$value;
+			        $ret[] = $value;
     			}
     		}	        
 	    }

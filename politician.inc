@@ -3,9 +3,6 @@ require_once 'api/api.inc';
 
 //timeline
 $string = file_get_contents("http://green.democracy.tw/{$u}/timeline");
-
-print_r($string);
-
 $newsfeeds = json_decode($string,true);
 $newsfeeds = $newsfeeds['nodes'];
 
