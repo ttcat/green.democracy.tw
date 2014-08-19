@@ -201,28 +201,30 @@ require_once 'api/api.inc';
             	current_nid = current_url[3];
             	console.log(current_nid);
             	
-	            if(current_url) {
+	            if(current_nid) {
 
 					$( ".issues > li" ).each(function( index ) {
 						  
-						  var lia = $( this ).find('a');
+						var lia = $( this ).find('a');
 						  console.log( index + ": " + lia.attr('hash-id') );
 
 					  if(lia.attr('hash-id') == current_nid) {
 					  	
 					  	lia.addClass('active');
-					  	$(this).find('div').css('display', 'block');  
-						agoto = '#' + current_nid;
+					  	$(this).find('div').css('display', 'block'); 
 						
 					  }else{
 					  	lia.removeClass('active');
 					  	$(this).find('div').css('display', 'none');  					  
 					  	
 					  }
+					  
 					})
+					
 				}
 
-				if(agoto) { 
+				if(current_nid) { 
+					agoto = '#' + current_nid;
 					var agotoy = $(agoto).offset(); 
 					console.log(agotoy);					
 					$('body').scrollTo(agotoy.top-200, {duration:800}).delay( 800 );
