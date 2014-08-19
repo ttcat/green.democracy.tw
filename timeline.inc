@@ -10,26 +10,25 @@ $newsfeeds = $newsfeeds['nodes'];
 
 //政見
 
-$string = file_get_contents('http://v.democracy.tw/test/event.json');
+$string = file_get_contents("http://v.democracy.tw/{$u}/event.json");
 $events = json_decode($string, true);
 $events = $events['nodes'];
 
 //活動
 
-$string = file_get_contents('http://v.democracy.tw/test/issue.json');
+$string = file_get_contents("http://v.democracy.tw/{$u}/issue.json");
 $issues = json_decode($string, true);
 $issues = $issues['nodes'];
 
 //相簿
 
-$string = file_get_contents('http://v.democracy.tw/test/galleries.json');
+$string = file_get_contents("http://v.democracy.tw/{$u}/galleries.json");
 $gallery = json_decode($string, true);
 $gallery = $gallery['nodes'];
 
 foreach($gallery as $key => $v) {
 	$gallery[$key]['node']['date'] = date("Y-m-d" ,strtotime($v['node']['post date']));
 }
-	
 
 //推薦
 //$endorsment already get from api.icnc
@@ -74,7 +73,6 @@ $rows = aasort($all_feeds_new,"date");
 			if($feed['type'] == "") { $feed['type'] = 'gallery'; }  //測試
 
 			if($feed['type'] == "News") { 
-			
 				if( ! $feed['category']) $feed['category'] = 'newsfeed';
 
 				if($feed['category'] == 'slider') { 
@@ -92,15 +90,13 @@ $rows = aasort($all_feeds_new,"date");
 			
 			if($feed['media']) { 
 				$media = explode("|", $feed['media']);	
+				$json_this_feed['images'] = $media;
 			}
-
-			if($feed['category'] == 'slider' || $feed['category'] == 'slider') { 
-		        $json_this_feed['images'] = $media;
-			}else{
-				if($feed['photo']) { 
-			       $json_this_feed['image'] = $feed['photo'];
-				}
+				
+			if($feed['photo']) { 
+			    $json_this_feed['image'] = $feed['photo'];
 			}
+			
 			
 			$json_this_feed['date'] = date('Y-m-d' , strtotime($feed['date']));
 			$json_this_feed['dateFormat'] = 'YYYY-MM-DD';
