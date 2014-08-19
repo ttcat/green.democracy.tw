@@ -147,7 +147,7 @@ $newsfeeds = $newsfeeds['nodes'];
 
 			if($feed['category'] == 'slider') { 
 				$media = explode("|", $feed['photo']);	
-				$str_media = "[\"" . implode("\",\"", $media) . "\", \"http://v.democracy.tw/sites/default/files/styles/news/public/ellen/files/dsc00987.jpg?itok=8Ax_z80V\"]";
+				$str_media = "[\"" . implode("\",\"", $media) . "\"]";
 			}else{
 				$str_media = $feed['photo'];
 			}
@@ -170,8 +170,13 @@ $newsfeeds = $newsfeeds['nodes'];
                         title:    '<?=$cats[$feed['category']][1]?>',
                         
 				        <? if($feed['sticky'] != "No") { ?>star: true,<? } ?>	//置頂
-				        <? if($feed['photo']) { ?>image: '<?=$str_media?>', <? } ?> // 照片
-				        
+
+				        <? if($feed['category'] == 'slider') { 
+					        if($feed['photo']) { ?>images: '<?=$str_media?>', <? } ?> // 照片
+					    <? } else{ ?>
+					        <? if($feed['photo']) { ?>image: '<?=$str_media?>', <? } ?> // 照片				        				        
+					    <? } ?>
+					    
                         height:   <?=$cats[$feed['category']][2]?>,	//slider 200, gallery 300, video/iframe 300
                         speed:    5000,
 
