@@ -92,8 +92,19 @@ $rows = aasort($all_feeds_new,"date");
 				$media = explode("|", $feed['media']);	
 			}
 
+			if($feed['category'] == 'slider' || $feed['category'] == 'slider') { 
+		        $json_this_feed['images'] = $media;
+			}else{
+				if($feed['photo']) { 
+			       $json_this_feed['image'] = $feed['photo'];
+				}
+			}
+			
+			$json_this_feed['date'] = date('Y-m-d' ,strtotime($feed['date']));
+			$json_this_feed['dateFormat'] = 'YYYY-MM-DD';
+			$json_this_feed['speed'] = 5000;
 
-			if($feed['sticky'] != "No") { $json_this_feed['star'] = true;	//置頂
+			if($feed['sticky'] != "No") { $json_this_feed['star'] = true; }	//置頂
 
 			if($feed['link']) {					
 				$parse_result = '';
