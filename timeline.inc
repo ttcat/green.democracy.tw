@@ -127,7 +127,7 @@ $rows = aasort($all_feeds_new,"date");
 				$event_time = '<h6>' . $feed['eventtime']  . ' / ' . $feed['location'] .'</h6>';
 				}
 
-            $json_this_feed['content'] = '<h3>' . $feed['title'] . '</h3><p>' . $event_time . $feed['content']  . '</p>',
+            $json_this_feed['content'] = '<h3>' . $feed['title'] . '</h3><p>' . $event_time . $feed['content']  . '</p>';
             if($target) { $json_this_feed['target'] = 'target="blank"'; }else{ $json_this_feed['target'] = ''; } 
 
 
