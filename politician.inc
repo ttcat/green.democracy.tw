@@ -181,7 +181,7 @@ $newsfeeds = $newsfeeds['nodes'];
                         speed:    5000,
 
 						<? if($feed['category'] == 'video') { ?>url: '<?=$feed['videolink']?>',<? } ?>
-                        content:  '<h3><?=$feed['title']?></h3><p><?=SL(str_replace("\n","",$feed['content']),250)?></p>',
+                        content:  '<h3><?=$feed['title']?></h3><p><?=str_replace("\n","",$feed['content'])?></p>',
                         <? if($feed['link']) { ?>readmore:    '<?=$feed['link']?>', <? } ?>
                         <? if($target) { ?>target: 'target="blank"'<? }else{ ?>target: '', <? } ?>
                         
