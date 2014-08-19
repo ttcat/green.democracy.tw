@@ -40,7 +40,9 @@ foreach($gallery as $key => $v) {
 $all_feeds = array_merge($newsfeeds, $events, $issues, $gallery, $endorsment);
 $rows = aasort_2($all_feeds,"date");
 
-print_r(json_encode($rows, true));
+print_r(json_encode($all_feeds, true));
+
+//print_r(json_encode($rows, true));
 
 	
 function aasort_2 ($array, $key) {
@@ -66,11 +68,7 @@ function aasort_2 ($array, $key) {
 	    }
     }
         
-    $array=$ret;
-    //foreach ($top_array as $k => $value) {
-    	//array_unshift($array, $value);
-    //}
-    
+    $array=$ret;    
     return $array;
 }
 
