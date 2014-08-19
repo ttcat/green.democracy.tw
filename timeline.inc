@@ -67,6 +67,68 @@ $rows = aasort($all_feeds_new,"date");
 		    	"gallery" => array("blog_post", "相簿", 300),
 			);
 
+		foreach ($rows as $k => $feed) { 
+
+			$feed = $feed['node'];
+			
+			if($feed['type'] == "News") { 
+			
+				if( ! $feed['category']) $feed['category'] = 'newsfeed';
+
+				if($feed['category'] == 'slider') { 
+					$media = explode("|", $feed['photo']);	
+				}
+				$json_this_feed['type'] = $cats[ $feed['category'] ][0];
+				$json_this_feed['title'] = $cats[$feed['category']][1];
+				$json_this_feed['height'] = $cats[$feed['category']][2];				
+			}else{
+				$json_this_feed['type'] = $cats[ $feed['type'] ][0];
+				$json_this_feed['title'] = $cats[$feed['type']][1];
+				$json_this_feed['height'] = $cats[$feed['type']][2];
+			}
+
+			if($feed['media']) { 
+				$media = explode("|", $feed['media']);	
+			}
+
+			if($feed['category'] == 'slider' || $feed['category'] == 'slider') { 
+		        $json_this_feed['images'] = $media;
+			}else{
+				if($feed['photo']) { 
+			       $json_this_feed['image'] = $feed['photo'];
+				}
+			}
+			
+			$json_this_feed['date'] = date('Y-m-d' ,strtotime($feed['date']));
+			$json_this_feed['dateFormat'] = 'YYYY-MM-DD';
+			$json_this_feed['speed'] = 5000;
+
+			if($feed['sticky'] != "No") { $json_this_feed['star'] = true;	//置頂
+
+			if($feed['link']) {					
+				$parse_result = '';
+				$parse_result = parse_url($feed['link']);
+				if($parse_result['host'] != $_SERVER['HTTP_HOST'] ) { $target = 'target="blank"'; } else { $target = ''; }
+				//<span class="icon-"></span>
+				$feed['title'] = '<a href="'.$feed['link'].'" '.$target.'>' . $feed['title'] . '</a>';
+				$json_this_feed['readmore'] = $feed['link'];
+			}
+
+			if($feed['category'] == 'video') { 
+				$json_this_feed['url'] = $feed['videolink'];
+			}
+
+			$feed['content'] = SL(str_replace("\n","",$feed['content']),250);
+
+
+
+
+			$json[] = $json_this_feed;
+
+		} //end foreach	
+
+	
+	print_r(json_encode($json, true));
 
 function aasort ($array, $key) {
 
