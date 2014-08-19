@@ -53,7 +53,7 @@ require_once 'api/api.inc';
 				<ul class="issues toggle">
     	                		<!-- Toggle -->
     	                	    <li class="toggle-li">
-    	                	      <a href="#" class="toggle-btn" hash-id="a1" id="sa1"><em class="icon-globe"></em> <span>堅決反對粗糙的自由貿易、多邊經貿協定，加速對在地經濟、農業與經濟體質的破壞</span></a>
+    	                	      <a href="#" class="toggle-btn" hash-id="1" id="sa1"><em class="icon-globe"></em> <span>堅決反對粗糙的自由貿易、多邊經貿協定，加速對在地經濟、農業與經濟體質的破壞</span></a>
     	                	      <div class="toggle-content">
 
     	                	      	<p>史上頭一遭由政黨舉辦的駭客松，預計透過一整天的寫程式/故事的具體行動，改變綠黨、改變政治。歡迎對於公民參與、政治變革、hacking 年底九合一選舉有興趣的朋友參加，不限綠黨黨員、專案不限只在綠黨選舉使用。時間：</p>
@@ -65,7 +65,7 @@ require_once 'api/api.inc';
     	                	    </li>
     	                	    <!-- Toggle -->
     	                	    <li class="toggle-li">
-    	                	      <a href="#" class="toggle-btn" hash-id="a2" id="sa2">My Credit Card Is Stuck In My Computer?</a>
+    	                	      <a href="#" class="toggle-btn" hash-id="21" id="sa21">My Credit Card Is Stuck In My Computer?</a>
     	                	      <div class="toggle-content">
 
 	    	                	      <h6>Heading Six <span>Span</span></h6>
@@ -90,7 +90,7 @@ require_once 'api/api.inc';
     	                	    </li>
     	                	    <!-- Toggle -->
     	                	    <li class="toggle-li">
-    	                	      <a href="#" class="toggle-btn" hash-id="a3" id="sa3">Why Doesn’t The Earth Fall Down?</a>
+    	                	      <a href="#" class="toggle-btn" hash-id="33" id="sa33">Why Doesn’t The Earth Fall Down?</a>
     	                	      <div class="toggle-content">
     	                	      	<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     	                	      	<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -102,21 +102,21 @@ require_once 'api/api.inc';
     	                	    </li>
     	                	    <!-- Toggle -->
     	                	    <li class="toggle-li">
-    	                	      <a href="#" class="toggle-btn" hash-id="a4" id="sa4">How much wood could a Wood Chuck chuck?</a>
+    	                	      <a href="#" class="toggle-btn" hash-id="44" id="sa44">How much wood could a Wood Chuck chuck?</a>
     	                	      <div class="toggle-content">
     	                	      	<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus.</p>
     	                	      </div>
     	                	    </li>
     	                	    <!-- Toggle -->
     	                	    <li class="toggle-li">
-    	                	      <a href="#" class="toggle-btn" hash-id="a5" id="sa5">Do toilets flush backwards in the southern hemisphere?</a>
+    	                	      <a href="#" class="toggle-btn" hash-id="55" id="sa55">Do toilets flush backwards in the southern hemisphere?</a>
     	                	      <div class="toggle-content">
     	                	      	<p>Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
     	                	      </div>
     	                	    </li>
     	                	    <!-- Toggle -->
     	                	    <li class="toggle-li">
-    	                	      <a href="#" class="toggle-btn"  hash-id="a6" id="sa6">Do blondes really have more fun?</a>
+    	                	      <a href="#" class="toggle-btn"  hash-id="66" id="sa66">Do blondes really have more fun?</a>
     	                	      <div class="toggle-content">
     	                	      	<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     	                	      </div>
@@ -219,7 +219,7 @@ require_once 'api/api.inc';
 				}
 
 				if(current_nid) { 
-					agoto = '#s' + current_nid;
+					agoto = '#sa' + current_nid;
 					var agotoy = $(agoto).offset(); 
 					$('body').scrollTo(agotoy.top-200, {duration:800}).delay( 800 );
 				}
