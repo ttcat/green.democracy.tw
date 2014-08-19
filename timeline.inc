@@ -49,7 +49,7 @@ foreach($all_feeds as $key => $v) {
 $rows = aasort($all_feeds_new,"date");
 
 //print_r(json_encode($all_feeds_new, true));
-print_r(json_encode($rows, true));
+//print_r(json_encode($rows, true));
 
 	
 function aasort ($array, $key) {
@@ -61,7 +61,7 @@ function aasort ($array, $key) {
     }
     
     rsort($sorter); //DESC by vaule
-    //print_r($sorter);
+	print_r(json_encode($sorter));
     
     //if($_GET['order'] == 'ascending') { asort($sorter); }
     //asort($sorter, SORT_NUMERIC);
