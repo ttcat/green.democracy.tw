@@ -196,8 +196,11 @@ require_once 'api/api.inc';
 
 				var url = $.url(); // parse the current page URL            	
             	var current_url = url.data.attr.relative;
+            	console.log(current_url);
+
             	current_url.split('/');
             	current_nid = current_url[2];
+            	console.log(current_nid);
             	
 	            if(current_nid) {
 
