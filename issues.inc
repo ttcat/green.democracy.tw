@@ -195,7 +195,7 @@ require_once 'api/api.inc';
             	var agoto;
 
 				var url = $.url(); // parse the current page URL
-				
+            	console.log(url);				
             	
             	var current_url = url.data.param.relative;
             	console.log(current_url);
