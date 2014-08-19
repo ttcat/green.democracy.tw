@@ -225,7 +225,9 @@ require_once 'api/api.inc';
 
 				if(current_nid) { 
 					agoto = '#s' + current_nid;
-					var agotoy = $(agoto).offset(); 		
+					console.log(agoto);
+					var agotoy = $('#sa4').offset(); 
+					console.log(agotoy);					
 					$('body').scrollTo(agotoy.top-200, {duration:800}).delay( 800 );
 				}
 			});
