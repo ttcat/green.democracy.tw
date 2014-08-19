@@ -216,8 +216,6 @@ require_once 'api/api.inc';
 						
 					  }else{
 					  	lia.removeClass('active');
-		            	console.log(agotoy);
-					  	
 					  	$(this).find('div').css('display', 'none');  					  
 					  	
 					  }
@@ -226,6 +224,7 @@ require_once 'api/api.inc';
 
 				if(agoto) { 
 					var agotoy = $(agoto).offset(); 
+					console.log(agotoy);					
 					$('body').scrollTo(agotoy.top-200, {duration:800}).delay( 800 );
 				}
 			});
