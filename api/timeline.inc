@@ -1,5 +1,5 @@
 <?php
-require_once 'api/api.inc';
+require_once 'api.inc';
 
 //分頁
 

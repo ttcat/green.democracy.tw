@@ -3,16 +3,31 @@ global $u;
 $q = ltrim($_SERVER['REQUEST_URI'], '/');
 $q = preg_replace('/[^a-zA-Z0-9]\//', '', $q);
 
-list($u, $f, $nid) = explode('/', $q, 3);
+list($u, $f, $key, $vaule) = explode('/', $q, 4);
 
+	if($key == 'nid') {	
+	 	$value = explode('?' ,$value, 2);
+		if(is_numeric($value[0])) {
+			$nid = filter_var($value[0], FILTER_SANITIZE_NUMBER_INT);
+			$query_this_page = $value[1]; //參數待處理 sql-injection
+		}
+	}
+	
+	if($key == 'api') {
+	 	$value = explode('?' ,$value, 2);
+	 	if($value[0] == 'timeline') {
+	 		$timeline_page_query = $value[1]; //參數待處理 sql-injection
+	 		include_once('api/timeline.inc');
+			exit();
+		}
+	}
+	
 $f = explode('?' ,$f, 2);
-$nid = explode('?' ,$nid, 2);
-
+//預設 politician.inc 為首頁
 if($f[0] == null) {
   include_once('politician.inc');
   exit();
 }
-
 if(file_exists($f[0].'.inc')){
   include_once($f[0].'.inc');
   exit();
