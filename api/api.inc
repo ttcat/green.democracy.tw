@@ -29,9 +29,6 @@ $string = file_get_contents("http://v.democracy.tw/{$u}/site.json");
 $user = json_decode($string,true);
 $user = $user['nodes'][0]['node'];
 
-print_r($string);
-
-
 //推薦
 $string = file_get_contents("http://v.democracy.tw/{$u}/endorsment.json");
 $recommendation = json_decode($string,true);
