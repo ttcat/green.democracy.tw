@@ -224,10 +224,8 @@ require_once 'api/api.inc';
 				}
 
 				if(current_nid) { 
-					agoto = '#' + current_nid;
-					console.log(agoto);
-					var agotoy = $('#a4').offset(); 
-					console.log(agotoy);					
+					agoto = '#s' + current_nid;
+					var agotoy = $(agoto).offset(); 		
 					$('body').scrollTo(agotoy.top-200, {duration:800}).delay( 800 );
 				}
 			});
