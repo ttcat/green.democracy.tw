@@ -38,11 +38,19 @@ foreach($gallery as $key => $v) {
 //combian_arrays
 
 $all_feeds = array_merge($newsfeeds, $events, $issues, $gallery, $endorsment);
+
+$i = 0;
+foreach($all_feeds as $key => $v) {
+	$all_feeds[$i] = $v;
+	$i ++;
+}
+
+
+
 $rows = aasort_2($all_feeds,"date");
 
-print_r(json_encode($all_feeds, true));
-
-//print_r(json_encode($rows, true));
+//print_r(json_encode($all_feeds, true));
+print_r(json_encode($rows, true));
 
 	
 function aasort_2 ($array, $key) {
