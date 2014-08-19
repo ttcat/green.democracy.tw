@@ -171,6 +171,8 @@ $issues = $issues['nodes'];
 									
         <script type="text/javascript">
             $(document).ready(function() {
+            	$('.issues-like').css('display', 'inline-block');
+            
             	var agoto;
 
             	current_nid = '<?=$nid?>';
