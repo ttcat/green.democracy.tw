@@ -5,17 +5,16 @@ $q = preg_replace('/[^a-zA-Z0-9]\//', '', $q);
 
 list($u, $f, $nid) = explode('/', $q, 3);
 
-print_r($u);
-print_r($f);
-print_r($nid);
+$f = explode('?' ,$f, 2);
+$nid = explode('?' ,$nid, 2);
 
-if($f == null) {
+if($f[0] == null) {
   include_once('politician.inc');
   exit();
 }
 
-if(file_exists($f.'.inc')){
-  include_once($f.'.inc');
+if(file_exists($f[0].'.inc')){
+  include_once($f[0].'.inc');
   exit();
 }
 ?>
