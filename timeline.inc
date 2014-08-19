@@ -140,6 +140,32 @@ $rows = aasort($all_feeds_new,"date");
 
 
 
+function aasort ($array, $key) {
+
+    $sorter=array();
+    $ret=array();
+
+    foreach ($array as $ii => $va) {
+        $sorter[$va['node']['sort_id']] = $va['node'][$key]; //depends on format of array
+    }
+
+    arsort($sorter); //DESC by vaule with key
+    	
+    foreach ($sorter as $ii => $va) {
+    	if($va) {
+    		foreach ($array as $k => $value) {
+    			if($value['node']['sort_id'] == $ii) {
+			        $ret[]=$value;
+    			}
+    		}	        
+	    }
+    }
+        
+    $array=$ret;    
+    return $array;
+}
+
+
 /*                    
                                                             
                     {
@@ -173,29 +199,5 @@ $rows = aasort($all_feeds_new,"date");
 				                                
                     },
 
-*/ 
+*/
 
-
-function aasort ($array, $key) {
-    $sorter=array();
-    $ret=array();
-
-    foreach ($array as $ii => $va) {
-        $sorter[$va['node']['sort_id']] = $va['node'][$key]; //depends on format of array
-    }
-
-    arsort($sorter); //DESC by vaule with key
-    	
-    foreach ($sorter as $ii => $va) {
-    	if($va) {
-    		foreach ($array as $k => $value) {
-    			if($value['node']['sort_id'] == $ii) {
-			        $ret[]=$value;
-    			}
-    		}	        
-	    }
-    }
-        
-    $array=$ret;    
-    return $array;
-}
