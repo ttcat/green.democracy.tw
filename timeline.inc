@@ -44,7 +44,6 @@ foreach($all_feeds as $key => $v) {
 	$v['node']['sort_id'] = $i;
 	$all_feeds_new[] = $v;
 	$i ++;
-
 }
 
 
@@ -60,10 +59,12 @@ function aasort_2 ($array, $key) {
     $ret=array();
 
     foreach ($array as $ii => $va) {
-        $sorter[$ii] = $va['node'][$key]; //depends on format of array
+        $sorter[$va['node'][$key]] = $va['node']['sort_id']; //depends on format of array
     }
     
-    arsort($sorter); //DESC
+    krsort($sorter); //DESC
+    print_r($sorter);
+    
     //if($_GET['order'] == 'ascending') { asort($sorter); }
     //asort($sorter, SORT_NUMERIC);
     //rsort($sorter);
@@ -71,8 +72,8 @@ function aasort_2 ($array, $key) {
     foreach ($sorter as $ii => $va) {
     	if($va) {
     		foreach ($array as $k => $value) {
-    			if($value['node'][$key] == $va) {
-			        $ret[$ii]=$value;
+    			if($value['node']['sort_id'] == $va) {
+			        $ret[]=$value;
     			}
     		}	        
 	    }
