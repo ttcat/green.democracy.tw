@@ -88,6 +88,26 @@ $rows = aasort($all_feeds_new,"date");
 			}
 
 			
+			if($feed['media']) { 
+				$media = explode("|", $feed['media']);	
+			}
+
+
+			if($feed['sticky'] != "No") { $json_this_feed['star'] = true;	//置頂
+
+			if($feed['link']) {					
+				$parse_result = '';
+				$parse_result = parse_url($feed['link']);
+				if($parse_result['host'] != $_SERVER['HTTP_HOST'] ) { $target = 'target="blank"'; } else { $target = ''; }
+				//<span class="icon-"></span>
+				$feed['title'] = '<a href="'.$feed['link'].'" '.$target.'>' . $feed['title'] . '</a>';
+				$json_this_feed['readmore'] = $feed['link'];
+			}
+
+			if($feed['category'] == 'video') { 
+				$json_this_feed['url'] = $feed['videolink'];
+			}			
+			
 
 			$feed['content'] = SL(str_replace("\n","",$feed['content']),250);
 
