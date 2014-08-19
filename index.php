@@ -9,6 +9,7 @@ list($u, $f, $key, $vaule) = explode('/', $q, 4);
 	 	$value = explode('?' ,$value, 2);
 		if(is_numeric($value[0])) {
 			$nid = filter_var($value[0], FILTER_SANITIZE_NUMBER_INT);
+			print_r($nid);
 			$query_this_page = $value[1]; //參數待處理 sql-injection
 		}
 	}

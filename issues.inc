@@ -194,7 +194,7 @@ require_once 'api/api.inc';
             $(document).ready(function() {
             	var agoto;
 
-            	current_nid = <?=$nid?>
+            	current_nid = <?=$nid?>;
             	
 	            if(current_nid) {
 
