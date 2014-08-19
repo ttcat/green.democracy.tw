@@ -8,20 +8,17 @@ $string = file_get_contents("http://v.democracy.tw/{$u}/news.json");
 $newsfeeds = json_decode($string,true);
 $newsfeeds = $newsfeeds['nodes'];
 
-//政見
-
+//活動
 $string = file_get_contents("http://v.democracy.tw/{$u}/event.json");
 $events = json_decode($string, true);
 $events = $events['nodes'];
 
-//活動
-
+//政見
 $string = file_get_contents("http://v.democracy.tw/{$u}/issue.json");
 $issues = json_decode($string, true);
 $issues = $issues['nodes'];
 
-//相簿
-
+//相簿	
 $string = file_get_contents("http://v.democracy.tw/{$u}/galleries.json");
 $gallery = json_decode($string, true);
 $gallery = $gallery['nodes'];

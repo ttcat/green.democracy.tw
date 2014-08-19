@@ -4,6 +4,11 @@ global $nid;
 
 require_once 'api/api.inc';
 
+//政見
+$string = file_get_contents("http://v.democracy.tw/{$u}/issue.json");
+$issues = json_decode($string, true);
+$issues = $issues['nodes'];
+
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -51,18 +56,24 @@ require_once 'api/api.inc';
 				<hr>
 				
 				<ul class="issues toggle">
+
+						<? foreach ($issues as $key => $value) { 
+							$issue = $value['node']; 
+						?>
     	                		<!-- Toggle -->
     	                	    <li class="toggle-li">
-    	                	      <a href="#" class="toggle-btn" hash-id="1" id="sa1"><em class="icon-globe"></em> <span>堅決反對粗糙的自由貿易、多邊經貿協定，加速對在地經濟、農業與經濟體質的破壞</span></a>
+    	                	      <a href="#" class="toggle-btn" hash-id="<?=$issue['nid']?>" id="sa<?=$issue['nid']?>"><em class="icon-globe"></em> <span><?=$issue['title']?></span></a>
     	                	      <div class="toggle-content">
 
-    	                	      	<p>史上頭一遭由政黨舉辦的駭客松，預計透過一整天的寫程式/故事的具體行動，改變綠黨、改變政治。歡迎對於公民參與、政治變革、hacking 年底九合一選舉有興趣的朋友參加，不限綠黨黨員、專案不限只在綠黨選舉使用。時間：</p>
+    	                	      	<p><?=$issue['content']?></p>
 
-								<p><span class="issues-tags meta"><span class=" icon-tags"></span> 經濟、全球貿易、糧食、在地經濟<span></p>
-    	                	      <div class=" issues-like fb-like" data-href="https://www.facebook.com/taiwangreenparty" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+								<p><span class="issues-tags meta"><span class=" icon-tags"></span> <?=$issue['tag']?><span></p>
+    	                	      <div class=" issues-like fb-like" data-href="http://green.democracy.tw/<?=$u?>/issues/nid/<?=$issue['nid']?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
 
     	                	      </div>
     	                	    </li>
+    	                <? } ?>	    
+    	                	    
     	                	    <!-- Toggle -->
     	                	    <li class="toggle-li">
     	                	      <a href="#" class="toggle-btn" hash-id="21" id="sa21">My Credit Card Is Stuck In My Computer?</a>
@@ -88,39 +99,7 @@ require_once 'api/api.inc';
     	                	      	
     	                	      </div>
     	                	    </li>
-    	                	    <!-- Toggle -->
-    	                	    <li class="toggle-li">
-    	                	      <a href="#" class="toggle-btn" hash-id="33" id="sa33">Why Doesn’t The Earth Fall Down?</a>
-    	                	      <div class="toggle-content">
-    	                	      	<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    	                	      	<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    	                	      	<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    	                	      	<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    	                	      	<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    	                	      	<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>    	                	      	    	                	      	    	                	      	    	                	      	    	                	      	
-    	                	      </div>
-    	                	    </li>
-    	                	    <!-- Toggle -->
-    	                	    <li class="toggle-li">
-    	                	      <a href="#" class="toggle-btn" hash-id="44" id="sa44">How much wood could a Wood Chuck chuck?</a>
-    	                	      <div class="toggle-content">
-    	                	      	<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus.</p>
-    	                	      </div>
-    	                	    </li>
-    	                	    <!-- Toggle -->
-    	                	    <li class="toggle-li">
-    	                	      <a href="#" class="toggle-btn" hash-id="55" id="sa55">Do toilets flush backwards in the southern hemisphere?</a>
-    	                	      <div class="toggle-content">
-    	                	      	<p>Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-    	                	      </div>
-    	                	    </li>
-    	                	    <!-- Toggle -->
-    	                	    <li class="toggle-li">
-    	                	      <a href="#" class="toggle-btn"  hash-id="66" id="sa66">Do blondes really have more fun?</a>
-    	                	      <div class="toggle-content">
-    	                	      	<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    	                	      </div>
-    	                	    </li>
+
     	                	  </ul>
 
 				<!-- add here-->
