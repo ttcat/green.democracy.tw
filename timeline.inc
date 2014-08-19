@@ -41,7 +41,8 @@ $all_feeds = array_merge($newsfeeds, $events, $issues, $gallery, $endorsment);
 
 $i = 0;
 foreach($all_feeds as $key => $v) {
-	$v['node']['sortID'] = $i;
+print_r($v);
+	$v['node']['sort_id'] = $i;
 	$i ++;
 }
 
