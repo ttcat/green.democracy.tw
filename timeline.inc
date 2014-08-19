@@ -71,6 +71,8 @@ $rows = aasort($all_feeds_new,"date");
 
 			$feed = $feed['node'];
 			
+			if($feed['type'] == "") { $feed['type'] = 'gallery'; }  //測試
+
 			if($feed['type'] == "News") { 
 			
 				if( ! $feed['category']) $feed['category'] = 'newsfeed';
