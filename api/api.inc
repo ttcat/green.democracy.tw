@@ -5,7 +5,6 @@ global $u;
 require_once 'api/Mobile_Detect.inc';
 $detect = new Mobile_Detect;
 
-
 function SL($str,$len,$name=null){
 
 if(!preg_match("[/^\x80-\xff]","$str")) {
@@ -29,6 +28,9 @@ if(!preg_match("[/^\x80-\xff]","$str")) {
 $string = file_get_contents("http://v.democracy.tw/{$u}/site.json");
 $user = json_decode($string,true);
 $user = $user['nodes'][0]['node'];
+
+print_r($string);
+
 
 //推薦
 $string = file_get_contents("http://v.democracy.tw/{$u}/endorsment.json");
