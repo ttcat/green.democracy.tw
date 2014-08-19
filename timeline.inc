@@ -152,6 +152,7 @@ function aasort ($array, $key) {
     	
     	if($va['node']['sticky'] != null && $va['node']['sticky'] != "No" ) {
         	$sorter[$va['node']['sort_id']] = '9' . $va['node'][$key]; //depends on format of array
+        	print_r($sorter);
         }else{
         	$sorter[$va['node']['sort_id']] = $va['node'][$key]; //depends on format of array        
         }
