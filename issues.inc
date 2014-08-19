@@ -196,7 +196,6 @@ require_once 'api/api.inc';
 
 				var url = $.url(); // parse the current page URL            	
             	var current_url = url.data.attr.relative;
-            	console.log(current_url);
 
             	current_url = current_url.split('/');
             	current_nid = current_url[3];
@@ -213,10 +212,12 @@ require_once 'api/api.inc';
 					  	
 					  	lia.addClass('active');
 					  	$(this).find('div').css('display', 'block');  
-						agoto = '#' + lia.attr('id');	
+						agoto = '#' + current_nid;
 						
 					  }else{
 					  	lia.removeClass('active');
+		            	console.log(agotoy);
+					  	
 					  	$(this).find('div').css('display', 'none');  					  
 					  	
 					  }
