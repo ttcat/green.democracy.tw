@@ -199,14 +199,14 @@ require_once 'api/api.inc';
 
             	current_url = current_url.split('/');
             	current_nid = current_url[3];
-            	console.log(current_nid);
+//            	console.log(current_nid);
             	
 	            if(current_nid) {
 
 					$( ".issues > li" ).each(function( index ) {
 						  
 						var lia = $( this ).find('a');
-						  console.log( index + ": " + lia.attr('hash-id') );
+						//console.log( index + ": " + lia.attr('hash-id') );
 
 					  if(lia.attr('hash-id') == current_nid) {
 					  	
@@ -225,12 +225,11 @@ require_once 'api/api.inc';
 
 				if(current_nid) { 
 					agoto = '#s' + current_nid;
-					console.log(agoto);
 					var agotoy = $(agoto).offset(); 
-					console.log(agotoy);					
 					$('body').scrollTo(agotoy.top-200, {duration:800}).delay( 800 );
 				}
 			});
+
 
 $.fn.scrollTo = function( target, options, callback ){
   if(typeof options == 'function' && arguments.length == 2){ callback = options; options = target; }
