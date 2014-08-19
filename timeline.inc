@@ -46,15 +46,13 @@ foreach($all_feeds as $key => $v) {
 	$i ++;
 }
 
+$rows = aasort($all_feeds_new,"date");
 
-
-$rows = aasort_2($all_feeds,"date");
-
-print_r(json_encode($all_feeds_new, true));
-//print_r(json_encode($rows, true));
+//print_r(json_encode($all_feeds_new, true));
+print_r(json_encode($rows, true));
 
 	
-function aasort_2 ($array, $key) {
+function aasort ($array, $key) {
     $sorter=array();
     $ret=array();
 
