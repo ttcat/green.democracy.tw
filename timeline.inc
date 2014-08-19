@@ -26,6 +26,11 @@ $string = file_get_contents('http://v.democracy.tw/test/galleries.json');
 $gallery = json_decode($string, true);
 $gallery = $gallery['nodes'];
 
+foreach($gallery as $key => $v) {
+	$gallery[$key]['date'] = date("Y-m-d" ,strtotime($v['post date']));
+}
+	
+
 //推薦
 //$endorsment
 
