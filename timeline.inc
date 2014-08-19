@@ -41,7 +41,7 @@ $all_feeds = array_merge($newsfeeds, $events, $issues, $gallery, $endorsment);
 
 $i = 0;
 foreach($all_feeds as $key => $v) {
-	$all_feeds[$i] = $v;
+	$all_feeds_2[$i] = $v;
 	$i ++;
 }
 
@@ -49,7 +49,7 @@ foreach($all_feeds as $key => $v) {
 
 $rows = aasort_2($all_feeds,"date");
 
-print_r(json_encode($all_feeds, true));
+print_r(json_encode($all_feeds_2, true));
 //print_r(json_encode($rows, true));
 
 	
