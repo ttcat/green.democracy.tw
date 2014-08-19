@@ -48,7 +48,7 @@ function aasort_2 ($array, $key) {
     $ret=array();
 
     foreach ($array as $ii => $va) {
-        $sorter[$ii]=$va[$key];
+        $sorter[$ii]=$va['node'][$key];
     }
     
     //if($_GET['order'] == 'descending') { arsort($sorter); }
