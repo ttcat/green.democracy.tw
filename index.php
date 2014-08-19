@@ -13,10 +13,10 @@ list($u, $f, $key, $vaule) = explode('/', $q, 4);
 		}
 	}
 	
-	if($key == 'api') {
-	 	$value = explode('?' ,$value, 2);
-	 	if($value[0] == 'timeline') {
-	 		$timeline_page_query = $value[1]; //參數待處理 sql-injection
+	if($f == 'api') {
+	 	$key = explode('?' ,$value, 2);
+	 	if($key[0] == 'timeline') {
+	 		$timeline_page_query = $key[1]; //參數待處理 sql-injection
 	 		include_once('api/timeline.inc');
 			exit();
 		}
