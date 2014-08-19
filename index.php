@@ -5,6 +5,10 @@ $q = preg_replace('/[^a-zA-Z0-9]\//', '', $q);
 
 list($u, $f, $nid) = explode('/', $q, 3);
 
+print_r($u);
+print_r($f);
+print_r($nid);
+
 if($f == null) {
   include_once('politician.inc');
   exit();
