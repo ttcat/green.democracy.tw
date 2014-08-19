@@ -202,7 +202,7 @@ require_once 'api/api.inc';
             	current_nid = current_url[2];
             	console.log(current_nid);
             	
-	            if(current_nid) {
+	            if(current_url) {
 
 					$( ".issues > li" ).each(function( index ) {
 						  
