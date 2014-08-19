@@ -34,7 +34,7 @@ $gallery = $gallery['nodes'];
 
 $all_feeds = array_merge($newsfeeds, $events, $issues, $gallery, $endorsment);
 
-print_r($all_feeds);
+print_r(json_decode($all_feeds));
 
 
 exit;
