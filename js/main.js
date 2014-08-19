@@ -64,9 +64,11 @@ $(document).ready(function() {
 		var myURL = document.location;
 		
 	    if($(this).attr('hash-id')) { 
-	    
+	    	
+	    	var pathnames = window.location.pathname.split('/');
+	    	
 			if (history.pushState) {
-			    var newurl = window.location.protocol + "//" + window.location.host + '/issues/nid/' + $(this).attr('hash-id');
+			    var newurl = window.location.protocol + "//" + window.location.host + pathnames[0] + '/issues/nid' + $(this).attr('hash-id');
 			    window.history.pushState({path:newurl},'',newurl);
 			}	    
 	    
