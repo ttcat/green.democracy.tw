@@ -142,12 +142,12 @@ $newsfeeds = $newsfeeds['nodes'];
 
 			if($feed['media']) { 
 				$media = explode("|", $feed['media']);	
-				$str_media = "['" . implode("','", $media) . "']";					
+				$str_media = "[\"" . implode("\",\"", $media) . "\"]";
 			}
 
 			if($feed['category'] == 'slider') { 
 				$media = explode("|", $feed['photo']);	
-				$str_media = "['" . implode("','", $media) . "']";					
+				$str_media = "[\"" . implode("\",\"", $media) . "\"]";
 			}else{
 				$str_media = $feed['photo'];
 			}
