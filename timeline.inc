@@ -57,6 +57,7 @@ function aasort ($array, $key) {
     $ret=array();
 
     foreach ($array as $ii => $va) {
+    	print_r($va['node']['sort_id']);
         $sorter[$va['node']['sort_id']] = $va['node'][$key]; //depends on format of array
     }
     
