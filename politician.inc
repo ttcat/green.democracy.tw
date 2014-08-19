@@ -129,7 +129,7 @@ $newsfeeds = $newsfeeds['nodes'];
         <script type="text/javascript">
             $(document).ready(function() {
             
-                var init_data = <?=print_r($string)?>;
+                var init_data = <? echo $string; ?>;
 
 				var total_feeds = <?=count($newsfeeds)?>; 
 				var feeds_left = total_feeds - init_data.length;
