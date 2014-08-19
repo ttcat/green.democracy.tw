@@ -2,7 +2,7 @@
 require_once 'api/api.inc';
 
 //timeline
-$string = file_get_contents("http://green.democracy.tw/{$u}/timeline");
+$string = file_get_contents("http://green.democracy.tw/{$u}/api/timeline");
 $newsfeeds = json_decode($string,true);
 $newsfeeds = $newsfeeds['nodes'];
 
@@ -165,7 +165,7 @@ $newsfeeds = $newsfeeds['nodes'];
                     year--;
                     button.addClass('notice').text('讀取中...');
 
-                    $.ajax('ajax_data.php', {
+                    $.ajax('<?=$u?>/api/timeline', {
                         type     : 'POST',
                         dataType : 'json',
                         data     : {year: year},
