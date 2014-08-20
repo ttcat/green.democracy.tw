@@ -5,7 +5,9 @@ require_once 'api/api.inc';
 $string = file_get_contents("http://green.democracy.tw/{$u}/api/timeline");
 $newsfeeds = json_decode($string,true);
 
-print_r($newsfeeds);
+$newsfeeds_perpage = $newsfeeds[0]['perpage'];
+$newsfeeds_total = $newsfeeds[0]['total'];
+$newsfeeds_thispage = $newsfeeds[0]['thispage'];
 
 
 ?><!DOCTYPE html>
@@ -126,10 +128,10 @@ print_r($newsfeeds);
         <script type="text/javascript">
             $(document).ready(function() {
 
-                var perpage = 3;            
+                var perpage = <?=$newsfeeds_perpage?>;
                 var init_data = <? echo $string; ?>;
 
-				var total_feeds = 10<?=$newsfeeds_total?>; 
+				var total_feeds = <?=$newsfeeds_total?>; 
 				var feeds_left = total_feeds - perpage;
 
 							if(feeds_left <= 0) {
