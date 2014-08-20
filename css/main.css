@@ -2385,7 +2385,7 @@ h2, h3 { page-break-after: avoid; }
 	
 	.issues em{
 		font-size:30px;
-		padding: 0.2em;
+		padding-left: 0.2em;
 		vertical-align: middle;
 	}	
 
