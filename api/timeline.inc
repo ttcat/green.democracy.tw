@@ -4,7 +4,8 @@ require_once 'api.inc';
 //分頁
 $perpage = 3;
 $pageq = explode('?' , $timeline_page_query);
-$start_feed = $pageq * 3;
+
+$start_feed = (int) $pageq[1] * 3;
 $end_feed = $start_feed + 2;
 
 
@@ -151,8 +152,8 @@ $rows = aasort($all_feeds_new,"date");
 			$jj ++
 		} //end foreach	
 
-	$json['total'] = count($json);
-	$json['thispage'] = 0;
+	$json['total'] = count($rows);
+	$json['thispage'] = $start_feed;
 	
 	print_r(json_encode($json, true));
 
