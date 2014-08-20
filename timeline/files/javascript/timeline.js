@@ -187,6 +187,7 @@ function Timeline(element, data, undefined) {
 
 
                 break;
+                
             case 'blog_post':
                 // image
                 if (element_data.image !== null) {
@@ -306,6 +307,8 @@ function Timeline(element, data, undefined) {
 
                 break;
         }
+        
+        
 
         element.appendTo(SELF._container);
 
@@ -501,9 +504,9 @@ function Timeline(element, data, undefined) {
     };
 
     this._loadMore = function() {
-        if (SELF._loadmore.hasClass('loading')) {
-            return;
-        }
+        //if (SELF._loadmore.hasClass('loading')) {
+           // return;
+        //}
 
         SELF._loadmore.addClass('loading');
 
