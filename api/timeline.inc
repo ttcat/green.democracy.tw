@@ -14,9 +14,9 @@ $newsfeeds = json_decode($string,true);
 $newsfeeds = $newsfeeds['nodes'];
 
 //活動
-$string = file_get_contents("http://v.democracy.tw/{$u}/event.json");
-$events = json_decode($string, true);
-$events = $events['nodes'];
+//$string = file_get_contents("http://v.democracy.tw/{$u}/event.json");
+//$events = json_decode($string, true);
+//$events = $events['nodes'];
 
 //政見
 $string = file_get_contents("http://v.democracy.tw/{$u}/issue.json");
