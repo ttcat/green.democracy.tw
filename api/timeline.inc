@@ -162,7 +162,7 @@ $rows = aasort($all_feeds_new,"date");
 		} //end foreach	
 
 	$json[0]['perpage'] = $perpage;
-	$json[0]['total'] = count($jj);
+	$json[0]['total'] = $jj;
 	$json[0]['thispage'] = $start_feed;
 
 		
