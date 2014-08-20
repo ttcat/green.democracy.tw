@@ -174,7 +174,7 @@ $newsfeeds_thispage = $newsfeeds[0]['thispage'];
                         type     : 'GET',
                         dataType : 'json',
                         success  : function(data) {
-	                        data = '[' + data + ']';                    	
+	                        data = data;
                             // remove loading
 							button.css('display', 'none');                            
                             button.removeClass('notice').html('<em class="fa fa-refresh"></em> 顯示更多');
