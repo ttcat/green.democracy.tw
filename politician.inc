@@ -170,10 +170,12 @@ $newsfeeds_thispage = $newsfeeds['thispage'];
                     
                     button.addClass('notice').text('讀取中...');
 
-                    $.ajax('/<?=$u?>/api/timeline?'+page, {
+                    $.ajax('http://087creative.com/gp2014/timeline/demo/ajax_data.php?'+page, {
                         type     : 'GET',
                         dataType : 'json',
                         success  : function(data) {
+                        	data = '[' + data + ']';
+                        	
                             // remove loading
 							button.css('display', 'none');                            
                             button.removeClass('notice').html('<em class="icon-refresh"></em> 顯示更多');
