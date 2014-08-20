@@ -182,7 +182,7 @@ $newsfeeds_thispage = $newsfeeds[0]['thispage'];
                             timeline.appendData(data);
 							feeds_left = feeds_left - perpage;
 							
-							window.addthis.toolbox("#timeline_fb_23");
+							window.addthis.toolbox(".addthis_sharing_toolbox");
 
 							if(feeds_left <= 0) {
 								button.css('display', 'none');
