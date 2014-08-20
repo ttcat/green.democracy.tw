@@ -8,6 +8,8 @@ $pageq = explode('?' , $timeline_page_query);
 $start_feed = ( (int) $pageq[0] ) * 3;
 $end_feed = $start_feed + 2;
 
+
+/*
 //newsfeeds
 $string = file_get_contents("http://v.democracy.tw/{$u}/news.json");
 $newsfeeds = json_decode($string,true);
@@ -39,6 +41,12 @@ foreach($gallery as $key => $v) {
 
 //combian_all arrays
 $all_feeds = array_merge($newsfeeds, $issues, $gallery, $endorsment);
+*/
+
+$string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json");
+$all_feeds = json_decode($string,true);
+$all_feeds = $newsfeeds['nodes'];
+
 
 //sorting
 $i = 0;
@@ -135,7 +143,7 @@ $rows = aasort($all_feeds_new,"date");
 			$event_time = '';
 			//event 加上按鈕
 			if($feed['type'] == 'Event') { 
-					$feed['content'] = '<p>' . $feed['content'] . '</p><p></p><a href="'. $feed['link'] .'" class="btn small-btn"><em class="icon-chevron-sign-right"></em>我要參加！</a><br>'; 
+					$feed['content'] = '<p>' . $feed['content'] . '</p><p></p><a href="'. $feed['link'] .'" class="btn small-btn"><em class="fa fa-chevron-sign-right"></em>我要參加！</a><br>'; 
 					$event_time = '<h6>' . $feed['eventtime']  . ' <br> ' . $feed['location'] .'</h6>';
 				}
 

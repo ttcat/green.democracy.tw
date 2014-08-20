@@ -54,7 +54,7 @@ $newsfeeds_thispage = $newsfeeds[0]['thispage'];
 
         <div id="timeline" style="margin-top:20px; margin-bottom:20px;" class="timeline"></div>
 		<div class="timeline_loadmore" id="loadmore" style="display:none;">
-    		<em class="icon-refresh"></em> 顯示更多
+    		<em class="fa fa-refresh"></em> 顯示更多
     	</div>
 
 				<!-- add here-->
@@ -177,7 +177,7 @@ $newsfeeds_thispage = $newsfeeds[0]['thispage'];
 	                        data = '[' + data + ']';                    	
                             // remove loading
 							button.css('display', 'none');                            
-                            button.removeClass('notice').html('<em class="icon-refresh"></em> 顯示更多');
+                            button.removeClass('notice').html('<em class="fa fa-refresh"></em> 顯示更多');
                             // append new data
                             timeline.appendData(data);
 							feeds_left = feeds_left - perpage;
