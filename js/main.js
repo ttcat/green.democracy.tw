@@ -146,6 +146,7 @@ $(document).ready(function() {
 
 	$('#nav-word').html('挺好的！');
     $(window).scroll(sticky_relocate);
+    $(window).resize(sticky_relocate);
     sticky_relocate();
 	 
 	 
