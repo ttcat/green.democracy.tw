@@ -504,9 +504,9 @@ function Timeline(element, data, undefined) {
     };
 
     this._loadMore = function() {
-        //if (SELF._loadmore.hasClass('loading')) {
-           // return;
-        //}
+        if (SELF._loadmore.hasClass('loading')) {
+            return;
+        }
 
         SELF._loadmore.addClass('loading');
 
@@ -625,9 +625,9 @@ function Timeline(element, data, undefined) {
         SELF._container.data('loaded', true).appendTo(element);
 
         // load more
-        if (SELF._options.loadmore && SELF._options.max && data.length) {
+        //if (SELF._options.loadmore && SELF._options.max && data.length) {
             SELF._loadmore = $('<div>').addClass('timeline_loadmore').text(thisl_loadmore_text).appendTo(element);
-        }
+        //}
 
         if (SELF._options.animation) {
             setTimeout(function() {
