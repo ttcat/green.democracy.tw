@@ -63,7 +63,7 @@ $issues = $issues['nodes'];
     	                		<!-- Toggle -->
     	                	    <li class="toggle-li">
     	                	      <a href="#" class="toggle-btn" hash-id="<?=$issue['nid']?>" id="sa<?=$issue['nid']?>"><em class="icon-globe"></em> <span><?=$issue['title']?></span></a>
-    	                	      <div class="toggle-content">
+    	                	      <div class="toggle-content" style="display:inline-block">
 
     	                	      	<p><?=$issue['content']?></p>
 
@@ -171,7 +171,7 @@ $issues = $issues['nodes'];
 									
         <script type="text/javascript">
             $(document).ready(function() {
-            	$('.issues-like').css('display', 'inline-block');
+
             
             	var agoto;
 
