@@ -2,6 +2,11 @@
 require_once 'api.inc';
 
 //分頁
+$perpage = 3;
+$pageq = explode('?' , $timeline_page_query);
+$start_feed = $pageq * 3;
+$end_feed = $start_feed + 2;
+
 
 //newsfeeds
 $string = file_get_contents("http://v.democracy.tw/{$u}/news.json");
@@ -29,6 +34,7 @@ foreach($gallery as $key => $v) {
 
 //推薦
 //$endorsment already get from api.icnc
+
 
 
 //combian_all arrays
@@ -62,6 +68,9 @@ $rows = aasort($all_feeds_new,"date");
 		    	"gallery" => array("gallery", "相簿", 300, ''),
 			);
 
+
+		var $jj = 0;
+		
 		foreach ($rows as $k => $feed) { 
 
 			$feed = $feed['node'];
@@ -125,7 +134,7 @@ $rows = aasort($all_feeds_new,"date");
 			$event_time = '';
 			//event 加上按鈕
 			if($feed['type'] == 'Event') { 
-					$feed['content'] = '<p>' . $feed['content'] . '</p><p></p><a href="'. $feed['link'] .'" class="btn small-btn"><em class="icon-chevron-sign-right"></em>我要參加！</a>'; 
+					$feed['content'] = '<p>' . $feed['content'] . '</p><p></p><a href="'. $feed['link'] .'" class="btn small-btn"><em class="icon-chevron-sign-right"></em>我要參加！</a><br>'; 
 					$event_time = '<h6>' . $feed['eventtime']  . ' <br> ' . $feed['location'] .'</h6>';
 				}
 
@@ -135,9 +144,11 @@ $rows = aasort($all_feeds_new,"date");
 
 			
 			//分頁控制在此
-			$json[] = $json_this_feed;
+			if($jj >= $start_feed && $jj <= $end_feed) {
+				$json[] = $json_this_feed;
+			}		
 			
-
+			$jj ++
 		} //end foreach	
 
 	$json['total'] = count($json);
