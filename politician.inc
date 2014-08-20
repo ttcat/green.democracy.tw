@@ -170,7 +170,7 @@ $newsfeeds_thispage = $newsfeeds['thispage'];
                     
                     button.addClass('notice').text('讀取中...');
 
-                    $.ajax('<?=$u?>/api/timeline?'+page, {
+                    $.ajax('/<?=$u?>/api/timeline?'+page, {
                         type     : 'GET',
                         dataType : 'json',
                         success  : function(data) {
