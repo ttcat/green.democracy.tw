@@ -59,6 +59,8 @@ $(document).ready(function() {
 	// Toggle	  
 	$('.toggle-btn').click(function(e){
 		e.preventDefault();
+		
+//$('.toggle-btn ')$('.issues-like').css('display', 'inline-block');		
 		$(this).closest('li').find('.toggle-content').not(':animated').slideToggle();
 		
 		var myURL = document.location;
@@ -71,7 +73,10 @@ $(document).ready(function() {
 			    var newurl = window.location.protocol + "//" + window.location.host + '/' + pathnames[1] + '/issues/nid/' + $(this).attr('hash-id');
 			    window.history.pushState({path:newurl},'',newurl);
 			}	    
-	    
+	   
+	   		var hash-fb = '#fb' + $(this).attr('hash-id');
+	   		$(hash-fb).css('display', 'inline-block');
+	   	 
 	    //window.location.hash = $(this).attr('hash-id'); 
 	    
 	    }
