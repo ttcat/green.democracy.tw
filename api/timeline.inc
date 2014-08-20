@@ -157,9 +157,39 @@ $rows = aasort($all_feeds_new,"date");
 	
 	$json_str = json_encode($json, true);
 //	$json_str = substr($json_str, 0, -1);
-	print_r($json_str);			
+//	print_r($json_str);			
 //	echo '[' . $json_str . ']';
 
+    $year = $_POST['year'];
+
+    $data = array(
+        array(
+            'type'    =>  'blog_post',
+            'date'    =>  $year . '-12-21',
+            'title'   =>  'Blog Post',
+            'content' => '<b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+        ),
+        array(
+            'type'    =>  'blog_post',
+            'date'    =>  $year . '-11-21',
+            'title'   =>  'Blog Post',
+            'content' => '<b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+        ),
+        array(
+            'type'    =>  'blog_post',
+            'date'    =>  $year . '-10-21',
+            'title'   =>  'Blog Post',
+            'content' => '<b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+        ),
+        array(
+            'type'    =>  'blog_post',
+            'date'    =>  $year . '-09-21',
+            'title'   =>  'Blog Post',
+            'content' => '<b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+        )
+    );
+
+    print json_encode($data);
 
 
 function aasort ($array, $key) {
