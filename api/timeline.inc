@@ -55,7 +55,7 @@ foreach($all_feeds as $key => $v) {
 	$i ++;
 }
 
-print_r($all_feeds);
+print_r(json_encode($all_feeds_new));
 exit;
 
 
