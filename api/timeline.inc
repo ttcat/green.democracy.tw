@@ -143,7 +143,7 @@ $rows = aasort($all_feeds_new,"date");
 			$event_time = '';
 			//event 加上按鈕
 			if($feed['type'] == 'Event') { 
-					$feed['content'] = '<p>' . $feed['content'] . '</p><p></p><a href="'. $feed['link'] .'" class="btn small-btn"><em class="fa fa-chevron-sign-right"></em>我要參加！</a><br>'; 
+					$feed['content'] = '<p>' . $feed['content'] . '</p><p></p><a href="'. $feed['link'] .'" class="btn small-btn"><em class="fa fa-thumbs-up"></em>我要參加！</a><br>'; 
 					$event_time = '<h6>' . $feed['eventtime']  . ' <br> ' . $feed['location'] .'</h6>';
 				}
 
