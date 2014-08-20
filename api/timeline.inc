@@ -2,7 +2,7 @@
 require_once 'api.inc';
 
 //分頁
-$perpage = 10;
+$perpage = 3;
 $pageq = explode('?' , $timeline_page_query);
 
 $start_feed = ( (int) $pageq[0] ) * $perpage;
@@ -150,9 +150,9 @@ $rows = aasort($all_feeds_new,"date");
 
 			
 			//分頁控制在此
-//			if($jj >= $start_feed && $jj <= $end_feed) {
+			if($jj >= $start_feed && $jj <= $end_feed) {
 				$json[] = (array) $json_this_feed;
-//			}		
+			}		
 			
 			$jj ++;
 		} //end foreach	
