@@ -1113,5 +1113,9 @@ function Timeline(element, data, undefined) {
         } else {
             SELF._processIframeQueue();
         }
+        
+		addthis.toolbox("#timeline_fb_23");
+		addthis.button("#timeline_fb_23");
+        
     };
 }
