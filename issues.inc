@@ -168,6 +168,7 @@ $issues = $issues['nodes'];
 	<script type="text/javascript" src="/js/purl.js"></script>
 	
 	<script type="text/javascript" src="/js/main.js?<?=time?>"></script>
+	<script type="text/javascript" src="/js/jquery-scrollto.js?<?=time?>"></script>
 									
         <script type="text/javascript">
             $(document).ready(function() {
@@ -203,28 +204,10 @@ $issues = $issues['nodes'];
 					agoto = '#sa' + current_nid;
 					var agotoy = $(agoto).offset(); 
 					//$('body').scrollTo(agotoy.top-200, {duration:800}).delay( 800 );
+					$(agoto).scrollto();
 					console.log( agotoy );
 				}
 			});
-
-
-$.fn.scrollTo = function( target, options, callback ){
-  if(typeof options == 'function' && arguments.length == 2){ callback = options; options = target; }
-  var settings = $.extend({
-    scrollTarget  : target,
-    offsetTop     : 50,
-    duration      : 500,
-    easing        : 'swing'
-  }, options);
-  return this.each(function(){
-    var scrollPane = $(this);
-    var scrollTarget = (typeof settings.scrollTarget == "number") ? settings.scrollTarget : $(settings.scrollTarget);
-    var scrollY = (typeof scrollTarget == "number") ? scrollTarget : scrollTarget.offset().top + scrollPane.scrollTop() - parseInt(settings.offsetTop);
-    scrollPane.animate({scrollTop : scrollY }, parseInt(settings.duration), settings.easing, function(){
-      if (typeof callback == 'function') { callback.call(this); }
-    });
-  });
-}
 
                         
         </script>
