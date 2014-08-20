@@ -1091,9 +1091,12 @@ function Timeline(element, data, undefined) {
 
         if (SELF._options.order === 'desc') {
             $(timeline_data).each(function(index, data) {
-                if (parseInt(data.date.replace(/-/g, ''), 10) <=  end_date) {
-                    new_data.push(data);
-                }
+            	console.log( data );
+            	if(data.date) {
+	                if (parseInt(data.date.replace(/-/g, ''), 10) <=  end_date) {
+    	                new_data.push(data);
+        	        }
+        	    }
             });
         } else {
             $(timeline_data).each(function(index, data) {
