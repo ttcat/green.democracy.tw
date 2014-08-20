@@ -422,10 +422,6 @@ function Timeline(element, data, undefined) {
             next_image.fadeIn();
         }
 
-
-		addthis.toolbox("#timeline_fb_23");
-		addthis.button("#timeline_fb_23");
-
         var timeout_id = setTimeout(function() {
             SELF._updateSlider(timeline_element, direction);
         }, timeline_element.data('speed'));
