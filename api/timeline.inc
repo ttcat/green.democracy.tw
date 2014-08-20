@@ -153,9 +153,9 @@ $rows = aasort($all_feeds_new,"date");
 
 			
 			//分頁控制在此
-			if($jj >= $start_feed && $jj <= $end_feed) {
+//			if($jj >= $start_feed && $jj <= $end_feed) {
 				$json[0] = (array) $json_this_feed;
-			}		
+//			}		
 			
 			$jj ++;
 		} //end foreach	
