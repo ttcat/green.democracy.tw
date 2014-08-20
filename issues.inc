@@ -68,7 +68,7 @@ $issues = $issues['nodes'];
     	                	      	<p><?=$issue['content']?></p>
 
 									<p><span class="issues-tags meta"><span class=" icon-tags"></span> <?=$issue['tag']?><span></p>
-									<div id="fb<?=$issue['nid']?>" class="addthis_sharing_toolbox" data-url="http://green.democracy.tw/<?=$u?>/issues/nid/<?=$issue['nid']?>"></div>
+									
 
     	                	      </div>
     	                	    </li>
