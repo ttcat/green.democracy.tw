@@ -5,7 +5,7 @@ $q = preg_replace('/[^a-zA-Z0-9]\//', '', $q);
 
 list($u, $f, $key, $value) = explode('/', $q, 4);
 
-	if($key == 'nid') {	
+	if($key == 'nid') {	// 個別單元吃 nid
 	 	$value = explode('?' ,$value, 2);
 		if(is_numeric($value[0])) {	
 			$nid = filter_var($value[0], FILTER_SANITIZE_NUMBER_INT);
@@ -13,7 +13,15 @@ list($u, $f, $key, $value) = explode('/', $q, 4);
 		}
 	}
 	
-	if($f == 'api') {
+	if($f == 'nid') {	//timeline 首頁吃 nid
+	 	$key = explode('?' ,$key, 2);
+		if(is_numeric($key[0])) {	
+			$nid = filter_var($key[0], FILTER_SANITIZE_NUMBER_INT);
+			$query_this_page = $key[1]; //參數待處理 sql-injection
+		}
+	}	
+	
+	if($f == 'api') { // api read
 	 	$key = explode('?' ,$key, 2);
 	 	if($key[	0] == 'timeline') {
 	 		$timeline_page_query = $key[1]; //參數待處理 sql-injection
