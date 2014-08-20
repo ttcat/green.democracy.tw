@@ -155,15 +155,10 @@ $rows = aasort($all_feeds_new,"date");
 //	$json['thispage'] = $start_feed;
 	
 	$json_str = json_encode($json, true);
-	echo $json_str;
-	
-	$json_str = substr_replace($json_str, "[", 1);
-	
-	echo $json_str;
-	
-	$json_str = substr_replace($json_str, "]", -1);
-	
-	echo $json_str;
+	$json_str = substr($json_str, 0, 1);
+	$json_str = substr($json_str, 0, -1);
+			
+	echo '[' . $json_str . ']';
 
 
 
