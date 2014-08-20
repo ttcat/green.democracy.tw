@@ -4,8 +4,11 @@ require_once 'api/api.inc';
 //timeline
 $string = file_get_contents("http://green.democracy.tw/{$u}/api/timeline");
 $newsfeeds = json_decode($string,true);
-$newsfeeds = $newsfeeds['nodes'];
 
+print_r($newfeeds);
+
+$newfeeds_total = $newfeeds['total'];
+$newfeeds_thispage = $newfeeds['thispage'];
 
 
 ?><!DOCTYPE html>
@@ -128,7 +131,7 @@ $newsfeeds = $newsfeeds['nodes'];
             
                 var init_data = <? echo $string; ?>;
 
-				var total_feeds = <?=count($newsfeeds)?>; 
+				var total_feeds = <?=$newfeeds_total?>; 
 				var feeds_left = total_feeds - init_data.length;
 
 							if(feeds_left <= 0) {
