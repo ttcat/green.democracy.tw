@@ -19,6 +19,8 @@ list($u, $f, $key, $value) = explode('/', $q, 4);
 			$nid = filter_var($key[0], FILTER_SANITIZE_NUMBER_INT);
 			$query_this_page = $key[1]; //參數待處理 sql-injection
 		}
+		include_once('politician.inc');
+		exit();
 	}	
 	
 	if($f == 'api') { // api read
