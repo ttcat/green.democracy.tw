@@ -76,7 +76,7 @@ $(document).ready(function() {
 	   
 	   		var hash-fb = '#fb' + $(this).attr('hash-id');
 	   		$(hash-fb).css('display', 'inline-block');
-	   	 
+
 	    //window.location.hash = $(this).attr('hash-id'); 
 	    
 	    }
