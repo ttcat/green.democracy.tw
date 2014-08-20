@@ -189,7 +189,8 @@ $newsfeeds_thispage = $newsfeeds[0]['thispage'];
 								button.css('display', 'block');
 							}							
 		
-							addthis.toolbox(".addthis_sharing_toolbox");
+							addthis.toolbox("#timeline_fb_23");
+							alert("timeline_fb_23");
 		
                         }
                     });
