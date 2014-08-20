@@ -79,11 +79,12 @@ $rows = aasort($all_feeds_new,"date");
 				$json_this_feed['title'] = $cats[$feed['category']][1];
 				$json_this_feed['height'] = $cats[$feed['category']][2];
 				$linkpage = $cats[$feed['category']][3];	
+				
 			}else{
 				$json_this_feed['type'] = $cats[ $feed['type'] ][0];
 				$json_this_feed['title'] = $cats[$feed['type']][1];
 				$json_this_feed['height'] = $cats[$feed['type']][2];
-				$linkpage = $cats[$feed['category']][3];	
+				$linkpage = $cats[$feed['type']][3];	
 			}
 
 			
