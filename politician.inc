@@ -175,7 +175,6 @@ $newsfeeds_thispage = $newsfeeds[0]['thispage'];
                         type     : 'GET',
                         dataType : 'json',
                         success  : function(data) {
-	                        data = data;
                             // remove loading
 							button.css('display', 'none');                            
                             button.removeClass('notice').html('<em class="fa fa-refresh"></em> 顯示更多');
@@ -183,15 +182,18 @@ $newsfeeds_thispage = $newsfeeds[0]['thispage'];
                             timeline.appendData(data);
 							feeds_left = feeds_left - perpage;
 
+							addthis.toolbox("#timeline_fb_23");
+							addthis.button("#timeline_fb_23");
+
+							alert("timeline_fb_23");
+
+
 							if(feeds_left <= 0) {
 								button.css('display', 'none');
 							}else{
 								button.css('display', 'block');
 							}							
-		
-							addthis.toolbox("#timeline_fb_23");
-							alert("timeline_fb_23");
-		
+				
                         }
                     });
                 });
