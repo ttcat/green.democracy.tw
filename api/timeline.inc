@@ -47,9 +47,6 @@ $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json");
 $all_feeds = json_decode($string,true);
 $all_feeds = $all_feeds['nodes'];
 
-print_r($all_feeds);
-exit;
-
 //sorting
 $i = 0;
 foreach($all_feeds as $key => $v) {
@@ -57,6 +54,11 @@ foreach($all_feeds as $key => $v) {
 	$all_feeds_new[] = $v;
 	$i ++;
 }
+
+print_r($all_feeds);
+exit;
+
+
 
 $rows = aasort($all_feeds_new,"date");
 //print_r(json_encode($all_feeds_new, true));
