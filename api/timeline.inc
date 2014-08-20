@@ -149,7 +149,7 @@ $rows = aasort($all_feeds_new,"date");
 				$json[] = $json_this_feed;
 			}		
 			
-			$jj ++
+			$jj ++;
 		} //end foreach	
 
 	$json['total'] = count($rows);
