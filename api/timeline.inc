@@ -154,7 +154,7 @@ $rows = aasort($all_feeds_new,"date");
 	$json['total'] = count($rows);
 	$json['thispage'] = $start_feed;
 	
-	print_r(json_encode($json, true));
+	print_r( "[" . json_encode($json, true) ."]");
 
 
 
