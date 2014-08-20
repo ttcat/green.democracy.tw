@@ -104,7 +104,7 @@ $rows = aasort($all_feeds_new,"date");
 				$linkpage = $cats[$feed['type']][3];	
 			}
 
-			
+		if($json_this_feed['type']) { 
 			if($feed['media']) { 
 				$media = explode("|", $feed['media']);	
 				$json_this_feed['images'] = $media;
@@ -154,11 +154,11 @@ $rows = aasort($all_feeds_new,"date");
 
 				//分頁控制在此
 				if($jj >= $start_feed && $jj <= $end_feed) {
-					if($json_this_feed['type']) { 
-						$json[] = (array) $json_this_feed;
-					}
+					$json[] = (array) $json_this_feed;
 				}		
 			$jj ++;
+			
+			}
 		} //end foreach	
 
 //	$json['total'] = count($rows);
