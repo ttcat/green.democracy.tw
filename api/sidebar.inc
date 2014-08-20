@@ -4,9 +4,9 @@
 				    	<div class="clearfix aside-focus">
                 			<h3><strong>政見主要關注</strong></h3>
                 			<ul class="statistics">
-                				<li><em class="icon-globe"></em> <span>全球化貿易</span></li>
-                				<li><em class="icon-flag"></em> <span style="color:black;">性/別與同志</span></li>
-                				<li><em class="icon-legal"></em> <span style="color:black;">法律與人權</span></li>
+                				<li><em class="fa fa-globe"></em> <span>全球化貿易</span></li>
+                				<li><em class="fa fa-flag"></em> <span style="color:black;">性/別與同志</span></li>
+                				<li><em class="fa fa-legal"></em> <span style="color:black;">法律與人權</span></li>
                 			</ul>	
                 			<p><a class="more" herf="/<?=$u?>/issues">了解目前的政見</a></p>
                 		</div>
