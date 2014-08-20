@@ -155,9 +155,6 @@ $rows = aasort($all_feeds_new,"date");
 //	$json['thispage'] = $start_feed;
 	
 	$json_str = json_encode($json, true);
-	
-	print_r($json_str);
-
 	$json_str = substr($json_str, 0, -1);
 	print_r($json_str);			
 	echo '[' . $json_str . ']';
