@@ -52,15 +52,15 @@ $rows = aasort($all_feeds_new,"date");
 //處理 json;
 	
 			$cats = array(
-			    "newsfeed" => array("blog_post", "選舉動態",200),
-			    "slider" => array("slider", "選舉動態", 200),
-			    "video" => array("iframe", "選舉動態", 300),
-		    	"newsclip" => array("news", "相關新聞",200),
+			    "newsfeed" => array("blog_post", "選舉動態",200, ''),
+			    "slider" => array("slider", "選舉動態", 200, ''),
+			    "video" => array("iframe", "選舉動態", 300, ''),
+		    	"newsclip" => array("news", "相關新聞",200, ''),
 
-		    	"FAQ" => array("blog_post", "政見", 200),
-		    	"Person" => array("blog_post", "各界推薦", 200),
-		    	"Event" => array("blog_post", "活動行程", 200),
-		    	"gallery" => array("gallery", "相簿", 300),
+		    	"FAQ" => array("blog_post", "政見", 200, 'issues/'),
+		    	"Person" => array("blog_post", "各界推薦", 200, 'endorsements/'),
+		    	"Event" => array("blog_post", "活動行程", 200, 'event/'),
+		    	"gallery" => array("gallery", "相簿", 300, ''),
 			);
 
 		foreach ($rows as $k => $feed) { 
@@ -77,11 +77,13 @@ $rows = aasort($all_feeds_new,"date");
 				}
 				$json_this_feed['type'] = $cats[ $feed['category'] ][0];
 				$json_this_feed['title'] = $cats[$feed['category']][1];
-				$json_this_feed['height'] = $cats[$feed['category']][2];				
+				$json_this_feed['height'] = $cats[$feed['category']][2];
+				$linkpage = $cats[$feed['category']][3];	
 			}else{
 				$json_this_feed['type'] = $cats[ $feed['type'] ][0];
 				$json_this_feed['title'] = $cats[$feed['type']][1];
 				$json_this_feed['height'] = $cats[$feed['type']][2];
+				$linkpage = $cats[$feed['category']][3];	
 			}
 
 			
@@ -125,7 +127,7 @@ $rows = aasort($all_feeds_new,"date");
 					$event_time = '<h6>' . $feed['eventtime']  . ' <br> ' . $feed['location'] .'</h6>';
 				}
 
-            $json_this_feed['content'] = '<h3>' . $feed['title'] . '</h3><p>' . $event_time . $feed['content']  . '</p>';
+            $json_this_feed['content'] = '<h3>' . $feed['title'] . '</h3><p>' . $event_time . $feed['content']  . '</p><div id="fb' . $issue['nid'] .' class="addthis_sharing_toolbox" data-url="http://green.democracy.tw/<?=$u?>/' .$linkpage. '/nid/' . $issue['nid'] . '></div>';
             if($target) { $json_this_feed['target'] = 'target="blank"'; }else{ $json_this_feed['target'] = ''; } 
 
 
