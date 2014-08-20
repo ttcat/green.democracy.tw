@@ -100,6 +100,8 @@ $rows = aasort($all_feeds_new,"date");
 			$json_this_feed['date'] = date('Y-m-d' , strtotime($feed['date']));
 			$json_this_feed['dateFormat'] = 'YYYY-MM-DD';
 			$json_this_feed['speed'] = 5000;
+			$json_this_feed['nid'] = $feed['nid'];
+
 
 			if($feed['sticky'] == "Yes") { $json_this_feed['star'] = true; }	//置頂
 
@@ -127,7 +129,7 @@ $rows = aasort($all_feeds_new,"date");
 					$event_time = '<h6>' . $feed['eventtime']  . ' <br> ' . $feed['location'] .'</h6>';
 				}
 
-            $json_this_feed['content'] = '<h3>' . $feed['title'] . '</h3><p>' . $event_time . $feed['content']  . '<div id="fb' . $issue['nid'] .'" class="addthis_sharing_toolbox" data-url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $issue['nid'] . '"></div></p>';
+            $json_this_feed['content'] = '<h3>' . $feed['title'] . '</h3><p>' . $event_time . $feed['content']  . '<div id="fb' . $issue['nid'] .'" class="addthis_sharing_toolbox" data-url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '"></div></p>';
             if($target) { $json_this_feed['target'] = 'target="blank"'; }else{ $json_this_feed['target'] = ''; } 
 
 
