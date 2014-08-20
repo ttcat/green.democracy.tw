@@ -204,7 +204,7 @@ $issues = $issues['nodes'];
 					agoto = '#sa' + current_nid;
 					var agotoy = $(agoto).offset(); 
 					//$('body').scrollTo(agotoy.top-200, {duration:800}).delay( 800 );
-					$(agoto).scrollto();
+					$(agoto).scrollTo();
 					console.log( agotoy );
 				}
 			});
