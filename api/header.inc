@@ -17,7 +17,7 @@
     <div class="outter-wrapper feature">
     	<div class="wrapper">
     	
-    	<div class="feature-heading"><a href="/<?=$u?>/politician">
+    	<div class="feature-heading"><a href="/<?=$u?>">
 
     		<? if($user['slogan']) { ?><p class="heading"><?=$user['slogan']?></p><? } ?>
 	    		<p><?=$user['title']?>
@@ -53,7 +53,7 @@
 
     	    	<!--<a href="index.html" class="logo"><img src="/images/gp_badge.png?v2" alt="Logo" /> <span>綠黨政治代理人公約</span></a>-->
     	    	
-    	    	<a href="/<?=$u?>/politician" class="logo"><img src="/images/gp_badge.png?v2" alt="Logo" /> <span id="logo-word"></span></a>
+    	    	<a href="/<?=$u?>" class="logo"><img src="/images/gp_badge.png?v2" alt="Logo" /> <span id="logo-word"></span></a>
     	        <span class="stickname" id="thisname"><?=$user['title']?></span>
     	    	
     	        <nav id="nav-wrap">
