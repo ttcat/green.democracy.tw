@@ -151,12 +151,13 @@ $rows = aasort($all_feeds_new,"date");
             if($target) { $json_this_feed['target'] = 'target="blank"'; }else{ $json_this_feed['target'] = ''; } 
 
 
-			
-			//分頁控制在此
-			if($jj >= $start_feed && $jj <= $end_feed) {
-				$json[] = (array) $json_this_feed;
-			}		
-			
+
+				//分頁控制在此
+				if($jj >= $start_feed && $jj <= $end_feed) {
+					if($json_this_feed['type']) { 
+						$json[] = (array) $json_this_feed;
+					}
+				}		
 			$jj ++;
 		} //end foreach	
 
