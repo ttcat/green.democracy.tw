@@ -267,9 +267,6 @@ function sticky_relocate() {
        	$('#space').height(0);
                 
     }
-    
-    addthis.toolbox('.addthis_sharing_toolbox');
-    
 }
 
 
