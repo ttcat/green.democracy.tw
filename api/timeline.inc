@@ -149,13 +149,11 @@ $rows = aasort($all_feeds_new,"date");
 
             $json_this_feed['content'] = '<h3>' . $feed['title'] . '</h3><p>' . $event_time . $feed['content']  . '<div id="timeline_fb_' . $feed['nid'] .'" class="addthis_sharing_toolbox" data-url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '">
             
-    <a class="addthis_button_preferred_1"></a>
-    <a class="addthis_button_preferred_2"></a>
+    <a class="addthis_share_button_preferred_1"></a>
+    <a class="addthis_sharebutton_preferred_2"></a>
     <a class="addthis_button_preferred_3"></a>
-    <a class="addthis_button_preferred_4"></a>
     <a class="addthis_button_compact"></a>
-    <a class="addthis_counter addthis_bubble_style"></a>
-            
+
             </div></p>';
             if($target) { $json_this_feed['target'] = 'target="blank"'; }else{ $json_this_feed['target'] = ''; } 
 
