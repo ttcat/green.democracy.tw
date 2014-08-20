@@ -2,10 +2,10 @@
 require_once 'api.inc';
 
 //分頁
-$perpage = 3;
+$perpage = 10;
 $pageq = explode('?' , $timeline_page_query);
 
-$start_feed = ( (int) $pageq[0] ) * 3;
+$start_feed = ( (int) $pageq[0] ) * $perpage;
 $end_feed = $start_feed + 2;
 
 
