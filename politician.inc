@@ -128,7 +128,7 @@ $newsfeeds_thispage = $newsfeeds[0]['thispage'];
             $(document).ready(function() {
 
                 var perpage = 3;            
-                var init_data = <? echo $string; ?>;
+                var init_data = '<? echo $string; ?>';
 
 				var total_feeds = 10<?=$newsfeeds_total?>; 
 				var feeds_left = total_feeds - perpage;
