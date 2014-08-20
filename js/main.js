@@ -74,8 +74,8 @@ $(document).ready(function() {
 			    window.history.pushState({path:newurl},'',newurl);
 			}	    
 	   
-	   		var hash-fb = '#fb' + $(this).attr('hash-id');
-	   		$(hash-fb).css('display', 'inline-block');
+	   		var hashfb = '#fb' + $(this).attr('hash-id');
+	   		$(hashfb).css('display', 'inline-block');
 
 	    //window.location.hash = $(this).attr('hash-id'); 
 	    
