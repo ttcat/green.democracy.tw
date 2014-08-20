@@ -5,13 +5,8 @@ require_once 'api.inc';
 $perpage = 3;
 $pageq = explode('?' , $timeline_page_query);
 
-$start_feed = ( (int) $pageq[1] ) * 3;
+$start_feed = ( (int) $pageq[0] ) * 3;
 $end_feed = $start_feed + 2;
-
-print_r($pageq);
-print_r($start_feed);
-print_r($end_feed);
-
 
 //newsfeeds
 $string = file_get_contents("http://v.democracy.tw/{$u}/news.json");
