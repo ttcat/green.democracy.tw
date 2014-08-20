@@ -69,7 +69,7 @@
     			            </ul>
     			        </li>
     	                
-    	            	<li class="nav-parent last donate"><a href="/"><em class="icon-heart"></em> 捐款支持</a>
+    	            	<li class="nav-parent last donate"><a href="/"><em class="fa fa-heart"></em> 捐款支持</a>
     	            		<ul>
     	            		    <li><a href="#">線上捐款</a></li>
     	            			<li><a href="/<?=$u?>/finance">捐款徵信</a></li>
