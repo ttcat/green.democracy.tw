@@ -70,7 +70,7 @@ $rows = aasort($all_feeds_new,"date");
 			);
 
 
-		var $jj = 0;
+		$jj = 0;
 		
 		foreach ($rows as $k => $feed) { 
 
