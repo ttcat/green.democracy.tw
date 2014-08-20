@@ -503,7 +503,9 @@ function Timeline(element, data, undefined) {
         return moment(date_string).format(format);
     };
 
-    this._loadMore = function() {
+
+
+/*    this._loadMore = function() {
         if (SELF._loadmore.hasClass('loading')) {
             return;
         }
@@ -528,7 +530,7 @@ function Timeline(element, data, undefined) {
             SELF.appendData(new_data);
         }, 1000);
     };
-    
+*/    
     
     
 
@@ -625,9 +627,9 @@ function Timeline(element, data, undefined) {
         SELF._container.data('loaded', true).appendTo(element);
 
         // load more
-        //if (SELF._options.loadmore && SELF._options.max && data.length) {
+        if (SELF._options.loadmore && SELF._options.max && data.length) {
             SELF._loadmore = $('<div>').addClass('timeline_loadmore').text(thisl_loadmore_text).appendTo(element);
-        //}
+        }
 
         if (SELF._options.animation) {
             setTimeout(function() {
@@ -858,7 +860,7 @@ function Timeline(element, data, undefined) {
         } else if (element.hasClass('slider_next')) {
             SELF._updateSlider(element.parents('.timeline_element:first'), 'next');
         } else if (element.hasClass('timeline_loadmore')) {
-            SELF._loadMore();
+            //SELF._loadMore();
         }
 
         return true;
