@@ -55,16 +55,9 @@ foreach($all_feeds as $key => $v) {
 	$i ++;
 }
 
-print_r(json_encode($all_feeds_new));
-exit;
-
-
-
 $rows = aasort($all_feeds_new,"date");
 //print_r(json_encode($all_feeds_new, true));
 //print_r(json_encode($rows, true));
-
-
 
 //處理 json;
 	
@@ -158,7 +151,7 @@ $rows = aasort($all_feeds_new,"date");
 			
 			//分頁控制在此
 //			if($jj >= $start_feed && $jj <= $end_feed) {
-				$json[0] = (array) $json_this_feed;
+				$json[] = (array) $json_this_feed;
 //			}		
 			
 			$jj ++;
