@@ -189,6 +189,8 @@ $newsfeeds_thispage = $newsfeeds[0]['thispage'];
 								button.css('display', 'block');
 							}							
 		
+							addthis.toolbox(".addthis_sharing_toolbox");
+		
                         }
                     });
                 });
