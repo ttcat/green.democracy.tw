@@ -5,8 +5,7 @@ require_once 'api/api.inc';
 $string = file_get_contents("http://green.democracy.tw/{$u}/api/timeline");
 $newsfeeds = json_decode($string,true);
 
-$newsfeeds_total = $newsfeeds[0]['total'];
-$newsfeeds_thispage = $newsfeeds[0]['thispage'];
+print_r($newsfeeds);
 
 
 ?><!DOCTYPE html>
