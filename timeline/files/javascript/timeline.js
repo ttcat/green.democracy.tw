@@ -1089,9 +1089,12 @@ function Timeline(element, data, undefined) {
         var end_date = parseInt(SELF._data[SELF._data.length - 1].date.replace(/-/g, ''), 10);
         var new_data = [];
 
+            	console.log( timeline_data );
+            	console.log( timeline_data.data );
+
+
         if (SELF._options.order === 'desc') {
-            $(timeline_data.data).each(function(index, data) {
-            	console.log(data );
+            $(timeline_data).each(function(index, data) {
             	if(data.date) {
 	                if (parseInt(data.date.replace(/-/g, ''), 10) <=  end_date) {
     	                new_data.push(data);
