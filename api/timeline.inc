@@ -45,7 +45,7 @@ $all_feeds = array_merge($newsfeeds, $issues, $gallery, $endorsment);
 
 $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json");
 $all_feeds = json_decode($string,true);
-$all_feeds = $newsfeeds['nodes'];
+$all_feeds = $all_feeds['nodes'];
 
 
 //sorting
