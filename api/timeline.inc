@@ -154,8 +154,11 @@ $rows = aasort($all_feeds_new,"date");
 //	$json['total'] = count($rows);
 //	$json['thispage'] = $start_feed;
 	
-	print_r( "[" . json_encode($json, true) ."]");
-
+	$json_str = json_encode($json, true);
+	$json_str = substr_replace($json_str, "[", 1);
+	$json_str = substr_replace($json_str, "]", -1);
+	
+	echo $json_str;
 
 
 
