@@ -47,6 +47,8 @@ $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json");
 $all_feeds = json_decode($string,true);
 $all_feeds = $all_feeds['nodes'];
 
+print_r($all_feeds);
+exit;
 
 //sorting
 $i = 0;
