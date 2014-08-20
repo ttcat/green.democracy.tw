@@ -38,7 +38,7 @@ foreach($gallery as $key => $v) {
 
 
 //combian_all arrays
-$all_feeds = array_merge($newsfeeds, $events, $issues, $gallery, $endorsment);
+$all_feeds = array_merge($newsfeeds, $issues, $gallery, $endorsment);
 
 //sorting
 $i = 0;
