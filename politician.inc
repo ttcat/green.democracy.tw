@@ -126,11 +126,12 @@ $newsfeeds_thispage = $newsfeeds['thispage'];
 
         <script type="text/javascript">
             $(document).ready(function() {
-            
+
+                var perpage = 3;            
                 var init_data = <? echo $string; ?>;
 
 				var total_feeds = <?=$newfeeds_total?>; 
-				var feeds_left = total_feeds - init_data.length;
+				var feeds_left = total_feeds - perpage;
 
 							if(feeds_left <= 0) {
 				                $('#loadmore').css('display', 'none');
@@ -157,26 +158,28 @@ $newsfeeds_thispage = $newsfeeds['thispage'];
 
 
                 // load more click
-                var year = 2011;   
+                var page = 0;
+                
                 $('#loadmore').on('click', function(e) {
                     var button = $(this);
                     if (button.hasClass('notice')) {
                         return;
                     }
-                    year--;
+                    
+                    page++;
+                    
                     button.addClass('notice').text('讀取中...');
 
-                    $.ajax('<?=$u?>/api/timeline', {
-                        type     : 'POST',
+                    $.ajax('<?=$u?>/api/timeline?'+page, {
+                        type     : 'GET',
                         dataType : 'json',
-                        data     : {year: year},
                         success  : function(data) {
                             // remove loading
 							button.css('display', 'none');                            
                             button.removeClass('notice').html('<em class="icon-refresh"></em> 顯示更多');
                             // append new data
                             timeline.appendData(data);
-							feeds_left = feeds_left - data.length;
+							feeds_left = feeds_left - perpage;
 
 							if(feeds_left <= 0) {
 								button.css('display', 'none');
