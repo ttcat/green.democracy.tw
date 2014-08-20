@@ -62,7 +62,7 @@ $issues = $issues['nodes'];
 						?>
     	                		<!-- Toggle -->
     	                	    <li class="toggle-li">
-    	                	      <a href="#" class="toggle-btn" hash-id="<?=$issue['nid']?>" id="sa<?=$issue['nid']?>"><em class="fa fa-bomb"></em> <span><?=$issue['title']?></span></a>
+    	                	      <a href="#" class="toggle-btn" hash-id="<?=$issue['nid']?>" id="sa<?=$issue['nid']?>"><em class="fa fa-bookmark"></em> <span><?=$issue['title']?></span></a>
     	                	      <div class="toggle-content">
 
     	                	      	<p><?=$issue['content']?></p>
