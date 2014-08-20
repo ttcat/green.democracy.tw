@@ -206,7 +206,7 @@ $issues = $issues['nodes'];
 					//$('body').scrollTo(agotoy.top-200, {duration:800}).delay( 800 );
 					//$(agoto).ScrollTo().delay( 2000 );
 					
-					$("html, body").animate({ scrollTop: $(document).height() }, 8000);
+					$("html, body").animate({ scrollTop: agotoy.top-200 }, 4000);
 					
 					console.log( agotoy );
 				}
