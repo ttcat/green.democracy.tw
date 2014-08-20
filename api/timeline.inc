@@ -34,7 +34,6 @@ foreach($gallery as $key => $v) {
 //combian_all arrays
 $all_feeds = array_merge($newsfeeds, $events, $issues, $gallery, $endorsment);
 
-
 //sorting
 $i = 0;
 foreach($all_feeds as $key => $v) {
@@ -141,6 +140,8 @@ $rows = aasort($all_feeds_new,"date");
 
 		} //end foreach	
 
+	$json['total'] = count($json);
+	$json['thispage'] = 0;
 	
 	print_r(json_encode($json, true));
 
