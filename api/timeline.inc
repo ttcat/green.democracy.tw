@@ -161,9 +161,8 @@ $rows = aasort($all_feeds_new,"date");
 			}
 		} //end foreach	
 
-	$json['total'] = count($json);
-	$json['thispage'] = $start_feed;
-	
+//	$json['total'] = count($json);
+//	$json['thispage'] = $start_feed;
 	$json_str = json_encode($json);
 //	$json_str = substr($json_str, 0, -1);
 	print_r($json_str);			
