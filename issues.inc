@@ -203,11 +203,7 @@ $issues = $issues['nodes'];
 				if(current_nid) { 
 					agoto = '#sa' + current_nid;
 					var agotoy = $(agoto).offset(); 
-					//$('body').scrollTo(agotoy.top-200, {duration:800}).delay( 800 );
-					//$(agoto).ScrollTo().delay( 2000 );
-					
-					$("html, body").animate({ scrollTop: agotoy.top-200 }, 4000);
-					
+					$("html, body").animate({ scrollTop: agotoy.top-200 });
 					console.log( agotoy );
 				}
 			});
