@@ -174,7 +174,7 @@ $newsfeeds_thispage = $newsfeeds['thispage'];
                         type     : 'GET',
                         dataType : 'json',
                         success  : function(data) {
-                        	data = '[' + data + ']';
+                        	//data = '[' + data + ']';
                         	
                             // remove loading
 							button.css('display', 'none');                            
