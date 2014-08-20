@@ -1090,8 +1090,8 @@ function Timeline(element, data, undefined) {
         var new_data = [];
 
         if (SELF._options.order === 'desc') {
-            $(timeline_data).each(function(index, data) {
-            	console.log( timeline_data );
+            $(timeline_data.data).each(function(index, data) {
+            	console.log(data );
             	if(data.date) {
 	                if (parseInt(data.date.replace(/-/g, ''), 10) <=  end_date) {
     	                new_data.push(data);
