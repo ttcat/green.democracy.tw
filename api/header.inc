@@ -3,10 +3,9 @@
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.0";
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=687618544645054&version=v2.0";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-    
 
     <!--[if lt IE 7]>
         <p class="chromeframe">你的瀏覽器太舊了，請升級或下載 <a href="http://www.google.com/chromeframe/?redirect=true"> Google Chrome Frame </a> 來瀏覽此網站</p>
