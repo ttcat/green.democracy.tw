@@ -149,7 +149,7 @@ $rows = aasort($all_feeds_new,"date");
 
             $json_this_feed['content'] = '<h3>' . $feed['title'] . '</h3><p>' . $event_time . $feed['content']  . '<div id="timeline_fb_' . $feed['nid'] .'" class="addthis_sharing_toolbox addthis_default_style" data-url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '">
             
-    <a class="addthis_share_button_preferred_1" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" addthis:title="THE TITLE"></a>
+    <a class="at-share-btn at-svc-facebook" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" addthis:title="THE TITLE"></a>
     <a class="addthis_sharebutton_preferred_2" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" addthis:title="THE TITLE"></a>
     <a class="addthis_button_preferred_3" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" addthis:title="THE TITLE"></a>
     <a class="addthis_button_compact" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" addthis:title="THE TITLE"></a>
