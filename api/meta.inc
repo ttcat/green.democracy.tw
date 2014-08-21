@@ -15,7 +15,6 @@ if($f != 'nid') {
 	$page_key = $f;
 }	
 
-$section_name = $display_header[$section]['title'];
 
 $current_url = WEB.$_SERVER['REQUEST_URI'];	
 	

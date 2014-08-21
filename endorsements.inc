@@ -10,7 +10,10 @@ if($nid) {
 				$nid_desc = $endorsment['node']['title'] . ' / ' . $endorsment['node']['professional-title'] . '：'. SL($endorsment['node']['professional-title'], 150);
 		}
 	}
-}	
+}
+
+$section = 'endorsment';
+$section_name = '各界推薦';
 
 
 ?><!DOCTYPE html>
