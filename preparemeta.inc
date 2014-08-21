@@ -35,6 +35,6 @@ echo curPageURL();
 
 echo "<br>";
 
-echo curPageName();
+echo curPageName(false);
 
 ?>
