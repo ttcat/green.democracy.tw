@@ -35,6 +35,6 @@ echo curPageURL();
 
 echo "<br>";
 
-echo curPageName(false);
+echo $_SERVER['REQUEST_URI'];
 
 ?>
