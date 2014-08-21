@@ -150,7 +150,7 @@ $rows = aasort($all_feeds_new,"date");
             $json_this_feed['content'] = '<h3>' . $feed['title'] . '</h3><p>' . $event_time . $feed['content']  . '<div id="timeline_fb_' . $feed['nid'] .'" class="addthis_sharing_toolbox addthis_default_style addthis_20x20_style" data-url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '">';
 
             if($pageq[0]) { 
-	            $json_this_feed['content'] .=  '<a class="addthis_button_facebook" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" ></a><a class="addthis_button_twitter" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" ></a><a class="addthis_button_google_plusone_share" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" ></a><a class="addthis_button_compact" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" ></a>';
+	            $json_this_feed['content'] .=  '<a class="addthis_button_facebook" style="padding: 0px;" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" ></a><a style="padding: 0px;" class="addthis_button_twitter" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" ></a><a style="padding: 0px;" class="addthis_button_google_plusone_share" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" ></a><a class="addthis_button_compact" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" ></a>';
 	        }
 
             $json_this_feed['content'] .= '</div></p>';
