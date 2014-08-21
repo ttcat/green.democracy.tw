@@ -138,12 +138,14 @@ $rows = aasort($all_feeds_new,"date");
 			}			
 			
 
+            if($target) { $json_this_feed['target'] = 'target="blank"'; }else{ $json_this_feed['target'] = ''; } 
+
 			$feed['content'] = SL(str_replace("\n","",$feed['content']),250);
 
 			$event_time = '';
 			//event 加上按鈕
 			if($feed['type'] == 'Event') { 
-					$feed['content'] = '<p>' . $feed['content'] . '</p><p></p><a href="'. $feed['link'] .'" class="btn small-btn"><em class="fa fa-thumbs-up"></em>我要參加！</a><br>'; 
+					$feed['content'] = '<p>' . $feed['content'] . '</p><p></p><a href="'. $feed['link'] .'" ' . $json_this_feed['target'] . ' class="btn small-btn"><em class="fa fa-thumbs-up"></em>我要參加！</a><br>'; 
 					$event_time = '<h6>' . $feed['eventtime']  . ' <br> ' . $feed['location'] .'</h6>';
 				}
 
@@ -158,7 +160,6 @@ $rows = aasort($all_feeds_new,"date");
 	        }
 
             $json_this_feed['content'] .= '</div></p>';
-            if($target) { $json_this_feed['target'] = 'target="blank"'; }else{ $json_this_feed['target'] = ''; } 
 
 
 
