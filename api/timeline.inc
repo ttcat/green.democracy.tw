@@ -148,7 +148,7 @@ $rows = aasort($all_feeds_new,"date");
 				}
 
 			if($feed['type'] == 'Person') {
-				$feed['title'] = $feed['title'] . '<br><strong>' . $feed['professional_title'] . '<strong>';
+				$feed['title'] = $feed['title'] . ' / ' . $feed['professional_title'] ;
 			}
 
             $json_this_feed['content'] = '<h3>' . $feed['title'] . '</h3><p>' . $event_time . $feed['content']  . '<div id="timeline_fb_' . $feed['nid'] .'" class="addthis_sharing_toolbox addthis_default_style addthis_20x20_style" data-url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '">';
