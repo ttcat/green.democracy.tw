@@ -1,7 +1,6 @@
 <?php
 require_once 'api.inc';
 
-$pageq = 0;
 //分頁
 $perpage = 3;
 $pageq = explode('?' , $timeline_page_query);
@@ -149,13 +148,8 @@ $rows = aasort($all_feeds_new,"date");
 				}
 
             $json_this_feed['content'] = '<h3>' . $feed['title'] . '</h3><p>' . $event_time . $feed['content']  . '<div id="timeline_fb_' . $feed['nid'] .'" class="addthis_sharing_toolbox addthis_default_style addthis_20x20_style" data-url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '">';
-            
-            if($pageq) { 
-	            //$json_this_feed['content'] .=  '<a class="addthis_button_facebook_like" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" ></a><a class="addthis_button_twitter" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" ></a><a class="addthis_button_google_plusone" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" ></a><a class="addthis_button_compact" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" ></a>';
-	        }
 
             $json_this_feed['content'] .= '</div></p>';
-            
             if($target) { $json_this_feed['target'] = 'target="blank"'; }else{ $json_this_feed['target'] = ''; } 
 
 
