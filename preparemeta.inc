@@ -37,6 +37,10 @@ echo "<br>";
 
 echo $_SERVER['REQUEST_URI'];
 
+global $f;
+global $key;
+global $value;
+
 print_r($u);
 echo "<br>";
 print_r($f);
