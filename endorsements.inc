@@ -8,7 +8,7 @@ require_once 'api/api.inc';
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
 
-		<? require_once 'api/meta.inc'; ?>
+		<? require_once 'api/meta'; ?>
 
         <meta charset="utf-8">
         <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
