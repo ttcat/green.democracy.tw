@@ -147,7 +147,7 @@ $rows = aasort($all_feeds_new,"date");
 					$event_time = '<h6>' . $feed['eventtime']  . ' <br> ' . $feed['location'] .'</h6>';
 				}
 
-            $json_this_feed['content'] = '<h3>' . $feed['title'] . '</h3><p>' . $event_time . $feed['content']  . '<div id="timeline_fb_' . $feed['nid'] .'" class="addthis_sharing_toolbox addthis_default_style addthis_32x32_style" data-url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '">
+            $json_this_feed['content'] = '<h3>' . $feed['title'] . '</h3><p>' . $event_time . $feed['content']  . '<div id="timeline_fb_' . $feed['nid'] .'" class="addthis_sharing_toolbox addthis_default_style addthis_20x20_style" data-url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '">
             
     <a class="addthis_button_preferred_1" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" addthis:title="THE TITLE"></a>
     <a class="addthis_button_preferred_2" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" addthis:title="THE TITLE"></a>
