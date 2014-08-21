@@ -1,6 +1,18 @@
 <?php
 require_once 'api/api.inc';
 
+global $nid;
+
+if($nid) { 
+	foreach ($endorsment as $key => $en) {		
+		if($endorsment['node']['nid']) == $nid) {
+				$nid_name = $endorsment['node']['title'];
+				$nid_desc = $endorsment['node']['title'] . ' / ' . $endorsment['node']['professional-title'] . '：'. SL($endorsment['node']['professional-title'], 150);
+		}
+	}
+}	
+
+
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->

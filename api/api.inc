@@ -23,6 +23,11 @@ if(!preg_match("[/^\x80-\xff]","$str")) {
 
 }
 
+define('WEB', 'http://green.democracy.tw');
+
+global $f;
+global $key;
+global $value;
 
 //個人資料
 $string = file_get_contents("http://v.democracy.tw/{$u}/site.json");
