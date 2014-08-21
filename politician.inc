@@ -183,6 +183,13 @@ $newsfeeds_thispage = $newsfeeds[0]['thispage'];
 							feeds_left = feeds_left - perpage;
 
 
+    '<a class="addthis_button_preferred_1" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" ></a>'
+    '<a class="addthis_button_preferred_2" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" ></a>'
+    '<a class="addthis_button_preferred_3" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" ></a>'
+    '<a class="addthis_button_compact" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" ></a>'
+
+
+
 							window.addthis.toolbox(".addthis_sharing_toolbox");
 
 							if(feeds_left <= 0) {
