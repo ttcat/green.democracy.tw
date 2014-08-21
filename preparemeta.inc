@@ -37,4 +37,7 @@ echo "<br>";
 
 echo $_SERVER['REQUEST_URI'];
 
+echo $u, $f, $key, $value;
+
+
 ?>
