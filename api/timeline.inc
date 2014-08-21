@@ -132,7 +132,7 @@ $rows = aasort($all_feeds_new,"date");
 				$feed['title'] = '<a href="'.$feed['link'].'" '.$target.'>' . $feed['title'] . '</a>';
 				$json_this_feed['readmore'] = $feed['link'];
 			}
-
+						
 			if($feed['category'] == 'video') { 
 				$json_this_feed['url'] = $feed['videolink'];
 			}			
@@ -146,6 +146,10 @@ $rows = aasort($all_feeds_new,"date");
 					$feed['content'] = '<p>' . $feed['content'] . '</p><p></p><a href="'. $feed['link'] .'" class="btn small-btn"><em class="fa fa-thumbs-up"></em>我要參加！</a><br>'; 
 					$event_time = '<h6>' . $feed['eventtime']  . ' <br> ' . $feed['location'] .'</h6>';
 				}
+
+			if($feed['type'] == 'Person') {
+				$feed['title'] = $feed['title'] . '<br><strong>' . $feed['professional-title'] . '<strong>';
+			}
 
             $json_this_feed['content'] = '<h3>' . $feed['title'] . '</h3><p>' . $event_time . $feed['content']  . '<div id="timeline_fb_' . $feed['nid'] .'" class="addthis_sharing_toolbox addthis_default_style addthis_20x20_style" data-url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '">';
 
