@@ -5,7 +5,7 @@ global $nid;
 
 if($nid) { 
 	foreach ($endorsment as $key => $en) {		
-		if($endorsment['node']['nid']) == $nid) {
+		if($endorsment['node']['nid'] == $nid) {
 				$nid_name = $endorsment['node']['title'];
 				$nid_desc = $endorsment['node']['title'] . ' / ' . $endorsment['node']['professional-title'] . '：'. SL($endorsment['node']['professional-title'], 150);
 		}
