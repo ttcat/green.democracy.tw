@@ -3,6 +3,9 @@ require_once 'api/api.inc';
 
 global $nid;
 
+	$fb_title = '各界推薦 - '.$user['title'].' | 2014 挺好的！綠黨政治代理人';
+	$share_img = "";
+
 if($nid) { 
 	foreach ($endorsment as $key => $en) {		
 		if($en['node']['nid'] == $nid) {
@@ -12,9 +15,6 @@ if($nid) {
 				if($en['node']['photo']) { $share_img = $en['node']['photo']; }else{ $share_img = ""; }
 		}
 	}
-}else{
-	$fb_title = '各界推薦 - '.$user['title'].' | 2014 挺好的！綠黨政治代理人';
-	$share_img = "";
 }
 
 $section = 'endorsment';
