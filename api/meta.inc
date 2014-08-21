@@ -55,7 +55,7 @@ if($section == 'newsCT' or $section == 'board_analysis'){
 	$fb_description = $user_desc;
 	
 
-}else if($section == 'endorsements') {
+}else if($section == 's') {
 
 	$html_title = $fb_title;
 	$fb_description = $nid_desc;
