@@ -98,19 +98,23 @@ if(!$share_link) {
 
 
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><?=$html_title?></title>
-<meta name="keywords" content="綠黨,<?=$user['title']?>,<?=$keywords?>" />
-<meta property="og:title" content="<?=$fb_title?>" />
-<meta property="og:type" content="article"/>
-<meta property="og:url" content="<?=$share_link?>" />
-<meta property="og:image" content="<?=$share_img?>" />
-<meta property="og:site_name" content="2014 挺好的！綠黨政治代理人" /> 
-<meta property="og:description" content="<?=$fb_description?>" />  
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
 
-<link rel="shortcut icon" href="images/favicon.ico"/>
-<script>
-function fb() {window.open('<?="http://www.facebook.com/sharer.php?u=".urlencode($share_link)?>', 'Facebook','toolbar=0,status=0,width=626,height=436');}
-function pl() {window.open('<?=$plurk_link?>');}
-function fb_index() {window.open('<?="http://www.facebook.com/sharer.php?u=".urlencode(WEB)?>', 'Facebook','toolbar=0,status=0,width=626,height=436');}
-</script>
+		<title><?=$html_title?></title>
+		<meta name="keywords" content="綠黨,<?=$user['title']?>,<?=$keywords?>" />
+		<meta property="og:title" content="<?=$fb_title?>" />
+		<meta property="og:type" content="article"/>
+		<meta property="og:url" content="<?=$share_link?>" />
+		<meta property="og:image" content="<?=$share_img?>" />
+		<meta property="og:site_name" content="2014 挺好的！綠黨政治代理人" /> 
+		<meta property="og:description" content="<?=$fb_description?>" />  
+
+		<link rel="shortcut icon" href="images/favicon.ico"/>
+		<script>
+			function fb() {window.open('<?="http://www.facebook.com/sharer.php?u=".urlencode($share_link)?>', 'Facebook','toolbar=0,status=0,width=626,height=436');}
+			function pl() {window.open('<?=$plurk_link?>');}
+			function fb_index() {window.open('<?="http://www.facebook.com/sharer.php?u=".urlencode(WEB)?>', 'Facebook','toolbar=0,status=0,width=626,height=436');}
+		</script>
