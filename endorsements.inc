@@ -4,6 +4,7 @@ require_once 'api/api.inc';
 global $nid;
 
 if($nid) { 
+	print_r($nid);
 	foreach ($endorsment as $key => $en) {		
 		if($endorsment['node']['nid'] == $nid) {
 				$nid_name = $endorsment['node']['title'];
