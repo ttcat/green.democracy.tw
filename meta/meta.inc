@@ -1,13 +1,36 @@
 <?
 
-$section;
-$current_url;
+$display_header = Array(
 
-$user_desc;
+//		''=> array('title' => '','desc' => '2013 年 3 月 9 日的全國廢核大遊行，北中南東共有 22 萬人上街展現廢核的民間力量，要求直接停建核四，北部、中部、南 部、東部等數百個民間團體共同組成了「全國廢核行動平台」，進行大規模的民間力量串聯，希望能匯聚公民的力量一起行動。 替我們共同的未來一起努力！', 'catShare' => 'aboutus.php', 'menu' => '0'),
+//		'joinspot'=> array('title' => '推廣：成為反核柑仔店','desc' => '不論你是擁有一間店面，或是擁有公開的空間，都可以在本網站登錄據點。經過審核後，您就可以成為反核柑仔店，並可以隨時修改據點資訊、更新活動、成為反核旗鋪貨點等。不只是透過網路，也請從你實體生活圈開始發揮影響力吧！', 'catShare' => 'joinspot.php', 'menu' => '0'),
+//		'newsCT'=> array('title' => '', 'desc' => '', 'catShare' => 'news.php', 'menu' => '0'),
+	);
 
 
+define('WEB', 'http://green.democracy.tw');
+
+global $f;
+global $key;
+global $value;
+
+if($f != 'nid') { 
+	
+	$section = $f;
+	$page_key = $key;
+
+
+}else{
+
+	$section = 'politician';
+	$page_key = $f;
+
+}	
+
+$current_url = WEB.$_SERVER['REQUEST_URI'];	
+	
 function headersend() {
-	$mypage = curPageName();
+	$mypage = $section;
 	$pageNotSend =  array('joinspot_done.php','board_analysis.php','top10_film.php','top10_news.php','top10_actor.php');
 	for($i=0; $i < count($pageNotSend); $i++) {
 		if($mypage == $pageNotSend[$i]) {
@@ -31,7 +54,7 @@ if($section == 'newsCT' or $section == 'board_analysis'){
 	// $share_img = get_UPIMG_no($article_staus['post_pic'],'','');
 	$t = date("Ymdh");
 	$share_img = ($news_pic) ? "$Host/upload/$news_pic".'?'.$t : "$HttpHost/images/newsListPic.jpg".'?'.$t;
-	$share_link = WEB.curPageName().'?news_no='.$news_no;
+	$share_link = $current_url.'?news_no='.$news_no;
 	$fb_description = $news_desc;
 
 
@@ -50,12 +73,12 @@ if($section == 'newsCT' or $section == 'board_analysis'){
 	$html_title = $fb_title;
 	$share_img = "";
 	$fb_description = $nid_desc;
-	$share_link = WEB.curPageName();
+	$share_link = $current_url;
  
 }
 
 if(!$share_link) {
-	$share_link = WEB.curPageName();
+	$share_link = $current_url;
 	$cnt = 0;
 }
 
