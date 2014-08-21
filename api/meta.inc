@@ -99,9 +99,9 @@ if(!$share_link) {
 
 
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
-        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <meta content="black" name="apple-mobile-web-app-status-bar-style">
+			<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+	        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    	    <meta content="black" name="apple-mobile-web-app-status-bar-style">
 
 		<title><?=$html_title?></title>
 		<meta name="keywords" content="綠黨,<?=$user['title']?>,<?=$keywords?>" />
@@ -118,3 +118,4 @@ if(!$share_link) {
 			function pl() {window.open('<?=$plurk_link?>');}
 			function fb_index() {window.open('<?="http://www.facebook.com/sharer.php?u=".urlencode(WEB)?>', 'Facebook','toolbar=0,status=0,width=626,height=436');}
 		</script>
+		
