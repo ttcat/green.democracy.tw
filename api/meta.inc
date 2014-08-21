@@ -55,6 +55,12 @@ if($section == 'newsCT' or $section == 'board_analysis'){
 	$fb_description = $user_desc;
 	
 
+}else if($section == 'endorsements') {
+
+	$html_title = $fb_title;
+	$fb_description = $nid_desc;
+	$share_link = $current_url;
+ 
 }else{
 
 	$fb_title = $user['title'].$section_name.'：'.$nid_name.' | 2014 挺好的！綠黨政治代理人';

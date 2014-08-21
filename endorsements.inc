@@ -7,13 +7,19 @@ if($nid) {
 	foreach ($endorsment as $key => $en) {		
 		if($en['node']['nid'] == $nid) {
 				$nid_name = $en['node']['title'];
-				$nid_desc = $en['node']['title'] . ' / ' . $en['node']['professional-title'] . '：'. SL($en['node']['professional-title'], 150);
+				$nid_desc = $en['node']['title'] . ' / ' . $en['node']['professional-title'] . '：'. SL($en['node']['content'], 150);
+				$fb_title =$nid_name .'推薦綠黨' .  $user['title']  . ' | 2014 挺好的！綠黨政治代理人';
+				if($en['node']['photo']) { $share_img = $en['node']['photo']; }else{ $share_img = ""; }
 		}
 	}
+}else{
+	$fb_title = '各界推薦 - '.$user['title'].' | 2014 挺好的！綠黨政治代理人';
+	$share_img = "";
 }
 
 $section = 'endorsment';
 $section_name = '各界推薦';
+
 
 
 ?><!DOCTYPE html>
