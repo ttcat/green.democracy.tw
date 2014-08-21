@@ -1,6 +1,7 @@
 <?php
 require_once 'api.inc';
 
+$pageq = 0;
 //分頁
 $perpage = 3;
 $pageq = explode('?' , $timeline_page_query);
