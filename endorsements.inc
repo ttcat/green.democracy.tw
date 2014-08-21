@@ -4,11 +4,10 @@ require_once 'api/api.inc';
 global $nid;
 
 if($nid) { 
-	print_r($nid);
 	foreach ($endorsment as $key => $en) {		
-		if($endorsment['node']['nid'] == $nid) {
-				$nid_name = $endorsment['node']['title'];
-				$nid_desc = $endorsment['node']['title'] . ' / ' . $endorsment['node']['professional-title'] . '：'. SL($endorsment['node']['professional-title'], 150);
+		if($en['node']['nid'] == $nid) {
+				$nid_name = $en['node']['title'];
+				$nid_desc = $en['node']['title'] . ' / ' . $en['node']['professional-title'] . '：'. SL($en['node']['professional-title'], 150);
 		}
 	}
 }
