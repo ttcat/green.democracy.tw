@@ -63,11 +63,11 @@ if($section == 'newsCT' or $section == 'board_analysis'){
  
 }else{
 
-	$fb_title = $user['title'].$section_name.'：'.$nid_name.' | 2014 挺好的！綠黨政治代理人';
-	$html_title = $fb_title;
-	$share_img = "";
-	$fb_description = $nid_desc;
-	$share_link = $current_url;
+//	$fb_title = $user['title'].$section_name.'：'.$nid_name.' | 2014 挺好的！綠黨政治代理人';
+//	$html_title = $fb_title;
+//	$share_img = "";
+//	$fb_description = $nid_desc;
+//	$share_link = $current_url;
  
 }
 
