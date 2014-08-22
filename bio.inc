@@ -43,7 +43,7 @@ require_once 'api/api.inc';
 				
 
 				<!-- add here-->
-				<h2>簡介 new3</h2>
+				<h2><?=$user['title']?>簡介</h2>
 						<hr>
 						
 						姓名
