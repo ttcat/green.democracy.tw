@@ -121,6 +121,7 @@ body{ padding: 0em; }
 	}
 	#nav ul {
 		width: auto;
+		min-width: 100px;
 		position: static;
 		display: block;
 		border: none;
