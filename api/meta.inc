@@ -13,7 +13,7 @@ if($f != 'nid') {
 }else{
 	$section = 'politician';
 	$page_key = $f;
-}	
+}
 
 
 $current_url = WEB.$_SERVER['REQUEST_URI'];	
@@ -52,7 +52,7 @@ if($section == 'newsCT' or $section == 'board_analysis'){
 	$fb_title = $user['title'] .' | 2014 挺好的！綠黨政治代理人';
 	$html_title = $fb_title;
 	$share_img = $user['logo'];
-	$fb_description = $user_desc;
+	$fb_description = $user['bio'];
 	
 
 }else if($section == 's') {

@@ -48,7 +48,7 @@ if(file_exists('http://v.democracy.tw/{$u}/site.json')) {
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8">
-<title>Error 404 Not Found</title>
+<title>Error 404 Not Found api</title>
 <style>
 <!--
   body {font-family: arial,sans-serif}
