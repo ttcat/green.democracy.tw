@@ -30,9 +30,10 @@ global $key;
 global $value;
 
 //個人資料
-if(file_exists('http://v.democracy.tw/{$u}/site.json')) {
-
 	$string = file_get_contents("http://v.democracy.tw/{$u}/site.json");
+
+if($stting) {
+	
 	$user = json_decode($string,true);
 	$user = $user['nodes'][0]['node'];
 
