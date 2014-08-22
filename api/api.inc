@@ -31,9 +31,6 @@ global $value;
 
 //個人資料
 	$string = file_get_contents("http://v.democracy.tw/{$u}/site.json");
-
-if($stting) {
-	
 	$user = json_decode($string,true);
 	$user = $user['nodes'][0]['node'];
 
@@ -43,29 +40,5 @@ if($stting) {
 	$recommendation = $recommendation['nodes'];
 	$endorsment = $recommendation;
 	shuffle($recommendation);
-	
-}else{
-?>
-<html>
-<head>
-<meta http-equiv="content-type" content="text/html;charset=utf-8">
-<title>Error 404 Not Found api</title>
-<style>
-<!--
-  body {font-family: arial,sans-serif}
-  img { border:none; }
-//-->
-</style>
-</head>
-<body>
-<div align="center">
-<h1>404 Not Found</h1>
-<hr>
-Nginx
-</div>
-</body>
-</html>
-<?
- exit();
-}
+
 ?>
