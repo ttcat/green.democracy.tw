@@ -56,7 +56,7 @@
     	        <span class="stickname" id="thisname"><?=$user['title']?></span>
     	    	
     	        <nav id="nav-wrap">
-    	        	<ul class="nav" id="nav">
+    	        	<ul class="nav" id="nav" style="overflow: hidden;">
     	        	
     	            	<li class="nav-parent"><a href="/<?=$u?>/bio" id="first-nav">認識<?=$user['title']?></a>
 							<ul>

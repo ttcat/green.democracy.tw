@@ -566,6 +566,7 @@ body{ padding: 0em; }
 	
 .stick {
 	height:50px;
+	margin-left: 0;
 }
 
 .stick .logo span {
