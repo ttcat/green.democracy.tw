@@ -56,7 +56,7 @@
     	        <span class="stickname" id="thisname"><?=$user['title']?></span>
     	    	
     	        <nav id="nav-wrap">
-    	        	<ul class="nav" id="nav" style="overflow: hidden;">
+    	        	<ul class="nav" id="nav">
     	        	
     	            	<li class="nav-parent"><a href="/<?=$u?>/bio" id="first-nav">認識<?=$user['title']?></a>
 							<ul>
@@ -69,7 +69,7 @@
     			        </li>
     	                
     	            	<li class="nav-parent last donate"><a href="/"><em class="fa fa-heart"></em> 捐款支持</a>
-    	            		<ul>
+    	            		<ul style="overflow: hidden;">
     	            		    <li><a href="#">線上捐款</a></li>
     	            			<li><a href="/<?=$u?>/finance">捐款徵信</a></li>
     	            			<li><a href="#">承諾投票</a></li>
