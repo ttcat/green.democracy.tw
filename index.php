@@ -27,6 +27,7 @@ list($u, $f, $key, $value) = explode('/', $q, 4);
 			$nid = filter_var($key_array[0], FILTER_SANITIZE_NUMBER_INT);
 			$query_this_page = $key_array[1]; //參數待處理 sql-injection
 			$current_url = $u.'/nid/'.$nid;
+			$section = 'index';
 			$page_key = $nid;			
 		}
 		include_once('politician.inc');
