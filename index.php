@@ -46,17 +46,17 @@ list($u, $f, $key, $value) = explode('/', $q, 4);
 $f_array = explode('?' ,$f, 2);
 //預設 politician.inc 為首頁
 if($f_array[0] == null) {
-  $current_url = $u;
+  if(!$current_url) { $current_url = $u; }
   $section = 'index';
   include_once('politician.inc');
   exit();
 }
 
 if(file_exists($f_array[0].'.inc')){
-  $current_url = $u.'/'.$f_array[0];
-  $section = $f_array[0];
-  include_once($f_array[0].'.inc');
-  exit();
+	if(!$current_url) { $current_url = $u.'/'.$f_array[0]; }
+	if(!$section) $section = $f_array[0];
+	include_once($f_array[0].'.inc');
+	exit();
 }
 
   include_once('404.inc');
