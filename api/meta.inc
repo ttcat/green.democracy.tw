@@ -38,6 +38,7 @@ function showFBlike_l($p){
 	return $fb;
 }
 
+
 if($section == 'index') {
 
 	$fb_title = $user['title'] .' | 2014 挺好的！綠黨政治代理人';
@@ -50,7 +51,7 @@ if($section == 'index') {
 	if(!$fb_title) { $user['title'].'的'.$fb_title = $section_data['title'].' | 2014 挺好的！綠黨政治代理人'; }
 	if(!$share_img) { $share_img = ""; }
 	$html_title = $fb_title;
-	$share_link = $this_url;
+	if(!$fb_description) $fb_description = $nid_desc;
 	
 }
 
@@ -82,8 +83,8 @@ if(!isset($fb_description) or $fb_description == '') {	$fb_description = '2014 �
 			<meta property="og:video:height" content="320" />
 			<meta property="og:video:type" content="application/x-shockwave-flash" />
 		<? } ?>
-	    <meta content="" name="msapplication-TileColor">
-    	<meta content="IE10" name="msapplication-TileImage">
+		<meta content="" name="msapplication-TileColor">
+		<meta content="IE10" name="msapplication-TileImage">
 		<meta property="fb:app_id" content="687618544645054" />
 		<meta property="fb:admins" content="100000125299492" />
 		<meta property="og:locale" content="zh_TW" />    	
