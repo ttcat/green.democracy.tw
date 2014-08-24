@@ -2,27 +2,13 @@
 
 $display_header = Array(
 
-		'endorsements'=> array('title' => '各界推薦','desc' => '', 'menu' => '3'),
-//		'joinspot'=> array('title' => '推廣：成為反核柑仔店','desc' => '不論你是擁有一間店面，或是擁有公開的空間，都可以在本網站登錄據點。經過審核後，您就可以成為反核柑仔店，並可以隨時修改據點資訊、更新活動、成為反核旗鋪貨點等。不只是透過網路，也請從你實體生活圈開始發揮影響力吧！', 'catShare' => 'joinspot.php', 'menu' => '0'),
-//		'newsCT'=> array('title' => '', 'desc' => '', 'catShare' => 'news.php', 'menu' => '0'),
+		'endorsements'=> array('title' => '各界推薦2','desc' => '', 'menu' => '3'),
+
 	);
 
-
-//$section = 'endorsment';
-
-
-if($f != 'nid') { 	
-	$section = $f;
-	$page_key = $key;
-}else{
-	$section = 'politician';
-	$page_key = $f;
-}
-
 $section_data = $display_header[$section];
+$this_url = WEB.$current_url;
 
-$current_url = WEB.$current_url;
-	
 function headersend() {
 	$mypage = $section;
 	$pageNotSend =  array('joinspot_done.php','board_analysis.php','top10_film.php','top10_news.php','top10_actor.php');
@@ -48,7 +34,7 @@ if($section == 'newsCT' or $section == 'board_analysis'){
 	// $share_img = get_UPIMG_no($article_staus['post_pic'],'','');
 	$t = date("Ymdh");
 	$share_img = ($news_pic) ? "$Host/upload/$news_pic".'?'.$t : "$HttpHost/images/newsListPic.jpg".'?'.$t;
-	$share_link = $current_url.'?news_no='.$news_no;
+	$share_link = $this_url.'?news_no='.$news_no;
 	$fb_description = $news_desc;
 
 
@@ -64,7 +50,7 @@ if($section == 'newsCT' or $section == 'board_analysis'){
 
 	$html_title = $fb_title;
 	$fb_description = $nid_desc;
-	$share_link = $current_url;
+	$share_link = $this_url;
  
 }else{	// 沒有帶 nid 的一般單元
 
@@ -73,11 +59,11 @@ if($section == 'newsCT' or $section == 'board_analysis'){
 	
 	$html_title = $fb_title;
 	$fb_description = $nid_desc;
-	$share_link = $current_url;
+	$share_link = $this_url;
 }
 
 
-if(!$share_link) {	$share_link = $current_url;	}
+if(!$share_link) {	$share_link = $this_url; }
 if(!$html_title) {	$html_title = $fb_title; }
 if($share_img == '') { $share_img = $user['icon']; }
 if(!isset($fb_description) or $fb_description == '') {	$fb_description = '2014 挺好的人選、挺好的政黨、挺好的！台灣綠黨政治代理人官方網站。'; }
