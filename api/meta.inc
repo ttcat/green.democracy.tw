@@ -17,8 +17,7 @@ if($nid && $object) {
 	foreach ($object as $key => $v) {
 
 		if($section == 'index') { 
-		print_r($v);
-			//$section_data = $display_header[$v]; 
+			$section_data = $display_header[$v['section']]; 
 			$v['node'] = $v; 
 		}
 	
