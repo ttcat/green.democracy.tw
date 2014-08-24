@@ -1,9 +1,8 @@
 <?php
 global $u;
 global $nid;
-
 require_once 'api/api.inc';
-
+echo $current_url;
 //政見
 $string = file_get_contents("http://v.democracy.tw/{$u}/issue.json");
 $issues = json_decode($string, true);
