@@ -15,7 +15,7 @@ $this_url = WEB.'/'.$current_url;
 
 if($nid && $object) { 
 	foreach ($object as $key => $v) {		
-		//print_r($object);
+		print_r($object);
 		if($v['node']['nid'] == $nid) {
 				$nid_name = $v['node']['title'];
 				$nid_desc = SL($v['node']['content'], 150);
