@@ -1,24 +1,6 @@
 <?php
 require_once 'api/api.inc';
 global $nid;
-
-if($nid) { 
-	foreach ($endorsment as $key => $v) {		
-		if($v['node']['nid'] == $nid) {
-				$nid_name = $v['node']['title'];
-				$nid_desc = $v['node']['title'] . ' / ' . $v['node']['professional-title'] . '：'. SL($v['node']['content'], 150);
-				$fb_title =$nid_name .'推薦：' .  $user['title']  . ' | 2014 挺好的！綠黨政治代理人';
-				if($v['node']['photo']) { $share_img = $v['node']['photo']; }else{ $share_img = ""; }
-				if($v['node']['videolink']) { $videolink = $v['node']['videolink']; }
-				$nid_found = 1;
-		}
-	}
-}
-
-if($nid) {
-	if(!$nid_found) {   include_once('404.inc');  exit(); }
-}
-
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
