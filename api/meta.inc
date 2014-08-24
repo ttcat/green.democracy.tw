@@ -6,7 +6,8 @@ $display_header = Array(
 		'endorsements'=> array('title' => '各界推薦','desc' => '', 'menu' => '3'),
 		'events'=> array('title' => '活動行程','desc' => '', 'menu' => '4'),		
 		'pledge'=> array('title' => '政治代理人公約','desc' => '', 'menu' => '5'),		
-		'events'=> array('title' => '捐款徵信','desc' => '', 'menu' => '4'),	
+		'finance'=> array('title' => '捐款徵信','desc' => '', 'menu' => '4'),	
+		
 );
 
 $section_data = $display_header[$section];
