@@ -15,7 +15,8 @@ $this_url = WEB.'/'.$current_url;
 
 if($nid && $object) { 
 	foreach ($object as $key => $v) {
-		if($section == 'index') { $v['node'] = $v; }
+
+		if($section == 'index') { $v['node'] = $v; print_r($v['node'];) }
 	
 		if($v['node']['nid'] == $nid) {
 				$nid_name = $v['node']['title'];
