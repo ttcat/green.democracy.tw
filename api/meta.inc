@@ -77,12 +77,11 @@ if(!isset($fb_description) or $fb_description == '') {	$fb_description = '2014 �
 		<meta property="og:image" content="<?=$share_img?>" />
 		<meta property="og:site_name" content="2014 挺好的！綠黨政治代理人" /> 
 		<meta property="og:description" content="<?=$fb_description?>" />  
-		<? if($videolink) { ?>
-			<meta property="og:video" content="<?=$videolink?>" />
-			<meta property="og:video:width" content="568" />
-			<meta property="og:video:height" content="320" />
-			<meta property="og:video:type" content="application/x-shockwave-flash" />
-		<? } ?>
+<? if($videolink) { ?>
+		<meta property="og:video" content="<?=$videolink?>" />
+		<meta property="og:video:width" content="568" />
+		<meta property="og:video:height" content="320" />
+		<meta property="og:video:type" content="application/x-shockwave-flash" />		<? } ?>
 		<meta content="" name="msapplication-TileColor">
 		<meta content="IE10" name="msapplication-TileImage">
 		<meta property="fb:app_id" content="687618544645054" />
