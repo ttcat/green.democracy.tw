@@ -1,11 +1,12 @@
 <?
-/*
+
 $display_header = Array(
 
 		'endorsements'=> array('title' => '各界推薦','desc' => '', 'menu' => '3'),
 //		'joinspot'=> array('title' => '推廣：成為反核柑仔店','desc' => '不論你是擁有一間店面，或是擁有公開的空間，都可以在本網站登錄據點。經過審核後，您就可以成為反核柑仔店，並可以隨時修改據點資訊、更新活動、成為反核旗鋪貨點等。不只是透過網路，也請從你實體生活圈開始發揮影響力吧！', 'catShare' => 'joinspot.php', 'menu' => '0'),
 //		'newsCT'=> array('title' => '', 'desc' => '', 'catShare' => 'news.php', 'menu' => '0'),
 	);
+
 
 if($f != 'nid') { 	
 	$section = $f;
@@ -14,7 +15,6 @@ if($f != 'nid') {
 	$section = 'politician';
 	$page_key = $f;
 }
-
 
 $current_url = WEB.$_SERVER['REQUEST_URI'];	
 	
@@ -74,6 +74,10 @@ if($section == 'newsCT' or $section == 'board_analysis'){
 if(!$share_link) {
 	$share_link = $current_url;
 	$cnt = 0;
+}
+
+if(!$html_title) {
+	$html_title = $fb_title;
 }
 
 	$plurk_link = 'http://www.plurk.com/?qualifier=shares&amp;status='.urlencode($share_link." (".$fb_title.") " . $share_img);
