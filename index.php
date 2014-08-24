@@ -47,6 +47,7 @@ $f_array = explode('?' ,$f, 2);
 //預設 politician.inc 為首頁
 if($f_array[0] == null) {
   $current_url = $u;
+  $section = 'index';
   include_once('politician.inc');
   exit();
 }

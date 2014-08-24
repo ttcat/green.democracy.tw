@@ -3,12 +3,13 @@ require_once 'api/api.inc';
 global $nid;
 
 if($nid) { 
-	foreach ($endorsment as $key => $en) {		
-		if($en['node']['nid'] == $nid) {
-				$nid_name = $en['node']['title'];
-				$nid_desc = $en['node']['title'] . ' / ' . $en['node']['professional-title'] . '：'. SL($en['node']['content'], 150);
-				$fb_title =$nid_name .'推薦綠黨' .  $user['title']  . ' | 2014 挺好的！綠黨政治代理人';
-				if($en['node']['photo']) { $share_img = $en['node']['photo']; }else{ $share_img = ""; }
+	foreach ($endorsment as $key => $v) {		
+		if($v['node']['nid'] == $nid) {
+				$nid_name = $v['node']['title'];
+				$nid_desc = $v['node']['title'] . ' / ' . $v['node']['professional-title'] . '：'. SL($v['node']['content'], 150);
+				$fb_title =$nid_name .'推薦：' .  $user['title']  . ' | 2014 挺好的！綠黨政治代理人';
+				if($v['node']['photo']) { $share_img = $v['node']['photo']; }else{ $share_img = ""; }
+				if($v['node']['videolink']) { $videolink = $v['node']['videolink']; }
 				$nid_found = 1;
 		}
 	}

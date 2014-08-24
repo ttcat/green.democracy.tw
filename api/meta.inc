@@ -1,24 +1,37 @@
 <?
+if($nid) { 
+	foreach ($$section as $key => $v) {		
+		if($v['node']['nid'] == $nid) {
+				$nid_name = $v['node']['title'];
+				$nid_desc = SL($v['node']['content'], 150);
+				$fb_title =$nid_name .' -  '. $user['title']  . '的政見 | 2014 挺好的！綠黨政治代理人';
+				if($v['node']['photo']) { $share_img = $v['node']['photo']; }else{ $share_img = ""; }
+				if($v['node']['videolink']) { $videolink = $v['node']['videolink']; }
+				$nid_found = 1;
+		}
+	}
+}
+
+if($nid) {
+	if(!$nid_found) {   include_once('404.inc');  exit(); }
+}
 
 $display_header = Array(
 
-		'endorsements'=> array('title' => '各界推薦2','desc' => '', 'menu' => '3'),
-
+		'bio'=> array('title' => '簡介','desc' => '', 'menu' => '1'),
+		'issues'=> array('title' => '政見','desc' => '', 'menu' => '2'),
+		'endorsements'=> array('title' => '各界推薦','desc' => '', 'menu' => '3'),
+		'events'=> array('title' => '活動行程','desc' => '', 'menu' => '4'),		
+		'pledge'=> array('title' => '政治代理人公約','desc' => '', 'menu' => '5'),
+		
+		
+		'events'=> array('title' => '捐款徵信','desc' => '', 'menu' => '4'),	
+		
 	);
 
 $section_data = $display_header[$section];
 $this_url = WEB.'/'.$current_url;
 
-function headersend() {
-	$mypage = $section;
-	$pageNotSend =  array('joinspot_done.php','board_analysis.php','top10_film.php','top10_news.php','top10_actor.php');
-	for($i=0; $i < count($pageNotSend); $i++) {
-		if($mypage == $pageNotSend[$i]) {
-			return false;
-		}
-	}
-	return true;
-}
 
 function showFBlike_l($p){
 	$url = WEB.$p;
@@ -26,42 +39,21 @@ function showFBlike_l($p){
 	return $fb;
 }
 
-
-if($section == 'newsCT' or $section == 'board_analysis'){
-
-	$fb_title = $news_title.' | 2014 挺好的！綠黨政治代理人';
-	$html_title = $fb_title;
-	// $share_img = get_UPIMG_no($article_staus['post_pic'],'','');
-	$t = date("Ymdh");
-	$share_img = ($news_pic) ? "$Host/upload/$news_pic".'?'.$t : "$HttpHost/images/newsListPic.jpg".'?'.$t;
-	$share_link = $this_url.'?news_no='.$news_no;
-	$fb_description = $news_desc;
-
-
-}else if($section == 'index') {
+if($section == 'index') {
 
 	$fb_title = $user['title'] .' | 2014 挺好的！綠黨政治代理人';
 	$html_title = $fb_title;
 	$share_img = $user['logo'];
 	$fb_description = $user['bio'];
-	
-
-}else if($section == 's') {
-
-	$html_title = $fb_title;
-	$fb_description = $nid_desc;
-	$share_link = $this_url;
  
 }else{	// 沒有帶 nid 的一般單元
 
-	if(!$fb_title) { $fb_title = $section_data['title'].' - '.$user['title'].' | 2014 挺好的！綠黨政治代理人'; }
+	if(!$fb_title) { $user['title'].'的'.$fb_title = $section_data['title'].' | 2014 挺好的！綠黨政治代理人'; }
 	if(!$share_img) { $share_img = ""; }
-	
 	$html_title = $fb_title;
-	$fb_description = $nid_desc;
 	$share_link = $this_url;
+	
 }
-
 
 if(!$share_link) {	$share_link = $this_url; }
 if(!$html_title) {	$html_title = $fb_title; }
@@ -85,11 +77,15 @@ if(!isset($fb_description) or $fb_description == '') {	$fb_description = '2014 �
 		<meta property="og:image" content="<?=$share_img?>" />
 		<meta property="og:site_name" content="2014 挺好的！綠黨政治代理人" /> 
 		<meta property="og:description" content="<?=$fb_description?>" />  
-
+		<? if($videolink) { ?>
+		<meta property="og:video" content="<?=$videolink?>" />
+		<meta property="og:video:width" content="568" />
+		<meta property="og:video:height" content="320" />
+		<meta property="og:video:type" content="application/x-shockwave-flash" />
+		<? } ?>
 		<link rel="shortcut icon" href="images/favicon.ico"/>
 		<script>
 			function fb() {window.open('<?="http://www.facebook.com/sharer.php?u=".urlencode($share_link)?>', 'Facebook','toolbar=0,status=0,width=626,height=436');}
 			function pl() {window.open('<?=$plurk_link?>');}
 			function fb_index() {window.open('<?="http://www.facebook.com/sharer.php?u=".urlencode(WEB)?>', 'Facebook','toolbar=0,status=0,width=626,height=436');}
 		</script>
-		
