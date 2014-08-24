@@ -7,7 +7,7 @@ $display_header = Array(
 	);
 
 $section_data = $display_header[$section];
-$this_url = WEB.$current_url;
+$this_url = WEB.'/'.$current_url;
 
 function headersend() {
 	$mypage = $section;
@@ -72,8 +72,7 @@ if(!isset($fb_description) or $fb_description == '') {	$fb_description = '2014 æ
 	$twitter_link = "javascript: void(window.open('http://twitter.com/home/?status='.concat(encodeURIComponent('".$fb_title."')) .concat(' ') .concat(encodeURIComponent('".$share_link."'))));";	
 	
 
-?>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+?>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 		<meta content="black" name="apple-mobile-web-app-status-bar-style">
