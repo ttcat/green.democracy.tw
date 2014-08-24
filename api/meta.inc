@@ -20,7 +20,7 @@ if($nid && $object) {
 	
 		if($v['node']['nid'] == $nid) {
 				$nid_name = $v['node']['title'];
-				$nid_desc = SL($v['node']['content'], 150);
+				$nid_desc = SL(strip_tags($v['node']['content']), 150);
 				$fb_title =$nid_name .' - '. $user['title']  . '的' .$section_data['title'].' | 2014 挺好的！綠黨政治代理人';
 				if($v['node']['photo']) { $share_img = $v['node']['photo']; }else{ $share_img = ""; }
 				if($v['node']['videolink']) { $videolink = $v['node']['videolink']; }
@@ -40,7 +40,7 @@ function showFBlike_l($p){
 }
 
 
-if($section == 'index' && !$nid) {
+if($section == 'index' && !$nid) { //index
 
 	$fb_title = $user['title'] .' | 2014 挺好的！綠黨政治代理人';
 	$html_title = $fb_title;
