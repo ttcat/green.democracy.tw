@@ -43,6 +43,8 @@ list($u, $f, $key, $value) = explode('/', $q, 4);
 		}
 	}
 
+exit();
+
 $f_array = explode('?' ,$f, 2);
 //預設 politician.inc 為首頁
 if($f_array[0] == null) {
