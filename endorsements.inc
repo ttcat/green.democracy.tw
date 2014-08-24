@@ -15,7 +15,7 @@ if($nid) {
 }
 
 if($nid) {
-	if(!$nid_found) { echo '404'; }
+	if(!$nid_found) {   include_once('404.inc');  exit(); }
 }
 
 ?><!DOCTYPE html>
