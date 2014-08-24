@@ -11,6 +11,8 @@ $q = preg_replace('/[^a-zA-Z0-9]\//', '', $q);
 
 list($u, $f, $key, $value) = explode('/', $q, 4);
 
+exit();
+
 	if($key == 'nid') {	// 個別單元吃 nid
 	 	$value_array = explode('?' ,$value, 2);
 		if(is_numeric($value_array[0])) {	
@@ -35,15 +37,13 @@ list($u, $f, $key, $value) = explode('/', $q, 4);
 	
 	if($f == 'api') { // api read
 	 	$key_array = explode('?' ,$key_array, 2);
-	 	if($key_array[	0] == 'timeline') {
+	 	if($key_array[0] == 'timeline') {
 	 		$timeline_page_query = $key_array[1]; //參數待處理 sql-injection
 			$current_url = $u.'/api/timeline';
 	 		include_once('api/timeline.inc');
 			exit();
 		}
 	}
-
-exit();
 
 $f_array = explode('?' ,$f, 2);
 //預設 politician.inc 為首頁
