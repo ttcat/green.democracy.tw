@@ -10,12 +10,15 @@ if($nid) {
 				$nid_desc = $en['node']['title'] . ' / ' . $en['node']['professional-title'] . '：'. SL($en['node']['content'], 150);
 				$fb_title =$nid_name .'推薦綠黨' .  $user['title']  . ' | 2014 挺好的！綠黨政治代理人';
 				if($en['node']['photo']) { $share_img = $en['node']['photo']; }else{ $share_img = ""; }
+				$nid_found = 1;
 		}
 	}
 }
 
 $section = 'endorsment';
 $section_name = '各界推薦';
+
+if(!$nid_found) { echo '404'; }
 
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
