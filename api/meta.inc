@@ -10,6 +10,7 @@ $display_header = Array(
 
 //$section = 'endorsment';
 
+
 if($f != 'nid') { 	
 	$section = $f;
 	$page_key = $key;
@@ -19,6 +20,8 @@ if($f != 'nid') {
 }
 
 $section_data = $display_header[$section];
+
+$current_url = WEB.$current_url;
 	
 function headersend() {
 	$mypage = $section;

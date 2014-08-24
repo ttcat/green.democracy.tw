@@ -16,7 +16,8 @@ list($u, $f, $key, $value) = explode('/', $q, 4);
 		if(is_numeric($value_array[0])) {	
 			$nid = filter_var($value_array[0], FILTER_SANITIZE_NUMBER_INT);
 			$query_this_page = $value_array[1]; //參數待處理 sql-injection
-			$current_url = $u.'/'.$f.'/nid/'.$nid;			
+			$current_url = $u.'/'.$f.'/nid/'.$nid;
+			$page_key = $nid;			
 		}
 	}
 	
@@ -26,6 +27,7 @@ list($u, $f, $key, $value) = explode('/', $q, 4);
 			$nid = filter_var($key_array[0], FILTER_SANITIZE_NUMBER_INT);
 			$query_this_page = $key_array[1]; //參數待處理 sql-injection
 			$current_url = $u.'/nid/'.$nid;
+			$page_key = $nid;			
 		}
 		include_once('politician.inc');
 		exit();
@@ -41,7 +43,6 @@ list($u, $f, $key, $value) = explode('/', $q, 4);
 		}
 	}
 
-
 $f_array = explode('?' ,$f, 2);
 //預設 politician.inc 為首頁
 if($f_array[0] == null) {
@@ -52,6 +53,7 @@ if($f_array[0] == null) {
 
 if(file_exists($f_array[0].'.inc')){
   $current_url = $u.'/'.$f_array[0];
+  $section = $f_array[0];
   include_once($f_array[0].'.inc');
   exit();
 }
