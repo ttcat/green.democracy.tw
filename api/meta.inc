@@ -1,6 +1,4 @@
 <?
-
-$objects = $$section;
 if($nid) { 
 	foreach ($objects as $key => $v) {		
 		if($v['node']['nid'] == $nid) {
