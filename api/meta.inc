@@ -10,16 +10,13 @@ $display_header = Array(
 		
 );
 
-echo $section;
-
-
 $section_data = $display_header[$section];
 $this_url = WEB.'/'.$current_url;
 
 if($nid && $object) { 
 	foreach ($object as $key => $v) {
 
-		if($section == 'index') { $feed = $v; $v = array(); $v['node'] = $feed; print_r($v['node']); }
+		if($section == 'index') { $v['node'] = $v; }
 	
 		if($v['node']['nid'] == $nid) {
 				$nid_name = $v['node']['title'];
@@ -28,7 +25,7 @@ if($nid && $object) {
 				if($v['node']['photo']) { $share_img = $v['node']['photo']; }else{ $share_img = ""; }
 				if($v['node']['videolink']) { $videolink = $v['node']['videolink']; }
 				$nid_found = 1;
-				//echo "found";
+				echo "found";
 		}
 	}
 }
