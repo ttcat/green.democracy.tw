@@ -10,7 +10,6 @@ $display_header = Array(
 
 //$section = 'endorsment';
 
-
 if($f != 'nid') { 	
 	$section = $f;
 	$page_key = $key;
@@ -19,10 +18,7 @@ if($f != 'nid') {
 	$page_key = $f;
 }
 
-echo $section;
 $section_data = $display_header[$section];
-
-$current_url = WEB.$_SERVER['REQUEST_URI'];	
 	
 function headersend() {
 	$mypage = $section;
@@ -69,12 +65,12 @@ if($section == 'newsCT' or $section == 'board_analysis'){
  
 }else{	// 沒有帶 nid 的一般單元
 
-	$fb_title = $section_data['title'].' - '.$user['title'].' | 2014 挺好的！綠黨政治代理人';
-	$share_img = "";
+	if(!$fb_title) { $fb_title = $section_data['title'].' - '.$user['title'].' | 2014 挺好的！綠黨政治代理人'; }
+	if(!$share_img) { $share_img = ""; }
+	
 	$html_title = $fb_title;
 	$fb_description = $nid_desc;
 	$share_link = $current_url;
- 
 }
 
 
