@@ -9,7 +9,7 @@ $object = $endorsment;
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-		<? require_once 'api/meta.inc'; ?>
+<? require_once 'api/meta.inc'; ?>
          <link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
          <link rel="stylesheet" type="text/css" href="/css/main.css?<?=time()?>">
          <link rel="stylesheet" type="text/css" href="/timeline/files/css/timeline_themegp.css?<?=time()?>" />

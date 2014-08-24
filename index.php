@@ -17,7 +17,8 @@ list($u, $f, $key, $value) = explode('/', $q, 4);
 			$nid = filter_var($value_array[0], FILTER_SANITIZE_NUMBER_INT);
 			$query_this_page = $value_array[1]; //參數待處理 sql-injection
 			$current_url = $u.'/'.$f.'/nid/'.$nid;
-			$page_key = $nid;			
+			echo '@@';
+			$page_key = $nid;
 		}
 	}
 	
