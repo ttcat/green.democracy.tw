@@ -128,7 +128,7 @@ $rows = aasort($all_feeds_new,"date");
 			if($feed['link']) {					
 				$parse_result = '';
 				$parse_result = parse_url($feed['link']);
-				if($parse_result['host'] != $_SERVER['HTTP_HOST'] ) { $target = 'target="blank"'; } else { $target = ''; }
+				if($parse_result['host'] != $_SERVER['HTTP_HOST'] ) { $target = 'blank'; } else { $target = ''; }
 				$feed['title'] = '<a href="'.$feed['link'].'" '.$target.'>' . $feed['title'] . '</a>';
 				$json_this_feed['readmore'] = $feed['link'];
 			}
@@ -138,7 +138,7 @@ $rows = aasort($all_feeds_new,"date");
 			}			
 			
 
-            if($target) { $json_this_feed['target'] = 'target="blank"'; }else{ $json_this_feed['target'] = ''; } 
+            if($target) { $json_this_feed['target'] = 'blank'; }else{ $json_this_feed['target'] = ''; } 
 
 			$feed['content'] = SL(str_replace("\n","",$feed['content']),250);
 

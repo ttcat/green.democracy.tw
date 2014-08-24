@@ -137,6 +137,8 @@ function Timeline(element, data, undefined) {
     this._createElement = function(element_data, position) {
         element_data = $.extend({}, SELF._default_element_data, element_data)
 
+		if(element_data.target == 'blank') { element_data.target = 'target="blank"'; }
+
         // element DIV
         var element = $('<div>').addClass('timeline_element ' + element_data.type);
 
