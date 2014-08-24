@@ -7,7 +7,6 @@ require_once 'api/api.inc';
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-        <meta charset="utf-8">
 <? require_once 'api/meta.inc'; ?>
          <link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
          <link rel="stylesheet" type="text/css" href="/css/main.css?<?=time()?>">
