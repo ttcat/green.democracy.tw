@@ -11,8 +11,6 @@ $q = preg_replace('/[^a-zA-Z0-9]\//', '', $q);
 
 list($u, $f, $key, $value) = explode('/', $q, 4);
 
-exit();
-
 	if($key == 'nid') {	// 個別單元吃 nid
 	 	$value_array = explode('?' ,$value, 2);
 		if(is_numeric($value_array[0])) {	
