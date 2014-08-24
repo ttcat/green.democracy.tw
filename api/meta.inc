@@ -14,8 +14,10 @@ $section_data = $display_header[$section];
 $this_url = WEB.'/'.$current_url;
 
 if($nid && $object) { 
-	foreach ($object as $key => $v) {		
-		if($v['node']['nid'] == $nid || $v['nid'] == $nid) {
+	foreach ($object as $key => $v) {
+		if($section == 'index') { $v['node'] = $v; }
+	
+		if($v['node']['nid'] == $nid) {
 				$nid_name = $v['node']['title'];
 				$nid_desc = SL($v['node']['content'], 150);
 				$fb_title =$nid_name .' - '. $user['title']  . '的' .$section_data['title'].' | 2014 挺好的！綠黨政治代理人';
