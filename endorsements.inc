@@ -15,9 +15,6 @@ if($nid) {
 	}
 }
 
-$section = 'endorsment';
-$section_name = '各界推薦';
-
 if(!$nid_found) { echo '404'; }
 
 ?><!DOCTYPE html>

@@ -8,6 +8,9 @@ $display_header = Array(
 	);
 
 
+//$section = 'endorsment';
+
+
 if($f != 'nid') { 	
 	$section = $f;
 	$page_key = $key;
@@ -15,6 +18,9 @@ if($f != 'nid') {
 	$section = 'politician';
 	$page_key = $f;
 }
+
+$section_data = $display_header[$section];
+
 
 $current_url = WEB.$_SERVER['REQUEST_URI'];	
 	
@@ -63,14 +69,13 @@ if($section == 'newsCT' or $section == 'board_analysis'){
  
 }else{	// 沒有帶 nid 的一般單元
 
-	$fb_title = $section_name.' - '.$user['title'].' | 2014 挺好的！綠黨政治代理人';
+	$fb_title = $section_data['title'].' - '.$user['title'].' | 2014 挺好的！綠黨政治代理人';
 	$share_img = "";
 	$html_title = $fb_title;
 	$fb_description = $nid_desc;
 	$share_link = $current_url;
  
 }
-
 
 
 if(!$share_link) {	$share_link = $current_url;	}
@@ -83,9 +88,6 @@ if(!isset($fb_description) or $fb_description == '') {	$fb_description = '2014 �
 	
 
 ?>
-
-
-
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
