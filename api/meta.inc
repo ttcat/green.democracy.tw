@@ -1,10 +1,23 @@
 <?
+$display_header = Array(
+
+		'bio'=> array('title' => '簡介','desc' => '', 'menu' => '1'),
+		'issues'=> array('title' => '政見','desc' => '', 'menu' => '2'),
+		'endorsements'=> array('title' => '各界推薦','desc' => '', 'menu' => '3'),
+		'events'=> array('title' => '活動行程','desc' => '', 'menu' => '4'),		
+		'pledge'=> array('title' => '政治代理人公約','desc' => '', 'menu' => '5'),		
+		'events'=> array('title' => '捐款徵信','desc' => '', 'menu' => '4'),	
+);
+
+$section_data = $display_header[$section];
+$this_url = WEB.'/'.$current_url;
+
 if($nid) { 
 	foreach ($object as $key => $v) {		
 		if($v['node']['nid'] == $nid) {
 				$nid_name = $v['node']['title'];
 				$nid_desc = SL($v['node']['content'], 150);
-				$fb_title =$nid_name .' -  '. $user['title']  . '的政見 | 2014 挺好的！綠黨政治代理人';
+				$fb_title =$nid_name .' - '. $user['title']  . '的' .$section_data['title'].' | 2014 挺好的！綠黨政治代理人';
 				if($v['node']['photo']) { $share_img = $v['node']['photo']; }else{ $share_img = ""; }
 				if($v['node']['videolink']) { $videolink = $v['node']['videolink']; }
 				$nid_found = 1;
@@ -15,23 +28,6 @@ if($nid) {
 if($nid) {
 	if(!$nid_found) {   include_once('404.inc');  exit(); }
 }
-
-$display_header = Array(
-
-		'bio'=> array('title' => '簡介','desc' => '', 'menu' => '1'),
-		'issues'=> array('title' => '政見','desc' => '', 'menu' => '2'),
-		'endorsements'=> array('title' => '各界推薦','desc' => '', 'menu' => '3'),
-		'events'=> array('title' => '活動行程','desc' => '', 'menu' => '4'),		
-		'pledge'=> array('title' => '政治代理人公約','desc' => '', 'menu' => '5'),
-		
-		
-		'events'=> array('title' => '捐款徵信','desc' => '', 'menu' => '4'),	
-		
-	);
-
-$section_data = $display_header[$section];
-$this_url = WEB.'/'.$current_url;
-
 
 function showFBlike_l($p){
 	$url = WEB.$p;
