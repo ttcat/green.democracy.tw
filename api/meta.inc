@@ -1,5 +1,5 @@
 <?
-
+/*
 $display_header = Array(
 
 		'endorsements'=> array('title' => '各界推薦','desc' => '', 'menu' => '3'),
@@ -88,6 +88,9 @@ if(!$share_link) {
 	if($share_img == '') {
 		$share_img = 'http://nonukeyesvote.tw/images/fbshare_v3.jpg';
 	}
+	
+	
+*/	
 ?>
 
 
