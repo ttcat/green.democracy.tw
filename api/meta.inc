@@ -13,7 +13,7 @@ $display_header = Array(
 $section_data = $display_header[$section];
 $this_url = WEB.'/'.$current_url;
 
-if($nid) { 
+if($nid && $object) { 
 	foreach ($object as $key => $v) {		
 		//print_r($object);
 		if($v['node']['nid'] == $nid) {
