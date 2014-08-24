@@ -1,6 +1,6 @@
 <?
 if($nid) { 
-	foreach ($objects as $key => $v) {		
+	foreach ($object as $key => $v) {		
 		if($v['node']['nid'] == $nid) {
 				$nid_name = $v['node']['title'];
 				$nid_desc = SL($v['node']['content'], 150);
