@@ -161,7 +161,9 @@ $rows = aasort($all_feeds_new,"date");
 	        }
 
             $json_this_feed['content'] .= '</div></p>';
-
+			
+			$json_this_feed['section_s'] = $linkpage;
+			
 
 
 				//分頁控制在此
