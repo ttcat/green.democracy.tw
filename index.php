@@ -3,43 +3,51 @@ global $u;
 $q = ltrim($_SERVER['REQUEST_URI'], '/');
 $q = preg_replace('/[^a-zA-Z0-9]\//', '', $q);
 
+//$pos = strpos($q, '?');
+//if ($pos === false) {
+	//} else {
+//}
+
+
 list($u, $f, $key, $value) = explode('/', $q, 4);
 
 	if($key == 'nid') {	// 個別單元吃 nid
-	 	$value = explode('?' ,$value, 2);
-		if(is_numeric($value[0])) {	
-			$nid = filter_var($value[0], FILTER_SANITIZE_NUMBER_INT);
-			$query_this_page = $value[1]; //參數待處理 sql-injection
+	 	$value_array = explode('?' ,$value, 2);
+		if(is_numeric($value_array[0])) {	
+			$nid = filter_var($value_array[0], FILTER_SANITIZE_NUMBER_INT);
+			$query_this_page = $value_array[1]; //參數待處理 sql-injection
 		}
 	}
 	
 	if($f == 'nid') {	//timeline 首頁吃 nid
-	 	$key = explode('?' ,$key, 2);
-		if(is_numeric($key[0])) {	
-			$nid = filter_var($key[0], FILTER_SANITIZE_NUMBER_INT);
-			$query_this_page = $key[1]; //參數待處理 sql-injection
+	 	$key_array = explode('?' ,$key, 2);
+		if(is_numeric($key_array[0])) {	
+			$nid = filter_var($key_array[0], FILTER_SANITIZE_NUMBER_INT);
+			$query_this_page = $key_array[1]; //參數待處理 sql-injection
 		}
 		include_once('politician.inc');
 		exit();
 	}	
 	
 	if($f == 'api') { // api read
-	 	$key = explode('?' ,$key, 2);
-	 	if($key[	0] == 'timeline') {
-	 		$timeline_page_query = $key[1]; //參數待處理 sql-injection
+	 	$key_array = explode('?' ,$key_array, 2);
+	 	if($key_array[	0] == 'timeline') {
+	 		$timeline_page_query = $key_array[1]; //參數待處理 sql-injection
 	 		include_once('api/timeline.inc');
 			exit();
 		}
 	}
-	
-$f = explode('?' ,$f, 2);
+
+
+$f_array = explode('?' ,$f, 2);
 //預設 politician.inc 為首頁
-if($f[0] == null) {
+if($f_array[0] == null) {
   include_once('politician.inc');
   exit();
 }
-if(file_exists($f[0].'.inc')){
-  include_once($f[0].'.inc');
+
+if(file_exists($f_array[0].'.inc')){
+  include_once($f_array[0].'.inc');
   exit();
 }
 ?>
