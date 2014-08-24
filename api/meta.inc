@@ -25,7 +25,6 @@ if($nid && $object) {
 				if($v['node']['photo']) { $share_img = $v['node']['photo']; }else{ $share_img = ""; }
 				if($v['node']['videolink']) { $videolink = $v['node']['videolink']; }
 				$nid_found = 1;
-				echo "found";
 		}
 	}
 }
@@ -41,7 +40,7 @@ function showFBlike_l($p){
 }
 
 
-if($section == 'index') {
+if($section == 'index' && !$nid) {
 
 	$fb_title = $user['title'] .' | 2014 挺好的！綠黨政治代理人';
 	$html_title = $fb_title;
