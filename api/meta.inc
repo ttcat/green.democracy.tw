@@ -15,7 +15,7 @@ $this_url = WEB.'/'.$current_url;
 
 if($nid) { 
 	foreach ($object as $key => $v) {		
-		print_r($object);
+		//print_r($object);
 		if($v['node']['nid'] == $nid) {
 				$nid_name = $v['node']['title'];
 				$nid_desc = SL($v['node']['content'], 150);
@@ -23,7 +23,7 @@ if($nid) {
 				if($v['node']['photo']) { $share_img = $v['node']['photo']; }else{ $share_img = ""; }
 				if($v['node']['videolink']) { $videolink = $v['node']['videolink']; }
 				$nid_found = 1;
-				echo "found";
+				//echo "found";
 		}
 	}
 }
@@ -65,7 +65,7 @@ if(!isset($fb_description) or $fb_description == '') {	$fb_description = '2014 �
 
 ?>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
-		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 		<meta content="black" name="apple-mobile-web-app-status-bar-style">
 
 		<title><?=$html_title?></title>
@@ -77,12 +77,18 @@ if(!isset($fb_description) or $fb_description == '') {	$fb_description = '2014 �
 		<meta property="og:site_name" content="2014 挺好的！綠黨政治代理人" /> 
 		<meta property="og:description" content="<?=$fb_description?>" />  
 		<? if($videolink) { ?>
-		<meta property="og:video" content="<?=$videolink?>" />
-		<meta property="og:video:width" content="568" />
-		<meta property="og:video:height" content="320" />
-		<meta property="og:video:type" content="application/x-shockwave-flash" />
+			<meta property="og:video" content="<?=$videolink?>" />
+			<meta property="og:video:width" content="568" />
+			<meta property="og:video:height" content="320" />
+			<meta property="og:video:type" content="application/x-shockwave-flash" />
 		<? } ?>
+	    <meta content="" name="msapplication-TileColor">
+    	<meta content="IE10" name="msapplication-TileImage">
+		<meta property="fb:app_id" content="687618544645054" />
+		<meta property="fb:admins" content="100000125299492" />
+		<meta property="og:locale" content="zh_TW" />    	
 		<link rel="shortcut icon" href="images/favicon.ico"/>
+		<link href="" rel="apple-touch-icon-precomposed">
 		<script>
 			function fb() {window.open('<?="http://www.facebook.com/sharer.php?u=".urlencode($share_link)?>', 'Facebook','toolbar=0,status=0,width=626,height=436');}
 			function pl() {window.open('<?=$plurk_link?>');}

@@ -10,7 +10,7 @@ $issues = json_decode($string, true);
 $issues = $issues['nodes'];
 $object = $issues;
 
-?><!DOCTYPE html>
+?><!DOCTYPE html lang="zh-TW">
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
