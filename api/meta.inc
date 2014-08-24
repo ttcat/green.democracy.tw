@@ -10,14 +10,16 @@ $display_header = Array(
 		
 );
 
+echo $section;
+
+
 $section_data = $display_header[$section];
 $this_url = WEB.'/'.$current_url;
 
 if($nid && $object) { 
 	foreach ($object as $key => $v) {
 
-		print_r($v);
-		if($section == 'index') { $v['node'] = $v; print_r($v['node']); }
+		if($section == 'index') { $feed = $v; $v = array(); $v['node'] = $feed; print_r($v['node']); }
 	
 		if($v['node']['nid'] == $nid) {
 				$nid_name = $v['node']['title'];
