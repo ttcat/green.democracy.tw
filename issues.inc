@@ -19,9 +19,6 @@ $object = $issues;
 <? require_once 'api/meta.inc'; ?>
          <link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
          <link rel="stylesheet" type="text/css" href="/css/main.css?<?=time()?>">
-         <link rel="stylesheet" type="text/css" href="/timeline/files/css/timeline_themegp.css?<?=time()?>" />
-
-         <!-- Remove responsive.css is non-responsive needed -->
          <link rel="stylesheet" type="text/css" href="/css/responsive.css?<?=time()?>">
          <link rel="stylesheet" type="text/css" href="/css/flexslider.css">
          <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
@@ -68,6 +65,7 @@ $object = $issues;
     	                	    </li>
     	                <? } ?>	    
     	                	    
+    	                <? /* //example 
     	                	    <!-- Toggle -->
     	                	    <li class="toggle-li">
     	                	      <a href="#" class="toggle-btn" hash-id="21" id="sa21">My Credit Card Is Stuck In My Computer?</a>
@@ -92,17 +90,12 @@ $object = $issues;
     	                	      	
     	                	      	
     	                	      </div>
-    	                	    </li>
-
+    	                	    </li> */ ?>
     	                	  </ul>
 
 				<!-- add here-->
-
-
                 </div>
-				
-				
-				
+
 				<!-- Start Main Sidebar  -->
 					<? require_once 'api/sidebar.inc'; ?>
 				<!-- Finish Sidebar -->

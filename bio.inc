@@ -8,23 +8,13 @@ require_once 'api/api.inc';
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
-        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <meta content="black" name="apple-mobile-web-app-status-bar-style">
-        
-        <title><?=$user['title']?> | 2014 綠黨政治代理人</title>
-        <meta name="description" content="Enter Description">
-
+<? require_once 'api/meta.inc'; ?>
          <link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
          <link rel="stylesheet" type="text/css" href="/css/main.css?<?=time()?>">
-         <link rel="stylesheet" type="text/css" href="/timeline/files/css/timeline_themegp.css?<?=time()?>" />
-
-         <!-- Remove responsive.css is non-responsive needed -->
          <link rel="stylesheet" type="text/css" href="/css/responsive.css?<?=time()?>">
          <link rel="stylesheet" type="text/css" href="/css/flexslider.css">
          <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
          <link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox.css?v=2.1.4" media="screen" />
-         <link rel="stylesheet" type="text/css" href="/rs-plugin/css/settings.css" media="screen" />         
          <script src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>         
 
     </head>
@@ -147,8 +137,6 @@ require_once 'api/api.inc';
 	<script type="text/javascript" src="/js/mosaic.1.0.1.min.js"></script>
 	<script type="text/javascript" src="/js/cleantabs.jquery.js"></script>
 
-	<script type="text/javascript" src="/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-	<script type="text/javascript" src="/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 	<script type="text/javascript" src="/js/rs-slider.js"></script>
 
 	<script type="text/javascript" src="/js/contact.js"></script>
