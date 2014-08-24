@@ -15,6 +15,7 @@ $this_url = WEB.'/'.$current_url;
 
 if($nid) { 
 	foreach ($object as $key => $v) {		
+		print_r($object);
 		if($v['node']['nid'] == $nid) {
 				$nid_name = $v['node']['title'];
 				$nid_desc = SL($v['node']['content'], 150);
@@ -22,6 +23,7 @@ if($nid) {
 				if($v['node']['photo']) { $share_img = $v['node']['photo']; }else{ $share_img = ""; }
 				if($v['node']['videolink']) { $videolink = $v['node']['videolink']; }
 				$nid_found = 1;
+				echo "found";
 		}
 	}
 }
