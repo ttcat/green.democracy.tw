@@ -34,6 +34,7 @@ list($u, $f, $key, $value) = explode('/', $q, 4);
 	}	
 	
 	if($f == 'api') { // api read
+		echo "@";
 	 	$key_array = explode('?' ,$key_array, 2);
 	 	if($key_array[0] == 'timeline') {
 	 		$timeline_page_query = $key_array[1]; //參數待處理 sql-injection
