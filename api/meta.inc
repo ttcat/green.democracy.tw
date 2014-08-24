@@ -10,10 +10,8 @@ $display_header = Array(
 		
 );
 
-echo $current_url;
 $section_data = $display_header[$section];
 $this_url = WEB.'/'.$current_url;
-echo $current_url;
 
 if($nid) { 
 	foreach ($object as $key => $v) {		

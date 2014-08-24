@@ -1,15 +1,16 @@
 <?php
 global $u;
 global $nid;
+
 require_once 'api/api.inc';
-echo $current_url;
+
 //政見
 $string = file_get_contents("http://v.democracy.tw/{$u}/issue.json");
 $issues = json_decode($string, true);
 $issues = $issues['nodes'];
 $object = $issues;
 
-?><!DOCTYPE html lang="zh-TW">
+?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
