@@ -41,8 +41,8 @@ $section_data = $display_header[$section];
 $this_url = WEB.'/'.$current_url;
 
 if($section == 'index') { 
-	$string = file_get_contents("http://green.democracy.tw/{$u}/api/timeline?all");
-	$object = json_decode($string,true);
+	$string_meta = file_get_contents("http://green.democracy.tw/{$u}/api/timeline?all");
+	$object = json_decode($string_meta,true);
 }
 
 		
