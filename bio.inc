@@ -84,14 +84,15 @@ require_once 'api/api.inc';
 						<hr>
 
 						<div>
+						<p>
 						<ul>
 							<li>帳號：</li>
 							<li>戶名：</li>
 							<li>銀行：分行：</li>
 						</ul>
+						</p>
 						</div>
 
-				<p></p>
 
 				<h2>總部資訊</h2>
 						<hr>
