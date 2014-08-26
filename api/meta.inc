@@ -1,7 +1,7 @@
 <?
 
 
-function metavideo($url) {
+function metavideo($url, $ssl) {
 
 	$data = parse_url($url);
 	$query = explode('&', $data['query']);
@@ -16,7 +16,7 @@ function metavideo($url) {
 	    	//print_r($q);
     	    list($key, $value) = explode("=", $q); 
 			if($key == 'v') { $video_id = $value; }
-			$url_new = 'https://www.youtube.com/v/'.$video_id;
+			if($ssl) { $url_new = 'https://www.youtube.com/v/'.$video_id; } else { $url_new = 'http://www.youtube.com/v/'.$video_id; }
 	    } 	
     }
     
@@ -55,7 +55,7 @@ if($nid && $object) {
 				$share_img = "";
 				if($v['node']['image']) { $share_img = $v['node']['image']; } //timeline use image as key.
 				if($v['node']['photo']) { $share_img = $v['node']['photo']; }
-				if($v['node']['videolink']) { $videolink = metavideo($v['node']['videolink']); }
+				if($v['node']['videolink']) { $videolink = metavideo($v['node']['videolink'], 0); $videolink_ssl = metavideo($v['node']['videolink'], 1); }
 				$nid_found = 1;
 			}
 			
@@ -66,7 +66,7 @@ if($nid && $object) {
 					$nid_desc = SL(strip_tags($v['node']['content']), 150);
 					$fb_title =$nid_name .' - '. $user['title']  . '的' .$section_data['title'].' | 2014 挺好的！綠黨政治代理人';
 					if($v['node']['photo']) { $share_img = $v['node']['photo']; }else{ $share_img = ""; }
-					if($v['node']['videolink']) { $videolink = metavideo($v['node']['videolink']); }
+					if($v['node']['videolink']) { $videolink = metavideo($v['node']['videolink'], 0); $videolink_ssl = metavideo($v['node']['videolink'], 1); }
 					$nid_found = 1;
 			}
 		}
@@ -124,6 +124,7 @@ if(!isset($fb_description) or $fb_description == '') {	$fb_description = '2014 �
 		<meta property="og:description" content="<?=$fb_description?>" />  
 <? if($videolink) { ?>
 		<meta property="og:video" content="<?=$videolink?>" />
+		<meta property="og:video:secure_url" content="<?=$videolink_ssl?>" />
 		<meta property="og:video:width" content="568" />
 		<meta property="og:video:height" content="320" />
 		<meta property="og:video:type" content="application/x-shockwave-flash" />		<? } ?>
