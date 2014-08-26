@@ -93,7 +93,8 @@ require_once 'api/api.inc';
 						</p>
 						</div>
 
-
+				<br>
+	
 				<h2>總部資訊</h2>
 						<hr>
 
