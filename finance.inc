@@ -7,14 +7,7 @@ require_once 'api/api.inc';
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-        <meta charset="utf-8">
-        <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
-        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <meta content="black" name="apple-mobile-web-app-status-bar-style">
-        
-        <title><?=$user['title']?> | 2014 綠黨政治代理人</title>
-        <meta name="description" content="Enter Description">
-
+<? require_once 'api/meta.inc'; ?>
          <link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
          <link rel="stylesheet" type="text/css" href="/css/main.css?<?=time()?>">
          <link rel="stylesheet" type="text/css" href="/timeline/files/css/timeline_themegp.css?<?=time()?>" />
