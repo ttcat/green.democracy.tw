@@ -107,7 +107,7 @@ require_once 'api/api.inc';
 							<li>聯絡 email：<?=$user['email']?></li>
 						</ul>
 						<br>
-						<iframe width="100" height="550" src="https://www.google.com.tw/maps/place/802%E9%AB%98%E9%9B%84%E5%B8%82%E8%8B%93%E9%9B%85%E5%8D%80%E8%8F%AF%E6%96%B0%E8%A1%971%E8%99%9F/?&amp;output=embed"></iframe>
+						<iframe width="100" height="550" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3683.04753595446!2d120.299208!3d22.614699999999996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e037fbc0131fd%3A0x9697296bace77b26!2zODAy6auY6ZuE5biC6IuT6ZuF5Y2A6I-v5paw6KGXMeiZnw!5e0!3m2!1szh-TW!2stw!4v1409090033264" style="border:0"></iframe>
 						
 						
 						</div>
