@@ -150,8 +150,6 @@ $keywords = '綠黨,挺好的,九合一,選舉,greenparty';
 		<meta property="og:image" content="<?=$share_img?>" />
 		<meta property="og:site_name" content="2014 挺好的！綠黨政治代理人" /> 
 		<meta property="og:description" content="<?=$fb_description?>" />  
-		<meta property="og:locale" content="zh_TW" />
-		<meta property="og:locale:alternate" content="en_US" />
 		<? /*<meta property="og:see_also" content="">*/?>
 <? if($videolink) { ?>
 		<meta property="og:video" content="<?=$videolink?>" />
@@ -159,13 +157,13 @@ $keywords = '綠黨,挺好的,九合一,選舉,greenparty';
 		<meta property="og:video:width" content="568" />
 		<meta property="og:video:height" content="320" />
 		<meta property="og:video:type" content="application/x-shockwave-flash" />		<? } ?>
-		<meta content="" name="msapplication-TileColor">
-		<meta content="IE10" name="msapplication-TileImage">
 		<meta property="fb:app_id" content="687618544645054" />
 		<meta property="fb:admins" content="100000125299492" />
-		<meta property="og:locale" content="zh_TW" />    	
+		<meta property="og:locale" content="zh_TW" />
+		<? /*<meta content="" name="msapplication-TileColor">
+		<meta content="IE10" name="msapplication-TileImage">
 		<link rel="shortcut icon" href="images/favicon.ico"/>
-		<link href="" rel="apple-touch-icon-precomposed">
+		<link href="" rel="apple-touch-icon-precomposed">*/?>
 		<script>
 			function fb() {window.open('<?="http://www.facebook.com/sharer.php?u=".urlencode($share_link)?>', 'Facebook','toolbar=0,status=0,width=626,height=436');}
 			function pl() {window.open('<?=$plurk_link?>');}
