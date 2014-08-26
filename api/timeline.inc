@@ -114,6 +114,9 @@ $rows = aasort($all_feeds_new,"date");
 			    $json_this_feed['image'] = $feed['photo'];
 			}
 			
+
+            if($target) { $json_this_feed['target'] = 'blank'; }else{ $json_this_feed['target'] = ''; } 
+			if($json_this_feed['target'] == 'blank') { $target_text = 'target="_blank"'; }
 			
 			$json_this_feed['date'] = date('Y-m-d' , strtotime($feed['date']));
 			$json_this_feed['dateFormat'] = 'YYYY-MM-DD';
@@ -129,18 +132,14 @@ $rows = aasort($all_feeds_new,"date");
 				$parse_result = '';
 				$parse_result = parse_url($feed['link']);
 				if($parse_result['host'] != $_SERVER['HTTP_HOST'] ) { $target = 'blank'; } else { $target = ''; }
-				$feed['title'] = '<a href="'.$feed['link'].'" '.$target.'>' . $feed['title'] . '</a>';
+				$feed['title'] = '<a href="'.$feed['link'].'" '.$target_text.'>' . $feed['title'] . '</a>';
 				$json_this_feed['readmore'] = $feed['link'];
 			}
 						
 			if($feed['category'] == 'video') { 
 				$json_this_feed['url'] = $feed['videolink'];
 			}			
-			
-
-            if($target) { $json_this_feed['target'] = 'blank'; }else{ $json_this_feed['target'] = ''; } 
-			if($json_this_feed['target'] == 'blank') { $target_text = 'target="_blank"'; }
-			
+						
 			$feed['content'] = SL(str_replace("\n","",$feed['content']),250);
 
 			$event_time = '';
