@@ -3,10 +3,8 @@
 
 function metavideo($url) {
 
-	$data = parse_url($url, PHP_URL_PATH);
+	$data = parse_url($url);
 	$query = explode('&', $data['query']);
-	
-	print_r($url);
 	
 	print_r($data);
 	
