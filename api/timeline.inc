@@ -15,9 +15,6 @@ if(is_numeric($pageq[0]))
 	$end_feed = $start_feed + 2;
 }
 
-//combian_all arrays
-$all_feeds = array_merge($newsfeeds, $issues, $gallery, $endorsment);
-*/
 
 $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json");
 $all_feeds = json_decode($string,true);
