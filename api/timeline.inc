@@ -154,7 +154,7 @@ $rows = aasort($all_feeds_new,"date");
 					$json_this_feed['timestamp_str'] = time();
 					
 					if(time() > $event_timestamp) { 
-						$button_text = '<a href="'. $feed['link'] .'" ' . $target_text . ' class="btn small-btn white-btn"><em class="fa fa-thumbs-up"></em>活動結束</a>';
+						$button_text = '<a href="'. $feed['link'] .'" ' . $target_text . ' class="btn small-btn btn-style2"><em class="fa fa-thumbs-up"></em>活動結束</a>';
 					 }else{ 
 						$button_text ='<a href="'. $feed['link'] .'" ' . $target_text . ' class="btn small-btn"><em class="fa fa-thumbs-up"></em>我要參加！</a>';
 					}
