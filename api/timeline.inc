@@ -111,6 +111,11 @@ $rows = aasort($all_feeds_new,"date");
 
 			if($feed['sticky'] == "Yes") { $json_this_feed['star'] = true; }	//置頂
 
+			if($feed['type'] == 'Person') {
+				$feed['title'] = $feed['title'] . ' / ' . $feed['professional_title'] ;
+			}
+
+
 			//<span class="icon-"></span> 標題前面加上 icon
 
 			if($feed['link']) {					
@@ -151,9 +156,6 @@ $rows = aasort($all_feeds_new,"date");
 					$event_time = '<h6>' . $feed['eventtime']  . ' <br> ' . $feed['location'] .'</h6>';
 				}
 
-			if($feed['type'] == 'Person') {
-				$feed['title'] = $feed['title'] . ' / ' . $feed['professional_title'] ;
-			}
 
             $json_this_feed['content'] = '<h3>' . $feed['title'] . '</h3><p>' . $event_time . $feed['content']  . '<div id="timeline_fb_' . $feed['nid'] .'" class="addthis_sharing_toolbox addthis_default_style addthis_20x20_style" data-url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '">';
 

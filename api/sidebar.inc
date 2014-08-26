@@ -7,7 +7,7 @@
 			    		
 			    	 ?>
 				    	<div class="clearfix aside-focus">
-                			<h3><strong>政見主要關注</strong></h3>
+                			<h3><strong>主要關注</strong></h3>
                 			<ul class="statistics">
                 			<? foreach($user['policy'] as $key => $v) { ?>
                 				<li><em class="fa <?=$user['policyicon'][$key]?>"></em> <span<? if($key > 0) { ?> style="color:black;"<? } ?>><?=$v?></span></li>
@@ -28,14 +28,14 @@
 					
 			    	<? if($user['fundraising']) { ?>                		
 				    	<div class="clearfix aside-donate">
-                			<h3><strong>募款</strong></h3>
-                			<p>捐款的短話捐款的短話捐款的短話捐款的短話捐款的短話捐款的短話</p>
-
+                			<h3><strong>捐款支持</strong></h3>
+                			<p><?=$user['fundtitle']?></p>
+							<? /*
                 			<ol class="graphs">
                 				<li><div class="per-60 btn-style2"> 1,203,234<span>60%</span></div></li>                				
                 			</ol>
-                			                			
-                			<a href="#" class="btn small-btn "><em class="fa fa-heart"></em>線上捐款</a><p></p>
+                			*/?>        			
+                			<a href="<?=$user['fundlink']?>" class="btn small-btn "><em class="fa fa-heart"></em>線上捐款</a><p></p>
                 		</div>	
 
                 	<hr>
@@ -61,6 +61,13 @@
                 		</div>
                 					    	
 			    	<hr/>
+			    	
+	<script type="text/javascript" src="/js/fittext.js"></script>	
+    <script type="text/javascript">
+		// FitText.js
+		fitText(document.getElementById('promise'), 0.83)
+	</script>
+			    	
 					<? } ?>
 
 			    	<? if($user['news']) { ?>                		
