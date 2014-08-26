@@ -17,7 +17,7 @@ if($nid && $object) {
 	foreach ($object as $key => $v) {
 
 		if($section == 'index' && !$v['section']) { 
-			//$section_data = $display_header[$v['section']]; 
+			$section_data = $display_header[$v['section']]; 
 			$v['node'] = $v; 
 		}
 	
@@ -33,7 +33,7 @@ if($nid && $object) {
 }
 
 if($nid) {
-	//if(!$nid_found) {   include_once('404.inc');  exit(); }
+	if(!$nid_found && $section != 'index') {   include_once('404.inc');  exit(); }
 }
 
 function showFBlike_l($p){
