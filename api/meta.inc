@@ -112,11 +112,11 @@ if($section == 'index' && !$nid) { //index
  
 }else{	// 沒有帶 nid 的一般單元
 
-	echo "沒有帶 nid 的一般單元";
-	if(!$fb_title) { $user['title'].'的'.$fb_title = $section_data['title'].' | 2014 挺好的！綠黨政治代理人'; }
+	$user['title'].'的'.$fb_title = $section_data['title'].' | 2014 挺好的！綠黨政治代理人';
+	
 	if(!$share_img) { $share_img = ""; }
 	$html_title = $fb_title;
-	if(!$fb_description) $fb_description = $nid_desc;
+	if(!$fb_description) $fb_description = '';
 	
 }
 
