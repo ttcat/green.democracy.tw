@@ -11,6 +11,7 @@ global $key;
 global $value;
 
 	//個人資料
+	
 	$string = @file_get_contents("http://v.democracy.tw/{$u}/site.json");
 	if($string) 
 	{ 
