@@ -65,7 +65,7 @@ $object = $issues;
 
  <!-- Toggle -->
     	                	    <li class="toggle-li">
-    	                	      <a class="toggle-btn-nouse" >My Credit Card Is Stuck In My Computer?</a>
+    	                	      <span class="toggle-btn-nouse" >My Credit Card Is Stuck In My Computer?</span>
     	                	    </li>
 
     	                	    
