@@ -20,7 +20,8 @@ $object = $newsfeeds;
 <? require_once 'api/meta.inc'; ?>
          <link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
          <link rel="stylesheet" type="text/css" href="/css/main.css?<?=time()?>">
-         <link rel="stylesheet" type="text/css" href="/timeline/files/css/timeline_themegp.css?<?=time()?>" />
+         <link rel="stylesheet" type="text/css" href="/css/responsive.css?<?=time()?>">
+         <link rel="stylesheet" type="text/css" href="/timeline/files/css/timeline_themegp.css?<?=time()?>" />         
          <link rel="stylesheet" type="text/css" href="/css/flexslider.css">
          <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
          <link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox.css?v=2.1.4" media="screen" />
