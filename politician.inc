@@ -49,6 +49,11 @@ $object = $newsfeeds;
     		<em class="fa fa-refresh"></em> 顯示更多
     	</div>
 
+<? if($show_nid_one) { ?>
+		<div class="timeline_loadall" id="loadall" style="display:none;">
+    		<a href="http://green.democracy.tw/{$u}"><em class="fa fa-refresh"></em> 顯示全部</a>
+    	</div>
+<? } ?>
 				<!-- add here-->
 
 
@@ -132,7 +137,8 @@ $object = $newsfeeds;
 				var rwd_js = $(window).width();
 				if(rwd_js < 770) { columnMode_t = 'right';} else { columnMode_t = 'dual'; }
 				
-				<? if($show_nid_one) { ?>columnMode_t = 'right'; <? } ?>
+				<? if($show_nid_one) { ?>columnMode_t = 'right'; 
+				$('#loadall').css('display', 'block');<? } ?>
 				
                 var timeline = new Timeline($('#timeline'), init_data);
                 timeline.setOptions({
@@ -183,9 +189,6 @@ $object = $newsfeeds;
                         }
                     });
                 });
-
-			<? if($show_nid_one) { ?>$(".at300b").css('display', 'none');<? } ?>
-
             });
             
             
