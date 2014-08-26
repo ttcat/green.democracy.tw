@@ -1,12 +1,17 @@
 				<aside class="right-aside fourth last">
 			    	
-			    	<? if($user['issues']) { ?>
+			    	<? if($user['issues'] && $user['policy']) 
+			    		{
+			    		
+			    		$user['policy'] = explode('|', $user['policy']);
+			    		$user['policyicon'] = explode('|', $user['policyicon']);
+			    	 ?>
 				    	<div class="clearfix aside-focus">
                 			<h3><strong>政見主要關注</strong></h3>
                 			<ul class="statistics">
-                				<li><em class="fa fa-globe"></em> <span>全球化貿易</span></li>
-                				<li><em class="fa fa-flag"></em> <span style="color:black;">性/別與同志</span></li>
-                				<li><em class="fa fa-legal"></em> <span style="color:black;">法律與人權</span></li>
+                			<? for($user['policy'] as $key => $v) { ?>
+                				<li><em class="fa <?=$user['policyicon'][$k]?>"></em> <span><?=$user['policy'][$k]?></span></li>
+                			<? } ?>
                 			</ul>	
                 			<p><a class="more" herf="/<?=$u?>/issues">了解目前的政見</a></p>
                 		</div>
