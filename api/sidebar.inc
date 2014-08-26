@@ -5,7 +5,6 @@
 			    		$user['policy'] = explode('|', $user['policy']);			    		
 			    		$user['policyicon'] = explode('|', $user['policyicon']);
 			    		
-			    		
 			    	 ?>
 				    	<div class="clearfix aside-focus">
                 			<h3><strong>政見主要關注</strong></h3>
