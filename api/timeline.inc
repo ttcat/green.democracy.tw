@@ -160,15 +160,16 @@ $rows = aasort($all_feeds_new,"date");
 			if($linkpage) $linkpage_array = explode('/', $linkpage);
 			$json_this_feed['section'] = $linkpage_array[0];
 
-				//分頁控制在此
-				if($jj >= $start_feed && $jj <= $end_feed) {
-					$json[] = (array) $json_this_feed;
-				}
-				
+
 				if($end_feed == 0) // show_all
 				{
 					$json[] = (array) $json_this_feed;
+					
+				}else if($jj >= $start_feed && $jj <= $end_feed) //分頁控制在此
+				{
+					$json[] = (array) $json_this_feed;
 				}
+				
 				
 			$jj ++;
 			
