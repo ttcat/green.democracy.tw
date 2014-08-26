@@ -49,12 +49,13 @@ if($section == 'index') {
 if($nid && $object) { 
 	foreach ($object as $key => $v) {
 
-	print_r($v);
+
 		if($section == 'index') { 
 			
 			//$section_data = $display_header[$v['section']]; 
-			//$v['node'] = $v; 
-			
+			$v['node'] = $v; 
+			print_r($v['node']);
+				
 			if($v['node']['nid'] == $nid) {
 				
 				$v_title = explode('</h3>',$v['node']['content']);
