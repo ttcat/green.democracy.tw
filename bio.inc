@@ -88,7 +88,8 @@ require_once 'api/api.inc';
 						<ul>
 							<li>帳號：<?=$user['accountnumber']?></li>
 							<li>戶名：<?=$user['accountname']?></li>
-							<li>銀行：<?=$user['bank']?> / 分行：<?=$user['banknumber']?></li>
+							<li>銀行：<?=$user['bank']?>
+							<li>分行：<?=$user['banknumber']?></li>
 						</ul>
 						</p>
 						</div>
@@ -105,8 +106,8 @@ require_once 'api/api.inc';
 							<li>電話：<?=$user['phone']?></li>
 							<li>聯絡 email：<?=$user['email']?></li>
 						</ul>
-						
-						<iframe width="100" height="550" src="https://www.google.com/maps?ie=UTF8&amp;ll=34.013538,-118.802719&amp;spn=0.03543,0.056691&amp;t=m&amp;z=15&amp;output=embed"></iframe>
+						<br>
+						<iframe width="100" height="550" src="https://www.google.com.tw/maps/place/802%E9%AB%98%E9%9B%84%E5%B8%82%E8%8B%93%E9%9B%85%E5%8D%80%E8%8F%AF%E6%96%B0%E8%A1%971%E8%99%9F/?&amp;output=embed"></iframe>
 						
 						
 						</div>
