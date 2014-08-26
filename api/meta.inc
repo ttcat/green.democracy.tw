@@ -110,15 +110,16 @@ if($section == 'index' && !$nid) { //index
 	$share_img = $user['logo'];
 	$fb_description = $user['bio'];
  
-}else{	// 沒有帶 nid 的一般單元
+}else if(!$nid) {	// 沒有帶 nid 的一般單元
 
 	$fb_title = $user['title'].'的'.$section_data['title'].' | 2014 挺好的！綠黨政治代理人';
-	
 	if(!$share_img) { $share_img = ""; }
 	$html_title = $fb_title;
 	if(!$fb_description) $fb_description = '';
 	
 }
+
+
 
 if(!$share_link) {	$share_link = $this_url; }
 if(!$html_title) {	$html_title = $fb_title; }
