@@ -5,7 +5,9 @@ function metavideo($url) {
 
 	$data = parse_url($url, PHP_URL_PATH);
 	$query = explode('&', $data['query']);
-	print_r($query);
+	print_r($url);
+	print_r($data['query']);
+	
 	
 	if($data['host'] == 'www.youtube.com' || $data['host'] == 'youtube.com' || $data['host'] == 'youtu.be') 
 	{
