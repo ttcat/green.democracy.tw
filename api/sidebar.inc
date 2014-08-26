@@ -9,7 +9,7 @@
 				    	<div class="clearfix aside-focus">
                 			<h3><strong>政見主要關注</strong></h3>
                 			<ul class="statistics">
-                			<? for($user['policy'] as $key => $v) { ?>
+                			<? foreach($user['policy'] as $key => $v) { ?>
                 				<li><em class="fa <?=$user['policyicon'][$k]?>"></em> <span><?=$user['policy'][$k]?></span></li>
                 			<? } ?>
                 			</ul>	
