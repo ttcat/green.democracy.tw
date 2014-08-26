@@ -68,13 +68,13 @@
     			            </ul>
     			        </li>
     	                
-    	            	<li class="nav-parent last donate"><a href="/"><em class="fa fa-heart"></em> 捐款支持</a>
+    	            	<li class="nav-parent last donate"><a href="<?=$user['fundlink']?>"><em class="fa fa-heart"></em> 捐款支持</a>
     	            		<ul style="overflow: hidden;">
-    	            		    <li><a href="#">線上捐款</a></li>
+    	            		    <li><a href="<?=$user['fundlink']?>">線上捐款</a></li>
     	            			<li><a href="/<?=$u?>/finance">捐款徵信</a></li>
-    	            			<li><a href="#">承諾投票</a></li>
-    	            			<li><a href="#">成為志工</a></li>
-    	            			<li><a href="#">分享給朋友</a></li>
+<? /*    	            			<li><a href="#">承諾投票</a></li>
+    	            			<li><a href="#">成為志工</a></li> */ ?>
+    	            			<li><a href="javascript:fb();">分享給朋友</a></li>
     	            		</ul>
     	            	</li>
     	                

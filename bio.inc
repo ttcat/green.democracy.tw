@@ -162,11 +162,6 @@ require_once 'api/api.inc';
             });
         </script>
 
-	<script type="text/javascript" src="/js/fittext.js"></script>	
-    <script type="text/javascript">
-		// FitText.js
-		fitText(document.getElementById('promise'), 0.83)
-	</script>
 	<script type="text/javascript" src="/js/main.js?<?=time?>"></script>
  
 	</body>
