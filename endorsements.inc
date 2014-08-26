@@ -50,9 +50,9 @@ $object = $endorsment;
 						
 						<p>
 						<blockquote>
-						<strong><?=$en['title']?> / <?=$en['professional-title']?></strong></br></br>
+						<h3><?=$en['title']?> / <?=$en['professional-title']?></h3></br></br>
 						<div class="half">
-	                       	<img src="<?=$en['photo']?>" alt="mock" style="100%">
+	                       	<img src="<?=$en['photo']?>" alt="mock" style="width:100%">
 	                    </div>
 	                    <?
 	                    for($i = 0; $i <= 100; $i++)
