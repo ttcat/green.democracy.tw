@@ -150,6 +150,7 @@ $rows = aasort($all_feeds_new,"date");
 					$event_timestamp_str = explode(' to ',$feed['eventtime']);
 					$event_timestamp_date = explode(' ',$feed['eventtime']);					
 					$event_timestamp = strtotime($event_timestamp_date.' '.$event_timestamp_str[1]);
+					$json_this_feed['timestamp'] = $event_timestamp;
 					
 					if($event_timestamp > time() ) { 
 						$button_text = '<a href="'. $feed['link'] .'" ' . $target_text . ' class="btn small-btn white-btn"><em class="fa fa-thumbs-up"></em>活動結束</a>';
