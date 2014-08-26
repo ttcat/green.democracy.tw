@@ -48,9 +48,12 @@ $object = $endorsment;
 				    		$en = $en['node'];
 			    	?>                		
 						
-						<p>
+						<p id="en<?=$en['nid']?>">
 						<blockquote style="line-height:1.4;">
 						<h3><?=$en['title']?> / <?=$en['professional-title']?></h3></br>
+						<div class="half">
+	                       	<img src="<?=$en['photo']?>" alt="mock" style="width:100%">
+	                    </div>
 	                    <?
 	                    for($i = 0; $i <= 100; $i++)
 	                    {
@@ -118,7 +121,18 @@ $object = $endorsment;
                     displayZeroDays : false,
                     oneDayClass	: 'oneday'
                 });
+
+
+            	current_nid = '<?=$nid?>';
+				if(current_nid) { 
+					agoto = '#en' + current_nid;
+					var agotoy = $(agoto).offset(); 
+					$("body").animate({ scrollTop: agotoy.top-200 }, 2000);					
+					console.log( agotoy );
+				}
+
             });
+
         </script>
 
 	<script type="text/javascript" src="/js/main.js?<?=time?>"></script>
