@@ -59,7 +59,7 @@ $rows = aasort($all_feeds_new,"date");
 
 			$json_this_feed = array();
 			$linkpage_array = array();
-			$target_text ＝ '';
+			$target_text ＝ null;
 						
 			$feed = $feed['node'];
 			
