@@ -54,7 +54,6 @@ if($nid && $object) {
 			
 			//$section_data = $display_header[$v['section']]; 
 			$v['node'] = $v; 
-			print_r($v['node']);
 				
 			if($v['node']['nid'] == $nid) {
 				
@@ -84,7 +83,7 @@ if($nid && $object) {
 }
 
 if($nid) {
-	//if(!$nid_found) {   include_once('404.inc');  exit(); }
+	if(!$nid_found) {   include_once('404.inc');  exit(); }
 }
 
 function showFBlike_l($p){
