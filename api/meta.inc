@@ -23,7 +23,8 @@ if($nid && $object) {
 			
 			if($v['node']['nid'] == $nid) {
 				
-				$v_title = explode('</h3>',$v['node']['content']);
+				$v_title = explode('</a></h3>',$v['node']['content']);
+				
 				$nid_name = strip_tags($v_title[0]);
 				$nid_desc = SL(strip_tags($v_title[1]), 150);
 				
