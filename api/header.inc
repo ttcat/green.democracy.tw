@@ -64,7 +64,7 @@
     			                <li><a href="/<?=$u?>/issues">政見</a></li>
 		    	                <!--<li><a href="#">政治代理人公約</a></li>-->
 		    	                <li><a href="/<?=$u?>/endorsements">各界推薦</a></li>
-    			                <li><a class="nav-parent" href="#">活動行程</a></li>
+    			                <? /* <li><a class="nav-parent" href="#">活動行程</a></li> */ ?>
     			            </ul>
     			        </li>
     	                
