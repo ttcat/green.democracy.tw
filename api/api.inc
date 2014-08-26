@@ -10,10 +10,29 @@ global $f;
 global $key;
 global $value;
 
+// Create a curl handle to a non-existing location
+$ch = curl_init('http://v.democracy.tw/{$u}/site.json');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$json = '';
+if( ($json = curl_exec($ch) ) === false)
+{
+    include('404.inc');
+    exit();
+}
+else
+{
+ 	$user = json_decode($json,true);
+	$user = $user['nodes'][0]['node'];   
+}
+
+// Close handle
+curl_close($ch);
+
+
 	//個人資料
-	$string = file_get_contents("http://v.democracy.tw/{$u}/site.json");
-	$user = json_decode($string,true);
-	$user = $user['nodes'][0]['node'];
+	//$string = file_get_contents("http://v.democracy.tw/{$u}/site.json");
+	//$user = json_decode($string,true);
+	//$user = $user['nodes'][0]['node'];
 
 	//推薦
 	$string = file_get_contents("http://v.democracy.tw/{$u}/endorsment.json");
