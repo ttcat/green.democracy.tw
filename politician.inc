@@ -102,11 +102,13 @@ $object = $newsfeeds;
             });
         </script>
 
+<? if($user['gotv']) ?>
 	<script type="text/javascript" src="/js/fittext.js"></script>	
     <script type="text/javascript">
 		// FitText.js
 		fitText(document.getElementById('promise'), 0.83)
 	</script>
+<? } ?>	
 	<script type="text/javascript" src="/js/main.js?<?=time?>"></script>
 
     <script type="text/javascript" src="/timeline/files/javascript/timeline.js"></script>			
