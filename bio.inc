@@ -119,8 +119,6 @@ require_once 'api/api.inc';
 	<script type="text/javascript" src="/js/mosaic.1.0.1.min.js"></script>
 	<script type="text/javascript" src="/js/cleantabs.jquery.js"></script>
 
-	<script type="text/javascript" src="/js/rs-slider.js"></script>
-
 	<script type="text/javascript" src="/js/contact.js"></script>
 	<script type="text/javascript" src="/js/jquery.form.js"></script>
 	<script type="text/javascript" src="/js/jquery.validate.min.js"></script>

@@ -39,10 +39,11 @@ require_once 'api/api.inc';
 				<h2>捐款公開徵信</h2>
 						<hr>
 						
-						
-						
 						<p>
 						<iframe style="height:600px;" src="https://docs.google.com/spreadsheets/d/1_0zPlnB8G2hBR4ir7pktNtaod8kTKrgglUpe0BKKWaY/pubhtml?widget=true&amp;headers=false"></iframe>
+						
+						<? /*<iframe src="<?=$user['gembeded']?>"> */ ?>
+						
     	                </p>
 	    	                    	                    	                    	                    	                
 				<!-- add here-->
