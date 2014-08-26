@@ -67,8 +67,12 @@ if($nid && $object) {
 					if($v['node']['videolink']) { $videolink = metavideo($v['node']['videolink'], 0); $videolink_ssl = metavideo($v['node']['videolink'], 1); }
 					$nid_found = 1;
 					
-					$only_this = $v['node']; // only show this feed if found;
-					$string = json_encode($only_this);					
+					$only_this = (array) $v['node']; // only show this feed if found;
+					$string = json_encode($only_this);	
+					$newsfeeds_perpage = 1;
+					$newsfeeds_total = 1;
+					$newsfeeds_thispage = 0;
+										
 					
 				}
 			}
