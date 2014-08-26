@@ -97,11 +97,7 @@ $rows = aasort($all_feeds_new,"date");
 			if($feed['videolink']) {
 				$json_this_feed['videolink'] = $feed['videolink'];
 			}
-			
-
-            if($target) { $json_this_feed['target'] = 'blank'; }else{ $json_this_feed['target'] = ''; } 
-			if($json_this_feed['target'] == 'blank') { $target_text = 'target="_blank"'; }
-			
+						
 			$json_this_feed['date'] = date('Y-m-d' , strtotime($feed['date']));
 			$json_this_feed['dateFormat'] = 'YYYY-MM-DD';
 			$json_this_feed['speed'] = 5000;
@@ -116,6 +112,10 @@ $rows = aasort($all_feeds_new,"date");
 				$parse_result = '';
 				$parse_result = parse_url($feed['link']);
 				if($parse_result['host'] != $_SERVER['HTTP_HOST'] ) { $target = 'blank'; } else { $target = ''; }
+
+	            if($target) { $json_this_feed['target'] = 'blank'; }else{ $json_this_feed['target'] = ''; } 
+				if($json_this_feed['target'] == 'blank') { $target_text = 'target="_blank"'; }
+
 				$feed['title'] = '<a href="'.$feed['link'].'" '.$target_text.'>' . $feed['title'] . '</a>';
 				$json_this_feed['readmore'] = $feed['link'];
 			}
