@@ -26,7 +26,7 @@ list($u, $f, $key, $value) = explode('/', $q, 4);
 		if(is_numeric($key_array[0])) {	
 			$nid = filter_var($key_array[0], FILTER_SANITIZE_NUMBER_INT);
 			$query_this_page = $key_array[1]; //參數待處理 sql-injection
-			$current_url = '/nid/'.$nid;
+			$current_url = 'nid/'.$nid;
 			$section = 'index';
 			$page_key = $nid;			
 		}
