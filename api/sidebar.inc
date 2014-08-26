@@ -10,7 +10,7 @@
                 			<h3><strong>政見主要關注</strong></h3>
                 			<ul class="statistics">
                 			<? foreach($user['policy'] as $key => $v) { ?>
-                				<li><em class="fa <?=$user['policyicon'][$key]?>"></em> <span><?=$v?></span></li>
+                				<li><em class="fa <?=$user['policyicon'][$key]?>"></em> <span<? if($key > 0) { ?> style="color:black;"<? } ?>><?=$v?></span></li>
                 			<? } ?>
                 			</ul>	
                 			<p><a class="more" herf="/<?=$u?>/issues">了解目前的政見</a></p>
