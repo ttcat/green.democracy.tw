@@ -65,7 +65,7 @@ $object = $issues;
 
  <!-- Toggle -->
     	                	    <li class="toggle-li">
-    	                	      <a href="#" class="toggle-btn" hash-id="21" id="sa21">My Credit Card Is Stuck In My Computer?</a>
+    	                	      <a class="toggle-btn" hash-id="21" id="sa21">My Credit Card Is Stuck In My Computer?</a>
     	                	    </li>
 
     	                	    
