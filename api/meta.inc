@@ -1,4 +1,21 @@
 <?
+
+
+function metavideo($url) {
+
+	$data = parse_url($url, PHP_URL_PATH);
+	$query = explode('&', $data['query']);
+	if($data['host'] == 'www.youtube.com' || $data['host'] == 'youtube.com' || $data['host'] == 'youtu.be') 
+	{
+		foreach($query as $q) 
+	    { 
+    	    list($key, $value) = explode("=", $q); 
+			if($key == 'v') { $video_id = $value; }
+	    } 	
+    }
+	return 'https://www.youtube.com/v/'.$video_id;
+}
+
 $display_header = Array(
 
 		'bio'=> array('title' => '簡介','desc' => '', 'menu' => '1'),
@@ -30,7 +47,7 @@ if($nid && $object) {
 				$share_img = "";
 				if($v['node']['image']) { $share_img = $v['node']['image']; } //timeline use image as key.
 				if($v['node']['photo']) { $share_img = $v['node']['photo']; }
-				if($v['node']['videolink']) { $videolink = $v['node']['videolink']; }
+				if($v['node']['videolink']) { $videolink = metavideo($v['node']['videolink']); }
 				$nid_found = 1;
 			}
 			
@@ -41,7 +58,7 @@ if($nid && $object) {
 					$nid_desc = SL(strip_tags($v['node']['content']), 150);
 					$fb_title =$nid_name .' - '. $user['title']  . '的' .$section_data['title'].' | 2014 挺好的！綠黨政治代理人';
 					if($v['node']['photo']) { $share_img = $v['node']['photo']; }else{ $share_img = ""; }
-					if($v['node']['videolink']) { $videolink = $v['node']['videolink']; }
+					if($v['node']['videolink']) { $videolink = metavideo($v['node']['videolink']); }
 					$nid_found = 1;
 			}
 		}
