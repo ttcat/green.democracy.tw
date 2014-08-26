@@ -105,6 +105,7 @@ $rows = aasort($all_feeds_new,"date");
 			}
 
 		if($json_this_feed['type']) { 
+		
 			if($feed['media']) { 
 				$media = explode("|", $feed['media']);	
 				$json_this_feed['images'] = $media;
@@ -190,8 +191,8 @@ $rows = aasort($all_feeds_new,"date");
 	$json[0]['thispage'] = $start_feed;
 
 		
-	$json_str = json_encode($json);
-	print_r($json_str);
+	//$json_str = json_encode($json);
+	print_r(json_encode($json_str));
 
 ///
 
