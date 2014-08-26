@@ -130,13 +130,19 @@ if(!isset($fb_description) or $fb_description == '') {	$fb_description = $user['
 	$twitter_link = "javascript: void(window.open('http://twitter.com/home/?status='.concat(encodeURIComponent('".$fb_title."')) .concat(' ') .concat(encodeURIComponent('".$share_link."'))));";	
 	
 
+$user['policy'] = explode('|', $user['policy']);			    		
+$user['policyicon'] = explode('|', $user['policyicon']);
+
+$keyword_issues = implode(',', $user['policy']);
+$keywords = '綠黨,挺好的,九合一,選舉,greenparty';
+
 ?>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 		<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 		<meta content="black" name="apple-mobile-web-app-status-bar-style">
 
 		<title><?=$html_title?></title>
-		<meta name="keywords" content="綠黨,<?=$user['title']?>,<?=$section_data['title']?>,<?=$keyword_issues?>,<?=$keywords?>" />
+		<meta name="keywords" content="<?=$user['title']?>,<?=$section_data['title']?>,<?=$keyword_issues?>,<?=$keywords?>" />
 		<meta property="og:title" content="<?=$fb_title?>" />
 		<meta property="og:type" content="article"/>
 		<meta property="og:url" content="<?=$share_link?>" />
