@@ -86,9 +86,9 @@ require_once 'api/api.inc';
 						<div>
 						<p>
 						<ul>
-							<li>帳號：</li>
-							<li>戶名：</li>
-							<li>銀行：分行：</li>
+							<li>帳號：<?=$user['accountnumber']?></li>
+							<li>戶名：<?=$user['accountname']?></li>
+							<li>銀行：<?=$user['bank']?> / 分行：<?=$user['banknumber']?></li>
 						</ul>
 						</p>
 						</div>
@@ -101,10 +101,13 @@ require_once 'api/api.inc';
 
 						<div>
 						<ul>
-							<li>地址：</li>
-							<li>電話：</li>
-							<li>聯絡 email：</li>
+							<li>地址：<?=$user['address']?></li>
+							<li>電話：<?=$user['phone']?></li>
+							<li>聯絡 email：<?=$user['email']?></li>
 						</ul>
+						
+						<iframe width="100" height="550" src="https://www.google.com/maps?ie=UTF8&amp;ll=34.013538,-118.802719&amp;spn=0.03543,0.056691&amp;t=m&amp;z=15&amp;output=embed"></iframe>
+						
 						
 						</div>
 						
