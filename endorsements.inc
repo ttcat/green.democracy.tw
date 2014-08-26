@@ -127,7 +127,7 @@ $object = $endorsment;
 				if(current_nid) { 
 					agoto = '#en' + current_nid;
 					var agotoy = $(agoto).offset(); 
-					$("body").animate({ scrollTop: agotoy.top }, 2000);					
+					$("body").animate({ scrollTop: agotoy.top-100 }, 2000);					
 					console.log( agotoy );
 				}
 
