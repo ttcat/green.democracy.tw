@@ -147,9 +147,6 @@ $object = $newsfeeds;
                 });
                 timeline.display();
 
-				<? if($show_nid_one) { ?>$(".at300b").css('display', 'none');<? } ?>
-
-
                 // load more click
                 var page = 0;
                 
@@ -186,6 +183,9 @@ $object = $newsfeeds;
                         }
                     });
                 });
+
+			<? if($show_nid_one) { ?>$(".at300b").css('display', 'none');<? } ?>
+
             });
             
             
