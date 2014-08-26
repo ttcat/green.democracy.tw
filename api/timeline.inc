@@ -115,6 +115,10 @@ $rows = aasort($all_feeds_new,"date");
 			    $json_this_feed['image'] = $feed['photo'];
 			}
 			
+			if($feed['videolink']) {
+				$json_this_feed['videolink'] = $feed['videolink'];
+			}
+			
 
             if($target) { $json_this_feed['target'] = 'blank'; }else{ $json_this_feed['target'] = ''; } 
 			if($json_this_feed['target'] == 'blank') { $target_text = 'target="_blank"'; }
