@@ -118,6 +118,7 @@ $object = $newsfeeds;
 	<script type="text/javascript" src="/js/main.js?<?=time?>"></script>
 
     <script type="text/javascript" src="/timeline/files/javascript/timeline.js"></script>			
+	<script type="text/javascript" src="/js/jquery-scrollto.js?<?=time?>"></script>
 
         <script type="text/javascript">
             $(document).ready(function() {
@@ -189,6 +190,15 @@ $object = $newsfeeds;
                         }
                     });
                 });
+                
+                
+               <? if($show_nid_one) { ?>
+					agoto = '.main-content';
+					var agotoy = $(agoto).offset(); 
+					$("body").animate({ scrollTop: agotoy.top-200 }, 2000);
+					console.log( agotoy );
+				<? } ?>
+                
             });
             
             
