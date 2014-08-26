@@ -52,22 +52,22 @@ if($nid && $object) {
 
 		if($section == 'index') { 
 			
-			//$section_data = $display_header[$v['section']]; 
-			$v['node'] = $v; 
+			if(!$v['section']) { //section = null = timeline_news_feed; otherwise go 404.
+				$v['node'] = $v; 
 				
-			if($v['node']['nid'] == $nid) {
+				if($v['node']['nid'] == $nid) {
 				
-				$v_title = explode('</h3>',$v['node']['content']);
-				$nid_name = strip_tags($v_title[0]);
-				$nid_desc = SL(strip_tags($v_title[1]), 150);
-				$fb_title = trim($nid_name) .' - '. $user['title']  . '的' .$v['node']['title'].' | 2014 挺好的！綠黨政治代理人';
-				$share_img = "";
-				if($v['node']['image']) { $share_img = $v['node']['image']; } //timeline use image as key.
-				if($v['node']['photo']) { $share_img = $v['node']['photo']; }
-				if($v['node']['videolink']) { $videolink = metavideo($v['node']['videolink'], 0); $videolink_ssl = metavideo($v['node']['videolink'], 1); }
-				$nid_found = 1;
+					$v_title = explode('</h3>',$v['node']['content']);
+					$nid_name = strip_tags($v_title[0]);
+					$nid_desc = SL(strip_tags($v_title[1]), 150);
+					$fb_title = trim($nid_name) .' - '. $user['title']  . '的' .$v['node']['title'].' | 2014 挺好的！綠黨政治代理人';
+					$share_img = "";
+					if($v['node']['image']) { $share_img = $v['node']['image']; } //timeline use image as key.
+					if($v['node']['photo']) { $share_img = $v['node']['photo']; }
+					if($v['node']['videolink']) { $videolink = metavideo($v['node']['videolink'], 0); $videolink_ssl = metavideo($v['node']['videolink'], 1); }
+					$nid_found = 1;
+				}
 			}
-			
 			
 		}else{
 			if($v['node']['nid'] == $nid) {
