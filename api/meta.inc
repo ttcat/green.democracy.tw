@@ -83,7 +83,7 @@ if($nid && $object) {
 }
 
 if($nid) {
-	if(!$nid_found) {   include_once('404.inc');  exit(); }
+	//if(!$nid_found) {   include_once('404.inc');  exit(); }
 }
 
 function showFBlike_l($p){
