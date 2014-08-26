@@ -147,6 +147,7 @@ $object = $newsfeeds;
                 });
                 timeline.display();
 
+				<? if($show_nid_one) { ?>$(".at300b").css('display', 'none');<? } ?>
 
 
                 // load more click
@@ -175,7 +176,6 @@ $object = $newsfeeds;
 
 							window.addthis.toolbox(".addthis_sharing_toolbox");
 							
-							<? if($show_nid_one) { ?>$(".at300b").css('display', 'none');<? } ?>
 							
 							if(feeds_left <= 0) {
 								button.css('display', 'none');
