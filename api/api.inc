@@ -22,6 +22,10 @@ global $value;
 	$endorsment = $recommendation;
 	shuffle($recommendation);
 
+	$user['policy'] = explode('|', $user['policy']);			    		
+	$user['policyicon'] = explode('|', $user['policyicon']);
+
+	$keyword_issues = implode(',', $user['policy']);
 
 //function
 

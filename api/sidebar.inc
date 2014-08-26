@@ -1,10 +1,7 @@
 				<aside class="right-aside fourth last">
 			    	
 			    	<? if($user['issues'] && $user['policy']) 
-			    		{
-			    		$user['policy'] = explode('|', $user['policy']);			    		
-			    		$user['policyicon'] = explode('|', $user['policyicon']);
-			    		
+			    		{			    		
 			    	 ?>
 				    	<div class="clearfix aside-focus">
                 			<h3><strong>主要關注</strong></h3>

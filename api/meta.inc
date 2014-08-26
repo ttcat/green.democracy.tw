@@ -136,7 +136,7 @@ if(!isset($fb_description) or $fb_description == '') {	$fb_description = $user['
 		<meta content="black" name="apple-mobile-web-app-status-bar-style">
 
 		<title><?=$html_title?></title>
-		<meta name="keywords" content="綠黨,<?=$user['title']?>,<?=$section_data['title']?>,<?=$keywords?>" />
+		<meta name="keywords" content="綠黨,<?=$user['title']?>,<?=$section_data['title']?>,<?=$keyword_issues?>,<?=$keywords?>" />
 		<meta property="og:title" content="<?=$fb_title?>" />
 		<meta property="og:type" content="article"/>
 		<meta property="og:url" content="<?=$share_link?>" />
