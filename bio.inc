@@ -28,7 +28,7 @@ require_once 'api/api.inc';
             <div class="main wrapper clearfix">
             	<!-- Start Main Content -->				
             	
-                <div class="main-content three-fourths">
+                <div class="main-content three-fourths light-wording-div">
 				
 
 				<!-- add here-->
