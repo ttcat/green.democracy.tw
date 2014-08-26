@@ -4,6 +4,8 @@
 			    		{
 			    		
 			    		$user['policy'] = explode('|', $user['policy']);
+			    		print_r($user['policy']);
+			    		
 			    		$user['policyicon'] = explode('|', $user['policyicon']);
 			    	 ?>
 				    	<div class="clearfix aside-focus">
