@@ -55,7 +55,7 @@ $object = $endorsment;
 	                       	<img src="<?=$en['photo']?>" alt="mock" style="100%">
 	                    </div>
 	                    <?
-	                    for($i = 0; $i <= 100; $i++; )
+	                    for($i = 0; $i <= 100; $i++)
 	                    {
 	                    	echo $en['content'];
 	                    }
