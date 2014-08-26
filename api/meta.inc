@@ -123,7 +123,7 @@ if(!$share_link) {	$share_link = $this_url; }
 if(!$html_title) {	$html_title = $fb_title; }
 if($share_img == '') { $share_img = $user['logo']; }
 
-if(!isset($fb_description) or $fb_description == '') {	$fb_description = $user['title'].'：'.$user['section'].'，2014 挺好的人選、挺好的政黨、挺好的！台灣綠黨政治代理人官方網站。'; }
+if(!isset($fb_description) or $fb_description == '') {	$fb_description = $user['title'].'－'.$user['section'].'：2014 挺好的人選、挺好的政黨、挺好的！台灣綠黨政治代理人官方網站。'; }
 	
 	$plurk_link = 'http://www.plurk.com/?qualifier=shares&amp;status='.urlencode($share_link." (".$fb_title.") " . $share_img);
 	$twitter_link = "javascript: void(window.open('http://twitter.com/home/?status='.concat(encodeURIComponent('".$fb_title."')) .concat(' ') .concat(encodeURIComponent('".$share_link."'))));";	
