@@ -50,13 +50,11 @@ $object = $endorsment;
 						
 						<p>
 						<blockquote>
-						<? //<strong>公民參政共同監督意願書</strong></br></br> ?>
-						
+						<strong><?=$en['title']?> / <?=$en['professional-title']?></strong></br></br>
 						<div class="half">
 	                       	<img src="<?=$en['photo']?>" alt="mock" style="100%">
 	                    </div>
 	                    <?=$en['content']?>
-						<cite>- <?=$en['title']?> / <?=$en['professional-title']?></cite>
     	                </blockquote>
     	                </p>
 					<? if($v < $total_en) { ?><hr><? } ?>
