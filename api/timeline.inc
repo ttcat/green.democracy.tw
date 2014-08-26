@@ -52,9 +52,11 @@ $rows = aasort($all_feeds_new,"date");
 		$json_this_feed = array();
 		
 		foreach ($rows as $k => $feed) { 
-			
+
 			$json_this_feed = array();
+			$linkpage_array = array();
 			
+						
 			$feed = $feed['node'];
 			
 			if($feed['type'] == "") { $feed['type'] = 'gallery'; }  //測試
