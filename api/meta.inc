@@ -40,10 +40,11 @@ $display_header = Array(
 $section_data = $display_header[$section];
 $this_url = WEB.'/'.$current_url;
 
-		if($section == 'index') { 
-			$string = file_get_contents("http://green.democracy.tw/{$u}/api/timeline?all");
-			$object = json_decode($string,true);
-		}
+if($section == 'index') { 
+	$string = file_get_contents("http://green.democracy.tw/{$u}/api/timeline?all");
+	$object = json_decode($string,true);
+}
+
 		
 if($nid && $object) { 
 	foreach ($object as $key => $v) {
@@ -81,7 +82,7 @@ if($nid && $object) {
 }
 
 if($nid) {
-	if(!$nid_found && $section != 'index') {   include_once('404.inc');  exit(); }
+	if(!$nid_found) {   include_once('404.inc');  exit(); }
 }
 
 function showFBlike_l($p){

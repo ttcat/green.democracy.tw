@@ -14,35 +14,6 @@ if(is_numeric($pageq[0]))
 	$start_feed = ( (int) $pageq[0] ) * $perpage;
 	$end_feed = $start_feed + 2;
 }
-/*
-//newsfeeds
-$string = file_get_contents("http://v.democracy.tw/{$u}/news.json");
-$newsfeeds = json_decode($string,true);
-$newsfeeds = $newsfeeds['nodes'];
-
-//活動
-//$string = file_get_contents("http://v.democracy.tw/{$u}/event.json");
-//$events = json_decode($string, true);
-//$events = $events['nodes'];
-
-//政見
-$string = file_get_contents("http://v.democracy.tw/{$u}/issue.json");
-$issues = json_decode($string, true);
-$issues = $issues['nodes'];
-
-//相簿	
-$string = file_get_contents("http://v.democracy.tw/{$u}/galleries.json");
-$gallery = json_decode($string, true);
-$gallery = $gallery['nodes'];
-
-foreach($gallery as $key => $v) {
-	$gallery[$key]['node']['date'] = date("Y-m-d" ,strtotime($v['node']['post date']));
-}
-
-//推薦
-//$endorsment already get from api.icnc
-
-
 
 //combian_all arrays
 $all_feeds = array_merge($newsfeeds, $issues, $gallery, $endorsment);
