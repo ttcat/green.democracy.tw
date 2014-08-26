@@ -102,7 +102,7 @@ $object = $newsfeeds;
             });
         </script>
 
-<? if($user['gotv']) ?>
+<? if($user['gotv']) { ?>
 	<script type="text/javascript" src="/js/fittext.js"></script>	
     <script type="text/javascript">
 		// FitText.js
