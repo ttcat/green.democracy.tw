@@ -51,9 +51,6 @@ $object = $endorsment;
 						<p>
 						<blockquote style="line-height:1.4;">
 						<h3><?=$en['title']?> / <?=$en['professional-title']?></h3></br>
-						<div class="half">
-	                       	<img src="<?=$en['photo']?>" alt="mock" style="width:100%">
-	                    </div>
 	                    <?
 	                    for($i = 0; $i <= 100; $i++)
 	                    {
