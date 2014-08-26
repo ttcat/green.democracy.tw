@@ -9,7 +9,8 @@ $pageq = explode('?' , $timeline_page_query);
 	$end_feed = 0;
 }
 
-if(is_numeric($pageq[0]) {
+if(is_numeric($pageq[0]))
+{
 	$start_feed = ( (int) $pageq[0] ) * $perpage;
 	$end_feed = $start_feed + 2;
 }
