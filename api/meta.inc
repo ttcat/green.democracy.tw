@@ -68,6 +68,8 @@ if($nid && $object) {
 					$nid_found = 1;
 					
 					$only_this[] = (array) $v['node']; // only show this feed if found;
+					$show_nid_one = 1;
+					
 					$string = json_encode($only_this);	
 					$newsfeeds_perpage = 1;
 					$newsfeeds_total = 1;

@@ -131,10 +131,11 @@ $object = $newsfeeds;
 				
 				var rwd_js = $(window).width();
 				if(rwd_js < 770) { columnMode_t = 'right';} else { columnMode_t = 'dual'; }
-
+				<? if($show_nid_one) { ?>columnMode_t = 'right'; ?>
+				
                 var timeline = new Timeline($('#timeline'), init_data);
                 timeline.setOptions({
-                	responsive_width : 770,
+                	<? if(!$show_nid_one) { ?>responsive_width : 770,<? } ?>
                     animation:       true,
                     lightbox:        true,
                     first_separator: false,
