@@ -50,8 +50,8 @@ $object = $newsfeeds;
     	</div>
 
 <? if($show_nid_one) { ?>
-		<div class="timeline_loadmore" id="loadall" style="display:block; color:white;">
-    		<a href="http://green.democracy.tw/<?=$u?>"><em class="fa fa-refresh"></em> 顯示全部</a>
+		<div class="timeline_loadmore" id="loadall">
+    		<a href="http://green.democracy.tw/<?=$u?>" style="display:block; color:white;"><em class="fa fa-refresh"></em> 顯示全部</a>
     	</div>
 <? } ?>
 				<!-- add here-->
