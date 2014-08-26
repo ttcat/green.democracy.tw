@@ -59,7 +59,7 @@ $rows = aasort($all_feeds_new,"date");
 
 			$json_this_feed = array();
 			$linkpage_array = array();
-			
+			$target_text ＝ '';
 						
 			$feed = $feed['node'];
 			
@@ -114,7 +114,6 @@ $rows = aasort($all_feeds_new,"date");
 			if($feed['type'] == 'Person') {
 				$feed['title'] = $feed['title'] . ' / ' . $feed['professional_title'] ;
 			}
-
 
 			//<span class="icon-"></span> 標題前面加上 icon
 
