@@ -43,7 +43,6 @@ $this_url = WEB.'/'.$current_url;
 if($section == 'index') { 
 	$string = file_get_contents("http://green.democracy.tw/{$u}/api/timeline?all");
 	$object = json_decode($string,true);
-	print_r($object);
 }
 
 		
@@ -54,6 +53,7 @@ if($nid && $object) {
 			
 			//$section_data = $display_header[$v['section']]; 
 			//$v['node'] = $v; 
+	print_r($v['node']);
 			
 			if($v['node']['nid'] == $nid) {
 				
