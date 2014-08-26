@@ -17,6 +17,8 @@ function metavideo($url, $ssl) {
     	    list($key, $value) = explode("=", $q); 
 			if($key == 'v') { $video_id = $value; }
 			if($ssl) { $url_new = 'https://www.youtube.com/v/'.$video_id; } else { $url_new = 'http://www.youtube.com/v/'.$video_id; }
+			
+
 	    } 	
     }
     
@@ -38,6 +40,11 @@ $display_header = Array(
 $section_data = $display_header[$section];
 $this_url = WEB.'/'.$current_url;
 
+		if($section == 'index') { 
+			$string = file_get_contents("http://green.democracy.tw/{$u}/api/timeline?all");
+			$object = json_decode($string,true);
+		}
+		
 if($nid && $object) { 
 	foreach ($object as $key => $v) {
 
@@ -122,6 +129,9 @@ if(!isset($fb_description) or $fb_description == '') {	$fb_description = '2014 �
 		<meta property="og:image" content="<?=$share_img?>" />
 		<meta property="og:site_name" content="2014 挺好的！綠黨政治代理人" /> 
 		<meta property="og:description" content="<?=$fb_description?>" />  
+		<meta property="og:locale" content="zh_TW" />
+		<meta property="og:locale:alternate" content="en_US" />
+		<? /*<meta property="og:see_also" content="">*/?>
 <? if($videolink) { ?>
 		<meta property="og:video" content="<?=$videolink?>" />
 		<meta property="og:video:secure_url" content="<?=$videolink_ssl?>" />

@@ -5,10 +5,14 @@ require_once 'api.inc';
 $perpage = 3;
 $pageq = explode('?' , $timeline_page_query);
 
-$start_feed = ( (int) $pageq[0] ) * $perpage;
-$end_feed = $start_feed + 2;
+ if($pageq[0] == 'all') {
+	$end_feed = 0;
+}
 
-
+if(is_numeric($pageq[0]) {
+	$start_feed = ( (int) $pageq[0] ) * $perpage;
+	$end_feed = $start_feed + 2;
+}
 /*
 //newsfeeds
 $string = file_get_contents("http://v.democracy.tw/{$u}/news.json");
@@ -184,7 +188,13 @@ $rows = aasort($all_feeds_new,"date");
 				//分頁控制在此
 				if($jj >= $start_feed && $jj <= $end_feed) {
 					$json[] = (array) $json_this_feed;
-				}		
+				}
+				
+				if($end_feed == 0) // show_all
+				{
+					$json[] = (array) $json_this_feed;
+				}
+				
 			$jj ++;
 			
 			}
