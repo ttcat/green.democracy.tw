@@ -1,5 +1,6 @@
 <?php
 require_once 'api/api.inc';
+$section = 'index';
 
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -34,8 +35,7 @@ require_once 'api/api.inc';
 				     
 <h1 class="super"><span>404</span></h1>
 <h1>Page not found</h1>
-<p class="lead">Sorry, your lost my friend, the page your looking for does not exist anymore. <br>Take your luck at searching for a new&nbsp;one. </p>				     
-				     
+<p class="lead">Sorry, your lost my friend, the page your looking for does not exist anymore. <br>Take your luck at searching for a new&nbsp;one. </p>
 				         	                    	                    	                
 				<!-- add here-->
 				</div>
