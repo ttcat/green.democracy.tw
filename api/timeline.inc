@@ -146,14 +146,14 @@ $rows = aasort($all_feeds_new,"date");
 			$event_time = '';
 			//event 加上按鈕
 			if($feed['type'] == 'Event') { 
-					
+
 					$event_timestamp_str = explode(' to ',$feed['eventtime']);
 					$event_timestamp_date = explode(' ',$feed['eventtime']);					
 					$event_timestamp = strtotime($event_timestamp_date[0].' '.$event_timestamp_str[1]);
 					$json_this_feed['timestamp'] = $event_timestamp;
 					$json_this_feed['timestamp_str'] = time();
 					
-					if($event_timestamp > time() ) { 
+					if(time() > $event_timestamp) { 
 						$button_text = '<a href="'. $feed['link'] .'" ' . $target_text . ' class="btn small-btn white-btn"><em class="fa fa-thumbs-up"></em>活動結束</a>';
 					 }else{ 
 						$button_text ='<a href="'. $feed['link'] .'" ' . $target_text . ' class="btn small-btn"><em class="fa fa-thumbs-up"></em>我要參加！</a>';
