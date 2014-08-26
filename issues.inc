@@ -54,16 +54,20 @@ $object = $issues;
     	                		<!-- Toggle -->
     	                	    <li class="toggle-li">
     	                	      <a href="#" class="toggle-btn" hash-id="<?=$issue['nid']?>" id="sa<?=$issue['nid']?>"><em class="fa fa-bookmark"></em> <span><?=$issue['title']?></span></a>
-    	                	      <div class="toggle-content">
-
+    	                	      <? if($issue['content']) { ?><div class="toggle-content">
     	                	      	<p><?=$issue['content']?></p>
-
 									<p><span class="issues-tags meta"><span class="fa fa-tags"></span> <?=$issue['tag']?><span></p>
 									<div id="fb<?=$issue['nid']?>" class="addthis_sharing_toolbox" data-url="http://green.democracy.tw/<?=$u?>/issues/nid/<?=$issue['nid']?>"></div>
-
-    	                	      </div>
+    	                	      </div><? } ?>
     	                	    </li>
     	                <? } ?>	    
+
+
+ <!-- Toggle -->
+    	                	    <li class="toggle-li">
+    	                	      <a href="#" class="toggle-btn" hash-id="21" id="sa21">My Credit Card Is Stuck In My Computer?</a>
+    	                	    </li>
+
     	                	    
     	                <? /* //example 
     	                	    <!-- Toggle -->
@@ -173,7 +177,7 @@ $object = $issues;
 						//console.log( index + ": " + lia.attr('hash-id') );
 
 					  if(lia.attr('hash-id') == current_nid) {
-					  	
+					  					  	
 					  	lia.addClass('active');
 					  	$(this).find('div').css('display', 'block'); 
 						
