@@ -26,10 +26,9 @@ if($nid && $object) {
 				$v_title = explode('</h3>',$v['node']['content']);
 				$nid_name = strip_tags($v_title[0]);
 				$nid_desc = SL(strip_tags($v_title[1]), 150);
-				
 				$fb_title = trim($nid_name) .' - '. $user['title']  . '的' .$v['node']['title'].' | 2014 挺好的！綠黨政治代理人';
-
-				if($v['node']['photo']) { $share_img = $v['node']['photo']; }else{ $share_img = ""; }
+				if($v['node']['image']) { $share_img = $v['node']['image']; }else{ $share_img = ""; }
+				if($v['node']['photo']) { $share_img = $v['node']['image']; }else{ $share_img = ""; }
 				if($v['node']['videolink']) { $videolink = $v['node']['videolink']; }
 				$nid_found = 1;
 			}
