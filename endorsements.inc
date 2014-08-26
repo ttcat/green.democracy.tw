@@ -50,7 +50,7 @@ $object = $endorsment;
 						
 						<p>
 						<blockquote style="line-heigt:1.4;">
-						<h3><?=$en['title']?> / <?=$en['professional-title']?></h3></br></br>
+						<h3><?=$en['title']?> / <?=$en['professional-title']?></h3></br>
 						<div class="half">
 	                       	<img src="<?=$en['photo']?>" alt="mock" style="width:100%">
 	                    </div>
