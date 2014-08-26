@@ -54,7 +54,13 @@ $object = $endorsment;
 						<div class="half">
 	                       	<img src="<?=$en['photo']?>" alt="mock" style="100%">
 	                    </div>
-	                    <?=$en['content']?>
+	                    <?
+	                    for($i = 0; $i <= 100; $i++; )
+	                    {
+	                    	echo $en['content'];
+	                    }
+	                    	
+	                    	?>
     	                </blockquote>
     	                </p>
 					<? if($v < $total_en) { ?><hr><? } ?>
