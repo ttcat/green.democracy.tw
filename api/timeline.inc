@@ -83,7 +83,7 @@ $rows = aasort($all_feeds_new,"date");
 				$linkpage = $cats[$feed['type']][3];	
 			}
 
-			if($feed['link']) { 
+			if(! $feed['link'] && $linkpage) { 
 				$feed['link'] = 'http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'];
 				$json_this_feed['test'] = 1;
 			}
