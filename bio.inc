@@ -39,7 +39,7 @@ require_once 'api/api.inc';
 						選區
 						選區細節
 						
-						<div class=".toggle-content">
+						<div class="toggle-content">
 						<p>
 						<strong>自傳標題</strong></br></br>
 						
