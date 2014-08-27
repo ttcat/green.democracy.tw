@@ -56,7 +56,7 @@ require_once 'api/api.inc';
 
 
 
-				<h2>政治獻金專戶</h2>
+				<h2 class="clearfix">政治獻金專戶</h2>
 						<hr>
 
 						<div>
@@ -72,7 +72,7 @@ require_once 'api/api.inc';
 
 				<br>
 	
-				<h2>總部資訊</h2>
+				<h2 class="clearfix">總部資訊</h2>
 						<hr>
 
 
