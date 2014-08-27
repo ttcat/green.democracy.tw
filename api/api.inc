@@ -10,25 +10,20 @@ global $f;
 global $key;
 global $value;
 
-	//個人資料
-	
-	$string = file_get_contents("http://v.democracy.tw/{$u}/site.json");
-	if($string) 
-	{ 
-		$user = json_decode($string,true);
-		$user = $user['nodes'][0]['node'];
-	}else
-	{
-		include_once('404.inc');
-		exit();
-	}
+//個人資料
 
-	//推薦
-	$string = file_get_contents("http://v.democracy.tw/{$u}/endorsment.json");
-	$recommendation = json_decode($string,true);
-	$recommendation = $recommendation['nodes'];
-	$endorsment = $recommendation;
-	shuffle($recommendation);
+$string = file_get_contents("http://v.democracy.tw/{$u}/site.json");
+if($string) 	{ 
+  $user = json_decode($string,true);
+  $user = $user['nodes'][0]['node'];
+}
+
+//推薦
+$string = file_get_contents("http://v.democracy.tw/{$u}/endorsment.json");
+$recommendation = json_decode($string,true);
+$recommendation = $recommendation['nodes'];
+$endorsment = $recommendation;
+shuffle($recommendation);
 
 //function
 
@@ -50,4 +45,3 @@ function SL($str,$len,$name=null){
 
 }
 
-?>

@@ -18,13 +18,13 @@
     	
     	<div class="feature-heading"><a href="/<?=$u?>">
 
-    		<? if($user['slogan']) { ?><p class="heading"><?=$user['slogan']?></p><? } ?>
+    		<?php if($user['slogan']) { ?><p class="heading"><?=$user['slogan']?></p><?php } ?>
 	    		<p><?=$user['title']?>
-    					<? if(!$detect->isMobile()) {?><div class="fb-like main-like" data-href="<?=$user['fb']?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div><? } ?>
-		    	<? if($user['section'] or $user['detail']) { ?><ul class="heading-info">
-		    			<? if($user['section']) { ?><li><?=$user['section']?></li><? } ?>
-		    			<? if($user['detail']) { ?><li><?=$user['detail']?></li><? } ?>
-    				<ul><? } ?>
+    					<?php if(!$detect->isMobile()) { ?><div class="fb-like main-like" data-href="<?=$user['fb']?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div><?php } ?>
+		    	<?php if($user['section'] or $user['detail']) { ?><ul class="heading-info">
+		    			<?php if($user['section']) { ?><li><?=$user['section']?></li><?php } ?>
+		    			<?php if($user['detail']) { ?><li><?=$user['detail']?></li><?php } ?>
+    				<ul><?php } ?>
     			</p>
 
     	</a></div>
@@ -34,7 +34,7 @@
 		<div class="bannerShadow" style="background-image: url(<?=$user['banner']?>);"></div>
 
     	<div class="outer-profile-img">
-			<? if($detect->isMobile()) {?> <div class="fb-like phone-like" style="position: absolute;" data-href="<?=$user['fb']?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div> <? } ?>    	
+			<?php if($detect->isMobile()) {?> <div class="fb-like phone-like" style="position: absolute;" data-href="<?=$user['fb']?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div> <?php } ?>    	
 		    <img id="imgHeadShot" class="profile-img" src="<?=$user['logo']?>" alt="<?=$user['title']?>">
 	    </div>
     	
@@ -64,16 +64,17 @@
     			                <li><a href="/<?=$u?>/issues">政見</a></li>
 		    	                <!--<li><a href="#">政治代理人公約</a></li>-->
 		    	                <li><a href="/<?=$u?>/endorsements">各界推薦</a></li>
-    			                <? /* <li><a class="nav-parent" href="#">活動行程</a></li> */ ?>
+    			                <!--<li><a class="nav-parent" href="#">活動行程</a></li>-->
     			            </ul>
     			        </li>
-    	                
     	            	<li class="nav-parent last donate"><a href="<?=$user['fundlink']?>"><em class="fa fa-heart"></em> 捐款支持</a>
     	            		<ul style="overflow: hidden;">
     	            		    <li><a href="<?=$user['fundlink']?>">線上捐款</a></li>
     	            			<li><a href="/<?=$u?>/finance">捐款徵信</a></li>
-<? /*    	            			<li><a href="#">承諾投票</a></li>
-    	            			<li><a href="#">成為志工</a></li> */ ?>
+<!--
+    	            			<li><a href="#">承諾投票</a></li>
+    	            			<li><a href="#">成為志工</a></li>
+-->
     	            			<li><a href="javascript:fb();">分享給朋友</a></li>
     	            		</ul>
     	            	</li>
@@ -86,5 +87,4 @@
     	<!-- End Main Navigation -->
     </div>
     <!-- End Outter Wrapper -->
-    
     <div id="space"></div>

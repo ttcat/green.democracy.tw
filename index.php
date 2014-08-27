@@ -1,78 +1,69 @@
 <?php
-global $u;
-$q = ltrim($_SERVER['REQUEST_URI'], '/');
+error_reporting(E_ALL & ~E_NOTICE);
+
+global $u,$nid,$page;
+$q = $_SERVER['REDIRECT_URL'] ? ltrim($_SERVER['REDIRECT_URL'], '/') : ltrim($_SERVER['REQUEST_URI'], '/');
+if(strstr($q, '?')){
+  $q = substr($q, 0, strpos($q, '?'));
+}
 $q = preg_replace('/[^a-zA-Z0-9]\//', '', $q);
 
-//$pos = strpos($q, '?');
-//if ($pos === false) {
-	//} else {
-//}
+list($u, $f, $nid) = explode('/', $q, 3);
 
-
-list($u, $f, $key, $value) = explode('/', $q, 4);
-
-// verify input
-// TODO: should be only accept listed user for greenparty
+/**
+ * 1. verify user
+ * TODO: should be only accept listed user for greenparty
+ */
 $u = str_replace('.php', '', $u);
-if(empty($u) || empty($f)){
+if(empty($u)){
   header("HTTP/1.0 404 Not Found");
   include('404.html');
   exit();
 }
 
-// 
-	if($key == 'nid') {	// 個別單元吃 nid
-	 	$value_array = explode('?' ,$value, 2);
-		if(is_numeric($value_array[0])) {	
-			$nid = filter_var($value_array[0], FILTER_SANITIZE_NUMBER_INT);
-			$query_this_page = $value_array[1]; //參數待處理 sql-injection
-			$current_url = $u.'/'.$f.'/nid/'.$nid;
-			$page_key = $nid;
-		}
-	}
-	
-	if($f == 'nid') {	//timeline 首頁吃 nid
-	 	$key_array = explode('?' ,$key, 2);
-		if(is_numeric($key_array[0])) {	
-			$nid = filter_var($key_array[0], FILTER_SANITIZE_NUMBER_INT);
-			$query_this_page = $key_array[1]; //參數待處理 sql-injection
-			$current_url = $u.'/nid/'.$nid;
-			$section = 'index';
-			$page_key = $nid;			
-		}
-		include_once('politician.inc');
-		exit();
-	}	
-	
-	if($f == 'api') { // api read
-	 	$key_array = explode('?' ,$key, 2);
-	 	if($key_array[0] == 'timeline') {
-	 		$timeline_page_query = $key_array[1]; //參數待處理 sql-injection
-			$current_url = $u.'/api/timeline';
-	 		include_once('api/timeline.inc');
-			exit();
-		}
-	}
-
-$f_array = explode('?' ,$f, 2);
-//預設 politician.inc 為首頁
-if($f_array[0] == null) {
-  if(!$current_url) { $current_url = $u; }
-  $section = 'index';
-  include_once('politician.inc');
-  exit();
+/**
+ * verify section
+ */
+if(empty($f)){
+  $f = 'politician';
 }
 
-if(file_exists($f_array[0].'.inc')){
-	if(!$current_url) { $current_url = $u.'/'.$f_array[0]; }
-	if(!$section) $section = $f_array[0];
-	include_once($f_array[0].'.inc');
-	exit();
+switch($f){
+  case 'timeline':
+    if(!empty($nid) && is_numeric($nid)){
+      
+    }
+    else{
+      $nid = null;
+    }
+
+    // require api here
+    require_once 'api/api.inc';
+    $page = !empty($_GET['p']) ? $_GET['p'] : 0;
+    if(is_numeric($page) || $page === 'all'){
+      require_once('api/timeline.inc');
+      print get_timeline();
+      exit();
+    }
+    break;
+  default:
+    if(!empty($nid) && is_numeric($nid)){
+      
+    }
+    else{
+      $nid = null;
+    }
+    // require api here
+    require_once 'api/api.inc';
+    if(file_exists($f.'.inc')){
+      include_once($f.'.inc');
+      exit();
+    }
+    break;
 }
 
-// 404 should always static
+// 404 should always static for performance reason(too bad)
 header("HTTP/1.0 404 Not Found");
 include('404.html');
 exit();
-?>
 

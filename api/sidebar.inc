@@ -1,33 +1,33 @@
 				<aside class="right-aside fourth last">
 			    	
-			    	<? if($user['issues'] && $user['policy']) 
+			    	<?php if($user['issues'] && $user['policy']) 
 			    		{			    		
 			    	 ?>
 				    	<div class="clearfix aside-focus">
                 			<h3><strong>主要關注</strong></h3>
                 			<ul class="statistics">
-                			<? foreach($user['policy'] as $key => $v) { ?>
-                				<li><em class="fa <?=$user['policyicon'][$key]?>"></em> <span<? if($key > 0) { ?> style="color:black;"<? } ?>><?=$v?></span></li>
-                			<? } ?>
+                			<?php foreach($user['policy'] as $key => $v) { ?>
+                				<li><em class="fa <?=$user['policyicon'][$key]?>"></em> <span<?php if($key > 0) { ?> style="color:black;"<?php } ?>><?=$v?></span></li>
+                			<?php } ?>
                 			</ul>	
                 			<p><a class="more" href="/<?=$u?>/issues">了解目前的政見</a></p>
                 		</div>
-				    <? } ?>
+				    <?php } ?>
 				    
 				    	                		
-			    	<? if($user['recommendation']) { ?>                		
+			    	<?php if($user['recommendation']) { ?>                		
                 		<!-- Quote Widget -->
 				    	<div class="clearfix aside-recom">
                 			<h3><strong>各界推薦</strong></h3>
                 			<blockquote><?=$recommendation[0]['node']['content']?><cite>- <?=$recommendation[0]['node']['title']?> / <?=$recommendation[0]['node']['professional-title']?></cite></blockquote>
                 		</div>
-					<? } ?>	
+					<?php } ?>	
 					
-			    	<? if($user['fundraising']) { ?>                		
+			    	<?php if($user['fundraising']) { ?>                		
 				    	<div class="clearfix aside-donate">
                 			<h3><strong>捐款支持</strong></h3>
                 			<p><?=$user['fundtitle']?></p>
-							<? /*
+							<?php /*
                 			<ol class="graphs">
                 				<li><div class="per-60 btn-style2"> 1,203,234<span>60%</span></div></li>                				
                 			</ol>
@@ -36,9 +36,9 @@
                 		</div>	
 
                 	<hr>
-					<? } ?>
+					<?php } ?>
 
-			    	<? if($user['gotv']) { ?>                		
+			    	<?php if($user['gotv']) { ?>                		
 
                 		<!-- Email Signup Widget -->
 				    	<div class="clearfix aside-signup">
@@ -65,9 +65,9 @@
 		fitText(document.getElementById('promise'), 0.83)
 	</script>
 			    	
-					<? } ?>
+					<?php } ?>
 
-			    	<? if($user['news']) { ?>                		
+			    	<?php if($user['news']) { ?>                		
 
                 		<!-- Start Text Widget -->     
 				    	<div class="clearfix aside-news">
@@ -82,10 +82,10 @@
                 		</div>
                 		
                 <hr class="aside-news">
-                <? } ?>
+                <?php } ?>
                 
                 
-				<? if($user['gallery']) { ?>                		                		
+				<?php if($user['gallery']) { ?>                		                		
 			    	<!-- Start Gallery Widget -->
 			    	
 			    	<div class="clearfix gallery aside-gallery">
@@ -134,20 +134,20 @@
 			    	</div>
 
                 <hr class="aside-gallery">                		
-				<? } ?>
+				<?php } ?>
 				
 				
 			    	
 				    	<div class="clearfix aside-contact">
 				    	
                 			<h3><strong>聯繫<?=$user['title']?></strong></h3>
-							<? if($user['fb']) { ?><div class="fb-like-box" style="margin-left: -10px; margin-bottom: 5px; margin-top: -5px;" data-href="<?=$user['fb']?>" data-width="200" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div><? } ?>
+							<?php if($user['fb']) { ?><div class="fb-like-box" style="margin-left: -10px; margin-bottom: 5px; margin-top: -5px;" data-href="<?=$user['fb']?>" data-width="200" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div><?php } ?>
 							<ul class="link-list">
-    	       					<? if($user['website']) { ?><li><a href="#">網站名稱</a></li><? } ?>
-    	       					<? if($user['phone']) { ?><li><a href="tel:<?=$user['phone']?>"><?=$user['phone']?></a></li><? } ?>
-    	       					<? if($user['address']) { ?><li><a href="https://www.google.com.tw/maps/search/<?=$user['address']?>/?hl=zh-TW" target="blank"><?=$user['address']?></a></li><? } ?>
+    	       					<?php if($user['website']) { ?><li><a href="#">網站名稱</a></li><?php } ?>
+    	       					<?php if($user['phone']) { ?><li><a href="tel:<?=$user['phone']?>"><?=$user['phone']?></a></li><?php } ?>
+    	       					<?php if($user['address']) { ?><li><a href="https://www.google.com.tw/maps/search/<?=$user['address']?>/?hl=zh-TW" target="blank"><?=$user['address']?></a></li><?php } ?>
     	       					
-    	       					<? if($user['email']) { ?><li><a href="emailto:<?=$user['email']?>"><?=$user['email']?></a></li><? } ?>
+    	       					<?php if($user['email']) { ?><li><a href="emailto:<?=$user['email']?>"><?=$user['email']?></a></li><?php } ?>
     	       				</ul>
                 		</div>
 			    	

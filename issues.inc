@@ -1,8 +1,6 @@
 <?php
-global $u;
-global $nid;
-
-require_once 'api/api.inc';
+// declare global for compatibility reason
+global $u,$nid;
 
 //政見
 $string = file_get_contents("http://v.democracy.tw/{$u}/issue.json");
@@ -57,7 +55,7 @@ $object = $issues;
     	                	      <?php if($issue['content']) { ?><div class="toggle-content">
     	                	      	<p><?php print $issue['content']; ?></p>
 									<p><span class="issues-tags meta"><span class="fa fa-tags"></span> <?php print $issue['tag']; ?><span></p>
-									<div id="fb<?php print $issue['nid']; ?>" class="addthis_sharing_toolbox" data-url="http://green.democracy.tw/<?php print $u; ?>/issues/nid/<?php print $issue['nid']; ?>"></div>
+									<div id="fb<?php print $issue['nid']; ?>" class="addthis_sharing_toolbox" data-url="http://green.democracy.tw/<?php print $u; ?>/issues/<?php print $issue['nid']; ?>"></div>
     	                	      </div><?php } ?>
     	                	    </li>
     	                <?php } ?>	    
@@ -158,14 +156,9 @@ $object = $issues;
 									
         <script type="text/javascript">
             $(document).ready(function() {
-
-            
             	var agoto;
-
-            	current_nid = '<?php print $nid; ?>';
-            	
+            	var current_nid = '<?php print $nid; ?>';
 	            if(current_nid) {
-
 					$( ".issues > li" ).each(function( index ) {
 						  
 						var lia = $( this ).find('a');

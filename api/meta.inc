@@ -1,4 +1,4 @@
-<?
+<?php
 
 
 function metavideo($url, $ssl) {
@@ -92,10 +92,6 @@ if($nid && $object) {
 	}
 }
 
-if($nid) {
-	if(!$nid_found) {   include_once('404.inc');  exit(); }
-}
-
 function showFBlike_l($p){
 	$url = WEB.$p;
 	$fb='<div class="fb-like" data-href="'.$url.'" data-layout="button_count"  data-send="false" data-width="80" data-show-faces="false" data-font="verdana"></div>';
@@ -150,20 +146,22 @@ $keywords = '綠黨,挺好的,九合一,選舉,greenparty';
 		<meta property="og:image" content="<?=$share_img?>" />
 		<meta property="og:site_name" content="2014 挺好的！綠黨政治代理人" /> 
 		<meta property="og:description" content="<?=$fb_description?>" />  
-		<? /*<meta property="og:see_also" content="">*/?>
-<? if($videolink) { ?>
+		<!-- <meta property="og:see_also" content=""> -->
+<?php if($videolink) { ?>
 		<meta property="og:video" content="<?=$videolink?>" />
 		<meta property="og:video:secure_url" content="<?=$videolink_ssl?>" />
 		<meta property="og:video:width" content="568" />
 		<meta property="og:video:height" content="320" />
-		<meta property="og:video:type" content="application/x-shockwave-flash" />		<? } ?>
+		<meta property="og:video:type" content="application/x-shockwave-flash" />		<?php } ?>
 		<meta property="fb:app_id" content="687618544645054" />
 		<meta property="fb:admins" content="100000125299492" />
 		<meta property="og:locale" content="zh_TW" />
-		<? /*<meta content="" name="msapplication-TileColor">
+    <!--
+		<meta content="" name="msapplication-TileColor">
 		<meta content="IE10" name="msapplication-TileImage">
 		<link rel="shortcut icon" href="images/favicon.ico"/>
-		<link href="" rel="apple-touch-icon-precomposed">*/?>
+		<link href="" rel="apple-touch-icon-precomposed">
+    -->
 		<script>
 			function fb() {window.open('<?="http://www.facebook.com/sharer.php?u=".urlencode($share_link)?>', 'Facebook','toolbar=0,status=0,width=626,height=436');}
 			function pl() {window.open('<?=$plurk_link?>');}

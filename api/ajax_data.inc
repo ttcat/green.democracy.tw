@@ -29,4 +29,3 @@
     );
 
     print json_encode($data);
-?>
