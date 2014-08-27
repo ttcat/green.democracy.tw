@@ -16,10 +16,10 @@ $object = $issues;
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-<? require_once 'api/meta.inc'; ?>
+<?php require_once 'api/meta.inc'; ?>
          <link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
-         <link rel="stylesheet" type="text/css" href="/css/main.css?<?=time()?>">
-         <link rel="stylesheet" type="text/css" href="/css/responsive.css?<?=time()?>">
+         <link rel="stylesheet" type="text/css" href="/css/main.css?<?php print time()?>">
+         <link rel="stylesheet" type="text/css" href="/css/responsive.css?<?php print time()?>">
          <link rel="stylesheet" type="text/css" href="/css/flexslider.css">
          <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
          <link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox.css?v=2.1.4" media="screen" />
@@ -29,7 +29,7 @@ $object = $issues;
     </head>
     <body>
     	
-	<? require_once 'api/header.inc'; ?>
+	<?php require_once 'api/header.inc'; ?>
     	
     	
     <div class="outter-wrapper">	
@@ -48,19 +48,19 @@ $object = $issues;
 				
 				<ul class="issues toggle">
 
-						<? foreach ($issues as $key => $value) { 
+						<?php foreach ($issues as $key => $value) { 
 							$issue = $value['node']; 
 						?>
     	                		<!-- Toggle -->
     	                	    <li class="toggle-li">
-    	                	      <a href="#" class="toggle-btn" hash-id="<?=$issue['nid']?>" id="sa<?=$issue['nid']?>"><em class="fa fa-bookmark"></em> <span><?=$issue['title']?></span></a>
-    	                	      <? if($issue['content']) { ?><div class="toggle-content">
-    	                	      	<p><?=$issue['content']?></p>
-									<p><span class="issues-tags meta"><span class="fa fa-tags"></span> <?=$issue['tag']?><span></p>
-									<div id="fb<?=$issue['nid']?>" class="addthis_sharing_toolbox" data-url="http://green.democracy.tw/<?=$u?>/issues/nid/<?=$issue['nid']?>"></div>
-    	                	      </div><? } ?>
+    	                	      <a href="#" class="toggle-btn" hash-id="<?php print $issue['nid']?>" id="sa<?php print $issue['nid']; ?>"><em class="fa fa-bookmark"></em> <span><?php print $issue['title']; ?></span></a>
+    	                	      <?php if($issue['content']) { ?><div class="toggle-content">
+    	                	      	<p><?php print $issue['content']; ?></p>
+									<p><span class="issues-tags meta"><span class="fa fa-tags"></span> <?php print $issue['tag']; ?><span></p>
+									<div id="fb<?php print $issue['nid']; ?>" class="addthis_sharing_toolbox" data-url="http://green.democracy.tw/<?php print $u; ?>/issues/nid/<?php print $issue['nid']; ?>"></div>
+    	                	      </div><?php } ?>
     	                	    </li>
-    	                <? } ?>	    
+    	                <?php } ?>	    
 
 
  <!-- Toggle -->
@@ -69,7 +69,7 @@ $object = $issues;
     	                	    </li>
 
     	                	    
-    	                <? /* //example 
+    	                <?php /* //example 
     	                	    <!-- Toggle -->
     	                	    <li class="toggle-li">
     	                	      <a href="#" class="toggle-btn" hash-id="21" id="sa21">My Credit Card Is Stuck In My Computer?</a>
@@ -101,7 +101,7 @@ $object = $issues;
                 </div>
 
 				<!-- Start Main Sidebar  -->
-					<? require_once 'api/sidebar.inc'; ?>
+					<?php require_once 'api/sidebar.inc'; ?>
 				<!-- Finish Sidebar -->
 
         	</div> <!-- #main -->
@@ -109,7 +109,7 @@ $object = $issues;
     </div>	
 
 
-	<? require_once 'api/footer.inc'; ?>
+	<?php require_once 'api/footer.inc'; ?>
 		
 	<!-- /////////////////// --> 
 	<!-- Start Scripts -->
@@ -153,8 +153,8 @@ $object = $issues;
 
 	<script type="text/javascript" src="/js/purl.js"></script>
 	
-	<script type="text/javascript" src="/js/main.js?<?=time?>"></script>
-	<script type="text/javascript" src="/js/jquery-scrollto.js?<?=time?>"></script>
+	<script type="text/javascript" src="/js/main.js?<?php print time(); ?>"></script>
+	<script type="text/javascript" src="/js/jquery-scrollto.js?<?php print time(); ?>"></script>
 									
         <script type="text/javascript">
             $(document).ready(function() {
@@ -162,7 +162,7 @@ $object = $issues;
             
             	var agoto;
 
-            	current_nid = '<?=$nid?>';
+            	current_nid = '<?php print $nid; ?>';
             	
 	            if(current_nid) {
 

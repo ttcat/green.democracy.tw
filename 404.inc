@@ -1,5 +1,6 @@
 <?php
-require_once 'api/api.inc';
+header("HTTP/1.0 404 Not Found");
+// require_once 'api/api.inc';
 $section = 'index';
 
 ?><!DOCTYPE html>
@@ -8,10 +9,10 @@ $section = 'index';
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-<? require_once 'api/meta.inc'; ?>
+<?php require_once 'api/meta.inc'; ?>
          <link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
-         <link rel="stylesheet" type="text/css" href="/css/main.css?<?=time()?>">
-         <link rel="stylesheet" type="text/css" href="/css/responsive.css?<?=time()?>">
+         <link rel="stylesheet" type="text/css" href="/css/main.css">
+         <link rel="stylesheet" type="text/css" href="/css/responsive.css">
          <link rel="stylesheet" type="text/css" href="/css/flexslider.css">
          <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
          <link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox.css?v=2.1.4" media="screen" />
@@ -20,7 +21,7 @@ $section = 'index';
     </head>
     <body>
     	
-	<? require_once 'api/header.inc'; ?>
+	<?php require_once 'api/header.inc'; ?>
     	
     <div class="outter-wrapper">	
     	 <!-- Start Main Body -->
@@ -42,7 +43,7 @@ $section = 'index';
 				
 				
 				<!-- Start Main Sidebar  -->
-					<? require_once 'api/sidebar.inc'; ?>
+					<?php require_once 'api/sidebar.inc'; ?>
 				<!-- Finish Sidebar -->
 				
 
@@ -52,7 +53,7 @@ $section = 'index';
     </div>	
 
 
-	<? require_once 'api/footer.inc'; ?>
+	<?php require_once 'api/footer.inc'; ?>
 	
 	<!-- Start Scripts -->
 	<!--<script type="text/javascript" src="/js/vendor/jquery-1.8.3.min.js"></script>-->
@@ -91,7 +92,7 @@ $section = 'index';
             });
         </script>
 
-	<script type="text/javascript" src="/js/main.js?<?=time?>"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
  
 	</body>
 </html>

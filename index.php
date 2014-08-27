@@ -11,6 +11,16 @@ $q = preg_replace('/[^a-zA-Z0-9]\//', '', $q);
 
 list($u, $f, $key, $value) = explode('/', $q, 4);
 
+// verify input
+// TODO: should be only accept listed user for greenparty
+$u = str_replace('.php', '', $u);
+if(empty($u) || empty($f)){
+  header("HTTP/1.0 404 Not Found");
+  include('404.html');
+  exit();
+}
+
+// 
 	if($key == 'nid') {	// 個別單元吃 nid
 	 	$value_array = explode('?' ,$value, 2);
 		if(is_numeric($value_array[0])) {	
@@ -60,7 +70,9 @@ if(file_exists($f_array[0].'.inc')){
 	exit();
 }
 
-  include_once('404.inc');
-  exit();
+// 404 should always static
+header("HTTP/1.0 404 Not Found");
+include('404.html');
+exit();
 ?>
 
