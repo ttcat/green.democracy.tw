@@ -7,13 +7,13 @@ require_once 'api/api.inc';
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-<? require_once 'api/meta.inc'; ?>
+<?php require_once 'api/meta.inc'; ?>
          <link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
-         <link rel="stylesheet" type="text/css" href="/css/main.css?<?=time()?>">
-         <link rel="stylesheet" type="text/css" href="/timeline/files/css/timeline_themegp.css?<?=time()?>" />
+         <link rel="stylesheet" type="text/css" href="/css/main.css?<?php echo time()?>">
+         <link rel="stylesheet" type="text/css" href="/timeline/files/css/timeline_themegp.css?<?php echo time()?>" />
 
          <!-- Remove responsive.css is non-responsive needed -->
-         <link rel="stylesheet" type="text/css" href="/css/responsive.css?<?=time()?>">
+         <link rel="stylesheet" type="text/css" href="/css/responsive.css?<?php echo time()?>">
          <link rel="stylesheet" type="text/css" href="/css/flexslider.css">
          <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
          <link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox.css?v=2.1.4" media="screen" />
@@ -23,7 +23,7 @@ require_once 'api/api.inc';
     </head>
     <body>
     	
-	<? require_once 'api/header.inc'; ?>
+	<?php require_once 'api/header.inc'; ?>
     	
     	
     <div class="outter-wrapper">	
@@ -42,7 +42,7 @@ require_once 'api/api.inc';
 						<p>
 						<iframe style="height:600px;" src="https://docs.google.com/spreadsheets/d/1_0zPlnB8G2hBR4ir7pktNtaod8kTKrgglUpe0BKKWaY/pubhtml?widget=true&amp;headers=false"></iframe>
 						
-						<? /*<iframe src="<?=$user['gembeded']?>"> */ ?>
+						<?php /*<iframe src="<?php echo $user['gembeded']?>"> */ ?>
 						
     	                </p>
 	    	                    	                    	                    	                    	                
@@ -52,7 +52,7 @@ require_once 'api/api.inc';
 				
 				
 				<!-- Start Main Sidebar  -->
-					<? require_once 'api/sidebar.inc'; ?>
+					<?php require_once 'api/sidebar.inc'; ?>
 				<!-- Finish Sidebar -->
 
 
@@ -61,7 +61,7 @@ require_once 'api/api.inc';
     </div>	
 
 
-	<? require_once 'api/footer.inc'; ?>
+	<?php require_once 'api/footer.inc'; ?>
 		
 	<!-- Start Scripts -->
 	<!--<script type="text/javascript" src="/js/vendor/jquery-1.8.3.min.js"></script>-->
@@ -102,7 +102,7 @@ require_once 'api/api.inc';
             });
         </script>
 
-	<script type="text/javascript" src="/js/main.js?<?=time?>"></script>		
+	<script type="text/javascript" src="/js/main.js?<?php echo time?>"></script>		
 
  
 	</body>
