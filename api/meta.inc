@@ -138,18 +138,18 @@ $keywords = '綠黨,挺好的,九合一,選舉,greenparty';
 		<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 		<meta content="black" name="apple-mobile-web-app-status-bar-style">
 
-		<title><?=$html_title?></title>
-		<meta name="keywords" content="<?=$user['title']?>,<?=$section_data['title']?>,<?=$keyword_issues?>,<?=$keywords?>" />
-		<meta property="og:title" content="<?=$fb_title?>" />
+		<title><?php echo $html_title?></title>
+		<meta name="keywords" content="<?php echo $user['title']?>,<?php echo $section_data['title']?>,<?php echo $keyword_issues?>,<?php echo $keywords?>" />
+		<meta property="og:title" content="<?php echo $fb_title?>" />
 		<meta property="og:type" content="article"/>
-		<meta property="og:url" content="<?=$share_link?>" />
-		<meta property="og:image" content="<?=$share_img?>" />
+		<meta property="og:url" content="<?php echo $share_link?>" />
+		<meta property="og:image" content="<?php echo $share_img?>" />
 		<meta property="og:site_name" content="2014 挺好的！綠黨政治代理人" /> 
-		<meta property="og:description" content="<?=$fb_description?>" />  
+		<meta property="og:description" content="<?php echo $fb_description?>" />  
 		<!-- <meta property="og:see_also" content=""> -->
 <?php if($videolink) { ?>
-		<meta property="og:video" content="<?=$videolink?>" />
-		<meta property="og:video:secure_url" content="<?=$videolink_ssl?>" />
+		<meta property="og:video" content="<?php echo $videolink?>" />
+		<meta property="og:video:secure_url" content="<?php echo $videolink_ssl?>" />
 		<meta property="og:video:width" content="568" />
 		<meta property="og:video:height" content="320" />
 		<meta property="og:video:type" content="application/x-shockwave-flash" />		<?php } ?>
@@ -163,7 +163,7 @@ $keywords = '綠黨,挺好的,九合一,選舉,greenparty';
 		<link href="" rel="apple-touch-icon-precomposed">
     -->
 		<script>
-			function fb() {window.open('<?="http://www.facebook.com/sharer.php?u=".urlencode($share_link)?>', 'Facebook','toolbar=0,status=0,width=626,height=436');}
-			function pl() {window.open('<?=$plurk_link?>');}
-			function fb_index() {window.open('<?="http://www.facebook.com/sharer.php?u=".urlencode(WEB)?>', 'Facebook','toolbar=0,status=0,width=626,height=436');}
+			function fb() {window.open('<?php echo "http://www.facebook.com/sharer.php?u=".urlencode($share_link)?>', 'Facebook','toolbar=0,status=0,width=626,height=436');}
+			function pl() {window.open('<?php echo $plurk_link?>');}
+			function fb_index() {window.open('<?php echo "http://www.facebook.com/sharer.php?u=".urlencode(WEB)?>', 'Facebook','toolbar=0,status=0,width=626,height=436');}
 		</script>

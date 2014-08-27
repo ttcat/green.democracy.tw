@@ -9,10 +9,10 @@ $object = $endorsment;
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-<? require_once 'api/meta.inc'; ?>
+<?php require_once 'api/meta.inc'; ?>
          <link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
-         <link rel="stylesheet" type="text/css" href="/css/main.css?<?=time()?>">
-         <link rel="stylesheet" type="text/css" href="/css/responsive.css?<?=time()?>">
+         <link rel="stylesheet" type="text/css" href="/css/main.css?<?php echo time()?>">
+         <link rel="stylesheet" type="text/css" href="/css/responsive.css?<?php echo time()?>">
          <link rel="stylesheet" type="text/css" href="/css/flexslider.css">
          <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
          <link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox.css?v=2.1.4" media="screen" />
@@ -22,7 +22,7 @@ $object = $endorsment;
     </head>
     <body>
     	
-	<? require_once 'api/header.inc'; ?>
+	<?php require_once 'api/header.inc'; ?>
     	
     	
     <div class="outter-wrapper">	
@@ -38,7 +38,7 @@ $object = $endorsment;
 				<h2>各界推薦</h2>
 						<hr>
 						
-			    	<? if($endorsment) { 
+			    	<?php if($endorsment) { 
 			    			$total_en = count($endorsment);
 			    			$v = 0;
 			    		
@@ -48,15 +48,15 @@ $object = $endorsment;
 				    		$en = $en['node'];
 			    	?>                		
 						
-						<p id="en<?=$en['nid']?>">
+						<p id="en<?php echo $en['nid']?>">
 						<blockquote style="line-height:1.4;">
-						<h3><?=$en['title']?> / <?=$en['professional-title']?></h3></br>
+						<h3><?php echo $en['title']?> / <?php echo $en['professional-title']?></h3></br>
 						
-						<? if($en['photo']) { ?>
+						<?php if($en['photo']) { ?>
 							<div class="half">
-	                       		<img src="<?=$en['photo']?>" alt="mock" style="width:100%">
+	                       		<img src="<?php echo $en['photo']?>" alt="mock" style="width:100%">
 		                    </div>
-	                    <? } ?>
+	                    <?php } ?>
 	                    
 	                    <?
 	                    	echo $en['content'];
@@ -64,9 +64,9 @@ $object = $endorsment;
 
     	                </blockquote>
     	                </p>
-					<? if($v < $total_en) { ?><hr><? } ?>
+					<?php if($v < $total_en) { ?><hr><?php } ?>
 
-					<? } //end foreach
+					<?php } //end foreach
 					} //end if?>
 				
     	                    	                    	                    	                    	                
@@ -76,14 +76,14 @@ $object = $endorsment;
 				
 				
 				<!-- Start Main Sidebar  -->
-					<? require_once 'api/sidebar.inc'; ?>
+					<?php require_once 'api/sidebar.inc'; ?>
 				<!-- Finish Sidebar -->
 
         	</div> <!-- #main -->
         </div> <!-- #main-container -->
     </div>	
 
-					<? require_once 'api/footer.inc'; ?>
+					<?php require_once 'api/footer.inc'; ?>
 					
 					
 	<!-- Start Scripts -->
@@ -124,7 +124,7 @@ $object = $endorsment;
                 });
 
 
-            	current_nid = '<?=$nid?>';
+            	current_nid = '<?php echo $nid?>';
 				if(current_nid) { 
 					agoto = '#en' + current_nid;
 					var agotoy = $(agoto).offset(); 
@@ -136,7 +136,7 @@ $object = $endorsment;
 
         </script>
 
-	<script type="text/javascript" src="/js/main.js?<?=time?>"></script>
+	<script type="text/javascript" src="/js/main.js?<?php echo time?>"></script>
 
  
 	</body>

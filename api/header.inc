@@ -16,14 +16,14 @@
     <div class="outter-wrapper feature">
     	<div class="wrapper">
     	
-    	<div class="feature-heading"><a href="/<?=$u?>">
+    	<div class="feature-heading"><a href="/<?php echo $u?>">
 
-    		<?php if($user['slogan']) { ?><p class="heading"><?=$user['slogan']?></p><?php } ?>
-	    		<p><?=$user['title']?>
-    					<?php if(!$detect->isMobile()) { ?><div class="fb-like main-like" data-href="<?=$user['fb']?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div><?php } ?>
+    		<?php if($user['slogan']) { ?><p class="heading"><?php echo $user['slogan']?></p><?php } ?>
+	    		<p><?php echo $user['title']?>
+    					<?php if(!$detect->isMobile()) { ?><div class="fb-like main-like" data-href="<?php echo $user['fb']?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div><?php } ?>
 		    	<?php if($user['section'] or $user['detail']) { ?><ul class="heading-info">
-		    			<?php if($user['section']) { ?><li><?=$user['section']?></li><?php } ?>
-		    			<?php if($user['detail']) { ?><li><?=$user['detail']?></li><?php } ?>
+		    			<?php if($user['section']) { ?><li><?php echo $user['section']?></li><?php } ?>
+		    			<?php if($user['detail']) { ?><li><?php echo $user['detail']?></li><?php } ?>
     				<ul><?php } ?>
     			</p>
 
@@ -31,11 +31,11 @@
     	
     	</div>
 
-		<div class="bannerShadow" style="background-image: url(<?=$user['banner']?>);"></div>
+		<div class="bannerShadow" style="background-image: url(<?php echo $user['banner']?>);"></div>
 
     	<div class="outer-profile-img">
-			<?php if($detect->isMobile()) {?> <div class="fb-like phone-like" style="position: absolute;" data-href="<?=$user['fb']?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div> <?php } ?>    	
-		    <img id="imgHeadShot" class="profile-img" src="<?=$user['logo']?>" alt="<?=$user['title']?>">
+			<?php if($detect->isMobile()) {?> <div class="fb-like phone-like" style="position: absolute;" data-href="<?php echo $user['fb']?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div> <?php } ?>    	
+		    <img id="imgHeadShot" class="profile-img" src="<?php echo $user['logo']?>" alt="<?php echo $user['title']?>">
 	    </div>
     	
     </div>
@@ -52,25 +52,25 @@
 
     	    	<!--<a href="index.html" class="logo"><img src="/images/gp_badge.png?v2" alt="Logo" /> <span>綠黨政治代理人公約</span></a>-->
     	    	
-    	    	<a href="/<?=$u?>" class="logo"><img src="/images/gp_badge.png?v2" alt="Logo" /> <span id="logo-word"></span></a>
-    	        <span class="stickname" id="thisname"><?=$user['title']?></span>
+    	    	<a href="/<?php echo $u?>" class="logo"><img src="/images/gp_badge.png?v2" alt="Logo" /> <span id="logo-word"></span></a>
+    	        <span class="stickname" id="thisname"><?php echo $user['title']?></span>
     	    	
     	        <nav id="nav-wrap">
     	        	<ul class="nav" id="nav">
     	        	
-    	            	<li class="nav-parent"><a href="/<?=$u?>/bio" id="first-nav">認識<?=$user['title']?></a>
+    	            	<li class="nav-parent"><a href="/<?php echo $u?>/bio" id="first-nav">認識<?php echo $user['title']?></a>
 							<ul>
-		    	                <li><a href="/<?=$u?>/bio">簡介</a></li>
-    			                <li><a href="/<?=$u?>/issues">政見</a></li>
+		    	                <li><a href="/<?php echo $u?>/bio">簡介</a></li>
+    			                <li><a href="/<?php echo $u?>/issues">政見</a></li>
 		    	                <!--<li><a href="#">政治代理人公約</a></li>-->
-		    	                <li><a href="/<?=$u?>/endorsements">各界推薦</a></li>
+		    	                <li><a href="/<?php echo $u?>/endorsements">各界推薦</a></li>
     			                <!--<li><a class="nav-parent" href="#">活動行程</a></li>-->
     			            </ul>
     			        </li>
-    	            	<li class="nav-parent last donate"><a href="<?=$user['fundlink']?>"><em class="fa fa-heart"></em> 捐款支持</a>
+    	            	<li class="nav-parent last donate"><a href="<?php echo $user['fundlink']?>"><em class="fa fa-heart"></em> 捐款支持</a>
     	            		<ul style="overflow: hidden;">
-    	            		    <li><a href="<?=$user['fundlink']?>">線上捐款</a></li>
-    	            			<li><a href="/<?=$u?>/finance">捐款徵信</a></li>
+    	            		    <li><a href="<?php echo $user['fundlink']?>">線上捐款</a></li>
+    	            			<li><a href="/<?php echo $u?>/finance">捐款徵信</a></li>
 <!--
     	            			<li><a href="#">承諾投票</a></li>
     	            			<li><a href="#">成為志工</a></li>

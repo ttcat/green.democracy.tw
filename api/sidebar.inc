@@ -7,10 +7,10 @@
                 			<h3><strong>主要關注</strong></h3>
                 			<ul class="statistics">
                 			<?php foreach($user['policy'] as $key => $v) { ?>
-                				<li><em class="fa <?=$user['policyicon'][$key]?>"></em> <span<?php if($key > 0) { ?> style="color:black;"<?php } ?>><?=$v?></span></li>
+                				<li><em class="fa <?php echo $user['policyicon'][$key]?>"></em> <span<?php if($key > 0) { ?> style="color:black;"<?php } ?>><?php echo $v?></span></li>
                 			<?php } ?>
                 			</ul>	
-                			<p><a class="more" href="/<?=$u?>/issues">了解目前的政見</a></p>
+                			<p><a class="more" href="/<?php echo $u?>/issues">了解目前的政見</a></p>
                 		</div>
 				    <?php } ?>
 				    
@@ -19,20 +19,20 @@
                 		<!-- Quote Widget -->
 				    	<div class="clearfix aside-recom">
                 			<h3><strong>各界推薦</strong></h3>
-                			<blockquote><?=$recommendation[0]['node']['content']?><cite>- <?=$recommendation[0]['node']['title']?> / <?=$recommendation[0]['node']['professional-title']?></cite></blockquote>
+                			<blockquote><?php echo $recommendation[0]['node']['content']?><cite>- <?php echo $recommendation[0]['node']['title']?> / <?php echo $recommendation[0]['node']['professional-title']?></cite></blockquote>
                 		</div>
 					<?php } ?>	
 					
 			    	<?php if($user['fundraising']) { ?>                		
 				    	<div class="clearfix aside-donate">
                 			<h3><strong>捐款支持</strong></h3>
-                			<p><?=$user['fundtitle']?></p>
+                			<p><?php echo $user['fundtitle']?></p>
 							<?php /*
                 			<ol class="graphs">
                 				<li><div class="per-60 btn-style2"> 1,203,234<span>60%</span></div></li>                				
                 			</ol>
                 			*/?>        			
-                			<a href="<?=$user['fundlink']?>" class="btn small-btn "><em class="fa fa-heart"></em>線上捐款</a><p></p>
+                			<a href="<?php echo $user['fundlink']?>" class="btn small-btn "><em class="fa fa-heart"></em>線上捐款</a><p></p>
                 		</div>	
 
                 	<hr>
@@ -43,7 +43,7 @@
                 		<!-- Email Signup Widget -->
 				    	<div class="clearfix aside-signup">
                 			<h3 id="promise"><strong>承諾 <span time="1417219200" class="petition_count kkcount-down"></span> 天後投票</strong></h3>
-                			<p>登記為本選區的選民、訂閱且隨時關注<?=$user['title']?>最新消息，並承諾在 <span class="highlight">11/29</span> 一定去投票！</p>
+                			<p>登記為本選區的選民、訂閱且隨時關注<?php echo $user['title']?>最新消息，並承諾在 <span class="highlight">11/29</span> 一定去投票！</p>
                 			<form id="contactform" class="quick-contact" action="php/processForm.php" method="post">                			
                 				<table class="tableless">
                 					<tr><td><input type="text" id="name" name="name" placeholder="姓名" /></td></tr>
@@ -140,14 +140,14 @@
 			    	
 				    	<div class="clearfix aside-contact">
 				    	
-                			<h3><strong>聯繫<?=$user['title']?></strong></h3>
-							<?php if($user['fb']) { ?><div class="fb-like-box" style="margin-left: -10px; margin-bottom: 5px; margin-top: -5px;" data-href="<?=$user['fb']?>" data-width="200" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div><?php } ?>
+                			<h3><strong>聯繫<?php echo $user['title']?></strong></h3>
+							<?php if($user['fb']) { ?><div class="fb-like-box" style="margin-left: -10px; margin-bottom: 5px; margin-top: -5px;" data-href="<?php echo $user['fb']?>" data-width="200" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div><?php } ?>
 							<ul class="link-list">
     	       					<?php if($user['website']) { ?><li><a href="#">網站名稱</a></li><?php } ?>
-    	       					<?php if($user['phone']) { ?><li><a href="tel:<?=$user['phone']?>"><?=$user['phone']?></a></li><?php } ?>
-    	       					<?php if($user['address']) { ?><li><a href="https://www.google.com.tw/maps/search/<?=$user['address']?>/?hl=zh-TW" target="blank"><?=$user['address']?></a></li><?php } ?>
+    	       					<?php if($user['phone']) { ?><li><a href="tel:<?php echo $user['phone']?>"><?php echo $user['phone']?></a></li><?php } ?>
+    	       					<?php if($user['address']) { ?><li><a href="https://www.google.com.tw/maps/search/<?php echo $user['address']?>/?hl=zh-TW" target="blank"><?php echo $user['address']?></a></li><?php } ?>
     	       					
-    	       					<?php if($user['email']) { ?><li><a href="emailto:<?=$user['email']?>"><?=$user['email']?></a></li><?php } ?>
+    	       					<?php if($user['email']) { ?><li><a href="emailto:<?php echo $user['email']?>"><?php echo $user['email']?></a></li><?php } ?>
     	       				</ul>
                 		</div>
 			    	

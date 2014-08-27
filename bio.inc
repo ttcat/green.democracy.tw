@@ -7,10 +7,10 @@ require_once 'api/api.inc';
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-<? require_once 'api/meta.inc'; ?>
+<?php require_once 'api/meta.inc'; ?>
          <link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
-         <link rel="stylesheet" type="text/css" href="/css/main.css?<?=time()?>">
-         <link rel="stylesheet" type="text/css" href="/css/responsive.css?<?=time()?>">
+         <link rel="stylesheet" type="text/css" href="/css/main.css?<?php echo time()?>">
+         <link rel="stylesheet" type="text/css" href="/css/responsive.css?<?php echo time()?>">
          <link rel="stylesheet" type="text/css" href="/css/flexslider.css">
          <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
          <link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox.css?v=2.1.4" media="screen" />
@@ -19,7 +19,7 @@ require_once 'api/api.inc';
     </head>
     <body>
     	
-	<? require_once 'api/header.inc'; ?>
+	<?php require_once 'api/header.inc'; ?>
     	
     	
     <div class="outter-wrapper">	
@@ -32,7 +32,7 @@ require_once 'api/api.inc';
 				
 
 				<!-- add here-->
-				<h2><?=$user['title']?>簡介</h2>
+				<h2><?php echo $user['title']?>簡介</h2>
 						<hr>
 						
 						姓名
@@ -44,7 +44,7 @@ require_once 'api/api.inc';
 								<strong>自傳標題</strong></br></br>
 							
 							<div class="half">
-		                       	<img src="<?=$user['logo']?>" alt="mock" width="100%">
+		                       	<img src="<?php echo $user['logo']?>" alt="mock" width="100%">
 	    	                   	<span class="wp-caption-text">參與社會運動的過程</span>
 	        	            </div>
 	                    
@@ -62,10 +62,10 @@ require_once 'api/api.inc';
 						<div>
 						<p>
 						<ul>
-							<li>帳號：<?=$user['accountnumber']?></li>
-							<li>戶名：<?=$user['accountname']?></li>
-							<li>銀行：<?=$user['bank']?>
-							<li>分行：<?=$user['banknumber']?></li>
+							<li>帳號：<?php echo $user['accountnumber']?></li>
+							<li>戶名：<?php echo $user['accountname']?></li>
+							<li>銀行：<?php echo $user['bank']?>
+							<li>分行：<?php echo $user['banknumber']?></li>
 						</ul>
 						</p>
 						</div>
@@ -78,9 +78,9 @@ require_once 'api/api.inc';
 
 						<div>
 						<ul>
-							<li>地址：<?=$user['address']?></li>
-							<li>電話：<?=$user['phone']?></li>
-							<li>聯絡 email：<?=$user['email']?></li>
+							<li>地址：<?php echo $user['address']?></li>
+							<li>電話：<?php echo $user['phone']?></li>
+							<li>聯絡 email：<?php echo $user['email']?></li>
 						</ul>
 						<br>
 						<iframe width="100" height="550" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3683.04753595446!2d120.299208!3d22.614699999999996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e037fbc0131fd%3A0x9697296bace77b26!2zODAy6auY6ZuE5biC6IuT6ZuF5Y2A6I-v5paw6KGXMeiZnw!5e0!3m2!1szh-TW!2stw!4v1409090033264" style="border:0"></iframe>
@@ -96,7 +96,7 @@ require_once 'api/api.inc';
 				
 				
 				<!-- Start Main Sidebar  -->
-					<? require_once 'api/sidebar.inc'; ?>
+					<?php require_once 'api/sidebar.inc'; ?>
 				<!-- Finish Sidebar -->
 				
 
@@ -106,7 +106,7 @@ require_once 'api/api.inc';
     </div>	
 
 
-	<? require_once 'api/footer.inc'; ?>
+	<?php require_once 'api/footer.inc'; ?>
 	
 	<!-- Start Scripts -->
 	<!--<script type="text/javascript" src="/js/vendor/jquery-1.8.3.min.js"></script>-->
@@ -143,7 +143,7 @@ require_once 'api/api.inc';
             });
         </script>
 
-	<script type="text/javascript" src="/js/main.js?<?=time?>"></script>
+	<script type="text/javascript" src="/js/main.js?<?php echo time?>"></script>
  
 	</body>
 </html>
