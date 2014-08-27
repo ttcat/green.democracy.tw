@@ -38,7 +38,7 @@
                 	<hr>
 					<?php } ?>
 
-			    	<?php if($user['gotv']) { ?>                		
+			    	<?php if($user['gotv'] && $done == 1) { ?>                		
 
                 		<!-- Email Signup Widget -->
 				    	<div class="clearfix aside-signup">
@@ -67,7 +67,7 @@
 			    	
 					<?php } ?>
 
-			    	<?php if($user['news']) { ?>                		
+			    	<?php if($user['news'] && $done == 1) { ?>                		
 
                 		<!-- Start Text Widget -->     
 				    	<div class="clearfix aside-news">
@@ -85,7 +85,7 @@
                 <?php } ?>
                 
                 
-				<?php if($user['gallery']) { ?>                		                		
+				<?php if($user['gallery'] && $done == 1) { ?>                		                		
 			    	<!-- Start Gallery Widget -->
 			    	
 			    	<div class="clearfix gallery aside-gallery">
