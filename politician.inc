@@ -181,7 +181,7 @@ $object = $newsfeeds;
                             timeline.appendData(data);
 							feeds_left = feeds_left - perpage;
 
-							//window.addthis.toolbox(".addthis_sharing_toolbox");
+							window.addthis.toolbox(".addthis_sharing_toolbox");
 							
 							
 							if(feeds_left <= 0) {
