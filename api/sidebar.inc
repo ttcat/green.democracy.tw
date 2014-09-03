@@ -38,7 +38,7 @@
                 	<hr>
 					<?php } ?>
 
-			    	<?php if($user['gotv']) { ?>                		
+			    	<?php // if($user['gotv'] && $done == 1) { ?>                		
 
                 		<!-- Email Signup Widget -->
 				    	<div class="clearfix aside-signup">
@@ -65,7 +65,7 @@
 		fitText(document.getElementById('promise'), 0.83)
 	</script>
 			    	
-					<?php } ?>
+					<?php // } ?>
 
 			    	<?php if($user['news'] && $done == 1) { ?>                		
 
