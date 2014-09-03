@@ -2,6 +2,8 @@
 function get_timeline($print = TRUE){
   global $u, $page, $nid;
 
+	if(!$page) { $page = 0; }
+
   $perpage = 3;
   
    if($page == 'all') {
