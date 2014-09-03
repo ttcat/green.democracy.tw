@@ -38,7 +38,7 @@
                 	<hr>
 					<?php } ?>
 
-			    	<?php if($user['gotv'] && $done == 1) { ?>                		
+			    	<?php if($user['gotv']) { ?>                		
 
                 		<!-- Email Signup Widget -->
 				    	<div class="clearfix aside-signup">
