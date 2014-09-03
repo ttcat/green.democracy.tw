@@ -52,7 +52,8 @@ $object = $issues;
     	                		<!-- Toggle -->
     	                	    <li class="toggle-li">
     	                	      <a href="#" class="toggle-btn" hash-id="<?php print $issue['nid']?>" id="sa<?php print $issue['nid']; ?>"><em class="fa fa-bookmark"></em> <span><?php print $issue['title']; ?></span></a>
-    	                	      <?php if($issue['content']) { ?><div class="toggle-content">
+    	                	      <?php if($issue['content']) { ?>
+    	                	      <div class="toggle-content">
     	                	      	<p><?php print $issue['content']; ?></p>
 									<p><span class="issues-tags meta"><span class="fa fa-tags"></span> <?php print $issue['tag']; ?><span></p>
 									<div id="fb<?php print $issue['nid']; ?>" class="addthis_sharing_toolbox" data-url="http://green.democracy.tw/<?php print $u; ?>/issues/<?php print $issue['nid']; ?>"></div>
@@ -62,10 +63,12 @@ $object = $issues;
 
 
  <!-- Toggle -->
+ 					<?php /*
     	                	    <li class="toggle-li">
     	                	      <span class="toggle-btn-nouse" ><em class="fa fa-bookmark"></em> 這是一個還沒有寫內容的條列政見視覺範例</span>
     	                	    </li>
-
+    	                	    */
+					  ?>
     	                	    
     	                <?php /* //example 
     	                	    <!-- Toggle -->
