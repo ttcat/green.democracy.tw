@@ -56,7 +56,9 @@ switch($f){
     // require api here
     require_once 'api/api.inc';
     if(file_exists($f.'.inc')){
+    	echo $nid;
       include_once($f.'.inc');
+      
       exit();
     }
     break;

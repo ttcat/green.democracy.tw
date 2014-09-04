@@ -2,7 +2,8 @@
 // declare global for compatibility reason
 global $u,$nid;
 
-echo $nid;
+print_r($nid);
+
 //政見
 $string = file_get_contents("http://v.democracy.tw/{$u}/issue.json");
 $issues = json_decode($string, true);
