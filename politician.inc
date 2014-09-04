@@ -130,20 +130,23 @@ $object = $newsfeeds;
 
 				var total_feeds = <?php echo $newsfeeds_total; ?>; 
 				var feeds_left = total_feeds - perpage;
-
+				var columnMode_t = 'dual';
+				
 							if(feeds_left <= 0) {
 				                $('#loadmore').css('display', 'none');
 							}else{
 				                $('#loadmore').css('display', 'block');
 							}							
+								
+				<?php if($show_nid_one) { ?>
+			        columnMode_t = 'right'; 
+					$('#loadall').css('display', 'block');
+        		<?php }else{ ?>
 				
 				var rwd_js = $(window).width();
 				if(rwd_js < 770) { columnMode_t = 'right';} else { columnMode_t = 'dual'; }
-				<?php if($show_nid_one) { ?>
-        columnMode_t = 'right'; 
-				$('#loadall').css('display', 'block');
-        <?php } ?>
 				
+				<? } ?>
                 var timeline = new Timeline($('#timeline'), init_data);
                 timeline.setOptions({
                 	<?php if(!$show_nid_one) { ?>responsive_width : 770,<?php } ?>

@@ -1,6 +1,4 @@
 <?php
-global $nid;
-echo $nid;
 
 function metavideo($url, $ssl) {
 
@@ -46,6 +44,7 @@ if($section == 'index') {
 	$object = json_decode($string_meta,true);
 }
 
+echo $section;
 		
 if($nid && $object) { 
 	foreach ($object as $key => $v) {
