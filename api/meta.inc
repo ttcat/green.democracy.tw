@@ -1,7 +1,5 @@
 <?php
-
-$section = $f;
-
+echo $nid;
 function metavideo($url, $ssl) {
 
 	$data = parse_url($url);
