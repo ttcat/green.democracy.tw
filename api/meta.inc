@@ -1,5 +1,6 @@
 <?php
 
+echo $section;
 
 function metavideo($url, $ssl) {
 
