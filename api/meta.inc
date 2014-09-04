@@ -1,7 +1,4 @@
 <?php
-echo $f;
-$section = $f;
-
 
 function metavideo($url, $ssl) {
 
@@ -42,7 +39,7 @@ $display_header = Array(
 $section_data = $display_header[$section];
 $this_url = WEB.'/'.$current_url;
 
-if($section == 'index') { 
+if($section == 'politician') { 
 	$string_meta = file_get_contents("http://green.democracy.tw/{$u}/api/timeline?all");
 	$object = json_decode($string_meta,true);
 }
@@ -52,7 +49,7 @@ if($nid && $object) {
 	foreach ($object as $key => $v) {
 
 
-		if($section == 'index') { 
+		if($section == 'politician') { 
 			
 			if(!$v['section']) { //section = null = timeline_news_feed; otherwise go 404.
 				$v['node'] = $v; 
@@ -101,7 +98,7 @@ function showFBlike_l($p){
 }
 
 
-if($section == 'index' && !$nid) { //index
+if($section == 'politician' && !$nid) { //index
 
 	$fb_title = $user['title'] .' | 2014 挺好的！綠黨政治代理人';
 	$html_title = $fb_title;
