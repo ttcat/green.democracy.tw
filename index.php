@@ -10,6 +10,10 @@ $q = preg_replace('/[^a-zA-Z0-9]\//', '', $q);
 
 list($u, $f, $nid) = explode('/', $q, 3);
 
+    	echo "u=".$u;
+    	echo "f=".$f;
+    	echo "nid=".$nid;
+    	    	    	
 /**
  * 1. verify user
  * TODO: should be only accept listed user for greenparty
@@ -56,7 +60,6 @@ switch($f){
     // require api here
     require_once 'api/api.inc';
     if(file_exists($f.'.inc')){
-    	echo "nid=".$nid;
       include_once($f.'.inc');
       
       exit();
