@@ -37,10 +37,10 @@ function get_timeline($print = TRUE){
   //處理 json;
     
         $cats = array(
-            "newsfeed" => array("blog_post", "選舉動態",200, ''),
-            "slider" => array("slider", "選舉動態", 200, ''),
-            "video" => array("iframe", "選舉動態", 300, ''),
-            "newsclip" => array("news", "相關新聞",200, ''),
+            "newsfeed" => array("blog_post", "選舉動態",200, 'politician/'),
+            "slider" => array("slider", "選舉動態", 200, 'politician/'),
+            "video" => array("iframe", "選舉動態", 300, 'politician/'),
+            "newsclip" => array("news", "相關新聞",200, 'politician/'),
 
             "FAQ" => array("blog_post", "政見", 200, 'issues/'),
             "Person" => array("blog_post", "各界推薦", 200, 'endorsements/'),
@@ -69,6 +69,7 @@ function get_timeline($print = TRUE){
           if($feed['category'] == 'slider') { 
             $media = explode("|", $feed['photo']);	
           }
+
           $json_this_feed['type'] = $cats[ $feed['category'] ][0];
           $json_this_feed['title'] = $cats[$feed['category']][1];
           $json_this_feed['height'] = $cats[$feed['category']][2];
@@ -154,11 +155,11 @@ function get_timeline($print = TRUE){
           }
 
 
-              $json_this_feed['content'] = '<h3>' . $feed['title'] . '</h3><p>' . $event_time . $feed['content']  . '<div id="timeline_fb_' . $feed['nid'] .'" class="addthis_sharing_toolbox addthis_default_style addthis_20x20_style" data-url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '">';
+              $json_this_feed['content'] = '<h3>' . $feed['title'] . '</h3><p>' . $event_time . $feed['content']  . '<div id="timeline_fb_' . $feed['nid'] .'" class="addthis_sharing_toolbox addthis_default_style addthis_20x20_style" data-url="http://green.democracy.tw/' . $u . '/' .$linkpage. $feed['nid'] . '">';
 
               if($page != 'all' || $page != 0) 
               { 
-                $json_this_feed['content'] .=  '<a class="addthis_button_facebook" style="padding: 0px;" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" ></a><a style="padding: 0px;" class="addthis_button_twitter" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" ></a><a style="padding: 0px;" class="addthis_button_google_plusone_share" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" ></a><a style="padding: 0px;" class="addthis_button_compact" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. 'nid/' . $feed['nid'] . '" ></a>';
+                $json_this_feed['content'] .=  '<a class="addthis_button_facebook" style="padding: 0px;" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. $feed['nid'] . '" ></a><a style="padding: 0px;" class="addthis_button_twitter" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. $feed['nid'] . '" ></a><a style="padding: 0px;" class="addthis_button_google_plusone_share" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. $feed['nid'] . '" ></a><a style="padding: 0px;" class="addthis_button_compact" addthis:url="http://green.democracy.tw/' . $u . '/' .$linkpage. $feed['nid'] . '" ></a>';
 	            }
 
               $json_this_feed['content'] .= '</div></p>';

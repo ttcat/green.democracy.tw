@@ -70,7 +70,7 @@ $(document).ready(function() {
 	    	var pathnames = window.location.pathname.split('/');
 	    	
 			if (history.pushState) {
-			    var newurl = window.location.protocol + "//" + window.location.host + '/' + pathnames[1] + '/issues/nid/' + $(this).attr('hash-id');
+			    var newurl = window.location.protocol + "//" + window.location.host + '/' + pathnames[1] + '/issues/' + $(this).attr('hash-id');
 			    window.history.pushState({path:newurl},'',newurl);
 			}	    
 	   
