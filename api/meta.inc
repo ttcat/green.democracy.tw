@@ -44,6 +44,8 @@ if($section == 'politician') {
 	$object = json_decode($string_meta,true);
 }
 
+global $section;
+		echo $f;
 		echo $section;		
 if($nid && $object) { 
 
