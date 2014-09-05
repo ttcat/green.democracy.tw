@@ -46,7 +46,14 @@ if($section == 'politician') {
 
 		
 if($nid && $object) { 
+
+				echo "test0";
+
+
 	foreach ($object as $key => $v) {
+
+				echo "test0.1";
+
 
 		if($section == 'politician') { 
 				
