@@ -6,12 +6,14 @@ function get_timeline($print = TRUE){
 
   $perpage = 3;
   
+  $start_feed = ((int) $page) * $perpage;
+  $end_feed = $start_feed + 2;
+
+
    if($page == 'all') {
     $end_feed = 0;
   }
 
-  $start_feed = ((int) $page) * $perpage;
-  $end_feed = $start_feed + 2;
 
   if($nid){
     $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/{$nid}");
@@ -169,7 +171,6 @@ function get_timeline($print = TRUE){
 
           if($end_feed == 0) // show_all
           {
-            echo "!@";
             $json[] = (array) $json_this_feed;
             
           }else if($jj >= $start_feed && $jj <= $end_feed) //分頁控制在此
