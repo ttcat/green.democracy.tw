@@ -40,7 +40,7 @@ $section_data = $display_header[$section];
 $this_url = WEB.'/'.$current_url;
 
 if($section == 'politician') { 
-	$string_meta = file_get_contents("http://green.democracy.tw/{$u}/api/timeline?all");
+	$string_meta = file_get_contents("http://green.democracy.tw/{$u}/timeline?all");
 	$object = json_decode($string_meta,true);
 }
 
