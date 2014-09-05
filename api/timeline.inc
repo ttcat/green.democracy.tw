@@ -8,7 +8,6 @@ function get_timeline($print = TRUE){
   
    if($page == 'all') {
     $end_feed = 0;
-    echo "@@@@";
   }
 
   $start_feed = ((int) $page) * $perpage;
@@ -170,6 +169,7 @@ function get_timeline($print = TRUE){
 
           if($end_feed == 0) // show_all
           {
+            echo "!@";
             $json[] = (array) $json_this_feed;
             
           }else if($jj >= $start_feed && $jj <= $end_feed) //分頁控制在此
