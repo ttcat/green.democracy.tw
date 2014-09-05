@@ -79,6 +79,11 @@ if($nid && $object) {
 										
 					
 				}
+			
+			}else{
+			
+				include("404.html");
+			
 			}
 			
 		}else{
