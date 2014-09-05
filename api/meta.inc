@@ -53,12 +53,16 @@ if($nid && $object) {
 	foreach ($object as $key => $v) {
 
 		if($section == 'politician') { 
-							
+		
+			echo "yes";
+
 			if($v['section'] == 'politician') { //section = politician = timeline_news_feed; otherwise go 404.
+
+			echo "yes2";
 				$v['node'] = $v; 
 				
 				if($v['node']['nid'] == $nid) {
-							
+			echo "yes3";							
 					$v_title = explode('</h3>',$v['node']['content']);
 					$nid_name = strip_tags($v_title[0]);
 					$nid_desc = SL(strip_tags($v_title[1]), 150);
