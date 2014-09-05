@@ -51,7 +51,6 @@ switch($f){
     break;
   default:
     $section = $f;
-    echo "@";
     if(!empty($nid) && is_numeric($nid)){
       
     }

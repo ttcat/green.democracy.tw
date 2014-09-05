@@ -60,9 +60,13 @@ if($nid && $object) {
 
 			echo "yes2";
 				$v['node'] = $v; 
+				print_r($v['node']);
 				
 				if($v['node']['nid'] == $nid) {
+			
 			echo "yes3";							
+			
+			
 					$v_title = explode('</h3>',$v['node']['content']);
 					$nid_name = strip_tags($v_title[0]);
 					$nid_desc = SL(strip_tags($v_title[1]), 150);
