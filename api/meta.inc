@@ -49,19 +49,12 @@ $section = $f;
 
 if($nid && $object) { 
 
-	echo "test0".$section;
-
 	foreach ($object as $key => $v) {
 
-	echo "test01".$section;
-
 		if($section == 'politician') { 
-				
-				echo $v['section'];
-			
-			if(!$v['section']) { //section = null = timeline_news_feed; otherwise go 404.
+							
+			if($v['section'] == 'politician') { //section = politician = timeline_news_feed; otherwise go 404.
 				$v['node'] = $v; 
-				echo "test2";
 				
 				if($v['node']['nid'] == $nid) {
 
