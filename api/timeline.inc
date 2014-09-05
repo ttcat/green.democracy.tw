@@ -8,6 +8,7 @@ function get_timeline($print = TRUE){
   
    if($page == 'all') {
     $end_feed = 0;
+    echo "@@@@";
   }
 
   $start_feed = ((int) $page) * $perpage;
