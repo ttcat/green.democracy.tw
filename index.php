@@ -14,7 +14,22 @@ list($u, $f, $nid) = explode('/', $q, 3);
  * 1. verify user
  * TODO: should be only accept listed user for greenparty
  */
-$u = str_replace('.php', '', $u);
+ 
+ $all_users = array('wangchungming', 'ellen', 'muwan', 'tang', 'chungli2014', 'rober86', 'samyang', 'jaywin2014', 'star', 'afu');
+ $u = str_replace('.php', '', $u);
+
+foreach ($all_users as $k => $user) {
+	if($user == $u) {
+		$found = 1;
+	}
+}
+
+if(empty($found)) {
+  header("HTTP/1.0 404 Not Found");
+  include('404.html');
+  exit();
+}
+
 if(empty($u)){
   header("HTTP/1.0 404 Not Found");
   include('404.html');
