@@ -1,7 +1,6 @@
 <?php
 
 global $section;
-echo 's'.$section;
 
 function metavideo($url, $ssl) {
 
@@ -54,18 +53,11 @@ if($nid && $object) {
 
 		if($section == 'politician') { 
 		
-			echo "yes";
-
 			if($v['section'] == 'politician') { //section = politician = timeline_news_feed; otherwise go 404.
 
-			echo "yes2";
 				$v['node'] = $v; 
-				print_r($v['node']);
 				
-				if($v['node']['nid'] == $nid) {
-			
-			echo "yes3";							
-			
+				if($v['node']['nid'] == $nid) {			
 			
 					$v_title = explode('</h3>',$v['node']['content']);
 					$nid_name = strip_tags($v_title[0]);
