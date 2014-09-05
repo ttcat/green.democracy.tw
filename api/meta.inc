@@ -1,5 +1,7 @@
 <?php
 
+global $section;
+
 function metavideo($url, $ssl) {
 
 	$data = parse_url($url);
