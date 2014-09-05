@@ -45,8 +45,6 @@ if($section == 'politician') {
 }
 
 
-$section = $f;
-
 if($nid && $object) { 
 
 	foreach ($object as $key => $v) {
@@ -57,8 +55,7 @@ if($nid && $object) {
 				$v['node'] = $v; 
 				
 				if($v['node']['nid'] == $nid) {
-
-				echo "test3";				
+							
 					$v_title = explode('</h3>',$v['node']['content']);
 					$nid_name = strip_tags($v_title[0]);
 					$nid_desc = SL(strip_tags($v_title[1]), 150);

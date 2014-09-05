@@ -31,6 +31,8 @@ if(empty($f)){
 
 switch($f){
   case 'timeline':
+    $section = 'timeline';
+  
     if(!empty($nid) && is_numeric($nid)){
       
     }
@@ -43,12 +45,12 @@ switch($f){
     $page = !empty($_GET['p']) ? $_GET['p'] : 0;
     if(is_numeric($page) || $page === 'all'){
       require_once('api/timeline.inc');
-      $section = 'timeline';
       print get_timeline();
       exit();
     }
     break;
   default:
+    $section = $f;
     if(!empty($nid) && is_numeric($nid)){
       
     }
@@ -59,7 +61,6 @@ switch($f){
     require_once 'api/api.inc';
     if(file_exists($f.'.inc')){
       include_once($f.'.inc');
-      $section = $f;
       exit();
     }
     break;
