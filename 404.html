@@ -66,6 +66,30 @@ header("HTTP/1.0 404 Not Found");
     	    	
     	        <nav id="nav-wrap">
     	        	<ul class="nav" id="nav">
+    	        	    	
+    	        	    	
+    	            	<li class="nav-parent"><a href="/<?php echo $u?>/bio" id="first-nav">認識<?php echo $user['title']?></a>
+							<ul>
+		    	                <li><a href="/<?php echo $u?>/bio">簡介</a></li>
+    			                <li><a href="/<?php echo $u?>/issues">政見</a></li>
+		    	                <!--<li><a href="#">政治代理人公約</a></li>-->
+		    	                <li><a href="/<?php echo $u?>/endorsements">各界推薦</a></li>
+    			                <!--<li><a class="nav-parent" href="#">活動行程</a></li>-->
+    			            </ul>
+    			        </li>
+    	            	<li class="nav-parent last donate"><a href="<?php echo $user['fundlink']?>"><em class="fa fa-heart"></em> 捐款支持</a>
+    	            		<ul style="overflow: hidden;">
+    	            		    <li><a href="<?php echo $user['fundlink']?>">線上捐款</a></li>
+    	            			<li><a href="/<?php echo $u?>/finance">捐款徵信</a></li>
+<!--
+    	            			<li><a href="#">承諾投票</a></li>
+    	            			<li><a href="#">成為志工</a></li>
+-->
+    	            			<li><a href="javascript:fb();">分享給朋友</a></li>
+    	            		</ul>
+    	            	</li>
+    	                
+
     	        	    	                
     	            </ul>                	
     	        </nav>
