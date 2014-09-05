@@ -44,15 +44,12 @@ if($section == 'politician') {
 	$object = json_decode($string_meta,true);
 }
 
-global $section;
-		echo $f;
-		echo $section;		
+
+$section = $f;
+
 if($nid && $object) { 
 
-		echo $section;
 	foreach ($object as $key => $v) {
-
-		echo $section;
 
 		if($section == 'politician') { 
 				
