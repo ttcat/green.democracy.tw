@@ -68,25 +68,7 @@ header("HTTP/1.0 404 Not Found");
     	        	<ul class="nav" id="nav">
     	        	    	
     	        	    	
-    	            	<li class="nav-parent"><a href="/<?php echo $u?>/bio" id="first-nav">認識<?php echo $user['title']?></a>
-							<ul>
-		    	                <li><a href="/<?php echo $u?>/bio">簡介</a></li>
-    			                <li><a href="/<?php echo $u?>/issues">政見</a></li>
-		    	                <!--<li><a href="#">政治代理人公約</a></li>-->
-		    	                <li><a href="/<?php echo $u?>/endorsements">各界推薦</a></li>
-    			                <!--<li><a class="nav-parent" href="#">活動行程</a></li>-->
-    			            </ul>
-    			        </li>
-    	            	<li class="nav-parent last donate"><a href="<?php echo $user['fundlink']?>"><em class="fa fa-heart"></em> 捐款支持</a>
-    	            		<ul style="overflow: hidden;">
-    	            		    <li><a href="<?php echo $user['fundlink']?>">線上捐款</a></li>
-    	            			<li><a href="/<?php echo $u?>/finance">捐款徵信</a></li>
-<!--
-    	            			<li><a href="#">承諾投票</a></li>
-    	            			<li><a href="#">成為志工</a></li>
--->
-    	            			<li><a href="javascript:fb();">分享給朋友</a></li>
-    	            		</ul>
+    	            	<li class="nav-parent last donate"><a href="/<?php echo $u?>"><em class="fa fa-heart"></em> 回到首頁</a>
     	            	</li>
     	                
 
@@ -113,7 +95,7 @@ header("HTTP/1.0 404 Not Found");
 				     
 <h1 class="super"><span>404</span></h1>
 <h1>Page not found</h1>
-<p class="lead">Sorry, your lost my friend, the page your looking for does not exist anymore. <br>Take your luck at searching for a new&nbsp;one. </p>
+<p class="lead">Sorry, your lost my friend, the page your looking for does not exist anymore. <br><a href="/<?php echo $u?>">Click here</a> to go back homepage. </p>
 				         	                    	                    	                
 				<!-- add here-->
 				</div>
