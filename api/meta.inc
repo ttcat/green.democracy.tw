@@ -14,11 +14,17 @@ $display_header = Array(
 );
 
 $section_data = $display_header[$section];
-$this_url = WEB.'/'.$current_url;
+
+
+$this_url = WEB.'/'.$u.'/'.$section;
+if($nid) { $this_url = WEB.'/'.$u.'/'.$section.'/'.$nid; }
 
 if($section == 'politician') { 
-	$string_meta = file_get_contents("http://green.democracy.tw/{$u}/timeline?all");
+	$string_meta = file_get_contents(WEB."/{$u}/timeline?all");
 	$object = json_decode($string_meta,true);
+	
+	if($nid) { $this_url = WEB.'/'.$u.'/politician/'.$nid; }else{ $this_url = WEB.'/'.$u; }
+	
 }
 
 

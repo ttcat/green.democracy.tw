@@ -65,26 +65,6 @@ switch($f){
     }
     break;
     
-  case 'timeline2':
-    $section = 'timeline';
-  
-    if(!empty($nid) && is_numeric($nid)){
-      
-    }
-    else{
-      $nid = null;
-    }
-
-    // require api here
-    require_once 'api/api.inc';
-    $page = !empty($_GET['p']) ? $_GET['p'] : 0;
-    if(is_numeric($page) || $page === 'all'){
-      require_once('api/timeline2.inc');
-      print get_timeline();
-      exit();
-    }
-    break;    
-    
   default:
     $section = $f;
     if(!empty($nid) && is_numeric($nid)){
