@@ -10,10 +10,10 @@
 		<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 		<meta content="black" name="apple-mobile-web-app-status-bar-style">
 
-		<title>404 | 2014 挺好的！綠黨政治代理人</title>
+		<title>2014 挺好的！綠黨政治代理人</title>
 		<meta name="keywords" content="綠黨,挺好的,九合一,選舉,greenparty" />
-		<meta property="og:title" content="404 | 2014 挺好的！綠黨政治代理人" />
-		<meta property="og:type" content="article"/>
+		<meta property="og:title" content="2014 挺好的！綠黨政治代理人" />
+		<meta property="og:type" content="website"/>
 		<meta property="og:url" content="http://green.democracy.tw/" />
 		<meta property="og:image" content="" />
 		<meta property="og:site_name" content="2014 挺好的！綠黨政治代理人" /> 

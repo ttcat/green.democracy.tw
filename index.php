@@ -32,9 +32,9 @@ if(empty($found) && $u) {
 
 if(empty($u)){
 	$f = 'index';
-
-  include('index.inc');
-  exit();
+    require_once 'api/api.inc';
+	include('index.inc');
+	exit();
 }
 
 /**
