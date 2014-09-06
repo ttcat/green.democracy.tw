@@ -84,6 +84,12 @@ function get_timeline($print = TRUE){
           $linkpage = $cats[$feed['type']][3];	
         }
 
+
+        if($feed['videolink']) {
+          $json_this_feed['videolink'] = metavideo($feed['videolink'], 1);
+          $feed['link'] = $feed['videolink'];
+        }
+
         if(! $feed['link'] && $linkpage) { 
           $feed['link'] = 'http://green.democracy.tw/' . $u . '/' .$linkpage. '' . $feed['nid'];
           $json_this_feed['test'] = 1;
