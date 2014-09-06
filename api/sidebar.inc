@@ -1,6 +1,6 @@
 				<aside class="right-aside fourth last">
 			    	
-			    	<?php if($user['issues'] && if($user['policy'][0]))
+			    	<?php if($user['issues'] && $user['policy'][0])
 			    		{			    					    		
 			    		echo "count". $user['policy'][0];
 			    	 ?>
