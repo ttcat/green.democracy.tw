@@ -85,7 +85,7 @@ function get_timeline($print = TRUE){
         }
 
         if(! $feed['link'] && $linkpage) { 
-          $feed['link'] = 'http://green.democracy.tw/' . $u . '/' .$linkpage. '/' . $feed['nid'];
+          $feed['link'] = 'http://green.democracy.tw/' . $u . '/' .$linkpage. '' . $feed['nid'];
           $json_this_feed['test'] = 1;
         }
       
