@@ -1,5 +1,5 @@
 <?php
-$photo_string = file_get_contents("http://www.panoramio.com/map/get_panoramas.php?set=full&from=0&to=20&minx=24&miny=120&maxx=25&maxy=121&size=original&mapfilter=true");
+$photo_string = file_get_contents("http://www.panoramio.com/map/get_panoramas.php?set=full&from=0&to=20&minx=24&miny=120&maxx=25&maxy=121&size=original&mapfilter=false");
 
   $banner_photo = json_decode($photo_string,true);
   print_r($banner_photo);
