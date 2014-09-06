@@ -1,7 +1,10 @@
 				<aside class="right-aside fourth last">
 			    	
 			    	<?php if($user['issues'] && $user['policy']) 
-			    		{			    		
+			    		{
+			    		
+			    		print_r("@".$user['policy']);
+			    					    		
 			    	 ?>
 				    	<div class="clearfix aside-focus">
                 			<h3><strong>主要關注</strong></h3>
@@ -19,7 +22,7 @@
                 		<!-- Quote Widget -->
 				    	<div class="clearfix aside-recom">
                 			<h3><strong>各界推薦</strong></h3>
-                			<blockquote><?php echo SL(strip_tags($recommendation[0]['node']['content']), 60); ?><a href="/<?php echo $u;?>/endorsements/<?php echo $recommendation[0]['node']['nid']; ?>"> more<cite>- <?php echo $recommendation[0]['node']['title']?> / <?php echo $recommendation[0]['node']['professional-title']?></cite></a></blockquote>
+                			<blockquote><?php echo SL(strip_tags($recommendation[0]['node']['content']), 60); ?><a href="/<?php echo $u;?>/endorsements/<?php echo $recommendation[0]['node']['nid']; ?>"> (閱讀全文)<cite>- <?php echo $recommendation[0]['node']['title']?> / <?php echo $recommendation[0]['node']['professional-title']?></cite></a></blockquote>
                 		</div>
 					<?php } ?>	
 					
