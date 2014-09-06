@@ -41,8 +41,7 @@ if($nid && $object) {
 			
 					$v_title = explode('</h3>',$v['node']['content']);
 					$nid_name = strip_tags($v_title[0]);
-					//$nid_desc = SL(strip_tags($v_title[1]), 150);
-					$nid_desc = SL(strip_tags($v_title[1]), 150);
+					$nid_desc = SL(strip_tags($v_title[1]), 300);
 					
 					$fb_title = trim($nid_name) .' - '. $user['title']  . '的' .$v['node']['title'].' | 2014 挺好的！綠黨政治代理人';
 					$share_img = "";
@@ -67,7 +66,8 @@ if($nid && $object) {
 		}else{
 			if($v['node']['nid'] == $nid) {
 					$nid_name = $v['node']['title'];
-					$nid_desc = SL(strip_tags($v['node']['content']), 150);
+					$nid_desc = SL(strip_tags($v['node']['content']), 150);					
+					if($section == 'endorsements') { $nid_desc = $nid_name .'推薦：'.$nid_desc; }
 					$fb_title =$nid_name .' - '. $user['title']  . '的' .$section_data['title'].' | 2014 挺好的！綠黨政治代理人';
 					if($v['node']['photo']) { $share_img = $v['node']['photo']; }else{ $share_img = ""; }
 					if($v['node']['videolink']) { $videolink = metavideo($v['node']['videolink'], 0); $videolink_ssl = metavideo($v['node']['videolink'], 1); }
@@ -113,6 +113,7 @@ if($section == 'politician' && !$nid) { //index
 if(!$share_link) {	$share_link = $this_url; }
 if(!$html_title) {	$html_title = $fb_title; }
 if($share_img == '') { $share_img = $user['logo']; }
+
 if($nid_desc) { $fb_description = $nid_desc; }
 
 if(!isset($fb_description) or $fb_description == '') {	$fb_description = $user['title'].'－'.$user['section'].'：2014 挺好的人選、挺好的政黨、挺好的！台灣綠黨政治代理人官方網站。'; }
