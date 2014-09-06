@@ -156,6 +156,7 @@ $object = $newsfeeds;
                     separator:       'null',
                     columnMode:  columnMode_t,
                     order:           'desc',
+                    height:			400,
                     loadmore: feeds_left,
                 });
                 timeline.display();

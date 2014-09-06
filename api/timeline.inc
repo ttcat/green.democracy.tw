@@ -122,9 +122,9 @@ function get_timeline($print = TRUE){
           $feed['title'] = $feed['title'] . ' / ' . $feed['professional_title'] ;
         }
 
-        //<span class="icon-"></span> 標題前面加上 icon
+        //<span class="icon-cc"></span> 標題前面加上 icon
 
-        if($feed['link']) {					
+        if($feed['link']) {	
           $parse_result = '';
           $parse_result = parse_url($feed['link']);
           if($parse_result['host'] != $_SERVER['HTTP_HOST'] ) { $target = 'blank'; } else { $target = ''; }
