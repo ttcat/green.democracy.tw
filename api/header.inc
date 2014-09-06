@@ -1,11 +1,12 @@
 <?php
 //25.192692, 121.368354
 //22.398513, 120.906929
-$photo_string = file_get_contents("http://www.panoramio.com/map/get_panoramas.php?order=popularity&set=public&from=0&to=20&tag=七堵&size=original&mapfilter=false");
+
+$photo_string = file_get_contents("http://www.panoramio.com/map/get_panoramas.php?order=popularity&set=public&from=0&to=20&minx=22.398513&miny=120.906929&maxx=25.192692&maxy=121.368354&size=original&mapfilter=false");
 
   $banner_photo = json_decode($photo_string,true);
   print_r($banner_photo);
-  echo "@3";
+  echo "@2";
 ?>
 
 
