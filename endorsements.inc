@@ -49,7 +49,7 @@ $object = $endorsment;
 			    	?>                		
 						
 						<p id="en<?php echo $en['nid']?>">
-						<blockquote style="line-height:1.4;">
+						<blockquote style="line-height:1.5;">
 						<h3><?php echo $en['title']?> / <?php echo $en['professional-title']?></h3></br>
 						
 						<?php if($en['photo']) { ?>
