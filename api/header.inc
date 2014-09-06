@@ -3,6 +3,7 @@ $photo_string = file_get_contents("http://www.panoramio.com/map/get_panoramas.ph
 
   $banner_photo = json_decode($photo_string,true);
   print_r($banner_photo);
+  echo "@";
 ?>
 
 
