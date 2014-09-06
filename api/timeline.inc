@@ -7,13 +7,14 @@ global $u, $page, $nid;
   $perpage = 3;
   
   $start_feed = ((int) $page) * $perpage;
-  $end_feed = $start_feed + 2;
-
+  $end_feed = $start_feed + $perpage - 1;
 
    if($page == 'all') {
     $end_feed = 0;
   }
 
+	echo $start_feed;
+	echo $end_feed;
 
   if($nid){
     $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/{$nid}");
