@@ -1,15 +1,29 @@
-<?php
-header("HTTP/1.0 404 Not Found");
-// require_once 'api/api.inc';
-$section = 'index';
-
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-<?php require_once 'api/meta.inc'; ?>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+
+		<title>404 | 2014 挺好的！綠黨政治代理人</title>
+		<meta name="keywords" content="綠黨,挺好的,九合一,選舉,greenparty" />
+		<meta property="og:title" content="404 | 2014 挺好的！綠黨政治代理人" />
+		<meta property="og:type" content="article"/>
+		<meta property="og:url" content="http://green.democracy.tw/" />
+		<meta property="og:image" content="" />
+		<meta property="og:site_name" content="2014 挺好的！綠黨政治代理人" /> 
+		<meta property="og:description" content="404 not found" />  
+		<!-- <meta property="og:see_also" content=""> -->
+		<meta property="fb:app_id" content="687618544645054" />
+		<meta property="fb:admins" content="100000125299492" />
+		<meta property="og:locale" content="zh_TW" />
+
+
          <link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
          <link rel="stylesheet" type="text/css" href="/css/main.css">
          <link rel="stylesheet" type="text/css" href="/css/responsive.css">
@@ -21,7 +35,50 @@ $section = 'index';
     </head>
     <body>
     	
-	<?php require_once 'api/header.inc'; ?>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=687618544645054&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <!--[if lt IE 7]>
+        <p class="chromeframe">你的瀏覽器太舊了，請升級或下載 <a href="http://www.google.com/chromeframe/?redirect=true"> Google Chrome Frame </a> 來瀏覽此網站</p>
+    <![endif]-->
+	
+
+	<div id="sticky-anchor"></div>
+    <!-- Start Outter Wrapper -->
+    <div id="navall" class="outter-wrapper header-container">
+    
+    	<!-- Start Main Navigation -->
+    	<div class="wrapper">
+    	    <header class="clearfix">
+
+    	    	<!--<a href="index.html" class="logo"><img src="/images/gp_badge.png?v2" alt="Logo" /> <span>綠黨政治代理人公約</span></a>-->
+    	    	
+    	    	<a href="http://green.democracy.tw/" class="logo"><img src="/images/gp_badge.png?v2" alt="Logo" /> <span id="logo-word"></span></a>
+    	        <span class="stickname" id="thisname"></span>
+    	    	
+    	        <nav id="nav-wrap">
+    	        	<ul class="nav" id="nav">
+    	        	    	
+    	        	    	
+    	            	<li class="nav-parent last donate"><a href="http://green.democracy.tw/"><em class="fa fa-home"></em> 回到首頁</a>
+    	            	</li>
+    	                
+
+    	        	    	                
+    	            </ul>                	
+    	        </nav>
+    	    </header>
+    	</div>
+    	<!-- End Main Navigation -->
+    </div>
+    <!-- End Outter Wrapper -->
+    <div id="space"></div>
     	
     <div class="outter-wrapper">	
     	 <!-- Start Main Body -->
@@ -34,19 +91,13 @@ $section = 'index';
 
 				<!-- add here-->
 				     
-<h1 class="super"><span>index</span></h1>
+<h1 class="super"><span><em class="fa fa-minus-circle"></em>index</span></h1>
 <h1>Page not found</h1>
-<p class="lead">Sorry, your lost my friend, the page your looking for does not exist anymore. <br>Take your luck at searching for a new&nbsp;one. </p>
+<p class="lead">Sorry, your lost my friend, the page your looking for does not exist anymore. <br><a href="http://green.democracy.tw/">Click here</a> to go back homepage. </p>
 				         	                    	                    	                
 				<!-- add here-->
 				</div>
 				
-				
-				<!-- Start Main Sidebar  -->
-					<?php require_once 'api/sidebar.inc'; ?>
-				<!-- Finish Sidebar -->
-				
-
 
         	</div> <!-- #main -->
         </div> <!-- #main-container -->
@@ -66,8 +117,6 @@ $section = 'index';
 	<script type="text/javascript" src="/js/mosaic.1.0.1.min.js"></script>
 	<script type="text/javascript" src="/js/cleantabs.jquery.js"></script>
 
-	<script type="text/javascript" src="/js/rs-slider.js"></script>
-
 	<script type="text/javascript" src="/js/contact.js"></script>
 	<script type="text/javascript" src="/js/jquery.form.js"></script>
 	<script type="text/javascript" src="/js/jquery.validate.min.js"></script>
@@ -77,21 +126,6 @@ $section = 'index';
 	<script type="text/javascript" src="/js/jquery.scrollUp.min.js"></script>
 	<script type="text/javascript" src="/js/selectivizr-min.js"></script>
 	
-	<script src="/js/kkcountdown.min.js" type="text/javascript"></script>
-	<script type="text/javascript">
-            $(document).ready(function(){
-                $(".kkcount-down").kkcountdown({
-                	dayText		: '',
-                	daysText 	: '',
-                    hoursText	: ':',
-                    minutesText	: ':',
-                    secondsText	: '',
-                    displayZeroDays : false,
-                    oneDayClass	: 'oneday'
-                });
-            });
-        </script>
-
 	<script type="text/javascript" src="/js/main.js"></script>
  
 	</body>
