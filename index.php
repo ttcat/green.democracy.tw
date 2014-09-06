@@ -31,6 +31,8 @@ if(empty($found) && $u) {
 }
 
 if(empty($u)){
+	$f = 'index';
+
   include('index.inc');
   exit();
 }
