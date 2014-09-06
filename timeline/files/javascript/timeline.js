@@ -175,7 +175,7 @@ function Timeline(element, data, undefined) {
 
                 SELF._iframe_queue.push({
                     element: content,
-                    url:     '123' //element_data.url
+                    url:     element_data.videolink
                 });
 
                 // content DIV
