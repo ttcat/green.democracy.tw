@@ -34,7 +34,7 @@ $section = 'index';
 
 				<!-- add here-->
 				     
-<h1 class="super"><span>404</span></h1>
+<h1 class="super"><span>index</span></h1>
 <h1>Page not found</h1>
 <p class="lead">Sorry, your lost my friend, the page your looking for does not exist anymore. <br>Take your luck at searching for a new&nbsp;one. </p>
 				         	                    	                    	                

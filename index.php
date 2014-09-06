@@ -31,8 +31,7 @@ if(empty($found)) {
 }
 
 if(empty($u)){
-  header("HTTP/1.0 404 Not Found");
-  include('404.html');
+  include('index.inc');
   exit();
 }
 
