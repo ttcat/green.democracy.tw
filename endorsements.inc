@@ -63,6 +63,8 @@ $object = $endorsment;
 	                    ?>
 
     	                </blockquote>
+    	                
+						<div id="fb<?php print $en['nid']; ?>" class="addthis_sharing_toolbox" data-url="http://green.democracy.tw/<?php print $u; ?>/endorsements/<?php print $en['nid']; ?>"></div>
     	                </p>
 					<?php if($v < $total_en) { ?><hr><?php } ?>
 
