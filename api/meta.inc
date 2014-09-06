@@ -24,16 +24,9 @@ if($section == 'politician') {
 
 if($nid && $object) { 
 
-echo "@1";
-
 	foreach ($object as $key => $v) {
 
-echo "@2";
-
 		if($section == 'politician') { 
-		
-			echo $v['section'];
-			echo "<br/>";
 		
 			if($v['section'] == 'politician') { //section = politician = timeline_news_feed; otherwise go 404.
 
@@ -62,12 +55,6 @@ echo "@2";
 					
 				}
 			
-			}else{
-				
-				echo "meta404";
-				include("404.html");
-				exit();
-			
 			}
 			
 		}else{
@@ -81,7 +68,14 @@ echo "@2";
 			}
 		}
 	}
+	
+  if(!$nid_found) 
+  {				
+	include("404.html");
+	exit();
+  }
 }
+
 
 function showFBlike_l($p){
 	$url = WEB.$p;
