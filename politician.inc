@@ -6,8 +6,10 @@ global $u,$nid;
 // re-use api
 
 $page = 1;
-require_once('api/timeline.inc');
-$string = get_timeline(FALSE);
+//require_once('api/timeline.inc');
+//$string = get_timeline(FALSE);
+
+$string = file_get_contents("/{$u}/timeline?p=1");
 $newsfeeds = json_decode($string,true);
 
 $newsfeeds_perpage = $newsfeeds[0]['perpage'];
