@@ -17,12 +17,11 @@
 		<meta property="og:url" content="http://green.democracy.tw/" />
 		<meta property="og:image" content="" />
 		<meta property="og:site_name" content="2014 挺好的！綠黨政治代理人" /> 
-		<meta property="og:description" content="404 not found" />  
+		<meta property="og:description" content="2014 挺好的人選、挺好的政黨、挺好的！台灣綠黨政治代理人官方網站" />  
 		<!-- <meta property="og:see_also" content=""> -->
 		<meta property="fb:app_id" content="687618544645054" />
 		<meta property="fb:admins" content="100000125299492" />
 		<meta property="og:locale" content="zh_TW" />
-
 
          <link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
          <link rel="stylesheet" type="text/css" href="/css/main.css">
@@ -56,8 +55,6 @@
     	<!-- Start Main Navigation -->
     	<div class="wrapper">
     	    <header class="clearfix">
-
-    	    	<!--<a href="index.html" class="logo"><img src="/images/gp_badge.png?v2" alt="Logo" /> <span>綠黨政治代理人公約</span></a>-->
     	    	
     	    	<a href="http://green.democracy.tw/" class="logo"><img src="/images/gp_badge.png?v2" alt="Logo" /> <span id="logo-word"></span></a>
     	        <span class="stickname" id="thisname"></span>
@@ -65,8 +62,8 @@
     	        <nav id="nav-wrap">
     	        	<ul class="nav" id="nav">
     	        	    	
-    	        	    	
-    	            	<li class="nav-parent last donate"><a href="http://green.democracy.tw/"><em class="fa fa-home"></em> 回到首頁</a>
+    	            	<li class="nav-parent last donate"><a href="http://green.democracy.tw/"><em class="fa fa-heart"></em> 捐款支持</a>
+
     	            	</li>
     	                
 
