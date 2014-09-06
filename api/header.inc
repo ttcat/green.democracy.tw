@@ -2,7 +2,7 @@
 //25.135982, 121.632885
 //25.059188, 121.743435
 
-$photo_string = file_get_contents("http://www.panoramio.com/map/get_panoramas.php?order=popularity&set=public&from=0&to=20&minx=121.743435&miny=25.059188&maxx=121.632885&maxy=25.135982&size=original&mapfilter=true");
+$photo_string = file_get_contents("http://www.panoramio.com/map/get_panoramas.php?order=popularity&set=full&from=0&to=20&minx=121.743435&miny=25.059188&maxx=121.632885&maxy=25.135982&size=original&mapfilter=true");
 
   $banner_photo = json_decode($photo_string,true);
   print_r($banner_photo);
