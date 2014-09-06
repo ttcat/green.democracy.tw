@@ -4,22 +4,13 @@ global $u, $page, $nid;
 
 	echo "page".$page;
 
-	if(!$page) { $page = 0; }
-
   $perpage = 3;
   
   $start_feed = ((int) $page) * $perpage;
   $end_feed = $start_feed + $perpage - 1;
 
-	echo $start_feed;
-	echo $end_feed;
-
-   if($page == 'all') {
-    $end_feed = 0;
-  }
-
-	echo $start_feed;
-	echo $end_feed;
+   if($page == 'all') { $end_feed = 0;  }
+   
 
   if($nid){
     $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/{$nid}");
