@@ -1,16 +1,13 @@
 				<aside class="right-aside fourth last">
 			    	
-			    	<?php if($user['issues'] && $user['policy']) 
-			    		{
-			    		
-			    		print_r("@".$user['policy']);
-			    					    		
+			    	<?php if($user['issues'] && count($user['policy']) > 0)
+			    		{			    					    		
 			    	 ?>
 				    	<div class="clearfix aside-focus">
                 			<h3><strong>主要關注</strong></h3>
                 			<ul class="statistics">
                 			<?php foreach($user['policy'] as $key => $v) { ?>
-                				<li><em class="fa <?php echo $user['policyicon'][$key]?>"></em> <span<?php if($key > 0) { ?> style="color:black;"<?php } ?>><?php echo $v?></span></li>
+                				<li><?php if(count($user['policyicon']) > $key) { ?><em class="fa <?php echo $user['policyicon'][$key]?>"></em> <? } ?><span<?php if($key > 0) { ?> style="color:black;"<?php } ?>><?php echo $v?></span></li>
                 			<?php } ?>
                 			</ul>	
                 			<p><a class="more" href="/<?php echo $u?>/issues">了解目前的政見</a></p>

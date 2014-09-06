@@ -122,7 +122,7 @@ if(!isset($fb_description) or $fb_description == '') {	$fb_description = $user['
 	$twitter_link = "javascript: void(window.open('http://twitter.com/home/?status='.concat(encodeURIComponent('".$fb_title."')) .concat(' ') .concat(encodeURIComponent('".$share_link."'))));";	
 	
 
-$user['policy'] = explode('|', $user['policy']);			    		
+$user['policy'] = explode('|', $user['policy']);
 $user['policyicon'] = explode('|', $user['policyicon']);
 
 $keyword_issues = implode(',', $user['policy']);
