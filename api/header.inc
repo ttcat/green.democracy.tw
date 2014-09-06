@@ -1,7 +1,7 @@
 <?php 
 if(!$user['banner'])
 {
-	$user['banner'] = '';
+	$user['banner'] = '/images/1920x2.jpg';
 }
 ?>
 <div id="fb-root"></div>
