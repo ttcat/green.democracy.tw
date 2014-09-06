@@ -587,6 +587,11 @@ body{ padding: 0em; }
 	left: 42%;
 }
    	
+div.timeline_loadmore {	
+	width:50%;
+}
+
+   	
 	.aside-focus, .aside-news, .aside-gallery, .footer-signup, .footer-news { display:none;}	
 }
 
