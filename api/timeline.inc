@@ -3,6 +3,7 @@ function get_timeline($print = TRUE){
 global $u, $page, $nid;
 
   $perpage = 3;
+  if($page == 0) $page = 1;
   
   $start_feed = ( ((int) $page)  - 1 ) * $perpage;
   $end_feed = $start_feed + $perpage - 1;
