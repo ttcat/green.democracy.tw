@@ -15,7 +15,7 @@ list($u, $f, $nid) = explode('/', $q, 3);
  * TODO: should be only accept listed user for greenparty
  */
  
- $all_users = array('wangchungming', 'ellen', 'muwan', 'tang', 'chungli2014', 'rober86', 'samyang', 'jaywin2014', 'star', 'afu');
+ $all_users = array('wangchungming', 'ellen', 'muwan', 'tang', 'chungli2014', 'rober86', 'samyang', 'jaywin2014', 'star', 'afu', 'test');
  $u = str_replace('.php', '', $u);
 
 foreach ($all_users as $k => $user) {
