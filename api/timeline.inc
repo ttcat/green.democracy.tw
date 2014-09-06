@@ -10,7 +10,8 @@ global $u, $page, $nid;
   $end_feed = $start_feed + $perpage - 1;
 
    if($page == 'all') { $end_feed = 0;  }
-   
+
+echo "pp=".$page;
 
   if($nid){
     $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/{$nid}");
