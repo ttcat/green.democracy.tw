@@ -24,7 +24,7 @@ if($section == 'politician') {
 	$object = json_decode($string_meta,true);
 	
 	if($nid) { $this_url = WEB.'/'.$u.'/politician/'.$nid; }else{ $this_url = WEB.'/'.$u; }
-	
+	$nid_desc = SL(strip_tags($v['node']['content']), 150);
 }
 
 
