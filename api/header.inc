@@ -1,3 +1,12 @@
+<?php
+$photo_string = file_get_contents("http://www.panoramio.com/map/get_panoramas.php?set=public&from=0&to=20&minx=-180&miny=-90&maxx=180&maxy=90&size=medium&mapfilter=true");
+
+  $banner_photo = json_decode($photo_string,true);
+  print_r($banner_photo);
+?>
+
+
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
