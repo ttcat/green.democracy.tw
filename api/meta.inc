@@ -24,7 +24,11 @@ if($section == 'politician') {
 
 if($nid && $object) { 
 
+echo "@1";
+
 	foreach ($object as $key => $v) {
+
+echo "@2";
 
 		if($section == 'politician') { 
 		
