@@ -2,16 +2,13 @@
 function get_timeline($print = TRUE){
 global $u, $page, $nid;
 
-	echo "page".$page;
-
   $perpage = 3;
   
-  $start_feed = ((int) $page) * $perpage;
+  $start_feed = ((int) $page - 1) * $perpage;
   $end_feed = $start_feed + $perpage - 1;
 
    if($page == 'all') { $end_feed = 0;  }
 
-echo "pp=".$page;
 
   if($nid){
     $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/{$nid}");
