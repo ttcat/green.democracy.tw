@@ -127,10 +127,14 @@ function get_timeline($print = TRUE){
         if($feed['link']) {	
           $parse_result = '';
           $parse_result = parse_url($feed['link']);
+          
+          echo "do the link\n";
+          
           if($parse_result['host'] != $_SERVER['HTTP_HOST'] ) { $target = 'blank'; } else { $target = ''; }
-
-                if($target) { $json_this_feed['target'] = 'blank'; }else{ $json_this_feed['target'] = ''; } 
+          if($target) { $json_this_feed['target'] = 'blank'; }else{ $json_this_feed['target'] = ''; } 
           if($json_this_feed['target'] == 'blank') { $target_text = 'target="_blank"'; }
+          
+                    echo $target_text;
 
           $feed['title'] = '<a href="'.$feed['link'].'" '.$target_text.'>' . $feed['title'] . '</a>';
           $json_this_feed['readmore'] = $feed['link'];

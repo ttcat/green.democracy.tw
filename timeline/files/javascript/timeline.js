@@ -223,7 +223,8 @@ function Timeline(element, data, undefined) {
 	                if (element_data.readmore !== null) {
 						
 						img_container.wrap($('<a>',{
-							href: element_data.readmore
+							href: element_data.readmore,
+							target: "_blank"
 						}));
 
         	        }
