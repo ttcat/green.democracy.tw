@@ -4,10 +4,10 @@ global $u, $page, $nid;
 
   $perpage = 3;
   
-  $start_feed = ((int) $page - 1) * $perpage;
-  $end_feed = $start_feed + $perpage - 1;
+  $start_feed = ( ((int) $page)  - 1 ) * $perpage;
+  $end_feed = $start_feed + $perpage;
 
-   if($page == 'all') { $end_feed = 0;  }
+  if($page == 'all') { $end_feed = 0;  }
 
 
   if($nid){

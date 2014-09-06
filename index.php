@@ -57,7 +57,7 @@ switch($f){
 
     // require api here
     require_once 'api/api.inc';
-    $page = !empty($_GET['p']) ? $_GET['p'] : 0;
+    $page = !empty($_GET['p']) ? $_GET['p'] : 1;
     if(is_numeric($page) || $page === 'all'){
       require_once('api/timeline.inc');
       print get_timeline();
