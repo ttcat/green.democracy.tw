@@ -2,31 +2,6 @@
 
 global $section;
 
-function metavideo($url, $ssl) {
-
-	$data = parse_url($url);
-	$query = explode('&', $data['query']);
-	
-	//print_r($data);
-	
-	
-	if($data['host'] == 'www.youtube.com' || $data['host'] == 'youtube.com' || $data['host'] == 'youtu.be') 
-	{
-		foreach($query as $q) 
-	    { 
-	    	//print_r($q);
-    	    list($key, $value) = explode("=", $q); 
-			if($key == 'v') { $video_id = $value; }
-			if($ssl) { $url_new = 'https://www.youtube.com/v/'.$video_id; } else { $url_new = 'http://www.youtube.com/v/'.$video_id; }
-			
-
-	    } 	
-    }
-    
-    
-	return $url_new;
-}
-
 $display_header = Array(
 
 		'bio'=> array('title' => '簡介','desc' => '', 'menu' => '1'),

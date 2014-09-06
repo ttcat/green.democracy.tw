@@ -101,7 +101,7 @@ function get_timeline($print = TRUE){
         }
         
         if($feed['videolink']) {
-          $json_this_feed['videolink'] = $feed['videolink'];
+          $json_this_feed['videolink'] = metavideo($feed['videolink'], 1);
         }
               
         $json_this_feed['date'] = date('Y-m-d' , strtotime($feed['date']));
@@ -131,7 +131,7 @@ function get_timeline($print = TRUE){
         }
               
         if($feed['category'] == 'video') { 
-          $json_this_feed['url'] = $feed['videolink'];
+          $json_this_feed['videolink'] = metavideo($feed['videolink'], 1);
         }			
               
         $feed['content'] = SL(str_replace("\n","",$feed['content']),250);
