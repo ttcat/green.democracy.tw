@@ -24,7 +24,6 @@ if($section == 'politician') {
 	$object = json_decode($string_meta,true);
 	
 	if($nid) { $this_url = WEB.'/'.$u.'/politician/'.$nid; }else{ $this_url = WEB.'/'.$u; }
-	$nid_desc = SL(strip_tags($v['node']['content']), 150);
 }
 
 
@@ -42,7 +41,9 @@ if($nid && $object) {
 			
 					$v_title = explode('</h3>',$v['node']['content']);
 					$nid_name = strip_tags($v_title[0]);
-					$nid_desc = SL(strip_tags($v_title[1]), 150);
+					//$nid_desc = SL(strip_tags($v_title[1]), 150);
+					$nid_desc = SL(strip_tags($v['node']['content']), 150);
+					
 					$fb_title = trim($nid_name) .' - '. $user['title']  . '的' .$v['node']['title'].' | 2014 挺好的！綠黨政治代理人';
 					$share_img = "";
 					if($v['node']['image']) { $share_img = $v['node']['image']; } //timeline use image as key.
@@ -75,6 +76,7 @@ if($nid && $object) {
 		}
 	}
 	
+
   if(!$nid_found) 
   {				
 	include("404.html");
