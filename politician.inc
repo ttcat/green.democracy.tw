@@ -6,7 +6,7 @@ global $u,$nid;
 // re-use api
 
 $page = 0;
-require_once('api/timeline.inc');
+require_once('api/timeline.inc?p=0');
 $string = get_timeline(FALSE);
 $newsfeeds = json_decode($string,true);
 
