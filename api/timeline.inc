@@ -7,9 +7,6 @@ global $u, $page, $nid;
   $start_feed = ( ((int) $page)  - 1 ) * $perpage;
   $end_feed = $start_feed + $perpage - 1;
 
-echo $start_feed;
-echo $end_feed;
-
   if($page == 'all') { $end_feed = 0;  }
 
 
