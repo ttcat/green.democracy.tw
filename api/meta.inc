@@ -56,7 +56,8 @@ if($nid && $object) {
 				}
 			
 			}else{
-			
+				
+				echo "meta404";
 				include("404.html");
 				exit();
 			
