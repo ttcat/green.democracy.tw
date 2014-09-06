@@ -1,6 +1,6 @@
 <?php
 function get_timeline($print = TRUE){
-  global $u, $page, $nid;
+global $u, $page, $nid;
 
 	if(!$page) { $page = 0; }
 
