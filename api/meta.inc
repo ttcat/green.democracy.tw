@@ -32,6 +32,9 @@ echo "@2";
 
 		if($section == 'politician') { 
 		
+			echo $v['section'];
+			echo "<br/>";
+		
 			if($v['section'] == 'politician') { //section = politician = timeline_news_feed; otherwise go 404.
 
 				$v['node'] = $v; 

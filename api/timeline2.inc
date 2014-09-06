@@ -52,8 +52,8 @@ function get_timeline($print = TRUE){
 
 
       $jj = 0;
-      //$json = array();
-      //$json_this_feed = array();
+      $json = array();
+      $json_this_feed = array();
       
       foreach ($rows as $k => $feed) { 
 
@@ -177,11 +177,11 @@ function get_timeline($print = TRUE){
 
           if($end_feed == 0) // show_all
           {
-            $json[] = $json_this_feed;
+            $json[] = (array) $json_this_feed;
             
           }else if($jj >= $start_feed && $jj <= $end_feed) //分頁控制在此
           {
-            $json[] = $json_this_feed;
+            $json[] = (array) $json_this_feed;
           }
           
           
