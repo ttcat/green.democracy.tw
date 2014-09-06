@@ -2,6 +2,8 @@
 function get_timeline($print = TRUE){
 global $u, $page, $nid;
 
+	echo "page".$page;
+
 	if(!$page) { $page = 0; }
 
   $perpage = 3;
@@ -11,7 +13,6 @@ global $u, $page, $nid;
 
 	echo $start_feed;
 	echo $end_feed;
-
 
    if($page == 'all') {
     $end_feed = 0;
