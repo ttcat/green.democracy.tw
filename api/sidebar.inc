@@ -19,11 +19,11 @@
                 		<!-- Quote Widget -->
 				    	<div class="clearfix aside-recom">
                 			<h3><strong>各界推薦</strong></h3>
-                			<blockquote><?php echo $recommendation[0]['node']['content']?><cite>- <?php echo $recommendation[0]['node']['title']?> / <?php echo $recommendation[0]['node']['professional-title']?></cite></blockquote>
+                			<blockquote><?php echo SL(strip_tags($recommendation[0]['node']['content']), 120); ?><cite>- <?php echo $recommendation[0]['node']['title']?> / <?php echo $recommendation[0]['node']['professional-title']?></cite></blockquote>
                 		</div>
 					<?php } ?>	
 					
-			    	<?php if($user['fundraising']) { ?>                		
+			    	<?php if($user['fundraising'] && $user['accountnumber']) { ?>                		
 				    	<div class="clearfix aside-donate">
                 			<h3><strong>捐款支持</strong></h3>
                 			<p><?php echo $user['fundtitle']?></p>
