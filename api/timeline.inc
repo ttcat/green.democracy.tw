@@ -5,7 +5,7 @@ global $u, $page, $nid;
   $perpage = 3;
   
   $start_feed = ( ((int) $page)  - 1 ) * $perpage;
-  $end_feed = $start_feed + $perpage;
+  $end_feed = $start_feed + $perpage - 1;
 
   if($page == 'all') { $end_feed = 0;  }
 
@@ -166,9 +166,9 @@ global $u, $page, $nid;
 	            }
 
               $json_this_feed['content'] .= '</div></p>';
+
         if($linkpage) $linkpage_array = explode('/', $linkpage);
         $json_this_feed['section'] = $linkpage_array[0];
-
 
           if($end_feed == 0) // show_all
           {
