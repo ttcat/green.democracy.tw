@@ -2,6 +2,7 @@
 			    	
 			    	<?php if($user['issues'] && count($user['policy']) > 0)
 			    		{			    					    		
+			    		echo "count".count($user['policy']);
 			    	 ?>
 				    	<div class="clearfix aside-focus">
                 			<h3><strong>主要關注</strong></h3>
