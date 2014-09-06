@@ -5,11 +5,10 @@ global $u,$nid;
 // timeline
 // re-use api
 
-$page = 1;
 require_once('api/timeline.inc');
 $string = get_timeline(FALSE);
-$newsfeeds = json_decode($string,true);
 
+$newsfeeds = json_decode($string,true);
 $newsfeeds_perpage = $newsfeeds[0]['perpage'];
 $newsfeeds_total = $newsfeeds[0]['total'];
 $newsfeeds_thispage = $newsfeeds[0]['thispage'];
@@ -164,7 +163,7 @@ $object = $newsfeeds;
                 timeline.display();
 
                 // load more click
-                var page = 0;
+                var page = 1;
                 
                 $('#loadmore').on('click', function(e) {
                     var button = $(this);
