@@ -23,7 +23,10 @@
                 		</div>
 					<?php } ?>	
 					
-			    	<?php if($user['fundraising'] && $user['accountnumber']) { ?>                		
+			    	<?php if($user['fundraising'] && $user['accountnumber']) { 
+			    	
+			    			if(!$user['fundtitle']) { $user['fundtitle'] = "您的捐款，可以讓我們印製更多文宣，讓更多市民認識綠黨、認識{$user['title']}的政見，甚至增加輔選宣傳的工作人員！"; }
+			    	?>                		
 				    	<div class="clearfix aside-donate">
                 			<h3><strong>捐款支持</strong></h3>
                 			<p><?php echo $user['fundtitle']?></p>
