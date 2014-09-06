@@ -53,7 +53,6 @@ function metavideo($url, $ssl) {
 	
 	//print_r($data);
 	
-	
 	if($data['host'] == 'www.youtube.com' || $data['host'] == 'youtube.com' || $data['host'] == 'youtu.be') 
 	{
 		foreach($query as $q) 
