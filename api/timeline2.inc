@@ -52,8 +52,8 @@ function get_timeline($print = TRUE){
 
 
       $jj = 0;
-      $json = array();
-      $json_this_feed = array();
+      //$json = array();
+      //$json_this_feed = array();
       
       foreach ($rows as $k => $feed) { 
 
