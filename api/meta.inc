@@ -42,8 +42,7 @@ if($nid && $object) {
 					$v_title = explode('</h3>',$v['node']['content']);
 					$nid_name = strip_tags($v_title[0]);
 					//$nid_desc = SL(strip_tags($v_title[1]), 150);
-					$nid_desc = SL(strip_tags($v['node']['content']), 150);
-					echo $nid_desc;
+					$nid_desc = SL(strip_tags($v_title[1]), 150);
 					
 					$fb_title = trim($nid_name) .' - '. $user['title']  . '的' .$v['node']['title'].' | 2014 挺好的！綠黨政治代理人';
 					$share_img = "";
@@ -114,6 +113,7 @@ if($section == 'politician' && !$nid) { //index
 if(!$share_link) {	$share_link = $this_url; }
 if(!$html_title) {	$html_title = $fb_title; }
 if($share_img == '') { $share_img = $user['logo']; }
+if($nid_desc) { $fb_description = $nid_desc; }
 
 if(!isset($fb_description) or $fb_description == '') {	$fb_description = $user['title'].'－'.$user['section'].'：2014 挺好的人選、挺好的政黨、挺好的！台灣綠黨政治代理人官方網站。'; }
 	
