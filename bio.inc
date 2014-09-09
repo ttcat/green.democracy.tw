@@ -1,6 +1,12 @@
 <?php
 require_once 'api/api.inc';
 
+//cv
+$string = file_get_contents("http://v.democracy.tw/star/timeline.json/cv");
+$cv = json_decode($cv, true);
+$cv = $cv['nodes'];
+$object = $cv;
+
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -38,18 +44,20 @@ require_once 'api/api.inc';
 						<div>
 							<p>
 
-													
-<!--								<strong>自傳標題</strong></br></br>
+								<strong><?php echo $cv['title']?></strong></br></br>
 							
+							<?php if($cv['photo']) { ?>
 							<div class="half">
-		                       	<img src="<?php echo $user['logo']?>" alt="mock" width="100%">
-	    	                   	<span class="wp-caption-text">參與社會運動的過程</span>
+		                       	<img src="<?php echo $cv['photo']?>" alt="mock" width="100%">
+	    	                   	<span class="wp-caption-text"><?php $cv['caption']; ?></span>
 	        	            </div>
-	                    
-	            	        被監督人 張明麗君 對於食安議題關注甚深、熱心公益，在基隆七堵地區推動共同購買，為本社基隆市七堵區綠葉山莊共同購買班創班班長，同時為本社解說員、基隆地區社員代表；平日在組織活動中，對於綠色生活之觀念皆能實踐、身體力行。<br/></br>
-							該君為實踐公民參政理想，並將食農議題、永續環境理念廣佈於基隆地區，決定代表綠黨投入2014年基隆市市議員選舉，作為一個長期關注台灣食農議題的社運團體，我們樂觀其成，並願意扮演監督者的角色，與社會各界共同監督，真正落實公民參政的理念。<br/></br>此致<br/></br>
-
-    	                	</p> -->
+	                    	<? } ?>
+	                    	
+							<?php echo $cv['content']; ?>
+							
+    	                	</p>
+    	                	
+    	                	<div class="addthis_sharing_toolbox" data-url="http://green.democracy.tw/<?php print $u; ?>/bio ?>"></div>
 						</div>
 
 

@@ -19,11 +19,18 @@ if($string) 	{
 }
 
 //推薦
-$string = file_get_contents("http://v.democracy.tw/{$u}/endorsment.json");
+$string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/person");
 $recommendation = json_decode($string,true);
 $recommendation = $recommendation['nodes'];
 $endorsment = $recommendation;
 shuffle($recommendation);
+
+
+//news
+$string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/person");
+$news = json_decode($string,true);
+$news = $news['nodes'];
+shuffle($news);
 
 //function
 
