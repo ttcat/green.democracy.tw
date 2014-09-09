@@ -161,7 +161,7 @@ global $u, $page, $nid;
         }			
         
         $org_content = $feed['content'];
-        if(!$nid) { $feed['content'] = SL(str_replace("\n","",$feed['content']),250); }
+        //if(!$nid) { $feed['content'] = SL(str_replace("\n","",$feed['content']),250); }
 
         $event_time = '';
         //event 加上按鈕
