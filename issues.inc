@@ -51,7 +51,8 @@ $object = $issues;
 						?>
     	                		<!-- Toggle -->
     	                	    <li class="toggle-li">
-    	                	      <a href="#" class="toggle-btn" hash-id="<?php print $issue['nid']?>" id="sa<?php print $issue['nid']; ?>"><em class="fa fa-bookmark"></em> <span><?php print $issue['title']; ?></span></a>
+    	                	    
+    	                	      <?php if($issue['content']) { ?><a href="#" class="toggle-btn" hash-id="<?php print $issue['nid']?>" id="sa<?php print $issue['nid']; ?>"><?php } ?><em class="fa fa-bookmark"></em> <span><?php print $issue['title']; ?></span><?php if($issue['content']) { ?></a><?php } ?>
     	                	      <?php if($issue['content']) { ?>
     	                	      <div class="toggle-content">
     	                	      	<p><?php print $issue['content']; ?></p>
