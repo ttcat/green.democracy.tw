@@ -159,8 +159,9 @@ global $u, $page, $nid;
         if($feed['category'] == 'video') { 
           $json_this_feed['videolink'] = metavideo($feed['videolink'], 1);
         }			
-              
-        $feed['content'] = SL(str_replace("\n","",$feed['content']),250);
+        
+        $org_content = $feed['content'];
+        if(!$show_nid_one) { $feed['content'] = SL(str_replace("\n","",$feed['content']),250); }
 
         $event_time = '';
         //event 加上按鈕

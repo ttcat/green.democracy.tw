@@ -5,15 +5,6 @@ global $u,$nid;
 // timeline
 // re-use api
 
-require_once('api/timeline.inc');
-$string = get_timeline(FALSE);
-$newsfeeds = json_decode($string,true);
-$newsfeeds_perpage = $newsfeeds[0]['perpage'];
-$newsfeeds_total = $newsfeeds[0]['total'];
-$newsfeeds_thispage = $newsfeeds[0]['thispage'];
-
-$object = $newsfeeds;
-
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -34,6 +25,19 @@ $object = $newsfeeds;
     <body>
     	
 	<?php require_once 'api/header.inc'; ?>
+
+<?php
+
+require_once('api/timeline.inc');
+$string = get_timeline(FALSE);
+$newsfeeds = json_decode($string,true);
+$newsfeeds_perpage = $newsfeeds[0]['perpage'];
+$newsfeeds_total = $newsfeeds[0]['total'];
+$newsfeeds_thispage = $newsfeeds[0]['thispage'];
+
+$object = $newsfeeds;
+
+?>
     	
     <div class="outter-wrapper">	
     	 <!-- Start Main Body -->
