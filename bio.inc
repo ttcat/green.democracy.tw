@@ -79,25 +79,24 @@ require_once 'api/api.inc';
 						<div>
 						<p>
 						<ul>
-							<?php if($user['accountnumber'])?><li>帳號：<?php echo $user['accountnumber']?></li><?php } ?>
-							<?php if($user['accountname'])?><li>戶名：<?php echo $user['accountname']?></li><?php } ?>
-							<?php if($user['bank'])?><li>銀行：<?php echo $user['bank']?><?php } ?>
-							<?php if($user['banknumber'])?><li>代碼：<?php echo $user['banknumber']?></li><?php } ?>
+							<?php if($user['accountnumber']) { ?><li>帳號：<?php echo $user['accountnumber']?></li><?php } ?>
+							<?php if($user['accountname']) { ?><li>戶名：<?php echo $user['accountname']?></li><?php } ?>
+							<?php if($user['bank']) { ?><li>銀行：<?php echo $user['bank']?><?php } ?>
+							<?php if($user['banknumber']) { ?><li>代碼：<?php echo $user['banknumber']?></li><?php } ?>
 						</ul>
 						</p>
 						</div>
 
 				<br>
 	
-				<h2 class="clearfix">總部資訊</h2>
+				<h2 class="clearfix">聯絡資訊</h2>
 						<hr>
-
 
 						<div>
 						<ul>
-							<li>地址：<?php echo $user['address']?></li>
-							<li>電話：<?php echo $user['phone']?></li>
-							<li>聯絡 email：<?php echo $user['email']?></li>
+							<?php if($user['address']) { ?><li>地址：<?php echo $user['address']?></li><?php } ?>
+							<?php if($user['phone']) { ?><li>電話：<?php echo $user['phone']?></li><?php } ?>
+							<?php if($user['email']) { ?><li>聯絡 email：<?php echo $user['email']?></li><?php } ?>
 						</ul>
 						<br>
 						<iframe width="100" height="550" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3683.04753595446!2d120.299208!3d22.614699999999996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e037fbc0131fd%3A0x9697296bace77b26!2zODAy6auY6ZuE5biC6IuT6ZuF5Y2A6I-v5paw6KGXMeiZnw!5e0!3m2!1szh-TW!2stw!4v1409090033264" style="border:0"></iframe>
