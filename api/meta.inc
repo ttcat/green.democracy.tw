@@ -48,6 +48,7 @@ if($nid && $object) {
 					if($v['node']['photo']) { $share_img = $v['node']['photo']; }
 					if($v['node']['videolink']) { $videolink = metavideo($v['node']['videolink'], 0); $videolink_ssl = metavideo($v['node']['videolink'], 1); }
 					$nid_found = 1;
+					$v['node']['content'] .= "@@";
 					
 					$only_this[] = (array) $v['node']; // only show this feed if found;
 					$show_nid_one = 1;

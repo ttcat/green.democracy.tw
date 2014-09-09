@@ -23,7 +23,6 @@ $object = $newsfeeds;
     <head>
 <?php require_once 'api/meta.inc'; ?>
 
-<?php print_r($string); ?>
          <link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
          <link rel="stylesheet" type="text/css" href="/css/main.css?<?php echo time(); ?>">
          <link rel="stylesheet" type="text/css" href="/css/responsive.css?<?php echo time(); ?>">

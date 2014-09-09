@@ -162,9 +162,8 @@ global $u, $page, $nid;
         
         $org_content = $feed['content'];
 
-        if(!$nid) { // need fix
+        if(!$nid) { 
         	$feed['content'] = SL(str_replace("\n","",$feed['content']),250); 
-        	//echo "cut";
         }
 
         $event_time = '';
