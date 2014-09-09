@@ -145,7 +145,7 @@ $keywords = '綠黨,挺好的,九合一,選舉,greenparty';
 		<meta property="fb:app_id" content="687618544645054" />
 		<meta property="fb:admins" content="100000125299492" />
 		<meta property="og:locale" content="zh_TW" />
-		<link rel="shortcut icon" href="favicon.ico"/>
+		<link rel="shortcut icon" href="/favicon.ico"/>
 		<meta content="#191d24" name="msapplication-TileColor">
 		<meta content="/images/fbcover_144.png" name="msapplication-TileImage">
 		<link href="/images/fbcover_144.png" rel="apple-touch-icon-precomposed">
