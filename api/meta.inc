@@ -21,7 +21,7 @@ if($nid) { $this_url = WEB.'/'.$u.'/'.$section.'/'.$nid; }
 
 if($section == 'politician' && $nid) { 
 	$string_meta = file_get_contents(WEB."/{$u}/timeline?all");
-	$object = json_decode($string_meta,true);
+	//$object = json_decode($string_meta,true);
 	if($nid) { $this_url = WEB.'/'.$u.'/politician/'.$nid; }else{ $this_url = WEB.'/'.$u; }
 }
 
@@ -38,7 +38,7 @@ if($nid && $object) {
 				
 				if($v['node']['nid'] == $nid) {			
 
-$v['node']['content'] .= $v['node']['content'];
+
 			
 					$v_title = explode('</h3>',$v['node']['content']);
 					$nid_name = strip_tags($v_title[0]);
