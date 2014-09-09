@@ -53,13 +53,10 @@ require_once 'api/api.inc';
 						</div>
 
 
-								<?php print_r($user['bio']); ?>
-								
-
 				<h2 class="clearfix">經歷</h2>
 						<hr>
 
-						<?php $ex = explode('|', $user['bio']); ?>
+						<?php $ex = explode('|', $user['bio']); print_r($ex); ?>
 
 						<div>
 						<p>
@@ -79,10 +76,10 @@ require_once 'api/api.inc';
 						<div>
 						<p>
 						<ul>
-							<?php if($user['accountnumber']) { ?><li>帳號：<?php echo $user['accountnumber']?></li><?php } ?>
-							<?php if($user['accountname']) { ?><li>戶名：<?php echo $user['accountname']?></li><?php } ?>
 							<?php if($user['bank']) { ?><li>銀行：<?php echo $user['bank']?><?php } ?>
 							<?php if($user['banknumber']) { ?><li>代碼：<?php echo $user['banknumber']?></li><?php } ?>
+							<?php if($user['accountnumber']) { ?><li>帳號：<?php echo $user['accountnumber']?></li><?php } ?>
+							<?php if($user['accountname']) { ?><li>戶名：<?php echo $user['accountname']?></li><?php } ?>
 						</ul>
 						</p>
 						</div>
