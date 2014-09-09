@@ -8,8 +8,6 @@ $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
 	$cvs = $cvs['nodes'];
 	$object = $cv;
 
-?>
-
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
