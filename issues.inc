@@ -20,7 +20,7 @@ foreach ($issues_all as $key => $value) {
 
 		$object = $issues;
 		
-		print_r($ussues);
+		print_r($issues_all);
 
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
