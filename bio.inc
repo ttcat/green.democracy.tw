@@ -7,8 +7,7 @@ $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
 
 print_r( "@". json_decode($cv) );
 
-    echo 'Decoding: ' . $string;
-    json_decode($string);
+   $cvs =  json_decode($string);
 
     switch (json_last_error()) {
         case JSON_ERROR_NONE:
@@ -34,14 +33,14 @@ print_r( "@". json_decode($cv) );
         break;
     }
 
-    echo PHP_EOL;
 
-
-?>
 
 $cvs = $cvs['nodes'];
 $object = $cv;
 
+print_r("@@".count($cvs));
+
+?>
 
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
