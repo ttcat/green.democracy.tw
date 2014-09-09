@@ -106,9 +106,11 @@ $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
 							<?php if($user['phone']) { ?><li>電話：<?php echo $user['phone']?></li><?php } ?>
 							<?php if($user['email']) { ?><li>聯絡 email：<?php echo $user['email']?></li><?php } ?>
 						</ul>
+						
+						<?php if($user['address']) { ?>
 						<br>
 						<iframe width="100" height="550" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCj9XwcX4eH4azexlMKjhfdCymvMQLQAgg&q=<?php echo $user['address']; ?>" style="border:0"></iframe>
-						
+						<? } ?>
 						
 						</div>
 						
