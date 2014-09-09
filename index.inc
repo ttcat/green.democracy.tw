@@ -109,10 +109,10 @@ shuffle($users);
                 	<div class="clearfix">	
                 	<?php 
                 	
-                	$cnt = 0;
+                	$cnt = 1;
 
                 	foreach($users as $key => $user_v) { 
-						if($cnt > 0 && $cnt%3 == 0) { $last = "last "; }else{ $last = ""; }
+						if($cnt > 1 && $cnt%4 == 0) { $last = "last "; }else{ $last = ""; }
                 	?>
                 	
                 		<div class="fourth <?php echo $last; ?>boxed">
