@@ -2,7 +2,6 @@
 
 global $all_users;
 
-var $string_array = array();
 foreach($all_users as $k2 => $v2) {
 	$string_array[] = file_get_contents("http://v.democracy.tw/{$v2}/site.json");
 }
