@@ -37,6 +37,8 @@ if($nid && $object) {
 				$v['node'] = $v; 
 				
 				if($v['node']['nid'] == $nid) {			
+
+$v['node']['content'] .= $v['node']['content'];
 			
 					$v_title = explode('</h3>',$v['node']['content']);
 					$nid_name = strip_tags($v_title[0]);
@@ -48,6 +50,7 @@ if($nid && $object) {
 					if($v['node']['photo']) { $share_img = $v['node']['photo']; }
 					if($v['node']['videolink']) { $videolink = metavideo($v['node']['videolink'], 0); $videolink_ssl = metavideo($v['node']['videolink'], 1); }
 					$nid_found = 1;
+					
 					$v['node']['content'] .= "@@";
 					
 					$only_this[] = (array) $v['node']; // only show this feed if found;
