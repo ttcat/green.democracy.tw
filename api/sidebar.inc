@@ -19,7 +19,7 @@
                 		<!-- Quote Widget -->
 				    	<div class="clearfix aside-recom">
                 			<h3><strong>各界推薦</strong></h3>
-                			<blockquote><?php if($recommendation[0]['node']['short-content']) { echo $recommendation[0]['node']['short-content']; } else { echo SL(strip_tags($recommendation[0]['node']['short-content']), 60); } ?><a href="/<?php echo $u;?>/endorsements/<?php echo $recommendation[0]['node']['nid']; ?>"> <i style="font-size:13px;">(閱讀全文)</i><cite>- <?php echo $recommendation[0]['node']['title']?> / <?php echo $recommendation[0]['node']['professional-title']?></cite></a></blockquote>
+                			<blockquote><?php if($recommendation[0]['node']['short-content']) { echo $recommendation[0]['node']['short-content']; } else { echo SL(strip_tags($recommendation[0]['node']['content']), 60); } ?><a href="/<?php echo $u;?>/endorsements/<?php echo $recommendation[0]['node']['nid']; ?>"> <i style="font-size:13px;">(閱讀全文)</i><cite>- <?php echo $recommendation[0]['node']['title']?> / <?php echo $recommendation[0]['node']['professional-title']?></cite></a></blockquote>
                 		</div>
 					<?php } ?>	
 					
