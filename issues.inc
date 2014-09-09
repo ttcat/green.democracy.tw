@@ -16,6 +16,8 @@ foreach ($issues_all as $key => $value) {
 	
 	if($value['section'] == 'FAQ') {
 		$issues[] = $value;
+		print_r($value);
+		
 	}
 }
 
