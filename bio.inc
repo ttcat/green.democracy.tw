@@ -56,7 +56,7 @@ $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
 	                    	
 							<?php echo $cvs[0]['node']['content']; ?>
 							
-    	                	</p>
+    	                	</p><br/>
     	                	
     	                	<div class="addthis_sharing_toolbox" data-url="http://green.democracy.tw/<?php print $u; ?>/bio ?>"></div>
 						</div>
