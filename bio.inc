@@ -38,6 +38,7 @@ $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
                 <div class="main-content three-fourths light-wording-div">
 				
 
+<?php if($cvs[0]['node']['content']) { ?>
 				<!-- add here-->
 				<h2><?php echo $user['title']?>的簡介</h2>
 						<hr>
@@ -62,7 +63,7 @@ $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
 						</div>
 	<br>
 	<br>
-
+<? } ?>
 				<h2 class="clearfix">經歷</h2>
 						<hr>
 
