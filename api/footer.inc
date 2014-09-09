@@ -14,9 +14,9 @@
 				<h3>最新訊息</h3>
                 			<div class="mosaic-block fade">
                 				<a href="#" class="mosaic-overlay link" title="新聞標題"></a><div class="mosaic-backdrop">
-                				<div class="corner-date">8/26</div><img src="/img/small_thumb3.jpg" alt="Mock" /></div>
+                				<div class="corner-date">09/05</div><img src="http://www.greenparty.org.tw/sites/www.greenparty.org.tw/files/imagecache/news_hp/news/lu_dang_sheng_ming__hei_xin_shi_pin_you_wan_mei_wan_shi_pin_an_quan_cong_liang_shi_zhu_quan_yu_xiao_nong_jing_ji_kai_shi_.jpg" alt="Mock" /></div>
                 			</div>
-                			<h3 class="title"><a href="#">新聞標題</a></h3>
+                			<h3 class="title"><a href="http://www.greenparty.org.tw/news/20140905/177">【綠黨聲明】黑心食品，有完沒完？食品安全，從糧食主權與小農經濟開始！</a></h3>
 			</div> 
 
 			
@@ -35,10 +35,10 @@
 			<div class="fourth widget last footer-action">
 				<h3>行動參與，挺好的！</h3>
 				<ul>
-					<li><a href="#">捐款給綠黨</a></li>
-					<li><a href="#">成為志工</a></li>
-					<li><a href="#">加入黨員</a></li>					
-					<li><a href="#">合作提案</a></li>
+					<li><a href="http://www.greenparty.org.tw/support/201302/33">捐款給綠黨</a></li>
+					<li><a href="http://www.greenparty.org.tw/support/201409/179">成為志工</a></li>
+					<li><a href="http://www.greenparty.org.tw/support/201306/55">加入黨員</a></li>					
+					<li><a href="http://www.greenparty.org.tw/contactus">合作提案</a></li>
 				</ul>
 			</div>
 			
