@@ -22,7 +22,6 @@ $object = $newsfeeds;
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
 <?php require_once 'api/meta.inc'; ?>
-
          <link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
          <link rel="stylesheet" type="text/css" href="/css/main.css?<?php echo time(); ?>">
          <link rel="stylesheet" type="text/css" href="/css/responsive.css?<?php echo time(); ?>">
