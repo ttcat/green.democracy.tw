@@ -73,7 +73,7 @@ if(!$user['banner'])
     			                <!--<li><a class="nav-parent" href="#">活動行程</a></li>-->
     			            </ul>
     			        </li>
-    	            	<li class="nav-parent last donate"><a href="<?php echo $user['fundlink']?>"><em class="fa fa-heart"></em> <?php if($user['fundraising']) { ?>捐款<?php }else ?>行動<?php } ?>支持</a>
+    	            	<li class="nav-parent last donate"><a href="<?php echo $user['fundlink']?>"><em class="fa fa-heart"></em> <?php if($user['fundraising']) { ?>捐款<?php }else{ ?>行動<?php } ?>支持</a>
     	            		<ul style="overflow: hidden;">
     	            		    <?php if($user['fundraising']) { ?><li><a href="<?php echo $user['fundlink']?>">線上捐款</a></li>
     	            			<?php if($user['gembeded']) { ?><li><a href="/<?php echo $u?>/finance">捐款徵信</a></li><?php } ?>
