@@ -8,6 +8,8 @@ global $u,$nid;
 require_once('api/timeline.inc');
 $string = get_timeline(FALSE);
 
+print_r($string);
+
 $newsfeeds = json_decode($string,true);
 $newsfeeds_perpage = $newsfeeds[0]['perpage'];
 $newsfeeds_total = $newsfeeds[0]['total'];

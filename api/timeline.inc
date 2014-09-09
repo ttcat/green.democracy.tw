@@ -164,7 +164,7 @@ global $u, $page, $nid;
 
         if(!$nid) { // need fix
         	$feed['content'] = SL(str_replace("\n","",$feed['content']),250); 
-        	echo "cut";
+        	//echo "cut";
         }
 
         $event_time = '';
