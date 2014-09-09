@@ -32,7 +32,7 @@ require_once 'api/api.inc';
 				
 
 				<!-- add here-->
-				<h2><?php echo $user['title']?>簡介</h2>
+				<h2><?php echo $user['title']?>的簡介</h2>
 						<hr>
 						
 						姓名
@@ -41,6 +41,8 @@ require_once 'api/api.inc';
 						
 						<div>
 							<p>
+								<?php print_r($user['bio']?>
+													
 								<strong>自傳標題</strong></br></br>
 							
 							<div class="half">
