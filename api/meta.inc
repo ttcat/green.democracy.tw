@@ -107,8 +107,6 @@ if($section == 'politician' && !$nid) { //index
 	
 }
 
-
-
 if(!$share_link) {	$share_link = $this_url; }
 if(!$html_title) {	$html_title = $fb_title; }
 if($share_img == '') { $share_img = $user['logo']; }
@@ -119,11 +117,8 @@ if(!isset($fb_description) or $fb_description == '') {	$fb_description = $user['
 	
 	$plurk_link = 'http://www.plurk.com/?qualifier=shares&amp;status='.urlencode($share_link." (".$fb_title.") " . $share_img);
 	$twitter_link = "javascript: void(window.open('http://twitter.com/home/?status='.concat(encodeURIComponent('".$fb_title."')) .concat(' ') .concat(encodeURIComponent('".$share_link."'))));";	
-	
 
 $user['policy'] = explode('|', $user['policy']);
-$user['policyicon'] = explode('|', $user['policyicon']);
-
 $keyword_issues = implode(',', $user['policy']);
 $keywords = '綠黨,挺好的,九合一,選舉,greenparty';
 
