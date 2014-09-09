@@ -73,6 +73,12 @@ shuffle($users);
     <![endif]-->
 	
 
+
+    <!-- Start Outter Wrapper / Feature Image -->	
+    <div class="outter-wrapper feature">
+		<div class="bannerShadow" style="background-image: url('/images/index_banner.jpg');"></div>    	
+    </div>
+    
 	<div id="sticky-anchor"></div>
     <!-- Start Outter Wrapper -->
     <div id="navall" class="outter-wrapper header-container">
