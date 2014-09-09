@@ -4,39 +4,9 @@ require_once 'api/api.inc';
 //cv
 $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
 
-
-print_r( "@". json_decode($cv) );
-
    $cvs =  json_decode($string, true);
-
-    switch (json_last_error()) {
-        case JSON_ERROR_NONE:
-            echo ' - No errors';
-        break;
-        case JSON_ERROR_DEPTH:
-            echo ' - Maximum stack depth exceeded';
-        break;
-        case JSON_ERROR_STATE_MISMATCH:
-            echo ' - Underflow or the modes mismatch';
-        break;
-        case JSON_ERROR_CTRL_CHAR:
-            echo ' - Unexpected control character found';
-        break;
-        case JSON_ERROR_SYNTAX:
-            echo ' - Syntax error, malformed JSON';
-        break;
-        case JSON_ERROR_UTF8:
-            echo ' - Malformed UTF-8 characters, possibly incorrectly encoded';
-        break;
-        default:
-            echo ' - Unknown error';
-        break;
-    }
-
-
-
-$cvs = $cvs['nodes'];
-$object = $cv;
+	$cvs = $cvs['nodes'];
+	$object = $cv;
 
 print_r($cvs);
 
@@ -79,16 +49,16 @@ print_r($cvs);
 						<div>
 							<p>
 
-								<strong><?php echo $cv['title']?></strong></br></br>
+								<strong><?php echo $cvs['title']?></strong></br></br>
 							
-							<?php if($cv['photo']) { ?>
+							<?php if($cvs['photo']) { ?>
 							<div class="half">
-		                       	<img src="<?php echo $cv['photo']?>" alt="mock" width="100%">
-	    	                   	<span class="wp-caption-text"><?php $cv['caption']; ?></span>
+		                       	<img src="<?php echo $cvs['photo']?>" alt="mock" width="100%">
+	    	                   	<span class="wp-caption-text"><?php $cvs['caption']; ?></span>
 	        	            </div>
 	                    	<? } ?>
 	                    	
-							<?php echo $cv['content']; ?>
+							<?php echo $cvs['content']; ?>
 							
     	                	</p>
     	                	
