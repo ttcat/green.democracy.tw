@@ -83,15 +83,73 @@
             <div class="main wrapper clearfix">
             	<!-- Start Main Content -->				
             	
-                <div class="main-content three-fourths">
-				
+                <div class="main-content">
 
-				<!-- add here-->
-				     
-<h1 class="super"><span><em class="fa fa-minus-circle"></em>index</span></h1>
-<h1>Page not found</h1>
-<p class="lead">Sorry, your lost my friend, the page your looking for does not exist anymore. <br><a href="http://green.democracy.tw/">Click here</a> to go back homepage. </p>
-				         	                    	                    	                
+
+<h1>Team Members</h1>
+                	<p class="lead">Our Team is the best around. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo.</p> 
+                	
+                	
+                	
+                	<div class="clearfix">
+                		<div class="fourth boxed">
+                			<img src="img/thumb-8.jpg" alt="Mock" />
+                			<div class="inner-box">
+                				<h4>Greg Knoll</h4>
+                				<h5>President</h5>
+                				<em>Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultri cies cula.</em>
+                				<ul class="social-link">
+                					<li><a href="#"><em class="icon-facebook-sign"></em></a></li>
+                					<li><a href="#"><em class="icon-instagram"></em></a></li>
+                					<li><a href="#"><em class="icon-linkedin-sign"></em></a></li>
+                					<li><a href="#"><em class="icon-twitter-sign"></em></a></li>
+                				</ul>
+                			</div>
+                		</div>
+                		
+                		<div class="fourth boxed">
+                			<img src="img/thumb-9.jpg" alt="Mock" />
+                			<div class="inner-box">
+                				<h4>Micky Dora</h4>
+                				<h5>Vice President</h5>
+                				<em>Pharetra augu nullam id dolor id nibh ultricies vehicula ut idemin asti elit.</em>
+                				<ul class="social-link">
+                					<li><a href="#"><em class="icon-facebook-sign"></em></a></li>
+                					<li><a href="#"><em class="icon-skype"></em></a></li>
+                					<li><a href="#"><em class="icon-linkedin-sign"></em></a></li>
+                				</ul>
+                			</div>
+                		</div>
+                		
+                		<div class="fourth boxed">
+                			<img src="img/thumb-3.jpg" alt="Mock" />
+                			<div class="inner-box">
+                				<h4>Lance Carson</h4>
+                				<h5>Public Relations</h5>
+                				<em>Vitae elit libero, ansom phar etra augue. Nullam id dolor id nibh ultri cies cula.</em>
+                				<ul class="social-link">
+                					<li><a href="#"><em class="icon-facebook-sign"></em></a></li>
+                					<li><a href="#"><em class="icon-skype"></em></a></li>
+                					<li><a href="#"><em class="icon-linkedin-sign"></em></a></li>
+                					<li><a href="#"><em class="icon-twitter-sign"></em></a></li>
+                				</ul>
+                			</div>
+                		</div>
+                		
+                		<div class="fourth last boxed">
+                			<img src="img/thumb-4.jpg" alt="Mock" />
+                			<div class="inner-box">
+                				<h4>Joel Tudor</h4>
+                				<h5>Legal &amp; Admin</h5>
+                				<em>Shar petra augu nullam id dolor id nibh ultricies vehicula ut idemin asti.</em>
+                				<ul class="social-link">
+                					<li><a href="#"><em class="icon-facebook-sign"></em></a></li>
+                					<li><a href="#"><em class="icon-linkedin-sign"></em></a></li>
+                				</ul>
+                			</div>
+                		</div>
+                	</div>
+
 				<!-- add here-->
 				</div>
 				
