@@ -34,16 +34,12 @@ require_once 'api/api.inc';
 				<!-- add here-->
 				<h2><?php echo $user['title']?>的簡介</h2>
 						<hr>
-						
-						姓名
-						選區
-						選區細節
-						
+
 						<div>
 							<p>
-								<?php print_r($user['bio']); ?>
+
 													
-								<strong>自傳標題</strong></br></br>
+<!--								<strong>自傳標題</strong></br></br>
 							
 							<div class="half">
 		                       	<img src="<?php echo $user['logo']?>" alt="mock" width="100%">
@@ -53,21 +49,40 @@ require_once 'api/api.inc';
 	            	        被監督人 張明麗君 對於食安議題關注甚深、熱心公益，在基隆七堵地區推動共同購買，為本社基隆市七堵區綠葉山莊共同購買班創班班長，同時為本社解說員、基隆地區社員代表；平日在組織活動中，對於綠色生活之觀念皆能實踐、身體力行。<br/></br>
 							該君為實踐公民參政理想，並將食農議題、永續環境理念廣佈於基隆地區，決定代表綠黨投入2014年基隆市市議員選舉，作為一個長期關注台灣食農議題的社運團體，我們樂觀其成，並願意扮演監督者的角色，與社會各界共同監督，真正落實公民參政的理念。<br/></br>此致<br/></br>
 
-    	                	</p>
+    	                	</p> -->
 						</div>
 
 
+								<?php print_r($user['bio']); ?>
+								
 
+				<h2 class="clearfix">經歷</h2>
+						<hr>
+
+						<?php $ex = explode('|', $user['bio']); ?>
+
+						<div>
+						<p>
+						<ul>
+							<?php foreach ($ex as $key => $value) { ?>
+							<?php if($vaule) { ?><li><?php echo $value; ?></li><?php } ?>
+							<?php } ?>
+						</ul>
+						</p>
+						</div>
+
+				<br>
+												
 				<h2 class="clearfix">政治獻金專戶</h2>
 						<hr>
 
 						<div>
 						<p>
 						<ul>
-							<li>帳號：<?php echo $user['accountnumber']?></li>
-							<li>戶名：<?php echo $user['accountname']?></li>
-							<li>銀行：<?php echo $user['bank']?>
-							<li>分行：<?php echo $user['banknumber']?></li>
+							<?php if($user['accountnumber'])?><li>帳號：<?php echo $user['accountnumber']?></li><?php } ?>
+							<?php if($user['accountname'])?><li>戶名：<?php echo $user['accountname']?></li><?php } ?>
+							<?php if($user['bank'])?><li>銀行：<?php echo $user['bank']?><?php } ?>
+							<?php if($user['banknumber'])?><li>代碼：<?php echo $user['banknumber']?></li><?php } ?>
 						</ul>
 						</p>
 						</div>
@@ -89,8 +104,6 @@ require_once 'api/api.inc';
 						
 						
 						</div>
-						
-						
 						
     	                    	                    	                    	                    	                
 				<!-- add here-->
