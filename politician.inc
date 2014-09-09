@@ -147,7 +147,7 @@ $object = $newsfeeds;
 				var rwd_js = $(window).width();
 				if(rwd_js < 770) { columnMode_t = 'right';} else { columnMode_t = 'dual'; }
 				
-				<? } ?>
+				<?php } ?>
                 var timeline = new Timeline($('#timeline'), init_data);
                 timeline.setOptions({
                 	<?php if(!$show_nid_one) { ?>responsive_width : 770,<?php } ?>
