@@ -56,7 +56,7 @@ $object = $issues;
     	                	      <?php if($issue['content']) { ?>
     	                	      <div class="toggle-content">
     	                	      	<p><?php print $issue['content']; ?></p>
-									<p><span class="issues-tags meta"><span class="fa <?php if(!$issue['icon']) { ?>$issue['icon']<?php } else { ?>fa-tags<?php } ?>"></span> <?php print $issue['tag']; ?><span></p>
+									<p><span class="issues-tags meta"><span class="fa <?php if($issue['icon']) { ?>$issue['icon']<?php } else { ?>fa-tags<?php } ?>"></span> <?php print $issue['tag']; ?><span></p>
 									<div id="fb<?php print $issue['nid']; ?>" class="addthis_sharing_toolbox" data-url="http://green.democracy.tw/<?php print $u; ?>/issues/<?php print $issue['nid']; ?>"></div>
     	                	      </div><?php } ?>
     	                	    </li>
