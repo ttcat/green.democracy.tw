@@ -107,7 +107,8 @@ shuffle($users);
 
 
 				<h1>2014 綠黨政治代理人</h1>
-                	<p class="lead">Our Team is the best around. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo.</p> 
+                	<p class="lead">新政治，從地方開始！今年綠黨的政治代理人分散在全台灣各地，包括淡水、三芝、石門、八里、土城、三峽、樹林、鶯歌、基隆七堵、桃園市、中壢、平鎮、新竹東區、竹東、高雄市三民區、澎湖馬公。我們要向住在這些地區的您，推薦我們
+                	最好的政治代理人！即使很可惜您不住在這些區域，我們也需要您分享、推薦給其他朋友！</p>
                 	
                 	
                 	<div class="clearfix">	
