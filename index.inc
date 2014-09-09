@@ -134,9 +134,9 @@ shuffle($users);
                 				<?php $icons_text = explode('|', $user_v['policy']); $icons = explode('|', $user_v['policyicon']); ?>
                 				<ul class="social-link">
                 				<?php if($icons_text[0]) { ?>                				
-                					<?php foreach ($icons as $i => $icon) { ?>
+                					<?php /* foreach ($icons as $i => $icon) { ?>
                 					<li><a href="#" alt="<?php echo $icons_text[$i]; ?>"><em class="fa <?php echo $icon; ?>"></em></a></li>
-                					<?php } ?>
+                					<?php } */?>
                 				<? } ?>	
                 				</ul>
                 			</div>
