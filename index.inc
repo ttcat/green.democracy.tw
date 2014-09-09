@@ -93,7 +93,7 @@ shuffle($users);
     	        <nav id="nav-wrap">
     	        	<ul class="nav" id="nav">
     	        	    	
-    	            	<li class="nav-parent last donate"><a href="http://green.democracy.tw/"><em class="fa fa-heart"></em> 捐款支持</a>
+    	            	<li class="nav-parent last donate"><a href="http://www.greenparty.org.tw/civicrm/contribute/transact?reset=1&id=4"><em class="fa fa-heart"></em> 捐款支持</a>
 
     	            	</li>
     	                
