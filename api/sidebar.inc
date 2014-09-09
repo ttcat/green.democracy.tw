@@ -15,7 +15,7 @@
 				    <?php } ?>
 				    
 				    	                		
-			    	<?php if($user['recommendation'] && $section != 'endorsements') { ?>                		
+			    	<?php if($user['recommendation'] && $section != 'endorsements' && $done != 1) { ?>                		
                 		<!-- Quote Widget -->
 				    	<div class="clearfix aside-recom">
                 			<h3><strong>各界推薦</strong></h3>
