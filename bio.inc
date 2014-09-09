@@ -5,7 +5,7 @@ require_once 'api/api.inc';
 $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
 
 
-$cvs = json_decode($cv, true);
+print_r( json_decode($cv) );
 
 print_r($cvs);
 
