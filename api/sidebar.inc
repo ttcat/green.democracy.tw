@@ -68,7 +68,7 @@
 		fitText(document.getElementById('promise'), 0.83)
 	</script>
 			    	
-					<?php // } ?>
+					<?php  } ?>
 
 
 
