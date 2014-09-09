@@ -7,7 +7,7 @@ $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
 
 print_r( "@". json_decode($cv) );
 
-   $cvs =  json_decode($string);
+   $cvs =  json_decode($string, true);
 
     switch (json_last_error()) {
         case JSON_ERROR_NONE:
