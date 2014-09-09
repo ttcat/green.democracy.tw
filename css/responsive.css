@@ -56,6 +56,12 @@ body{ padding: 0em; }
 			background-size: cover;
 			height: 275px;
 		}		
+
+		.bannerShadowNone {
+			background-position: center center;
+			background-size: cover;
+			height: 275px;
+		}		
 		
 
 	input[type=text], input[type=email], input[type=password], textarea {
@@ -478,6 +484,13 @@ body{ padding: 0em; }
 			background-size: cover;
 			height: 320px;
 		}
+
+		.bannerShadowNone {
+			background-position: center center;
+			background-size: cover;
+			height: 320px;
+		}
+
 
 		.heading-info {
 			border-top-color: #FFF;

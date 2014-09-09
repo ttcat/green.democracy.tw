@@ -527,6 +527,13 @@ p a{
 		height: 325px;
 	}
 
+
+	.bannerShadowNone {
+		background-position: center center;
+		background-size: cover;
+		height: 325px;
+	}
+	
 	.outer-profile-img {
 		position: relative;
 		max-width: 1140px;
