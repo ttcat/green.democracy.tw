@@ -41,7 +41,7 @@ global $u, $page, $nid;
             "newsclip" => array("news", "相關新聞",200, 'politician/'),
 
             "FAQ" => array("blog_post", "政見", 200, 'issues/'),
-            "Person" => array("blog_post", "各界推薦", 800, 'endorsements/'),
+            "Person" => array("blog_post", "各界推薦", 200, 'endorsements/'),
             "Event" => array("blog_post", "活動行程", 200, 'event/'),
             "gallery" => array("gallery", "相簿", 300, ''),
         );
@@ -70,13 +70,13 @@ global $u, $page, $nid;
 
           $json_this_feed['type'] = $cats[ $feed['category'] ][0];
           $json_this_feed['title'] = $cats[$feed['category']][1];
-          $json_this_feed['height'] = $cats[$feed['category']][2];
+          $json_this_feed['height'] = 800; //$cats[$feed['category']][2];
           $linkpage = $cats[$feed['category']][3];	
           
         }else{
           $json_this_feed['type'] = $cats[ $feed['type'] ][0];
           $json_this_feed['title'] = $cats[$feed['type']][1];
-          $json_this_feed['height'] = $cats[$feed['type']][2];
+          $json_this_feed['height'] =  800; //$cats[$feed['type']][2];
           $linkpage = $cats[$feed['type']][3];	
         }
 
