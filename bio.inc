@@ -96,7 +96,7 @@ require_once 'api/api.inc';
 							<?php if($user['email']) { ?><li>聯絡 email：<?php echo $user['email']?></li><?php } ?>
 						</ul>
 						<br>
-						<iframe width="100" height="550" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3683.04753595446!2d120.299208!3d22.614699999999996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e037fbc0131fd%3A0x9697296bace77b26!2zODAy6auY6ZuE5biC6IuT6ZuF5Y2A6I-v5paw6KGXMeiZnw!5e0!3m2!1szh-TW!2stw!4v1409090033264" style="border:0"></iframe>
+						<iframe width="100" height="550" src="http://maps.google.com/?q=<?php echo $user['address']; ?>" style="border:0"></iframe>
 						
 						
 						</div>
