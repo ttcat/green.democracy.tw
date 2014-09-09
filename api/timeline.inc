@@ -161,7 +161,7 @@ global $u, $page, $nid;
         }			
         
         $org_content = $feed['content'];
-        echo "@@".$nid;
+
         if(!$nid) { // need fix
         	$feed['content'] = SL(str_replace("\n","",$feed['content']),250); 
         }
