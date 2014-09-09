@@ -61,7 +61,7 @@ foreach ($issues_all as $key => $value) {
 				<ul class="issues toggle">
 
 						<?php foreach ($issues as $key => $value) { 
-							$issue = $value['node']; 
+							$issue = $value;
 						?>
     	                		<!-- Toggle -->
     	                	    <li class="toggle-li">
