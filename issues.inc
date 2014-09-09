@@ -3,24 +3,10 @@
 global $u,$nid;
 
 //政見
-//$string = file_get_contents("http://v.democracy.tw/{$u}/issue.json");
-//$issues = json_decode($string, true);
-
-if(!$string_meta) {
-	$string_meta = file_get_contents(WEB."/{$u}/timeline?all");
-}
-
-$issues_all = json_decode($string_meta,true);
-
-foreach ($issues_all as $key => $value) { 
-	if($value['section'] == 'issues') {
-		$issues[] = $value;		
-	}
-}
-
-		$object = $issues;
-		
-//		print_r($issues);
+$string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/faq");
+$issues = json_decode($string, true);
+$issues = $issues['nodes'];
+$object = $issues;
 
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -61,12 +47,7 @@ foreach ($issues_all as $key => $value) {
 				<ul class="issues toggle">
 
 						<?php foreach ($issues as $key => $value) { 
-							$issue = $value;
-
-							$v_title = explode('</h3>',$issue['content']);
-							$issue['title'] = strip_tags($v_title[0]);
-							$issue['content'] = strip_tags($v_title[1]);
-
+							$issue = $value['node']; 
 						?>
     	                		<!-- Toggle -->
     	                	    <li class="toggle-li">
@@ -75,7 +56,7 @@ foreach ($issues_all as $key => $value) {
     	                	      <?php if($issue['content']) { ?>
     	                	      <div class="toggle-content">
     	                	      	<p><?php print $issue['content']; ?></p>
-									<p><span class="issues-tags meta"><span class="fa fa-tags"></span> <?php print $issue['tag']; ?><span></p>
+									<p><span class="issues-tags meta"><span class="fa <?php if($issue['icon']) { ?>$issue['icon']<?php } else { ?>fa-tags<?php } ?>"></span> <?php print $issue['tag']; ?><span></p>
 									<div id="fb<?php print $issue['nid']; ?>" class="addthis_sharing_toolbox" data-url="http://green.democracy.tw/<?php print $u; ?>/issues/<?php print $issue['nid']; ?>"></div>
     	                	      </div><?php } ?>
     	                	    </li>
