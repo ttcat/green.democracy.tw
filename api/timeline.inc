@@ -215,7 +215,7 @@ function aasort ($array, $key) {
         
     }
 
-    arsort($sorter); //DESC by vaule with key
+    arsort($sorter); //DESC by value with key
       
     foreach ($sorter as $ii => $va) {
       if($va) {

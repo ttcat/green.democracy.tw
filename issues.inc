@@ -3,10 +3,24 @@
 global $u,$nid;
 
 //政見
-$string = file_get_contents("http://v.democracy.tw/{$u}/issue.json");
-$issues = json_decode($string, true);
-$issues = $issues['nodes'];
-$object = $issues;
+//$string = file_get_contents("http://v.democracy.tw/{$u}/issue.json");
+//$issues = json_decode($string, true);
+
+if(!$string_meta) {
+	$string_meta = file_get_contents(WEB."/{$u}/timeline?all");
+}
+
+$issues_all = json_decode($string_meta,true);
+
+foreach ($issues_all as $key => $value) { 
+	if($value['type'] == 'FAQ') {
+		$issues[] = $value['nodes'];
+	}
+}
+
+		$object = $issues;
+		
+		print_r($ussues);
 
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->

@@ -61,8 +61,8 @@ require_once 'api/api.inc';
 						<div>
 						<p>
 						<ul>
-							<?php foreach ($ex as $key => $vaule) { ?>
-								<?php if($vaule) { ?><li><?php echo $vaule; ?></li><?php } ?>
+							<?php foreach ($ex as $key => $value) { ?>
+								<?php if($value) { ?><li><?php echo $value; ?></li><?php } ?>
 							<?php } ?>
 						</ul>
 						</p>
