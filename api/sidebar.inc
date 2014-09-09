@@ -7,7 +7,7 @@
                 			<h3><strong>主要關注</strong></h3>
                 			<ul class="statistics">
                 			<?php foreach($user['policy'] as $key => $v) { ?>
-                				<li><?php if(count($user['policyicon']) > $key) { ?><em class="fa <?php echo $user['policyicon'][$key]?>"></em> <?php } ?><span<?php if($key > 0) { ?> style="color:black;"<?php } ?>><?php echo $v?></span></li>
+                				<li><?php if(count($user['policyicon']) > $key) { ?><em class="fa <?php echo $user['policyicon'][$key]?>"></em> <?php } ?><span<?php if($key >= 0) { ?> style="color:black;"<?php } ?>><?php echo $v?></span></li>
                 			<?php } ?>
                 			</ul>	
                 			<p><a class="more" href="/<?php echo $u?>/issues">了解目前的政見</a></p>

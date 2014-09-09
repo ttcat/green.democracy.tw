@@ -56,13 +56,13 @@ require_once 'api/api.inc';
 				<h2 class="clearfix">經歷</h2>
 						<hr>
 
-						<?php $ex = explode('|', $user['bio']); print_r($ex); ?>
+						<?php $ex = explode('|', $user['bio']); ?>
 
 						<div>
 						<p>
 						<ul>
 							<?php foreach ($ex as $key => $vaule) { ?>
-							<?php if($vaule) { ?><li><?php echo $vaule; ?></li><?php } ?>
+								<?php if($vaule) { ?><li><?php echo $vaule; ?></li><?php } ?>
 							<?php } ?>
 						</ul>
 						</p>
