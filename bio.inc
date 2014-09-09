@@ -4,6 +4,9 @@ require_once 'api/api.inc';
 //cv
 $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
 $cv = json_decode($cv, true);
+
+print_r($cv);
+
 $cv = $cv['nodes'];
 $object = $cv;
 
