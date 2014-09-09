@@ -19,7 +19,7 @@
                 		<!-- Quote Widget -->
 				    	<div class="clearfix aside-recom">
                 			<h3><strong>各界推薦</strong></h3>
-                			<blockquote><?php $recommendation[0]['node']['short-content']; ?><a href="/<?php echo $u;?>/endorsements/<?php echo $recommendation[0]['node']['nid']; ?>"> <i style="font-size:13px;">(閱讀全文)</i><cite>- <?php echo $recommendation[0]['node']['title']?> / <?php echo $recommendation[0]['node']['professional-title']?></cite></a></blockquote>
+                			<blockquote><?php if($recommendation[0]['node']['short-content']) { echo $recommendation[0]['node']['short-content']; } else { echo SL(strip_tags($recommendation[0]['node']['short-content']), 60); } ?><a href="/<?php echo $u;?>/endorsements/<?php echo $recommendation[0]['node']['nid']; ?>"> <i style="font-size:13px;">(閱讀全文)</i><cite>- <?php echo $recommendation[0]['node']['title']?> / <?php echo $recommendation[0]['node']['professional-title']?></cite></a></blockquote>
                 		</div>
 					<?php } ?>	
 					
@@ -70,14 +70,16 @@
 			    	
 					<?php // } ?>
 
+
+
 			    	<?php if($user['news'] && $done == 1) { ?>                		
 
                 		<!-- Start Text Widget -->     
 				    	<div class="clearfix aside-news">
                 			<h3><strong>相關新聞</strong></h3>
                 			<div class="mosaic-block fade">
-                				<a href="#" class="mosaic-overlay link" title="新聞標題"></a><div class="mosaic-backdrop">
-                				<div class="corner-date">8/26</div><img src="/img/small_thumb3.jpg" alt="Mock" /></div>
+                				<a href="#" class="mosaic-overlay link" title="<?php echo $news[0]['title']; ?>"></a><div class="mosaic-backdrop">
+                				<div class="corner-date">8/26</div><img src="<?php echo $news[0]['title']; ?>" alt="Mock" /></div>
                 			</div>
                 			<h3 class="title"><a href="#">新聞標題</a></h3>
                 			<p>媒體曝光的消息媒體曝光的消息媒體曝光的消息媒體曝光的消息媒體曝光的消息媒體曝光的消息
