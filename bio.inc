@@ -38,7 +38,7 @@ print_r( "@". json_decode($cv) );
 $cvs = $cvs['nodes'];
 $object = $cv;
 
-print_r("@@".count($cvs));
+print_r($cvs);
 
 ?>
 
