@@ -2,11 +2,12 @@
 
 global $all_users;
 
+var $string_array = array();
 foreach($all_users as $k2 => $v2) {
-	$string[] = file_get_contents("http://v.democracy.tw/{$v2}/site.json");
+	$string_array[] = file_get_contents("http://v.democracy.tw/{$v2}/site.json");
 }
 
-foreach ($string as $key => $value) {
+foreach ($string_array as $key => $value) {
   $user = json_decode($value,true);
   $users[] = $user['nodes'][0]['node'];
 }
