@@ -24,7 +24,7 @@
 			<div class="fourth widget footer-signup">
 				<h3>訂閱電子報</h3>
 				<p>關注綠黨最新消息</p>
-            <form id="subscribe-newsletter" style="margin-top:0;" action="#" method="post">                							
+            <form id="subscribe-newsletter" style="margin-top:0;" action="http://www.greenparty.org.tw/civicrm/mailing/subscribe" method="post">                							
 				<input type="email" placeholder="Email" name="email" id="email" value="" />
 				<input type="submit" class="btn small-btn" name="" value="訂閱" />
 			</form>
