@@ -62,8 +62,11 @@ foreach ($issues_all as $key => $value) {
 
 						<?php foreach ($issues as $key => $value) { 
 							$issue = $value;
-							
-							print_r($value);
+
+							$v_title = explode('</h3>',$issue['content']);
+							$issue['title'] = strip_tags($v_title[0]);
+							$issue['content'] = strip_tags($v_title[1]);
+
 						?>
     	                		<!-- Toggle -->
     	                	    <li class="toggle-li">
