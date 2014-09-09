@@ -12,7 +12,7 @@
 			<!-- Start Column -->
 			<div class="fourth widget footer-news">
 				<h3>最新訊息</h3>
-                			<div class="mosaic-block fade" style="background-img: url('http://www.greenparty.org.tw/sites/www.greenparty.org.tw/files/imagecache/news_hp/news/lu_dang_sheng_ming__hei_xin_shi_pin_you_wan_mei_wan_shi_pin_an_quan_cong_liang_shi_zhu_quan_yu_xiao_nong_jing_ji_kai_shi_.jpg');">
+                			<div class="mosaic-block fade" style="max-height:120px; background-img: url('http://www.greenparty.org.tw/sites/www.greenparty.org.tw/files/imagecache/news_hp/news/lu_dang_sheng_ming__hei_xin_shi_pin_you_wan_mei_wan_shi_pin_an_quan_cong_liang_shi_zhu_quan_yu_xiao_nong_jing_ji_kai_shi_.jpg');">
                 				<a href="http://www.greenparty.org.tw/news/20140905/177" class="mosaic-overlay link" title="新聞標題"></a><div class="mosaic-backdrop">
                 				<div class="corner-date">09/05</div><img src="/img/none.gif" alt="Mock" /></div>
                 			</div>
