@@ -4,10 +4,9 @@ global $u,$nid;
 
 // timeline
 // re-use api
-echo "@";
+
 require_once('api/timeline.inc');
 $string = get_timeline(FALSE);
-echo "@@";
 $newsfeeds = json_decode($string,true);
 $newsfeeds_perpage = $newsfeeds[0]['perpage'];
 $newsfeeds_total = $newsfeeds[0]['total'];
