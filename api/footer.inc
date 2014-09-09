@@ -35,9 +35,9 @@
 			<div class="fourth widget last footer-action">
 				<h3>行動參與，挺好的！</h3>
 				<ul>
-					<li><a href="http://www.greenparty.org.tw/support/201302/33">捐款給綠黨</a></li>
+					<li><a href="http://www.greenparty.org.tw/civicrm/contribute/transact?reset=1&id=4">捐款給綠黨</a></li>
 					<li><a href="http://www.greenparty.org.tw/support/201409/179">成為志工</a></li>
-					<li><a href="http://www.greenparty.org.tw/support/201306/55">加入黨員</a></li>					
+					<li><a href="http://www.greenparty.org.tw/civicrm/contribute/transact?reset=1&id=2">加入黨員</a></li>					
 					<li><a href="http://www.greenparty.org.tw/contactus">合作提案</a></li>
 				</ul>
 			</div>

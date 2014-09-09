@@ -15,7 +15,7 @@
 				    <?php } ?>
 				    
 				    	                		
-			    	<?php if($user['recommendation'] && $section != 'endorsements' && $done == 1) { ?>                		
+			    	<?php if($user['recommendation'] && $section != 'endorsements') { ?>                		
                 		<!-- Quote Widget -->
 				    	<div class="clearfix aside-recom">
                 			<h3><strong>各界推薦</strong></h3>
@@ -41,7 +41,7 @@
                 	<hr>
 					<?php } ?>
 
-			    	<?php // if($user['gotv'] && $done == 1) { ?>                		
+			    	<?php if($user['gotv'] && $done == 1) { ?>                		
 
                 		<!-- Email Signup Widget -->
 				    	<div class="clearfix aside-signup">
