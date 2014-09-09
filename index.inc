@@ -35,7 +35,7 @@ shuffle($users);
 		<meta property="og:title" content="2014 挺好的！綠黨政治代理人" />
 		<meta property="og:type" content="website"/>
 		<meta property="og:url" content="http://green.democracy.tw/" />
-		<meta property="og:image" content="http://green.democracy.tw/images/fbcover_144.png" />
+		<meta property="og:image" content="http://green.democracy.tw/images/fbcover.jpg" />
 		<meta property="og:site_name" content="2014 挺好的！綠黨政治代理人" /> 
 		<meta property="og:description" content="2014 挺好的人選、挺好的政黨、挺好的！台灣綠黨政治代理人官方網站" />  
 		<meta property="fb:app_id" content="687618544645054" />
