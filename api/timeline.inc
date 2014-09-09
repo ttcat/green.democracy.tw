@@ -110,10 +110,12 @@ global $u, $page, $nid;
           $feed['link'] = $feed['videolink'];
         }
 
-        if(! $feed['link'] && $linkpage) { 
-          $feed['link'] = 'http://green.democracy.tw/' . $u . '/' .$linkpage. '' . $feed['nid'];
-          $json_this_feed['test'] = 1;
-        }
+        if($feed['type'] != 'Event') { 
+	        if(! $feed['link'] && $linkpage) { 
+    	      $feed['link'] = 'http://green.democracy.tw/' . $u . '/' .$linkpage. '' . $feed['nid'];
+        	  $json_this_feed['test'] = 1;
+	        }
+	    }
       
       if($json_this_feed['type']) { 
       
