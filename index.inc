@@ -3,12 +3,16 @@
 global $all_users;
 
 foreach($all_users as $k2 => $v2) {
-	$string_array[] = file_get_contents("http://v.democracy.tw/{$v2}/site.json");
-}
+	if($v2 != 'test') {
+		$string_array[] = file_get_contents("http://v.democracy.tw/{$v2}/site.json");
+	}
+}	
 
 foreach ($string_array as $key => $value) {
   $user = json_decode($value,true);
+  $user['nodes'][0]['node']['id'] = $all_users[$key];
   $users[] = $user['nodes'][0]['node'];
+  
 }
 
 shuffle($users);
