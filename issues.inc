@@ -14,13 +14,13 @@ $issues_all = json_decode($string_meta,true);
 
 foreach ($issues_all as $key => $value) { 
 	if($value['type'] == 'FAQ') {
-		$issues[] = $value['nodes'];
+		$issues[] = $value;
 	}
 }
 
 		$object = $issues;
 		
-		print_r($issues_all);
+		print_r($issues);
 
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
