@@ -49,16 +49,16 @@ print_r($cvs);
 						<div>
 							<p>
 
-								<strong><?php echo $cvs['title']?></strong></br></br>
+								<strong><?php echo $cvs[0]['node']['title']?></strong></br></br>
 							
-							<?php if($cvs['photo']) { ?>
+							<?php if($cvs[0]['node']['photo']) { ?>
 							<div class="half">
-		                       	<img src="<?php echo $cvs['photo']?>" alt="mock" width="100%">
-	    	                   	<span class="wp-caption-text"><?php $cvs['caption']; ?></span>
+		                       	<img src="<?php echo $cvs[0]['node']['photo']?>" alt="mock" width="100%">
+	    	                   	<span class="wp-caption-text"><?php $cvs[0]['node']['caption']; ?></span>
 	        	            </div>
 	                    	<? } ?>
 	                    	
-							<?php echo $cvs['content']; ?>
+							<?php echo $cvs[0]['node']['content']; ?>
 							
     	                	</p>
     	                	
