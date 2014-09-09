@@ -3,16 +3,16 @@ require_once 'api/api.inc';
 
 //cv
 $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
-$cv = json_decode($cv, true);
 
-echo $string;
 
-print_r("@".$cv);
+$cvs = json_decode($cv, true);
 
-$cv = $cv['nodes'];
+print_r($cvs);
+
+
+$cvs = $cvs['nodes'];
 $object = $cv;
 
-print_r($cv);
 
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
