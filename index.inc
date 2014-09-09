@@ -1,8 +1,8 @@
 <?php
 
-global $all_user;
+global $all_users;
 
-foreach($all_user as $k2 => $v2) {
+foreach($all_users as $k2 => $v2) {
 	$string[] = file_get_contents("http://v.democracy.tw/{$v2}/site.json");
 }
 
