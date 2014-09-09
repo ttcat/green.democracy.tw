@@ -46,7 +46,6 @@ $object = $endorsment;
 			    			
 			    			$v ++;
 				    		$en = $en['node'];
-				    		print_r($en);
 			    	?>                		
 						
 						<p id="en<?php echo $en['nid']?>">
