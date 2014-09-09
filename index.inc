@@ -121,11 +121,12 @@ shuffle($users);
                 				<h4><?php echo $user_v['title']; ?></h4>
                 				<h5><?php echo $user_v['section']?></h5>
                 				<em><?php echo $user_v['slogan']?></em>
+                				
+                				<?php $icons_text = explode('|', $user_v['policy']); $icons = explode('|', $user_v['policyicon']); ?>
                 				<ul class="social-link">
-                					<li><a href="#"><em class="icon-facebook-sign"></em></a></li>
-                					<li><a href="#"><em class="icon-instagram"></em></a></li>
-                					<li><a href="#"><em class="icon-linkedin-sign"></em></a></li>
-                					<li><a href="#"><em class="icon-twitter-sign"></em></a></li>
+                					<?php foreach ($icons as $i => $icon) { ?>
+                					<li><a href="#" alt="<?php echo $icons_text[$i]; ?>"><em class="fa <?php echo $icon; ?>"></em></a></li>
+                					<?php } ?>
                 				</ul>
                 			</div>
                 		</div>
