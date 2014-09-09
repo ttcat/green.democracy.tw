@@ -26,7 +26,7 @@ if(!$user['banner'])
 
     		<?php if($user['slogan']) { ?><p class="heading"><?php echo $user['slogan']?></p><?php } ?>
 	    		<p><?php echo $user['title']?>
-    					<?php if(!$detect->isMobile()) { ?><div class="fb-like main-like" data-href="<?php echo $user['fb']?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div><?php } ?>
+    					<?php if(!$detect->isMobile()) { ?><?php if($user['fb']) { ?><div class="fb-like main-like" data-href="<?php echo $user['fb']?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div><?php }  } ?>
 		    	<?php if($user['section'] or $user['detail']) { ?><ul class="heading-info">
 		    			<?php if($user['section']) { ?><li><?php echo $user['section']?></li><?php } ?>
 		    			<?php if($user['detail']) { ?><li><?php echo $user['detail']?></li><?php } ?>
@@ -40,7 +40,7 @@ if(!$user['banner'])
 		<div class="bannerShadow" style="background-image: url(<?php echo $user['banner']?>);"></div>
 
     	<div class="outer-profile-img">
-			<?php if($detect->isMobile()) {?> <div class="fb-like phone-like" style="position: absolute;" data-href="<?php echo $user['fb']?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div> <?php } ?>    	
+			<?php if($detect->isMobile()) {?> <?php if($user['fb']) { ?><div class="fb-like phone-like" style="position: absolute;" data-href="<?php echo $user['fb']?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div> <?php } } ?>    	
 		    <img id="imgHeadShot" class="profile-img" src="<?php echo $user['logo']?>" alt="<?php echo $user['title']?>">
 	    </div>
     	
