@@ -41,7 +41,7 @@ require_once 'api/api.inc';
 						
 						<div>
 							<p>
-								<?php print_r($user['bio']?>
+								<?php print_r($user['bio']); ?>
 													
 								<strong>自傳標題</strong></br></br>
 							
