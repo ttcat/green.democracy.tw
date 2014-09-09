@@ -20,7 +20,7 @@ $this_url = WEB.'/'.$u.'/'.$section;
 if($nid) { $this_url = WEB.'/'.$u.'/'.$section.'/'.$nid; }
 
 if($section == 'politician' && $nid) { 
-	$string_meta = file_get_contents(WEB."/{$u}/timeline?all");
+	//$string_meta = file_get_contents(WEB."/{$u}/timeline?all");
 	//$object = json_decode($string_meta,true);
 	if($nid) { $this_url = WEB.'/'.$u.'/politician/'.$nid; }else{ $this_url = WEB.'/'.$u; }
 }
@@ -38,8 +38,6 @@ if($nid && $object) {
 				
 				if($v['node']['nid'] == $nid) {			
 
-
-			
 					$v_title = explode('</h3>',$v['node']['content']);
 					$nid_name = strip_tags($v_title[0]);
 					$nid_desc = SL(strip_tags($v_title[1]), 300);
@@ -50,9 +48,7 @@ if($nid && $object) {
 					if($v['node']['photo']) { $share_img = $v['node']['photo']; }
 					if($v['node']['videolink']) { $videolink = metavideo($v['node']['videolink'], 0); $videolink_ssl = metavideo($v['node']['videolink'], 1); }
 					$nid_found = 1;
-					
-					$v['node']['content'] .= "@@";
-					
+										
 					$only_this[] = (array) $v['node']; // only show this feed if found;
 					$show_nid_one = 1;
 					
