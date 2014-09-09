@@ -96,7 +96,7 @@ require_once 'api/api.inc';
 							<?php if($user['email']) { ?><li>聯絡 email：<?php echo $user['email']?></li><?php } ?>
 						</ul>
 						<br>
-						<iframe width="100" height="550" src="http://maps.google.com/?q=<?php echo $user['address']; ?>" style="border:0"></iframe>
+						<iframe width="100" height="550" src="https://www.google.com/maps/embed?q=<?php echo $user['address']; ?>" style="border:0"></iframe>
 						
 						
 						</div>
