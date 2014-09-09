@@ -1,3 +1,18 @@
+<?php
+
+global $all_user;
+
+foreach($all_user as $k2 => $v2) {
+	$string[] = file_get_contents("http://v.democracy.tw/{$v2}/site.json");
+}
+
+foreach ($string as $key => $value) {
+  $user = json_decode($value,true);
+  $users[] = $user['nodes'][0]['node'];
+}
+
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -86,8 +101,9 @@
                 <div class="main-content">
 
 
-<h1>Team Members</h1>
+				<h1>2014 綠黨政治代理人</h1>
                 	<p class="lead">Our Team is the best around. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo.</p> 
+                	
                 	
                 	
                 	
