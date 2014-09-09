@@ -60,7 +60,8 @@ $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
     	                	
     	                	<div class="addthis_sharing_toolbox" data-url="http://green.democracy.tw/<?php print $u; ?>/bio ?>"></div>
 						</div>
-
+	<br>
+	<br>
 
 				<h2 class="clearfix">經歷</h2>
 						<hr>
@@ -76,7 +77,7 @@ $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
 						</ul>
 						</p>
 						</div>
-
+			
 				<br>
 												
 				<h2 class="clearfix">政治獻金專戶</h2>
