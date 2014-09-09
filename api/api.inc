@@ -27,7 +27,7 @@ shuffle($recommendation);
 
 
 //news
-$string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/person");
+$string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/news");
 $news = json_decode($string,true);
 $news = $news['nodes'];
 shuffle($news);
