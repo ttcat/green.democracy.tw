@@ -41,7 +41,7 @@ global $u, $page, $nid;
             "newsclip" => array("news", "相關新聞",200, 'politician/'),
 
             "FAQ" => array("blog_post", "政見", 200, 'issues/'),
-            "Person" => array("blog_post", "各界推薦", 200, 'endorsements/'),
+            "Person" => array("blog_post", "各界推薦", 800, 'endorsements/'),
             "Event" => array("blog_post", "活動行程", 200, 'event/'),
             "gallery" => array("gallery", "相簿", 300, ''),
         );
