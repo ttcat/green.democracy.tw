@@ -116,11 +116,11 @@ shuffle($users);
                 	?>
                 	
                 		<div class="fourth <?php echo $last; ?>boxed">
-                			<img src="<?php echo $user_v['logo']; ?>" alt="Mock" />
+                			<img src="<?php echo $user_v['logo']; ?>" alt="<?php echo $user_v['title']; ?>" style="width: 500px;" />
                 			<div class="inner-box">
-                				<h4>Greg Knoll</h4>
-                				<h5>President</h5>
-                				<em>Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultri cies cula.</em>
+                				<h4><?php echo $user_v['title']; ?></h4>
+                				<h5><?php echo $user_v['section']?></h5>
+                				<em><?php echo $user_v['slogan']?></em>
                 				<ul class="social-link">
                 					<li><a href="#"><em class="icon-facebook-sign"></em></a></li>
                 					<li><a href="#"><em class="icon-instagram"></em></a></li>
