@@ -62,6 +62,8 @@ foreach ($issues_all as $key => $value) {
 
 						<?php foreach ($issues as $key => $value) { 
 							$issue = $value;
+							
+							print_r($value);
 						?>
     	                		<!-- Toggle -->
     	                	    <li class="toggle-li">
