@@ -76,7 +76,7 @@ shuffle($users);
 
     <!-- Start Outter Wrapper / Feature Image -->	
     <div class="outter-wrapper feature">
-		<div class="bannerShadownone" style="background-image: url('/images/index_banner.jpg');"></div>    	
+		<div class="bannerShadowNone" style="background-image: url('/images/index_banner.jpg');"></div>    	
     </div>
     
 	<div id="sticky-anchor"></div>
