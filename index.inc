@@ -11,6 +11,7 @@ foreach ($string_array as $key => $value) {
   $users[] = $user['nodes'][0]['node'];
 }
 
+shuffle($users);
 ?>
 
 <!DOCTYPE html>
@@ -105,11 +106,17 @@ foreach ($string_array as $key => $value) {
                 	<p class="lead">Our Team is the best around. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo.</p> 
                 	
                 	
+                	<div class="clearfix">	
+                	<?php 
                 	
+                	$cnt = 0;
+
+                	foreach($users as $key => $user_v) { 
+						if($cnt > 0 && $cnt%3 == 0) { $last = "last "; }else{ $last = ""; }
+                	?>
                 	
-                	<div class="clearfix">
-                		<div class="fourth boxed">
-                			<img src="img/thumb-8.jpg" alt="Mock" />
+                		<div class="fourth <?php echo $last; ?>boxed">
+                			<img src="<?php echo $user_v['logo']; ?>" alt="Mock" />
                 			<div class="inner-box">
                 				<h4>Greg Knoll</h4>
                 				<h5>President</h5>
@@ -123,105 +130,8 @@ foreach ($string_array as $key => $value) {
                 			</div>
                 		</div>
                 		
-                		<div class="fourth boxed">
-                			<img src="img/thumb-9.jpg" alt="Mock" />
-                			<div class="inner-box">
-                				<h4>Micky Dora</h4>
-                				<h5>Vice President</h5>
-                				<em>Pharetra augu nullam id dolor id nibh ultricies vehicula ut idemin asti elit.</em>
-                				<ul class="social-link">
-                					<li><a href="#"><em class="icon-facebook-sign"></em></a></li>
-                					<li><a href="#"><em class="icon-skype"></em></a></li>
-                					<li><a href="#"><em class="icon-linkedin-sign"></em></a></li>
-                				</ul>
-                			</div>
-                		</div>
-                		
-                		<div class="fourth boxed">
-                			<img src="img/thumb-3.jpg" alt="Mock" />
-                			<div class="inner-box">
-                				<h4>Lance Carson</h4>
-                				<h5>Public Relations</h5>
-                				<em>Vitae elit libero, ansom phar etra augue. Nullam id dolor id nibh ultri cies cula.</em>
-                				<ul class="social-link">
-                					<li><a href="#"><em class="icon-facebook-sign"></em></a></li>
-                					<li><a href="#"><em class="icon-skype"></em></a></li>
-                					<li><a href="#"><em class="icon-linkedin-sign"></em></a></li>
-                					<li><a href="#"><em class="icon-twitter-sign"></em></a></li>
-                				</ul>
-                			</div>
-                		</div>
-                		
-                		<div class="fourth last boxed">
-                			<img src="img/thumb-4.jpg" alt="Mock" />
-                			<div class="inner-box">
-                				<h4>Joel Tudor</h4>
-                				<h5>Legal &amp; Admin</h5>
-                				<em>Shar petra augu nullam id dolor id nibh ultricies vehicula ut idemin asti.</em>
-                				<ul class="social-link">
-                					<li><a href="#"><em class="icon-facebook-sign"></em></a></li>
-                					<li><a href="#"><em class="icon-linkedin-sign"></em></a></li>
-                				</ul>
-                			</div>
-                		</div>
-                		
-                	<div class="clearfix">
-                		<div class="fourth boxed">
-                			<img src="img/thumb-8.jpg" alt="Mock" />
-                			<div class="inner-box">
-                				<h4>Greg Knoll</h4>
-                				<h5>President</h5>
-                				<em>Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultri cies cula.</em>
-                				<ul class="social-link">
-                					<li><a href="#"><em class="icon-facebook-sign"></em></a></li>
-                					<li><a href="#"><em class="icon-instagram"></em></a></li>
-                					<li><a href="#"><em class="icon-linkedin-sign"></em></a></li>
-                					<li><a href="#"><em class="icon-twitter-sign"></em></a></li>
-                				</ul>
-                			</div>
-                		</div>
-                		
-                		<div class="fourth boxed">
-                			<img src="img/thumb-9.jpg" alt="Mock" />
-                			<div class="inner-box">
-                				<h4>Micky Dora</h4>
-                				<h5>Vice President</h5>
-                				<em>Pharetra augu nullam id dolor id nibh ultricies vehicula ut idemin asti elit.</em>
-                				<ul class="social-link">
-                					<li><a href="#"><em class="icon-facebook-sign"></em></a></li>
-                					<li><a href="#"><em class="icon-skype"></em></a></li>
-                					<li><a href="#"><em class="icon-linkedin-sign"></em></a></li>
-                				</ul>
-                			</div>
-                		</div>
-                		
-                		<div class="fourth boxed">
-                			<img src="img/thumb-3.jpg" alt="Mock" />
-                			<div class="inner-box">
-                				<h4>Lance Carson</h4>
-                				<h5>Public Relations</h5>
-                				<em>Vitae elit libero, ansom phar etra augue. Nullam id dolor id nibh ultri cies cula.</em>
-                				<ul class="social-link">
-                					<li><a href="#"><em class="icon-facebook-sign"></em></a></li>
-                					<li><a href="#"><em class="icon-skype"></em></a></li>
-                					<li><a href="#"><em class="icon-linkedin-sign"></em></a></li>
-                					<li><a href="#"><em class="icon-twitter-sign"></em></a></li>
-                				</ul>
-                			</div>
-                		</div>
-                		
-                		<div class="fourth last boxed">
-                			<img src="img/thumb-4.jpg" alt="Mock" />
-                			<div class="inner-box">
-                				<h4>Joel Tudor</h4>
-                				<h5>Legal &amp; Admin</h5>
-                				<em>Shar petra augu nullam id dolor id nibh ultricies vehicula ut idemin asti.</em>
-                				<ul class="social-link">
-                					<li><a href="#"><em class="icon-facebook-sign"></em></a></li>
-                					<li><a href="#"><em class="icon-linkedin-sign"></em></a></li>
-                				</ul>
-                			</div>
-                		</div>                		
+					<?php $cnt++;
+					}	?>	
                 		
                 		
                 	</div>
