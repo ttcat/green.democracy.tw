@@ -81,6 +81,35 @@ global $u, $page, $nid;
         }
 
 
+	if($feed['professional_title']) { 
+		$json_this_feed['professional_title']; 
+	}
+
+
+	if($feed['caption']) { 
+		$json_this_feed['caption']; 
+	}
+
+
+	if($feed['content-title']) { 
+		$json_this_feed['content-title']; 
+	}
+
+
+	if($feed['short-content']) { 
+		$json_this_feed['short-content']; 
+	}
+
+
+	if($feed['icon']) { 
+		$json_this_feed['icon']; 
+	}
+
+	if($feed['tag']) { 
+		$json_this_feed['tag']; 
+	}
+	
+	
         if($feed['videolink']) {
           $json_this_feed['videolink'] = metavideo($feed['videolink'], 1);
           $feed['link'] = $feed['videolink'];
