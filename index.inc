@@ -11,6 +11,8 @@ foreach ($string as $key => $value) {
   $users[] = $user['nodes'][0]['node'];
 }
 
+echo count($users);
+
 ?>
 
 <!DOCTYPE html>
