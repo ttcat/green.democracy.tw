@@ -46,7 +46,7 @@ shuffle($users);
 		<link rel="shortcut icon" href="/favicon.ico"/>
 		<meta content="#191d24" name="msapplication-TileColor">
 		<meta content="/images/fbcover_144.png" name="msapplication-TileImage">
-		<link href="/images/fbcover_144.png" rel="apple-touch-icon-precomposed">
+		<link href="http://green.democracy.tw/images/fbcover_144.png" rel="apple-touch-icon-precomposed">
 
          <link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
          <link rel="stylesheet" type="text/css" href="/css/main.css">
@@ -124,10 +124,10 @@ shuffle($users);
 						if($cnt > 1 && $cnt%4 == 0) { $last = "last "; }else{ $last = ""; }
                 	?>
                 	
-                		<div class="fourth <?php echo $last; ?>boxed">
-                			<a href="/<?php echo $user_v['id']; ?>"><img src="<?php echo $user_v['logo']; ?>" alt="<?php echo $user_v['title']; ?>" style="width: 500px;" /></a>
+                		<a href="/<?php echo $user_v['id']; ?>"><div class="fourth <?php echo $last; ?>boxed">
+                			<img src="<?php echo $user_v['logo']; ?>" alt="<?php echo $user_v['title']; ?>" style="width: 500px;" />
                 			<div class="inner-box">
-                				<a href="/<?php echo $user_v['id']; ?>"><h4><?php echo $user_v['title']; ?></h4></a>
+                				<h4><?php echo $user_v['title']; ?></h4>
                 				<h5><?php echo $user_v['section']?></h5>
                 				<em><?php echo $user_v['slogan']?></em>
                 				
@@ -140,7 +140,7 @@ shuffle($users);
                 				<? } ?>	
                 				</ul>
                 			</div>
-                		</div>
+                		</div></a>
                 		
 					<?php $cnt++;
 					}	?>	
