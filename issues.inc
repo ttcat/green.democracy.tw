@@ -14,9 +14,7 @@ $issues_all = json_decode($string_meta,true);
 
 foreach ($issues_all as $key => $value) { 
 	
-	print_r($value);
-	
-	if($value['type'] == 'FAQ') {
+	if($value['section'] == 'FAQ') {
 		$issues[] = $value;
 	}
 }
