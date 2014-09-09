@@ -5,8 +5,8 @@
 			
 			<!-- Start Column -->
 			<div class="fourth widget">
-				<h3>台灣綠黨</h3>
-				<p>台灣綠黨簡介台灣綠黨簡介台灣綠黨簡介台灣綠黨簡介台灣綠黨簡介台灣綠黨簡介台灣綠黨簡介台灣綠黨簡介台灣綠黨簡介台灣綠黨簡介台灣綠黨簡介台灣綠黨簡介台灣綠黨簡介台灣綠黨簡介台灣綠黨簡介</p>				
+				<a href="http://www.greenparty.org.tw"><h3>台灣綠黨</h3></a>
+				<p>國際上的綠黨於70年代興起，陸續在各國議會取得席次。1996年台灣綠黨成立，與全球 91 個綠黨共同遵循全球綠人憲章的六大核心價值，以社運力量的參政平台出發投入各層級選舉，2012 綠黨獲得近23萬政黨票，已成為台灣第五大黨。</p>
 			</div>
 
 			<!-- Start Column -->
@@ -26,6 +26,7 @@
 				<p>關注綠黨最新消息</p>
             <form id="subscribe-newsletter" style="margin-top:0;" action="http://www.greenparty.org.tw/civicrm/mailing/subscribe" method="post">                							
 				<input type="email" placeholder="Email" name="email" id="email" value="" />
+				<input type="hidden" id="mark_x_2" name="mark_x_2" value="1">
 				<input type="submit" class="btn small-btn" name="" value="訂閱" />
 			</form>
 			</div>
