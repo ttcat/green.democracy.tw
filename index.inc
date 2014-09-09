@@ -120,7 +120,7 @@ shuffle($users);
                 	?>
                 	
                 		<div class="fourth <?php echo $last; ?>boxed">
-                			<img src="<?php echo $user_v['logo']; ?>" alt="<?php echo $user_v['title']; ?>" style="width: 500px;" />
+                			<a href="/<?php echo $user_v['id']; ?>"><img src="<?php echo $user_v['logo']; ?>" alt="<?php echo $user_v['title']; ?>" style="width: 500px;" /></a>
                 			<div class="inner-box">
                 				<h4><?php echo $user_v['title']; ?></h4>
                 				<h5><?php echo $user_v['section']?></h5>
