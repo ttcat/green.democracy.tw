@@ -24,16 +24,17 @@ foreach ($all_users as $k => $user) {
 	}
 }
 
-if(empty($found) && $u) {
-  header("HTTP/1.0 404 Not Found");
-  include('404.html');
-  exit();
-}
-
 if($u == 'redir' && empty($f)){
 	$f = 'redir';
 	include('api/redir.inc');
 	exit();
+}
+
+
+if(empty($found) && $u) {
+  header("HTTP/1.0 404 Not Found");
+  include('404.html');
+  exit();
 }
 
 if(empty($u)){
