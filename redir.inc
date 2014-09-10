@@ -1,23 +1,3 @@
-<?php
-
-global $all_users;
-
-foreach($all_users as $k2 => $v2) {
-	if($v2 != 'test') {
-		$string_array[] = file_get_contents("http://v.democracy.tw/{$v2}/site.json");
-	}
-}	
-
-foreach ($string_array as $key => $value) {
-  $user = json_decode($value,true);
-  $user['nodes'][0]['node']['id'] = $all_users[$key];
-  $users[] = $user['nodes'][0]['node'];
-  
-}
-
-shuffle($users);
-?>
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -117,42 +97,63 @@ shuffle($users);
                 <div class="main-content">
 
 
-				<h1>2014 綠黨政治代理人</h1>
-                	<p class="lead">新政治，從地方開始！今年綠黨的政治代理人分散在全台灣各地，包括<a href="http://green.democracy.tw/wangchungming">淡水、三芝、石門、八里</a>、<a href="http://green.democracy.tw/muwan">土城、三峽、樹林、鶯歌</a>、<a href="http://green.democracy.tw/ellen">基隆七堵</a>、<a href="http://green.democracy.tw/rober86">桃園市、<a href="http://green.democracy.tw/chungli2014">中壢</a>、<a href="http://green.democracy.tw/tang">平鎮</a>、<a href="http://green.democracy.tw/samyang">新竹東區</a>、<a href="http://green.democracy.tw/jaywin2014">竹東、五峰</a>、<a href="http://green.democracy.tw/star">高雄市三民區</a>、<a href="http://green.democracy.tw/afu">澎湖馬公</a>。我們要向住在這些地區的您，推薦我們最好的政治代理人！若您不住在這些區域，也請您大力的分享推薦給其他朋友！</p>
+					<h1>Make a Donation</h1>
+                	<p class="lead">Make a donation today to help our cause. Below are several key area's in which we need your support and your donations. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>   	                
                 	
-                	
-                	<div class="clearfix">	
-                	<?php 
-                	
-                	$cnt = 1;
-
-                	foreach($users as $key => $user_v) { 
-						if($cnt > 1 && $cnt%4 == 0) { $last = "last "; }else{ $last = ""; }
-                	?>
-                	
-                		<a href="/<?php echo $user_v['id']; ?>"><div class="fourth <?php echo $last; ?>boxed">
-                			<img src="<?php echo $user_v['logo']; ?>" alt="<?php echo $user_v['title']; ?>" style="width: 500px;" />
-                			<div class="inner-box">
-                				<h4><?php echo $user_v['title']; ?></h4>
-                				<h5><?php echo $user_v['section']?></h5>
-                				<em><?php echo $user_v['slogan']?></em>
-                				
-                				<?php $icons_text = explode('|', $user_v['policy']); $icons = explode('|', $user_v['policyicon']); ?>
-                				<ul class="social-link">
-                				<?php if($icons_text[0]) { ?>                				
-                					<?php /* foreach ($icons as $i => $icon) { ?>
-                					<li><a href="#" alt="<?php echo $icons_text[$i]; ?>"><em class="fa <?php echo $icon; ?>"></em></a></li>
-                					<?php } */?>
-                				<? } ?>	
-                				</ul>
-                			</div>
-                		</div></a>
-                		
-					<?php $cnt++;
-					}	?>	
-                		
-                		
+                	<hr/>
+                	<div class="clearfix">
+                	<!-- Start Price -->
+                	<div class="third price">
+                		<h3>Clean a Beach<span>$9</span></h3>
+                		<div class="price-detail">
+                		<p><em>Help provide essential tools needed to clean up beaches.</em></p>
+                		<ul>
+                			<li>One Off Donation</li>
+                			<li>10kg Trash Removal</li>
+                			<li>Avatar on Site</li>
+                			<li>Photo Updates</li>
+                			<li>Kause Newsletter</li>
+                		</ul>
+                		<a class="btn">Donate Today</a>
+                		</div>	
                 	</div>
+                	
+                	
+                	<!-- Start Price -->
+                	<div class="third price price-feature">
+                		<h3>Repair a Reef<span>$22</span></h3>
+                		<div class="price-detail">
+                		<p><em>Provides much needed tools needed to repair barrier reefs.</em></p>
+                		<ul>
+                			<li>One Off Donation</li>
+                			<li>10kg Trash Removal</li>
+                			<li>Fills 1 Scuba tank</li>
+                			<li>Photo Updates</li>
+                			<li>Avatar on Site</li>
+                			<li>Kause Newsletter</li>
+                		</ul>
+                		<a class="btn green-btn">Donate Today</a>
+                		</div>	
+                	</div>
+                	
+                	
+                	<!-- Start Price -->
+                	<div class="third price last">
+                		<h3>Resuscitate a River<span>$34</span></h3>
+                		<div class="price-detail">
+                		<p><em>Help provide essential tools to resuscitate our rivers.</em></p>
+                		<ul>
+                			<li>One Off Donation</li>
+                			<li>Photo Updates</li>
+                			<li>Kause Newsletter</li>
+                			<li>Avatar on Site</li>
+                			<li>10kg Trash Removal</li>
+                		</ul>
+                		<a class="btn">Donate Today</a>
+                		</div>	
+                	</div>
+                	</div>
+                	
 
 				<!-- add here-->
 				</div>
@@ -161,9 +162,6 @@ shuffle($users);
         	</div> <!-- #main -->
         </div> <!-- #main-container -->
     </div>	
-
-
-	<?php require_once 'api/footer.inc'; ?>
 	
 	<!-- Start Scripts -->
 	<!--<script type="text/javascript" src="/js/vendor/jquery-1.8.3.min.js"></script>-->
