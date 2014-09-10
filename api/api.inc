@@ -322,3 +322,9 @@ function filter_xss_bad_protocol($string, $decode = TRUE) {
   } while ($before != $string);
   return check_plain($string);
 }
+
+function variable_get($name, $default) {
+  global $conf;
+
+  return isset($conf[$name]) ? $conf[$name] : $default;
+}
