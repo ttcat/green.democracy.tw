@@ -40,13 +40,12 @@ require_once 'api/api.inc';
 						<hr>
 						
 						<p>
-						<?php if($user['gembeded'] != '') { ?>
+						<?php if($user['gembeded'] != '') { 						
+							$user['gembeded'] = str_replace('edit#gid=0', '', $user['gembeded']);
+						?>
 							<iframe style="height:600px;" src="<?php echo $user['gembeded'];?>/pubhtml?widget=true&amp;headers=false"></iframe>
 						<?php } ?>
-						
-<!--						https://docs.google.com/spreadsheets/d/1WyJIRNZltKUlmJ-AvHuL9FxcCIjJLpmeBgEcxQNozhw/edit#gid=0
-						https://docs.google.com/spreadsheets/d/1WyJIRNZltKUlmJ-AvHuL9FxcCIjJLpmeBgEcxQNozhw/pubhtml?widget=true&amp;headers=false -->
-						
+
     	                </p>
 	    	                    	                    	                    	                    	                
 				<!-- add here-->
