@@ -58,7 +58,7 @@
 				<div class="foot right">
 					<!-- Social Media icons -->
 					<ul class="social-link">
-						<li><a href="http://green.democracy.tw" target="_self">綠黨所有政治代理人</a></li>
+						<li><a href="http://green.democracy.tw" target="_self">綠黨 2014 政治代理人</a></li>
 						<li>｜</li>						
 						<li><a href="https://www.facebook.com/taiwangreenparty" target="_blank"><em class="icon-facebook-sign"></em> 綠黨粉絲團</a></li>
 					</ul>
