@@ -96,7 +96,7 @@ if($section == 'politician' && !$nid) { //index
 	$fb_title = $user['title'] .' | 2014 挺好的！綠黨政治代理人';
 	$html_title = $fb_title;
 	$share_img = $user['logo'];
-	$fb_description = $user['bio'];
+	//$fb_description = $user['bio'];
  
 }else if(!$nid) {	// 沒有帶 nid 的一般單元
 
