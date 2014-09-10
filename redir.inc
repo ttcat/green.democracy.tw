@@ -72,8 +72,10 @@
     	    	
     	        <nav id="nav-wrap">
     	        	<ul class="nav" id="nav">
-    	        	    	
-    	            	<li class="nav-parent last donate"><a href="http://www.greenparty.org.tw/civicrm/contribute/transact?reset=1&id=4"><em class="fa fa-heart"></em> 捐款支持</a>
+
+    	            	<li class="nav-parent"><a href="javascript:window.parent.closefancy();"> 前往綠黨官網</a>
+    	            	<li class="nav-parent"><a href="http://www.greenparty.org.tw/civicrm/contribute/transact?reset=1&id=4"><em class="fa fa-heart"></em> 捐款支持</a>    	        	    	
+    	            	<li class="nav-parent last donate"><a href="http://green.democracy.tw"> 2014 綠黨參選人介紹</a>
 
     	            	</li>
     	                
@@ -86,60 +88,6 @@
     	<!-- End Main Navigation -->
     </div>
     <!-- End Outter Wrapper -->
-    <div id="space"></div>
-    	
-    <div class="outter-wrapper">	
-    	 <!-- Start Main Body -->
-        <div class="main-container">
-            <div class="main wrapper clearfix">
-            	<!-- Start Main Content -->				
-            	
-                <div class="main-content">
-
-
-					<h1>Make a Donation</h1>
-                	<p class="lead">Make a donation today to help our cause. Below are several key area's in which we need your support and your donations. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>   	                
-                	
-                	<hr/>
-                	<div class="clearfix">
-                	<!-- Start Price -->
-                	<div class="third price">
-                		<h3>Clean a Beach<span>$9</span></h3>
-                		<div class="price-detail">
-                		<p><em>Help provide essential tools needed to clean up beaches.</em></p>
-                		<a class="btn">回到首頁</a>
-                		</div>	
-                	</div>
-                	
-                	
-                	<!-- Start Price -->
-                	<div class="third price price-feature">
-                		<h3>Repair a Reef<span>$22</span></h3>
-                		<div class="price-detail">
-                		<p><em>Provides much needed tools needed to repair barrier reefs.</em></p>
-                		<a class="btn green-btn">立刻前往</a>
-                		</div>	
-                	</div>
-                	
-                	
-                	<!-- Start Price -->
-                	<div class="third price last">
-                		<h3>Resuscitate a River<span>$34</span></h3>
-                		<div class="price-detail">
-                		<p><em>Help provide essential tools to resuscitate our rivers.</em></p>
-                		<a class="btn">捐款支持</a>
-                		</div>	
-                	</div>
-                	</div>
-                	
-
-				<!-- add here-->
-				</div>
-				
-
-        	</div> <!-- #main -->
-        </div> <!-- #main-container -->
-    </div>	
 	
 	<!-- Start Scripts -->
 	<!--<script type="text/javascript" src="/js/vendor/jquery-1.8.3.min.js"></script>-->
