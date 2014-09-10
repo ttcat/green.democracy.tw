@@ -333,7 +333,7 @@ function variable_get($name, $default) {
 function decode_entities($text, $exclude = array()) {
   static $html_entities;
   if (!isset($html_entities)) {
-    include_once './includes/unicode.entities.inc';
+    include_once '/api/unicode.entities.inc';
   }
 
   // Flip the exclude list so that we can do quick lookups later.
