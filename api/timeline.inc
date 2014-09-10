@@ -170,7 +170,7 @@ global $u, $page, $nid;
 		$feed['content'] = filter_xss($feed['content'], $allowed_tags);
 		
         if(!$nid) { 
-        	$feed['content'] = SL(str_replace("\n","",$feed['content']), 250); 
+        	$feed['content'] = SL(str_replace("\n","",$feed['content']), 200); 
         }
 
         $event_time = '';
