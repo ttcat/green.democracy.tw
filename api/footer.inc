@@ -57,7 +57,7 @@
 				<div class="foot right">
 					<!-- Social Media icons -->
 					<ul class="social-link">
-						<li><a href="https://www.facebook.com/taiwangreenparty" target="_blank"><?php echo $user['title']?>選舉動態首頁</a></li>
+						<li><a href="http://green.democracy.tw" target="_self"><?php echo $user['title']?>選舉動態首頁</a></li>
 						<li>｜</li>						
 						<li><a href="https://www.facebook.com/taiwangreenparty" target="_blank"><em class="icon-facebook-sign"></em> 綠黨粉絲團</a></li>
 					</ul>
