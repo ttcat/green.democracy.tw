@@ -154,3 +154,15 @@ $keywords = '綠黨,挺好的,九合一,選舉,greenparty';
 			function pl() {window.open('<?php echo $plurk_link?>');}
 			function fb_index() {window.open('<?php echo "http://www.facebook.com/sharer.php?u=".urlencode(WEB)?>', 'Facebook','toolbar=0,status=0,width=626,height=436');}
 		</script>
+
+<!--GA-->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54051080-1', 'auto');
+  ga('send', 'pageview');		
+  </script>		
+<!--GA-->  
