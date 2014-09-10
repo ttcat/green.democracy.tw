@@ -112,7 +112,7 @@ $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
 						<ul>
 							<?php if($user['address']) { ?><li>地址：<?php echo $user['address']?></li><?php } ?>
 							<?php if($user['phone']) { ?><li>電話：<?php echo $user['phone']?></li><?php } ?>
-							<?php if($user['email']) { ?><li>聯絡 email：<?php echo $user['email']?></li><?php } ?>
+							<?php if($user['email']) { ?><li>信箱：<?php echo $user['email']?></li><?php } ?>
 						</ul>
 						
 						<?php if($user['address']) { ?>
