@@ -161,7 +161,7 @@
                 		</div>
 			    	
 			    	
-			    		<a href="#" target="_blank">回到選舉動態首頁</a>
+			    		<a href="<?php echo WEB.'/'.$u; ?>">回到選舉動態首頁</a>
 
 			    			    	
 				</aside> 
