@@ -40,9 +40,7 @@ require_once 'api/api.inc';
 						<hr>
 						
 						<p>
-						<iframe style="height:600px;" src="https://docs.google.com/spreadsheets/d/1_0zPlnB8G2hBR4ir7pktNtaod8kTKrgglUpe0BKKWaY/pubhtml?widget=true&amp;headers=false"></iframe>
-						
-						<?php /*<iframe src="<?php echo $user['gembeded']?>"> */ ?>
+						<iframe style="height:600px;" src="<?php if($user['gembeded']) { echo $user['gembeded']; ?> } else { ?>https://docs.google.com/spreadsheets/d/1_0zPlnB8G2hBR4ir7pktNtaod8kTKrgglUpe0BKKWaY/pubhtml?widget=true&amp;headers=false<?php } ?>"></iframe>
 						
     	                </p>
 	    	                    	                    	                    	                    	                
