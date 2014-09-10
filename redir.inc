@@ -107,14 +107,7 @@
                 		<h3>Clean a Beach<span>$9</span></h3>
                 		<div class="price-detail">
                 		<p><em>Help provide essential tools needed to clean up beaches.</em></p>
-                		<ul>
-                			<li>One Off Donation</li>
-                			<li>10kg Trash Removal</li>
-                			<li>Avatar on Site</li>
-                			<li>Photo Updates</li>
-                			<li>Kause Newsletter</li>
-                		</ul>
-                		<a class="btn">Donate Today</a>
+                		<a class="btn">回到首頁</a>
                 		</div>	
                 	</div>
                 	
@@ -124,15 +117,7 @@
                 		<h3>Repair a Reef<span>$22</span></h3>
                 		<div class="price-detail">
                 		<p><em>Provides much needed tools needed to repair barrier reefs.</em></p>
-                		<ul>
-                			<li>One Off Donation</li>
-                			<li>10kg Trash Removal</li>
-                			<li>Fills 1 Scuba tank</li>
-                			<li>Photo Updates</li>
-                			<li>Avatar on Site</li>
-                			<li>Kause Newsletter</li>
-                		</ul>
-                		<a class="btn green-btn">Donate Today</a>
+                		<a class="btn green-btn">立刻前往</a>
                 		</div>	
                 	</div>
                 	
@@ -142,14 +127,7 @@
                 		<h3>Resuscitate a River<span>$34</span></h3>
                 		<div class="price-detail">
                 		<p><em>Help provide essential tools to resuscitate our rivers.</em></p>
-                		<ul>
-                			<li>One Off Donation</li>
-                			<li>Photo Updates</li>
-                			<li>Kause Newsletter</li>
-                			<li>Avatar on Site</li>
-                			<li>10kg Trash Removal</li>
-                		</ul>
-                		<a class="btn">Donate Today</a>
+                		<a class="btn">捐款支持</a>
                 		</div>	
                 	</div>
                 	</div>
