@@ -40,7 +40,7 @@ shuffle($users);
 		<meta property="og:url" content="http://green.democracy.tw/" />
 		<meta property="og:image" content="http://green.democracy.tw/images/fbcover.jpg" />
 		<meta property="og:site_name" content="2014 挺好的！綠黨政治代理人" /> 
-		<meta property="og:description" content="2014 挺好的人選、挺好的政黨、挺好的！台灣綠黨政治代理人官方網站：新政治，從地方開始！今年綠黨的政治代理人分散在全台灣各地，包括淡水、三芝、石門、八里、土城、三峽、樹林、鶯歌、基隆七堵、桃園市、中壢、平鎮、新竹東區、竹東、高雄市三民區、澎湖馬公。我們要向住在這些地區的您，推薦我們最好的政治代理人！即使您不住在這些區域，我們也需要您大力的分享推薦給其他朋友！" />  
+		<meta property="og:description" content="2014 挺好的人選、挺好的政黨、挺好的！台灣綠黨政治代理人官方網站：新政治，從地方開始！今年綠黨的政治代理人分散在全台灣各地，包括台北市文祥里、淡水、三芝、石門、八里、土城、三峽、樹林、鶯歌、基隆七堵、桃園市、中壢、平鎮、新竹東區、竹東、高雄市三民區、澎湖馬公。我們要向住在這些地區的您，推薦我們最好的政治代理人！即使您不住在這些區域，我們也需要您大力的分享推薦給其他朋友！" />  
 		<meta property="fb:app_id" content="687618544645054" />
 		<meta property="fb:admins" content="100000125299492" />
 		<meta property="og:locale" content="zh_TW" />
@@ -131,7 +131,7 @@ shuffle($users);
 
 
 				<h1>2014 綠黨政治代理人</h1>
-                	<p class="lead">新政治，從地方開始！今年綠黨的政治代理人分散在全台灣各地，包括<a href="http://green.democracy.tw/wangchungming">淡水、三芝、石門、八里</a>、<a href="http://green.democracy.tw/muwan">土城、三峽、樹林、鶯歌</a>、<a href="http://green.democracy.tw/ellen">基隆七堵</a>、<a href="http://green.democracy.tw/rober86">桃園市、<a href="http://green.democracy.tw/chungli2014">中壢</a>、<a href="http://green.democracy.tw/tang">平鎮</a>、<a href="http://green.democracy.tw/samyang">新竹東區</a>、<a href="http://green.democracy.tw/jaywin2014">竹東、五峰</a>、<a href="http://green.democracy.tw/star">高雄市三民區</a>、<a href="http://green.democracy.tw/afu">澎湖馬公</a>。我們要向住在這些地區的您，推薦我們最好的政治代理人！若您不住在這些區域，也請您大力的分享推薦給其他朋友！</p>
+                	<p class="lead">新政治，從地方開始！今年綠黨的政治代理人分散在全台灣各地，包括<a href="http://green.democracy.tw/antung">台北市文祥里</a>、<a href="http://green.democracy.tw/wangchungming">淡水、三芝、石門、八里</a>、<a href="http://green.democracy.tw/muwan">土城、三峽、樹林、鶯歌</a>、<a href="http://green.democracy.tw/ellen">基隆七堵</a>、<a href="http://green.democracy.tw/rober86">桃園市</a>、<a href="http://green.democracy.tw/chungli2014">中壢</a>、<a href="http://green.democracy.tw/tang">平鎮</a>、<a href="http://green.democracy.tw/samyang">新竹東區</a>、<a href="http://green.democracy.tw/jaywin2014">竹東、五峰</a>、<a href="http://green.democracy.tw/star">高雄市三民區</a>、<a href="http://green.democracy.tw/afu">澎湖馬公</a>。我們要向住在這些地區的您，推薦我們最好的政治代理人！若您不住在這些區域，也請您大力的分享推薦給其他朋友！</p>
                 	
                 	
                 	<div class="clearfix">	
