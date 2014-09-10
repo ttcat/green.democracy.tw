@@ -41,8 +41,11 @@ require_once 'api/api.inc';
 						
 						<p>
 						<?php if($user['gembeded'] != '') { ?>
-							<iframe style="height:600px;" src="<?php echo $user['gembeded'];?>&amp;headers=false"></iframe>
+							<iframe style="height:600px;" src="<?php echo $user['gembeded'];?>/pubhtml?widget=true&amp;headers=false"></iframe>
 						<?php } ?>
+						
+<!--						https://docs.google.com/spreadsheets/d/1WyJIRNZltKUlmJ-AvHuL9FxcCIjJLpmeBgEcxQNozhw/edit#gid=0
+						https://docs.google.com/spreadsheets/d/1WyJIRNZltKUlmJ-AvHuL9FxcCIjJLpmeBgEcxQNozhw/pubhtml?widget=true&amp;headers=false -->
 						
     	                </p>
 	    	                    	                    	                    	                    	                
