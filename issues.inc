@@ -56,8 +56,8 @@ $object = $issues;
     	                	      <?php if($issue['content']) { ?>
     	                	      <div class="toggle-content">
     	                	      	<p><?php print $issue['content']; ?></p>
-									<p><span class="issues-tags meta"><span class="fa fa-tags"></span> <?php print $issue['tag']; ?><span></p>
-									<div id="fb<?php print $issue['nid']; ?>" class="addthis_sharing_toolbox" data-url="http://green.democracy.tw/<?php print $u; ?>/issues/<?php print $issue['nid']; ?>"></div>
+									<?php if($issue['tag']) { ?><p><span class="issues-tags meta"><span class="fa fa-tags"></span> <?php print $issue['tag']; ?><span></p><?php } ?>
+									分享這則政見：<div id="fb<?php print $issue['nid']; ?>" class="addthis_sharing_toolbox" data-url="http://green.democracy.tw/<?php print $u; ?>/issues/<?php print $issue['nid']; ?>"></div>
     	                	      </div><?php } ?>
     	                	    </li>
     	                <?php } ?>	    
