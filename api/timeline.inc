@@ -31,7 +31,7 @@ global $u, $page, $nid;
     
         $cats = array(
             "newsfeed" => array("blog_post", "選舉動態",200, 'politician/'),
-            "slider" => array("gallery", "選舉動態", 300, 'politician/'),
+            "slider" => array("slider", "選舉動態", 'auto', 'politician/'),
             "video" => array("iframe", "選舉動態", 300, 'politician/'),
             "newsclip" => array("news", "相關新聞",200, 'politician/'),
 
