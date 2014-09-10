@@ -6,7 +6,7 @@
 			<!-- Start Column -->
 			<div class="fourth widget">
 				<a href="http://www.greenparty.org.tw"><h3>台灣綠黨</h3></a>
-				<p>國際上的綠黨於 70 年代興起，陸續在各國議會取得席次。1996 年台灣綠黨成立，與全球 91 個綠黨共同遵循全球綠人憲章的六大核心價值，以社運力量的參政平台出發投入各層級選舉。上屆選舉綠黨獲得近23萬政黨票，已成為台灣第五大黨。</p>
+				<p>國際上的綠黨於 70 年代興起，陸續在各國議會取得席次。1996 年台灣綠黨成立，與全球 91 個綠黨共同遵循全球綠人憲章的六大核心價值，以社運力量的參政平台出發投入各層級選舉。上屆選舉綠黨獲得近23萬政黨票，已成為台灣第五大黨。<a href="http://green.democracy.tw" target="_self" class="btn small-btn ">所有候選人</a></p>
 			</div>
 
 			<!-- Start Column -->
@@ -57,7 +57,7 @@
 				<div class="foot right">
 					<!-- Social Media icons -->
 					<ul class="social-link">
-						<li><a href="http://green.democracy.tw" target="_self"><?php echo $user['title']?>選舉動態首頁</a></li>
+						<li><a href="http://green.democracy.tw" target="_self">綠黨所有政治代理人</a></li>
 						<li>｜</li>						
 						<li><a href="https://www.facebook.com/taiwangreenparty" target="_blank"><em class="icon-facebook-sign"></em> 綠黨粉絲團</a></li>
 					</ul>
