@@ -166,8 +166,11 @@ global $u, $page, $nid;
         
         $org_content = $feed['content'];
 
+        $allowed_tags = array('a', 'em', 'strong', 'cite', 'code', 'ul', 'ol', 'li', 'dl', 'dt', 'dd','p','br');
+		$feed['content'] = filter_xss($feed['content'], $allowed_tags);
+		
         if(!$nid) { 
-        	$feed['content'] = SL(str_replace("\n","",strip_tags($feed['content'])),250); 
+        	$feed['content'] = SL(str_replace("\n","",$feed['content']), 250); 
         }
 
         $event_time = '';
