@@ -32,7 +32,7 @@ if(empty($found) && $u) {
 
 if($f == 'redir' && empty($u)){
 	$f = 'redir';
-	include('redir.inc');
+	include('api/redir.inc');
 	exit();
 }
 
