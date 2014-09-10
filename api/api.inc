@@ -112,3 +112,12 @@ function filter_xss($string, $allowed_tags = array('a', 'em', 'strong', 'cite', 
     >                 # just a >
     )%x', '_filter_xss_split', $string);
 }
+
+
+function drupal_validate_utf8($text) {
+  if (strlen($text) == 0) {
+    return TRUE;
+  }
+  // For performance reasons this logic is duplicated in check_plain().
+  return (preg_match('/^./us', $text) == 1);
+}
