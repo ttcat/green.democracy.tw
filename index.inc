@@ -58,7 +58,17 @@ shuffle($users);
          <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
          <link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox.css?v=2.1.4" media="screen" />
          <script src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>         
+<!--GA-->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-54051080-1', 'auto');
+  ga('send', 'pageview');		
+  </script>		
+<!--GA-->  
     </head>
     <body>
     	
