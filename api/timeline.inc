@@ -61,6 +61,8 @@ global $u, $page, $nid;
 
           if($feed['category'] == 'slider') { 
             $media = $feed['photo'];
+	        $json_this_feed['images'] = $media;
+            
           }
 
           $json_this_feed['type'] = $cats[ $feed['category'] ][0];
