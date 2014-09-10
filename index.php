@@ -30,6 +30,12 @@ if(empty($found) && $u) {
   exit();
 }
 
+if($f == 'redir' && empty($u)){
+	$f = 'redir';
+	include('redir.inc');
+	exit();
+}
+
 if(empty($u)){
 	$f = 'index';
     require_once 'api/api.inc';
