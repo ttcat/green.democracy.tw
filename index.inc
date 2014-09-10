@@ -146,7 +146,7 @@ shuffle($users);
                 					<?php /* foreach ($icons as $i => $icon) { ?>
                 					<li><a href="#" alt="<?php echo $icons_text[$i]; ?>"><em class="fa <?php echo $icon; ?>"></em></a></li>
                 					<?php } */?>
-                				<? } ?>	
+                				<?php } ?>	
                 				</ul>
                 			</div>
                 		</div></a>

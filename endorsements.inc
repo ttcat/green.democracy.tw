@@ -58,8 +58,9 @@ $object = $endorsment;
 		                    </div>
 	                    <?php } ?>
 	                    
-	                    <?
-	                    	echo $en['content'];
+	                    <?php
+	                    	$allowed_tags = array('a', 'em', 'strong', 'cite', 'code', 'ul', 'ol', 'li', 'dl', 'dt', 'dd','p','br');
+							echo filter_xss($en['content'], $allowed_tags); 
 	                    ?>
 
     	                </blockquote>

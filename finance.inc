@@ -45,7 +45,6 @@ require_once 'api/api.inc';
 						?>
 							<iframe style="height:600px;" src="<?php echo $user['gembeded'];?>/pubhtml?widget=true&amp;headers=false"></iframe>
 						<?php } ?>
-
     	                </p>
 	    	                    	                    	                    	                    	                
 				<!-- add here-->

@@ -51,7 +51,7 @@ $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
 		                       	<img src="<?php echo $cvs[0]['node']['photo']?>" alt="mock" width="100%">
 	    	                   	<span class="wp-caption-text"><?php $cvs[0]['node']['caption']; ?></span>
 	        	            </div>
-	                    	<? } ?>
+	                    	<?php } ?>
 	                    	
 							<?php echo $cvs[0]['node']['content']; ?>
 							

@@ -53,7 +53,7 @@ $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
 		                       	<img src="<?php echo $cvs[0]['node']['photo']?>" alt="mock" width="100%">
 	    	                   	<span class="wp-caption-text"><?php $cvs[0]['node']['caption']; ?></span>
 	        	            </div>
-	                    	<? } ?>
+	                    	<?php } ?>
 							<?php 
 							
 							$allowed_tags = array('a', 'em', 'strong', 'cite', 'code', 'ul', 'ol', 'li', 'dl', 'dt', 'dd','p','br');
@@ -118,7 +118,7 @@ $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
 						<?php if($user['address']) { ?>
 						<br>
 						<iframe width="100" height="550" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCj9XwcX4eH4azexlMKjhfdCymvMQLQAgg&q=<?php echo $user['address']; ?>" style="border:0"></iframe>
-						<? } ?>
+						<?php } ?>
 						
 						</div>
 <?php } ?>						
