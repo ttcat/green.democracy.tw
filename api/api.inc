@@ -345,3 +345,7 @@ function decode_entities($text, $exclude = array()) {
   // http://php.net/manual/en/reference.pcre.pattern.modifiers).
   return preg_replace('/&(#x?)?([A-Za-z0-9]+);/e', '_decode_entities("$1", "$2", "$0", $html_entities, $exclude)', $text);
 }
+
+function check_plain($text) {
+  return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
+}
