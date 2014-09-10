@@ -10,8 +10,11 @@ foreach($all_users as $k2 => $v2) {
 
 foreach ($string_array as $key => $value) {
   $user = json_decode($value,true);
-  $user['nodes'][0]['node']['id'] = $all_users[$key];
-  $users[] = $user['nodes'][0]['node'];
+
+  if($user['nodes'][0]['node']) {
+  	$user['nodes'][0]['node']['id'] = $all_users[$key];
+	$users[] = $user['nodes'][0]['node'];
+  }
   
 }
 
