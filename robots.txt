@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /test/
 Disallow: /api/
+Disallow: /*/timeline/
