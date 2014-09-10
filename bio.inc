@@ -54,8 +54,10 @@ $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
 	    	                   	<span class="wp-caption-text"><?php $cvs[0]['node']['caption']; ?></span>
 	        	            </div>
 	                    	<? } ?>
-	                    	
-							<?php echo $cvs[0]['node']['content']; ?>
+							<?php 
+							
+							$allowed_tags = array('a', 'em', 'strong', 'cite', 'code', 'ul', 'ol', 'li', 'dl', 'dt', 'dd','p','br');
+							echo filter_xss($cvs[0]['node']['content'], $allowed_tags);  ?>
 							
     	                	</p><br/><br/>
     	                	
