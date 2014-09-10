@@ -60,7 +60,7 @@ global $u, $page, $nid;
           if( ! $feed['category']) $feed['category'] = 'newsfeed';
 
           if($feed['category'] == 'slider') { 
-            $media = explode("|", $feed['photo']);	
+            $media = $feed['photo'];
           }
 
           $json_this_feed['type'] = $cats[ $feed['category'] ][0];
