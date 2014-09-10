@@ -63,7 +63,9 @@ $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
 						</div>
 	<br>
 	<br>
-<? } ?>
+<?php } ?>
+
+<?php if($user['bio']) { ?>
 				<h2 class="clearfix">經歷</h2>
 						<hr>
 
@@ -80,7 +82,9 @@ $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
 						</div>
 			
 				<br>
-												
+<?php } ?>				
+
+<?php if($user['bank']) { ?>												
 				<h2 class="clearfix">政治獻金專戶</h2>
 						<hr>
 
@@ -96,7 +100,9 @@ $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
 						</div>
 
 				<br>
-	
+<?php } ?>
+
+<?php if($user['email'] || $user['phone'] || $user['address']) { ?>	
 				<h2 class="clearfix">聯絡資訊</h2>
 						<hr>
 
@@ -113,7 +119,7 @@ $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
 						<? } ?>
 						
 						</div>
-						
+<?php } ?>						
     	                    	                    	                    	                    	                
 				<!-- add here-->
 				</div>
