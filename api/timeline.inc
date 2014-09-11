@@ -56,9 +56,6 @@ global $u, $page, $nid;
 
         if($feed['sticky'] == "Yes") { $json_this_feed['star'] = 1; } else { 	$json_this_feed['star'] = 0; }//置頂
         
-        print_r($feed['sticky']); 
-        print_r($json_this_feed['star']);
-        
         if($feed['type'] == "") { $feed['type'] = 'gallery'; }  //測試
 
         if($feed['type'] == "News") { 
@@ -249,7 +246,6 @@ function aasort ($array, $key) {
 
       if($va['node']['sticky'] = "Yes" ) { 
           $sorter[$va['node']['sort_id']] = '9' . $va['node'][$key]; //depends on format of array
-          print_r("yes");
         }else{
           $sorter[$va['node']['sort_id']] = $va['node'][$key]; //depends on format of array        
         }
@@ -271,5 +267,3 @@ function aasort ($array, $key) {
     $array=$ret;    
     return $array;
 }
-
-echo "@@";
