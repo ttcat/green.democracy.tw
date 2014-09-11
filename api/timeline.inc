@@ -53,6 +53,10 @@ global $u, $page, $nid;
         $target_text = null;
               
         $feed = $feed['node'];
+
+        if($feed['sticky'] == "Yes") { $json_this_feed['star'] = 1; } else { 	$json_this_feed['star'] = 0; }//置頂
+        
+        print_r($json_this_feed['star']);
         
         if($feed['type'] == "") { $feed['type'] = 'gallery'; }  //測試
 
@@ -138,8 +142,6 @@ global $u, $page, $nid;
         $json_this_feed['speed'] = 5000;
         $json_this_feed['nid'] = $feed['nid'];
 
-
-        if($feed['sticky'] == "Yes") { $json_this_feed['star'] = 1; } else { 	$json_this_feed['star'] = 0; }//置頂
 
         if($feed['type'] == 'Person') {
           $feed['title'] = $feed['title'] . ' / ' . $feed['professional_title'] ;
