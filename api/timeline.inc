@@ -56,6 +56,7 @@ global $u, $page, $nid;
 
         if($feed['sticky'] == "Yes") { $json_this_feed['star'] = 1; } else { 	$json_this_feed['star'] = 0; }//置頂
         
+        print_r($feed['sticky']); 
         print_r($json_this_feed['star']);
         
         if($feed['type'] == "") { $feed['type'] = 'gallery'; }  //測試
