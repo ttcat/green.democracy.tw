@@ -71,7 +71,7 @@ $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
 				<h2 class="clearfix">經歷</h2>
 						<hr>
 
-						<?php $ex = explode('|', $user['bio']); ?>
+						<?php $ex = explode('|', $user['exp']); ?>
 
 						<div>
 						<p>
