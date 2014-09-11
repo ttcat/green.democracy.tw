@@ -145,11 +145,10 @@ $keywords = '綠黨,挺好的,九合一,選舉,greenparty';
 		<meta property="fb:app_id" content="687618544645054" />
 		<meta property="fb:admins" content="100000125299492" />
 		<meta property="og:locale" content="zh_TW" />
-		
 		<link rel="shortcut icon" href="/favicon.ico"/>
 		<meta content="#191d24" name="msapplication-TileColor">
-		<meta content="$user['logo']" name="msapplication-TileImage">
-		<link href="$user['logo']" rel="apple-touch-icon-precomposed">
+		<meta content="/images/fbcover_144.png" name="msapplication-TileImage">
+		<link href="/images/fbcover_144.png" rel="apple-touch-icon-precomposed">
 		<script>
 			function fb() {window.open('<?php echo "http://www.facebook.com/sharer.php?u=".urlencode($share_link)?>', 'Facebook','toolbar=0,status=0,width=626,height=436');}
 			function pl() {window.open('<?php echo $plurk_link?>');}
