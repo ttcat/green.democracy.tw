@@ -2,7 +2,7 @@
 require_once 'api/api.inc';
 
 //cv
-$string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
+$string = http_request_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
 
    $cvs =  json_decode($string, true);
 	$cvs = $cvs['nodes'];
