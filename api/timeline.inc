@@ -115,7 +115,6 @@ global $u, $page, $nid;
         if($feed['type'] != 'Event') { 
 	        if(! $feed['link'] && $linkpage) { 
     	      $feed['link'] = 'http://green.democracy.tw/' . $u . '/' .$linkpage. '' . $feed['nid'];
-        	  $json_this_feed['test'] = 1;
 	        }
 	    }
       
@@ -140,7 +139,7 @@ global $u, $page, $nid;
         $json_this_feed['nid'] = $feed['nid'];
 
 
-        if($feed['sticky'] == "Yes") { $json_this_feed['star'] = true; }	//置頂
+        if($feed['sticky'] == "Yes") { $json_this_feed['star'] = 1; } else { 	$json_this_feed['star'] = 0; }//置頂
 
         if($feed['type'] == 'Person') {
           $feed['title'] = $feed['title'] . ' / ' . $feed['professional_title'] ;
