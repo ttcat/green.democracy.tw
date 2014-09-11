@@ -271,3 +271,5 @@ function aasort ($array, $key) {
     $array=$ret;    
     return $array;
 }
+
+echo "@@";
