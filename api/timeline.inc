@@ -184,9 +184,10 @@ global $u, $page, $nid;
             $event_timestamp_str = explode(' to ',strip_tags($feed['eventtime']));
             $event_timestamp_date = explode(' ',strip_tags($feed['eventtime']));
             
-		if (strpos($event_timestamp_str[1], '2014')) {
-		    $event_timestamp = strtotime($event_timestamp_str[1]);            
-		}else{
+            
+		$event_timestamp = strtotime($event_timestamp_str[1]);            
+            
+		if (!strpos($event_timestamp_str[1], '2014')) {
 			$event_timestamp = strtotime($event_timestamp_date[0].' '.$event_timestamp_str[1]);
 		}
 
