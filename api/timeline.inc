@@ -186,10 +186,11 @@ global $u, $page, $nid;
             
 		if (strpos($event_timestamp_str[1],'2014') == false) {
             $event_timestamp = strtotime($event_timestamp_date[0].' '.$event_timestamp_str[1]);
-		}else{		
+		}else{
+		
 		    $event_timestamp = strtotime($event_timestamp_str[1]);
-		    $event_timestamp = strtotime('2014-09-13');
-		    
+		    $event_timestamp = '99999';
+
 		}
 
             
