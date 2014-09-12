@@ -197,9 +197,9 @@ global $u, $page, $nid;
             
             if(!$feed['link']) { $feed['link'] = "#"; }
             if(time() > $event_timestamp) { 
-              $button_text = '<a href="'. $feed['link'] .'" ' . $target_text . ' class="btn small-btn btn-style2" time="'.json_encode($event_timestamp_str).'"><em class="fa fa-thumbs-up"></em>活動結束</a>';
+              $button_text = '<a href="'. $feed['link'] .'" ' . $target_text . ' class="btn small-btn btn-style2" time="'.json_encode($event_timestamp_str).'" ftime="'.$event_timestamp_str[1].'"><em class="fa fa-thumbs-up"></em>活動結束</a>';
              }else{ 
-              $button_text ='<a href="'. $feed['link'] .'" ' . $target_text . ' class="btn small-btn" time="'.json_encode($event_timestamp_str).'"><em class="fa fa-thumbs-up"></em>我要參加！</a>';
+              $button_text ='<a href="'. $feed['link'] .'" ' . $target_text . ' class="btn small-btn" time="'.json_encode($event_timestamp_str).'" ftime="'.$event_timestamp_str[1].'"><em class="fa fa-thumbs-up"></em>我要參加！</a>';
             }
             
             $feed['content'] = '<p>' . $feed['content'] . '</p><p></p>'.$button_text.'<br>'; 
