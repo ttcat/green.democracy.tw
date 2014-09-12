@@ -188,7 +188,7 @@ global $u, $page, $nid;
             $event_timestamp = strtotime($event_timestamp_date[0].' '.$event_timestamp_str[1]);
 		}else{		
 		    $event_timestamp = strtotime($event_timestamp_str[1]);
-		    $event_timestamp = strtotime('2014-09-13 16:00');
+		    $event_timestamp = strtotime('2014-09-13');
 		    
 		}
 
