@@ -187,8 +187,9 @@ global $u, $page, $nid;
 		if (strpos($event_timestamp_str[1],'2014') == false) {
             $event_timestamp = strtotime($event_timestamp_date[0].' '.$event_timestamp_str[1]);
 		}else{		
-            $event_timestamp_date = explode(' ',$event_timestamp_str[1]);
-		    $event_timestamp = strtotime($event_timestamp_date[0]);
+		    $event_timestamp = strtotime($event_timestamp_str[1]);
+		    $event_timestamp = strtotime('2014-09-13 16:00');
+		    
 		}
 
             
@@ -198,7 +199,7 @@ global $u, $page, $nid;
             
             if(!$feed['link']) { $feed['link'] = "#"; }
             if(time() > $event_timestamp) { 
-              $button_text = '<a href="'. $feed['link'] .'" ' . $target_text . ' class="btn small-btn btn-style2" time="'.json_encode($event_timestamp_str).'" ftime="'.$event_timestamp_date[0].'"><em class="fa fa-thumbs-up"></em>活動結束</a>';
+              $button_text = '<a href="'. $feed['link'] .'" ' . $target_text . ' class="btn small-btn btn-style2" time="'.json_encode($event_timestamp_str).'" ftime="'.$event_timestamp_str[1].'"><em class="fa fa-thumbs-up"></em>活動結束</a>';
              }else{ 
               $button_text ='<a href="'. $feed['link'] .'" ' . $target_text . ' class="btn small-btn" time="'.json_encode($event_timestamp_str).'" ftime="'.$event_timestamp_str[1].'"><em class="fa fa-thumbs-up"></em>我要參加！</a>';
             }
