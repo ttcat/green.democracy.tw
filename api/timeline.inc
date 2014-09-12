@@ -176,7 +176,12 @@ global $u, $page, $nid;
         //event 加上按鈕
         if($feed['type'] == 'Event') { 
 
-            $event_timestamp_str = explode(' to ',$feed['eventtime']);
+		if (strpos($feed['eventtime'],'</div>') !== false) {
+			$eventtime = explode('</div>', $feed['eventtime']);
+			$feed['eventtime'] = $eventtime[1];
+		}
+
+            $event_timestamp_str = explode(' to ',strip_tags($feed['eventtime']));
             $event_timestamp_date = explode(' ',$feed['eventtime']);					
             $event_timestamp = strtotime($event_timestamp_date[0].' '.$event_timestamp_str[1]);
             $json_this_feed['timestamp'] = $event_timestamp;
