@@ -20,7 +20,7 @@ $this_url = WEB.'/'.$u.'/'.$section;
 if($nid) { $this_url = WEB.'/'.$u.'/'.$section.'/'.$nid; }
 
 if($section == 'politician' && $nid) { 
-	//$string_meta = file_get_contents(WEB."/{$u}/timeline?all");
+	//$string_meta = http_request_contents(WEB."/{$u}/timeline?all");
 	//$object = json_decode($string_meta,true);
 	if($nid) { $this_url = WEB.'/'.$u.'/politician/'.$nid; }else{ $this_url = WEB.'/'.$u; }
 }

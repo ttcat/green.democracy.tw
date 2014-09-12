@@ -11,7 +11,7 @@ global $u, $page, $nid;
   if($page == 'all') { $end_feed = 0;  }
   if($nid) { $end_feed = 0;  }
 
-  $string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json");
+  $string = http_request_contents("http://v.democracy.tw/{$u}/timeline.json", 60*5);
   $all_feeds = json_decode($string,true);
   $all_feeds = $all_feeds['nodes'];
 

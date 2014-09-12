@@ -12,14 +12,14 @@ global $value;
 
 //個人資料
 
-$string = file_get_contents("http://v.democracy.tw/{$u}/site.json");
-if($string) 	{ 
+$string = http_request_contents("http://v.democracy.tw/{$u}/site.json", 60*60);
+if($string) { 
   $user = json_decode($string,true);
   $user = $user['nodes'][0]['node'];
 }
 
 //推薦
-$string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/person");
+$string = http_request_contents("http://v.democracy.tw/{$u}/timeline.json/person");
 $recommendation = json_decode($string,true);
 $recommendation = $recommendation['nodes'];
 $endorsment = $recommendation;
@@ -27,7 +27,7 @@ shuffle($recommendation);
 
 
 //news
-$string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/news");
+$string = http_request_contents("http://v.democracy.tw/{$u}/timeline.json/news");
 $news = json_decode($string,true);
 $news = $news['nodes'];
 shuffle($news);
@@ -348,4 +348,33 @@ function decode_entities($text, $exclude = array()) {
 
 function check_plain($text) {
   return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
+}
+
+function http_request_contents($url, $expire = 900){
+  $now = time();
+  $cache_id = md5($url);
+  $dir = 'cache';
+  $filename = $dir.'/'.$cache_id.'.cache';
+  $cached = file_exists($filename);
+
+  // expired
+  if(!$cached || ($now - filemtime($filename) > $expire)){
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+    $data = curl_exec($ch);
+    $status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+    if($status == 200){
+      file_put_contents($filename, $data);
+      return $data;
+    }
+  }
+
+  // else from cache
+  if($cached){
+    return file_get_contents($filename);
+  }
+
+  // else error
+  return '';
 }

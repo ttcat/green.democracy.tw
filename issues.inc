@@ -3,7 +3,7 @@
 global $u,$nid;
 
 //政見
-$string = file_get_contents("http://v.democracy.tw/{$u}/timeline.json/faq");
+$string = http_request_contents("http://v.democracy.tw/{$u}/timeline.json/faq");
 $issues = json_decode($string, true);
 $issues = $issues['nodes'];
 $object = $issues;

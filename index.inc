@@ -4,7 +4,7 @@ global $all_users;
 
 foreach($all_users as $k2 => $v2) {
 	if($v2 != 'test') {
-		$string_array[] = file_get_contents("http://v.democracy.tw/{$v2}/site.json");
+		$string_array[] = http_request_contents("http://v.democracy.tw/{$v2}/site.json", 60*60);
 	}
 }	
 
