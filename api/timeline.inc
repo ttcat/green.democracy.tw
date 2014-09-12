@@ -193,8 +193,8 @@ global $u, $page, $nid;
    
    			$testing = strpos($event_timestamp_str[1], '2014');
    			
-   			if(!$testing) {
-				$event_timestamp = 1410681600;
+   			if($testing == false) {
+				$event_timestamp = strtotime($event_timestamp_date[0].' '.$event_timestamp_str[1]);
 			}else{
 				$event_timestamp = 1410724800;
 			}			
