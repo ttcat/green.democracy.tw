@@ -182,7 +182,7 @@ global $u, $page, $nid;
 		}
 
             $event_timestamp_str = explode(' to ',strip_tags($feed['eventtime']));
-            $event_timestamp_date = explode(' ',$feed['eventtime']);					
+            $event_timestamp_date = explode(' ',strip_tags($feed['eventtime']));
             $event_timestamp = strtotime($event_timestamp_date[0].' '.$event_timestamp_str[1]);
             $json_this_feed['timestamp'] = $event_timestamp;
             $json_this_feed['timestamp_str'] = time();
