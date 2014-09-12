@@ -378,3 +378,45 @@ function http_request_contents($url, $expire = 900){
   // else error
   return '';
 }
+
+
+function _decode_entities($prefix, $codepoint, $original, &$html_entities, &$exclude) {
+  // Named entity
+  if (!$prefix) {
+    // A named entity not in the exclude list.
+    if (isset($html_entities[$original]) && !isset($exclude[$html_entities[$original]])) {
+      return $html_entities[$original];
+    }
+    else {
+      return $original;
+    }
+  }
+  // Hexadecimal numerical entity
+  if ($prefix == '#x') {
+    $codepoint = base_convert($codepoint, 16, 10);
+  }
+  // Decimal numerical entity (strip leading zeros to avoid PHP octal notation)
+  else {
+    $codepoint = preg_replace('/^0+/', '', $codepoint);
+  }
+  // Encode codepoint as UTF-8 bytes
+  if ($codepoint < 0x80) {
+    $str = chr($codepoint);
+  }
+  else if ($codepoint < 0x800) {
+    $str = chr(0xC0 | ($codepoint >> 6)) . chr(0x80 | ($codepoint & 0x3F));
+  }
+  else if ($codepoint < 0x10000) {
+    $str = chr(0xE0 | ($codepoint >> 12)) . chr(0x80 | (($codepoint >> 6) & 0x3F)) . chr(0x80 | ($codepoint & 0x3F));
+  }
+  else if ($codepoint < 0x200000) {
+    $str = chr(0xF0 | ($codepoint >> 18)) . chr(0x80 | (($codepoint >> 12) & 0x3F)) . chr(0x80 | (($codepoint >> 6) & 0x3F)) . chr(0x80 | ($codepoint & 0x3F));
+  }
+  // Check for excluded characters
+  if (isset($exclude[$str])) {
+    return $original;
+  }
+  else {
+    return $str;
+  }
+}
