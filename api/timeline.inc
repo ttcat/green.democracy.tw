@@ -188,7 +188,7 @@ global $u, $page, $nid;
 		if (!strpos($event_timestamp_str[1], '2014')) {
 			$event_timestamp = strtotime($event_timestamp_date[0].' '.$event_timestamp_str[1]);
 		}else{
-			$event_timestamp = 1410724800;
+			$event_timestamp = 1410681600;
 		}
             
             $json_this_feed['timestamp'] = $event_timestamp;
