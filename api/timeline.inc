@@ -183,24 +183,21 @@ global $u, $page, $nid;
 
             $event_timestamp_str = explode(' to ',strip_tags($feed['eventtime']));
             $event_timestamp_date = explode(' ',strip_tags($feed['eventtime']));
-            
-            
-		$event_timestamp = strtotime($event_timestamp_str[1]);            
+			
+			$event_timestamp = strtotime($event_timestamp_str[1]);            
             
 		if (!strpos($event_timestamp_str[1], '2014')) {
 			$event_timestamp = strtotime($event_timestamp_date[0].' '.$event_timestamp_str[1]);
 		}
-
-            
             
             $json_this_feed['timestamp'] = $event_timestamp;
             $json_this_feed['timestamp_str'] = time();
             
             if(!$feed['link']) { $feed['link'] = "#"; }
             if(time() > $event_timestamp) { 
-              $button_text = '<a href="'. $feed['link'] .'" ' . $target_text . ' class="btn small-btn btn-style2" time="'.json_encode($event_timestamp_str).'" ftime="'.$event_timestamp_str[1].'"><em class="fa fa-thumbs-up"></em>活動結束</a>';
+              $button_text = '<a href="'. $feed['link'] .'" ' . $target_text . ' class="btn small-btn btn-style2" ><em class="fa fa-thumbs-up"></em>活動結束</a>';
              }else{ 
-              $button_text ='<a href="'. $feed['link'] .'" ' . $target_text . ' class="btn small-btn" time="'.json_encode($event_timestamp_str).'" ftime="'.$event_timestamp_str[1].'"><em class="fa fa-thumbs-up"></em>我要參加！</a>';
+              $button_text ='<a href="'. $feed['link'] .'" ' . $target_text . ' class="btn small-btn"><em class="fa fa-thumbs-up"></em>我要參加！</a>';
             }
             
             $feed['content'] = '<p>' . $feed['content'] . '</p><p></p>'.$button_text.'<br>'; 
