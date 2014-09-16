@@ -41,7 +41,22 @@ require_once 'api/api.inc';
 						
 						<p>
 						<?php if($user['gembeded'] != '') { 						
-							$user['gembeded'] = str_replace('edit#gid=0', '', $user['gembeded']);
+							
+							$check_edit = explode('/', $user['gembeded']);
+							
+							foreach($check_edit as $key => $value) {
+							
+								if(strpos($value, 'edit#') !== false) {
+									$cutoff = '/'.$value;
+								}
+							
+							}
+							
+							if($cutoff) {
+								$user['gembeded'] = str_replace($cutoff, '', $user['gembeded']);							
+							}
+							
+
 						?>
 							<iframe style="height:600px;" src="<?php echo $user['gembeded'];?>/pubhtml?widget=true&amp;headers=false"></iframe>
 						<?php } ?>
