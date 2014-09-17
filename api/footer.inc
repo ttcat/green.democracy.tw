@@ -10,14 +10,24 @@
 
 			</div>
 
+
+<?php
+
+$string = http_request_contents("http://www.greenparty.org.tw/news.json", 60*60);
+if($string) { 
+  $news_all = json_decode($string,true);
+  $news_all = $news_all['nodes'];
+}
+
+?>
 			<!-- Start Column -->
 			<div class="fourth widget footer-news">
 				<h3>最新訊息</h3>
                 			<div class="mosaic-block fade" style="max-height:120px; background-img: url('');">
-                				<a href="http://www.greenparty.org.tw/news/20140905/177"  target="_blank" class="mosaic-overlay link" title="新聞標題"></a><div class="mosaic-backdrop">
-                				<div class="corner-date">09/05</div><img style="margin-top: -20px;" src="http://www.greenparty.org.tw/sites/www.greenparty.org.tw/files/imagecache/news_hp/news/lu_dang_sheng_ming__hei_xin_shi_pin_you_wan_mei_wan_shi_pin_an_quan_cong_liang_shi_zhu_quan_yu_xiao_nong_jing_ji_kai_shi_.jpg" alt="【綠黨聲明】黑心食品，有完沒完？食品安全，從糧食主權與小農經濟開始！" /></div>
+                				<a href="http://www.greenparty.org.tw/news/20140905/177"  target="_blank" class="mosaic-overlay link" title="<?php echo $news_all[0]['node']['title']; ?>"></a><div class="mosaic-backdrop">
+                				<div class="corner-date">09/05</div><img style="margin-top: -20px;" src="<?php echo $news_all[0]['node']['photo']; ?>" alt="<?php echo $news_all[0]['node']['title']; ?>" /></div>
                 			</div>
-                			<p><a href="http://www.greenparty.org.tw/news/20140905/177" target="_blank" style="text-decoration: initial;">【綠黨聲明】黑心食品，有完沒完？食品安全，從糧食主權與小農經濟開始！</a></p>
+                			<p><a href="http://www.greenparty.org.tw/news/20140905/177" target="_blank" style="text-decoration: initial;"><?php echo $news_all[0]['node']['title']; ?></a></p>
 			</div> 
 
 			
