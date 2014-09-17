@@ -40,10 +40,6 @@ body{ padding: 0em; }
    ========================================================================== */
 @media only screen and (max-width: 768px) {
 
-	.video_embed {
-		height:auto;
-	}
-
 		.mosaic-block {
 			width:220px;
 		}	
@@ -413,6 +409,10 @@ body{ padding: 0em; }
    ========================================================================== */
 @media only screen and (max-width: 480px) { 
 
+
+	.video_embed {
+		height:auto;
+	}
 	
 	 input[type=text],  input[type=email], input[type=password], textarea, a.btn, input[type=button], input[type=submit]{
 		padding: 10px 2%;
