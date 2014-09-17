@@ -161,7 +161,7 @@
                 		</div>
 			    	
 			    	
-			    		<a href="<?php echo WEB.'/'.$u; ?>">回到選舉動態首頁</a>
+			    		<?php if($section != 'politician') { ?><a href="<?php echo WEB.'/'.$u; ?>">回到<?php echo $user['title']; ?>選舉動態首頁</a><?php } ?>
 
 			    			    	
 				</aside> 
