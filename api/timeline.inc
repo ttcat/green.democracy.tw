@@ -148,7 +148,7 @@ global $u, $page, $nid;
         //<span class="icon-cc"></span> 標題前面加上 icon
         
         if($feed['icon']) { $feed['title'] = '<em class="fa '.$feed['icon'].'"></em>'. $feed['title'];  } 
-		if($feed['type'] == 'Person') {	 $feed['title'] = '<em class="fa fa-thumbs-up"></em>'. $feed['title']; }
+		if($feed['type'] == 'Person') {		$feed['title'] = '<em class="fa fa-thumbs-up"></em>'. $feed['title']; }
 		
 
         if($feed['link']) {	
