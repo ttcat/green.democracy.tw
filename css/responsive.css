@@ -40,6 +40,10 @@ body{ padding: 0em; }
    ========================================================================== */
 @media only screen and (max-width: 768px) {
 
+	.video_embed {
+		height:auto;
+	}
+
 		.mosaic-block {
 			width:220px;
 		}	

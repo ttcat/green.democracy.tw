@@ -827,7 +827,7 @@ function Timeline(element, data, undefined) {
     this._processIframeQueue = function() {
         $(SELF._iframe_queue).each(function(index, queue) {
             //queue.element.removeClass('loading').html('<iframe frameborder="0" src="' + queue.url + '"></iframe>');
-			queue.element.removeClass('loading').html('<object><param style="width: 100%;" name="movie" value="' + queue.url + '"></param><embed src="' + queue.url + '" style="width: 100%;" type="application/x-shockwave-flash"></embed></object>');
+			queue.element.removeClass('loading').html('<object><param class="video_embed" style="width: 100%;" name="movie" value="' + queue.url + '"></param><embed class="video_embed" src="' + queue.url + '" style="width: 100%;" type="application/x-shockwave-flash"></embed></object>');
         });
     };
 
