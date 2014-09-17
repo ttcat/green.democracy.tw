@@ -12,7 +12,7 @@
 
 
 <?php
-
+require_once 'api/api.inc';
 $news_string = http_request_contents("http://www.greenparty.org.tw/news.json", 60*60);
 if($news_string) { 
   $news_all = json_decode($news_string,true);
