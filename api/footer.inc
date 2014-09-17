@@ -25,10 +25,10 @@ if($news_string) {
 			<div class="fourth widget footer-news">
 				<h3>最新訊息</h3>
                 			<div class="mosaic-block fade" style="max-height:120px; background-img: url('');">
-                				<a href="http://www.greenparty.org.tw/news/20140905/177"  target="_blank" class="mosaic-overlay link" title="<?php echo $news_all[0]['node']['title']; ?>"></a><div class="mosaic-backdrop">
+                				<a href="<?php echo $news_all[0]['node']['url']; ?>"  target="_blank" class="mosaic-overlay link" title="<?php echo $news_all[0]['node']['title']; ?>"></a><div class="mosaic-backdrop">
                 				<div class="corner-date"><?php echo $news_date; ?></div><img style="margin-top: 0px;" src="<?php echo $news_all[0]['node']['photo']; ?>" alt="<?php echo $news_all[0]['node']['title']; ?>" /></div>
                 			</div>
-                			<p><a href="http://www.greenparty.org.tw/news/20140905/177" target="_blank" style="text-decoration: initial;"><?php echo $news_all[0]['node']['title']; ?></a></p>
+                			<p><a href="<?php echo $news_all[0]['node']['url']; ?>" target="_blank" style="text-decoration: initial;"><?php echo $news_all[0]['node']['title']; ?></a></p>
 			</div> 
 
 			
