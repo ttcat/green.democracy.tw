@@ -148,6 +148,8 @@ global $u, $page, $nid;
         //<span class="icon-cc"></span> 標題前面加上 icon
         
         if($feed['icon']) { $feed['title'] = '<em class="fa '.$feed['icon'].'"></em>'. $feed['title'];  } 
+		if($feed['type'] == 'FAQ') {		$feed['title'] = '<em class="fa fa-thumbs-up"></em>'. $feed['title']; }
+		
 
         if($feed['link']) {	
           $parse_result = '';
@@ -182,7 +184,9 @@ global $u, $page, $nid;
 			$eventtime = explode('</div>', $feed['eventtime']);
 			$feed['eventtime'] = $eventtime[1];
 		}
-
+		
+		
+			$feed['title'] = '<em class="fa fa-calendar"></em>'. $feed['title'];
             $event_timestamp_str = explode(' to ',strip_tags($feed['eventtime']));
             $event_timestamp_date = explode(' ',strip_tags($feed['eventtime']));
 			
