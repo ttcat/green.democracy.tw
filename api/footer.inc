@@ -26,7 +26,7 @@ if($string) {
 				<h3>最新訊息</h3>
                 			<div class="mosaic-block fade" style="max-height:120px; background-img: url('');">
                 				<a href="http://www.greenparty.org.tw/news/20140905/177"  target="_blank" class="mosaic-overlay link" title="<?php echo $news_all[0]['node']['title']; ?>"></a><div class="mosaic-backdrop">
-                				<div class="corner-date">09/05</div><img style="margin-top: -20px;" src="<?php echo $news_all[0]['node']['photo']; ?>" alt="<?php echo $news_all[0]['node']['title']; ?>" /></div>
+                				<div class="corner-date">09/05</div><img style="margin-top: 0px;" src="<?php echo $news_all[0]['node']['photo']; ?>" alt="<?php echo $news_all[0]['node']['title']; ?>" /></div>
                 			</div>
                 			<p><a href="http://www.greenparty.org.tw/news/20140905/177" target="_blank" style="text-decoration: initial;"><?php echo $news_all[0]['node']['title']; ?></a></p>
 			</div> 
