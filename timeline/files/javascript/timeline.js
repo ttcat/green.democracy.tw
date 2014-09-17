@@ -156,7 +156,7 @@ function Timeline(element, data, undefined) {
         // title DIV
         if (element_data.title !== null) {
         	if(element_data.star) {
-        		star = '<span class="icon-star"></span>';
+        		star = '<em class="fa fa-star"></em>';
         	}else{
         		star = '';
         	}
