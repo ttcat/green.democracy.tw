@@ -200,9 +200,9 @@ global $u, $page, $nid;
             $json_this_feed['timestamp'] = $event_timestamp;
             $json_this_feed['timestamp_str'] = time();
             
-            if(!$feed['link']) { 
+            if(!$feed['link'] || strpos($feed['link'], 'http') == false) { 
             
-            	$feed['link'] = "#"; 
+            	$feed['link'] = "#";
             
             }else{
             
