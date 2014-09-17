@@ -32,7 +32,7 @@ global $u, $page, $nid;
         $cats = array(
             "newsfeed" => array("blog_post", "選舉動態",200, 'politician/'),
             "slider" => array("gallery", "動態相簿", 'auto', 'politician/'),
-            "video" => array("iframe", "選舉動態", 300, 'politician/'),
+            "video" => array("iframe", "選舉動態", 'auto', 'politician/'),
             "newsclip" => array("news", "相關新聞",200, 'politician/'),
 
             "FAQ" => array("blog_post", "政見", 200, 'issues/'),
@@ -110,7 +110,7 @@ global $u, $page, $nid;
 	
 	
         if($feed['videolink']) {
-          $json_this_feed['videolink'] = metavideo($feed['videolink'], 1);
+          $json_this_feed['videolink'] = metavideo($feed['videolink'], 0);
           $feed['link'] = $feed['videolink'];
         }
 
@@ -132,7 +132,7 @@ global $u, $page, $nid;
         }
         
         if($feed['videolink']) {
-          $json_this_feed['videolink'] = metavideo($feed['videolink'], 1);
+          $json_this_feed['videolink'] = metavideo($feed['videolink'], 0);
         }
               
         $json_this_feed['date'] = date('Y-m-d' , strtotime($feed['date']));
@@ -160,7 +160,7 @@ global $u, $page, $nid;
         }
               
         if($feed['category'] == 'video') { 
-          $json_this_feed['videolink'] = metavideo($feed['videolink'], 1);
+          $json_this_feed['videolink'] = metavideo($feed['videolink'], 0);
         }			
         
         $org_content = $feed['content'];
