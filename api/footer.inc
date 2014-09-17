@@ -36,10 +36,10 @@
 			<div class="fourth widget last footer-action">
 				<h3>行動參與，挺好的！</h3>
 				<ul>
-					<li><a href="http://www.greenparty.org.tw/civicrm/contribute/transact?reset=1&id=4">捐款給綠黨</a></li>
-					<li><a href="http://www.greenparty.org.tw/support/201409/179">成為志工</a></li>
-					<li><a href="http://www.greenparty.org.tw/civicrm/contribute/transact?reset=1&id=2">加入黨員</a></li>					
-					<li><a href="http://www.greenparty.org.tw/contactus">合作提案</a></li>
+					<li><a href="http://www.greenparty.org.tw/civicrm/contribute/transact?reset=1&id=4" target="_blank">捐款給綠黨</a></li>
+					<li><a href="http://www.greenparty.org.tw/support/201409/179" target="_blank" >成為志工</a></li>
+					<li><a href="http://www.greenparty.org.tw/civicrm/contribute/transact?reset=1&id=2" target="_blank" >加入黨員</a></li>					
+					<li><a href="http://www.greenparty.org.tw/contactus" target="_blank" >合作提案</a></li>
 				</ul>
 			</div>
 			
@@ -60,7 +60,7 @@
 					<ul class="social-link">
 						<li><a href="http://green.democracy.tw" target="_self">綠黨 2014 政治代理人</a></li>
 						<li>｜</li>						
-						<li><a href="https://www.facebook.com/taiwangreenparty" target="_blank"><em class="icon-facebook-sign"></em> 綠黨粉絲團</a></li>
+						<li><a href="https://www.facebook.com/taiwangreenparty" target="_blank"><em class="fa fa-facebook-square"></em> 綠黨粉絲團</a></li>
 					</ul>
 				</div>	
 				<!-- Copyright Info -->				
