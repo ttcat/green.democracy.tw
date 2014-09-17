@@ -11,7 +11,7 @@ global $key;
 global $value;
 
 
-if($u) {
+if($u && $found) {
 
 	//個人資料
 	$string = http_request_contents("http://v.democracy.tw/{$u}/site.json", 60*60);
@@ -26,7 +26,6 @@ if($u) {
 	$recommendation = $recommendation['nodes'];
 	$endorsment = $recommendation;
 	shuffle($recommendation);
-
 
 	//news
 	$string = http_request_contents("http://v.democracy.tw/{$u}/timeline.json/news");
