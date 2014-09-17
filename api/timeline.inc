@@ -146,6 +146,8 @@ global $u, $page, $nid;
         }
 
         //<span class="icon-cc"></span> 標題前面加上 icon
+        
+        if($feed['icon']) { $feed['title'] = '<em class="fa '.$feed['icon'].'"></em>'. $feed['title'];  } 
 
         if($feed['link']) {	
           $parse_result = '';
