@@ -13,9 +13,9 @@
 
 <?php
 
-$string = http_request_contents("http://www.greenparty.org.tw/news.json", 60*60);
-if($string) { 
-  $news_all = json_decode($string,true);
+$news_string = http_request_contents("http://www.greenparty.org.tw/news.json", 60*60);
+if($news_string) { 
+  $news_all = json_decode($news_string,true);
   $news_all = $news_all['nodes'];
   $news_date = date('m/d', strtotime($news_all[0]['node']['date']));
 }
