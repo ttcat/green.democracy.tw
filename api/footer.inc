@@ -13,6 +13,12 @@
 
 <?php
 
+$string = http_request_contents("http://www.greenparty.org.tw/news.json", 60*60);
+if($string) { 
+  $news_all = json_decode($string,true);
+  $news_all = $news_all['nodes'];
+  $news_date = date('m/d', strtotime($news_all[0]['node']['date']));
+}
 
 ?>
 			<!-- Start Column -->
@@ -20,7 +26,7 @@
 				<h3>最新訊息</h3>
                 			<div class="mosaic-block fade" style="max-height:120px; background-img: url('');">
                 				<a href="http://www.greenparty.org.tw/news/20140905/177"  target="_blank" class="mosaic-overlay link" title="<?php echo $news_all[0]['node']['title']; ?>"></a><div class="mosaic-backdrop">
-                				<div class="corner-date">09/05</div><img style="margin-top: 0px;" src="<?php echo $news_all[0]['node']['photo']; ?>" alt="<?php echo $news_all[0]['node']['title']; ?>" /></div>
+                				<div class="corner-date"><?php echo $news_date; ?></div><img style="margin-top: 0px;" src="<?php echo $news_all[0]['node']['photo']; ?>" alt="<?php echo $news_all[0]['node']['title']; ?>" /></div>
                 			</div>
                 			<p><a href="http://www.greenparty.org.tw/news/20140905/177" target="_blank" style="text-decoration: initial;"><?php echo $news_all[0]['node']['title']; ?></a></p>
 			</div> 
