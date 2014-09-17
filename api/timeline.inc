@@ -200,12 +200,19 @@ global $u, $page, $nid;
             $json_this_feed['timestamp'] = $event_timestamp;
             $json_this_feed['timestamp_str'] = time();
             
-            if(!$feed['link']) { $feed['link'] = "#"; }
-            if(time() > $event_timestamp) { 
-              $button_text = '<a href="'. $feed['link'] .'" ' . $target_text . ' class="btn small-btn btn-style2"><em class="fa fa-thumbs-up"></em>活動結束</a>';
-             }else{ 
-              $button_text ='<a href="'. $feed['link'] .'" ' . $target_text . ' class="btn small-btn"><em class="fa fa-thumbs-up"></em>我要參加！</a>';
-            }
+            if(!$feed['link']) { 
+            
+            	$feed['link'] = "#"; 
+            
+            }else{
+            
+	            if(time() > $event_timestamp) { 
+    	          $button_text = '<a href="'. $feed['link'] .'" ' . $target_text . ' class="btn small-btn btn-style2"><em class="fa fa-thumbs-up"></em>活動結束</a>';
+        	     }else{ 
+            	  $button_text ='<a href="'. $feed['link'] .'" ' . $target_text . ' class="btn small-btn"><em class="fa fa-thumbs-up"></em>我要參加！</a>';
+	            }
+    		}        
+            
             
             $feed['content'] = '<p>' . $feed['content'] . '</p><p></p>'.$button_text.'<br>'; 
             $event_time = '<h6>' . $feed['eventtime']  . ' <br> ' . $feed['location'] .'</h6>';
