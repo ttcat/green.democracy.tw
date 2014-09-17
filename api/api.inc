@@ -10,27 +10,31 @@ global $f;
 global $key;
 global $value;
 
-//個人資料
 
-$string = http_request_contents("http://v.democracy.tw/{$u}/site.json", 60*60);
-if($string) { 
-  $user = json_decode($string,true);
-  $user = $user['nodes'][0]['node'];
+if($u) {
+
+	//個人資料
+	$string = http_request_contents("http://v.democracy.tw/{$u}/site.json", 60*60);
+	if($string) { 
+	  $user = json_decode($string,true);
+	  $user = $user['nodes'][0]['node'];
+	}
+
+	//推薦
+	$string = http_request_contents("http://v.democracy.tw/{$u}/timeline.json/person");
+	$recommendation = json_decode($string,true);
+	$recommendation = $recommendation['nodes'];
+	$endorsment = $recommendation;
+	shuffle($recommendation);
+
+
+	//news
+	$string = http_request_contents("http://v.democracy.tw/{$u}/timeline.json/news");
+	$news = json_decode($string,true);
+	$news = $news['nodes'];
+	shuffle($news);
+
 }
-
-//推薦
-$string = http_request_contents("http://v.democracy.tw/{$u}/timeline.json/person");
-$recommendation = json_decode($string,true);
-$recommendation = $recommendation['nodes'];
-$endorsment = $recommendation;
-shuffle($recommendation);
-
-
-//news
-$string = http_request_contents("http://v.democracy.tw/{$u}/timeline.json/news");
-$news = json_decode($string,true);
-$news = $news['nodes'];
-shuffle($news);
 
 //function
 
