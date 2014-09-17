@@ -39,7 +39,7 @@
                 				<li><div class="per-60 btn-style2"> 1,203,234<span>60%</span></div></li>                				
                 			</ol>
                 			*/?>        			
-                			<a href="<?php echo $user['fundlink']?>" target="_blank" class="btn small-btn "><em class="fa fa-heart"></em>線上捐款</a><p></p>
+                			<a href="<?php echo $user['fundlink']?>" onClick="_gaq.push(['_trackEvent', 'donate', '<?php echo $u;?>', 'sidebar']);" target="_blank" class="btn small-btn "><em class="fa fa-heart"></em>線上捐款</a><p></p>
                 		</div>	
 
                 	<hr>
