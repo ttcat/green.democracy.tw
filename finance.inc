@@ -53,12 +53,13 @@ require_once 'api/api.inc';
 							}
 							
 							if($cutoff) {
-								$user['gembeded'] = str_replace($cutoff, '', $user['gembeded']);							
+								$user['gembeded'] = str_replace($cutoff, '', $user['gembeded']);
+								$user['gembeded'] = $user['gembeded'] . '/pubhtml?widget=true&amp;headers=false';							
 							}
 							
 
 						?>
-							<iframe style="height:600px;" src="<?php echo $user['gembeded'];?>/pubhtml?widget=true&amp;headers=false"></iframe>
+							<iframe style="height:600px;" src="<?php echo $user['gembeded'];?>"></iframe>
 						<?php } ?>
     	                </p>
 	    	                    	                    	                    	                    	                
