@@ -73,9 +73,9 @@
     	        <nav id="nav-wrap">
     	        	<ul class="nav" id="nav">
 
-    	            	<li class="nav-parent"><a href="javascript:window.parent.closefancy();"> 前往綠黨官網</a>
-    	            	<li class="nav-parent"><a href="http://www.greenparty.org.tw/civicrm/contribute/transact?reset=1&id=4"><em class="fa fa-heart"></em> 捐款支持</a>    	        	    	
-    	            	<li class="nav-parent last donate"><a href="http://green.democracy.tw"> 2014 綠黨參選人介紹</a>
+    	            	<li class="nav-parent"><a href="javascript:window.parent.closefancy();" target="_top"> 前往綠黨官網</a>
+    	            	<li class="nav-parent"><a href="http://www.greenparty.org.tw/civicrm/contribute/transact?reset=1&id=4" target="_top"><em class="fa fa-heart"></em> 捐款支持</a>    	        	    	
+    	            	<li class="nav-parent last donate"><a href="http://green.democracy.tw" target="_top"> 2014 綠黨參選人介紹</a>
 
     	            	</li>
     	                
