@@ -68,7 +68,7 @@ if(!$user['banner'])
 							<ul>
 		    	                <li><a href="/<?php echo $u?>/bio">簡介</a></li>
     			                <li><a href="/<?php echo $u?>/issues">政見</a></li>
-		    	                <? if($u != 'samyang' || $u != 'tang') { ?><li><a href="/<?php echo $u?>/pledge">政治代理人公約</a></li><? } ?>
+		    	                <? if($u != 'samyang' && $u != 'tang') { ?><li><a href="/<?php echo $u?>/pledge">政治代理人公約</a></li><? } ?>
 		    	                <li><a href="/<?php echo $u?>/endorsements">各界推薦</a></li>
     			                <!--<li><a class="nav-parent" href="#">活動行程</a></li>-->
     			            </ul>
