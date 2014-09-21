@@ -1060,7 +1060,7 @@ ol > li {
 }
 
 ol > ol > li:before {
-    content:counter(li, lower-alpha) ") "; /* Use the counter as content */
+    content:counter(li, lower-alpha) "."; /* Use the counter as content */
     counter-increment:li; /* Increment the counter by 1 */
 }
 
