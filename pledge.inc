@@ -93,7 +93,7 @@ $string = http_request_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
 </ol>
     	                	</p><br/><br/>
     	                	
-    	                	<div class="addthis_sharing_toolbox" data-url="http://green.democracy.tw/<?php print $u; ?>/bio ?>"></div>
+    	                	<div class="addthis_sharing_toolbox" data-url="http://green.democracy.tw/<?php print $u; ?>/pledge ?>"></div>
 						</div>
     	                    	                    	                    	                    	                
 				<!-- add here-->
