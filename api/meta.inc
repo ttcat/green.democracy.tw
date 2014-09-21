@@ -103,7 +103,7 @@ if($section == 'politician' && !$nid) { //index
 	$fb_title = $user['title'].'的'.$section_data['title'].' | 2014 挺好的！綠黨政治代理人';
 	if(!$share_img) { $share_img = ""; }
 	$html_title = $fb_title;
-	if(!$fb_description) $fb_description = ''; // fix
+	if(!$fb_description) $fb_description = $display_header[$section]['desc'];
 	
 }
 
