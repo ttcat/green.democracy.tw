@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	$(".right-aside").stick_in_parent({
-		offset_top: 70;
+		offset_top: 70
 	});
 
 	// Responsive Menu.js
