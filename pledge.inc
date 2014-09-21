@@ -132,7 +132,7 @@ $string = http_request_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
 	<script type="text/javascript" src="/js/jquery.stellar.min.js"></script>
 	<script type="text/javascript" src="/js/jquery.scrollUp.min.js"></script>
 	<script type="text/javascript" src="/js/selectivizr-min.js"></script>
-	<script  type="text/javascript" src="js/jquery.sticky-kit.min.js"></script>	
+	<script  type="text/javascript" src="/js/jquery.sticky-kit.min.js"></script>	
 	<script src="/js/kkcountdown.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
             $(document).ready(function(){
