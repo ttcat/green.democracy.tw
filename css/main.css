@@ -1000,6 +1000,11 @@ aside ul li, ul.link-list li, ul.statistics li{
 .main ul, .main ol{
 	margin-bottom: 12px;
 }
+
+ol > li > ol {
+	margin-left: 20px;
+}
+
 .main ul li > ul, .main ol li > ol{
 	margin-bottom: 0;
 	margin-left: -5px;
@@ -1039,8 +1044,7 @@ aside ul li, ul.link-list li, ul.statistics li{
  }
 
 .main ul li ol,
-.main ol,
-ol > li > ol {
+.main ol{
 	margin-left: 20px;
 }
 
