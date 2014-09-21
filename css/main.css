@@ -1059,7 +1059,7 @@ ol > li {
 	padding-left: 0px;
 }
 
-ol > ol > li:before {
+ol > li > ol > li:before {
     content:counter(li, lower-alpha) "."; /* Use the counter as content */
     counter-increment:li; /* Increment the counter by 1 */
 }
