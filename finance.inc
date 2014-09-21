@@ -59,7 +59,7 @@ require_once 'api/api.inc';
 							
 
 						?>
-							<iframe style="height:600px;" src="<?php echo $user['gembeded'];?>"></iframe>
+							<iframe style="height:1200px;" src="<?php echo $user['gembeded'];?>"></iframe>
 						<?php } ?>
     	                </p>
 	    	                    	                    	                    	                    	                
