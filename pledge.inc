@@ -16,6 +16,8 @@ $string = http_request_contents("http://v.democracy.tw/{$u}/timeline.json/cv");
     <head>
 <?php require_once 'api/meta.inc'; ?>
          <link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
+         <link rel="stylesheet" type="text/css" href="/css/main.css?<?php echo time()?>">
+         <link rel="stylesheet" type="text/css" href="/css/responsive.css?<?php echo time()?>">
          <link rel="stylesheet" type="text/css" href="/css/flexslider.css">
          <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
          <link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox.css?v=2.1.4" media="screen" />
