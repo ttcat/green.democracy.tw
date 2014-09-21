@@ -1001,7 +1001,8 @@ aside ul li, ul.link-list li, ul.statistics li{
 	margin-bottom: 12px;
 }
 
-.main ul li > ul, .main ol li > ol{
+/*.main ul li > ul, .main ol li > ol{*/
+.main ul li > ul {
 	margin-bottom: 0;
 	margin-left: -5px;
 }
