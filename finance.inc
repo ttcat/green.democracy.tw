@@ -59,7 +59,7 @@ require_once 'api/api.inc';
 							
 
 						?>
-							<iframe style="height:1200px;" src="<?php echo $user['gembeded'];?>"></iframe>
+							<iframe style="height:600px;" src="<?php echo $user['gembeded'];?>"></iframe>
 						<?php } ?>
     	                </p>
 	    	                    	                    	                    	                    	                
@@ -103,7 +103,7 @@ require_once 'api/api.inc';
 	<script type="text/javascript" src="/js/jquery.stellar.min.js"></script>
 	<script type="text/javascript" src="/js/jquery.scrollUp.min.js"></script>
 	<script type="text/javascript" src="/js/selectivizr-min.js"></script>
-	
+	<script  type="text/javascript" src="js/jquery.sticky-kit.min.js"></script>	
 	<script src="/js/kkcountdown.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
             $(document).ready(function(){

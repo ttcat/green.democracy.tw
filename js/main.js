@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+	$(".right-aside").stick_in_parent();
+
 	// Responsive Menu.js
 	$('#nav-wrap').prepend('<div id="menu-icon"><span><img src="/img/hamburger@2x.png"/></span><b style="color:#FFF" id="nav-word"></b></div>');
 	$("#menu-icon").on("click", function(){
