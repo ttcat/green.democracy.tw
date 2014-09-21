@@ -1001,14 +1001,11 @@ aside ul li, ul.link-list li, ul.statistics li{
 	margin-bottom: 12px;
 }
 
-ol > li > ol {
-	margin-left: 20px;
-}
-
 .main ul li > ul, .main ol li > ol{
 	margin-bottom: 0;
 	margin-left: -5px;
 }
+
 .main ul li.parent{
 	padding-bottom: 0;
 }   
@@ -1043,6 +1040,7 @@ ol > li > ol {
  	right: -22px;
  }
 
+.olalpha
 .main ul li ol,
 .main ol{
 	margin-left: 20px;
