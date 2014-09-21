@@ -1039,7 +1039,8 @@ aside ul li, ul.link-list li, ul.statistics li{
  }
 
 .main ul li ol,
-.main ol{
+.main ol,
+ol > li > ol {
 	margin-left: 20px;
 }
 
