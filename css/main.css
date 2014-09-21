@@ -1058,6 +1058,12 @@ ol > li {
 	padding-bottom: 10px;
 	padding-left: 0px;
 }
+
+ol > li > ol > li:before {
+    content:counter(li, upper-roman) "."; /* Use the counter as content */
+    counter-increment:li; /* Increment the counter by 1 */
+}
+
 .main ul li ol > li:before,
 ol > li:before {
     content:counter(li) "."; /* Use the counter as content */
