@@ -50,7 +50,7 @@ $object = $endorsment;
 						
 						<p id="en<?php echo $en['nid']?>">
 						<blockquote style="line-height:1.5;">
-						<h3><?php echo $en['title']?> / <?php echo $en['professional_title']?></h3></br>
+						<h3><?php echo $en['title']?><?php if($en['professional_title']) { ?> / <?php echo $en['professional_title']?><?php } ?></h3></br>
 						
 						<?php if($en['photo']) { ?>
 							<div class="half">
