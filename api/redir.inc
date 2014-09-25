@@ -111,7 +111,9 @@
 	 
         <script type="text/javascript">
             $(document).ready(function() {
-            	 window.opener.$('#TB_closeWindowButton').trigger('click');
+            	function close_overlay() {
+            	 	window.opener.$('#TB_closeWindowButton').trigger('click');
+            	}
         	});
 	 
 	 </script>
