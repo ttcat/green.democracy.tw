@@ -73,7 +73,6 @@
     	        <nav id="nav-wrap">
     	        	<ul class="nav" id="nav">
 
-    	            	<li class="nav-parent"><a href="javascript:close_overlay();" target="_top"> 綠黨官網</a>
     	            	<li class="nav-parent"><a href="http://www.greenparty.org.tw/civicrm/contribute/transact?reset=1&id=4" target="_top"><em class="fa fa-heart"></em> 捐款支持</a>    	        	    	
     	            	<li class="nav-parent last donate"><a href="http://green.democracy.tw" target="_top"> 前往 2014 綠黨參選人介紹</a>
 
@@ -109,16 +108,6 @@
 	<script type="text/javascript" src="/js/jquery.scrollUp.min.js"></script>
 	<script type="text/javascript" src="/js/selectivizr-min.js"></script>
 	 
-        <script type="text/javascript">
-//            $(document).ready(function() {
-            	function close_overlay() {
-            	 	
-            	 	window.parent.$('#TB_closeWindowButton').trigger('click');
-            	 	
-            	}
-//        	});
-	 
-	 </script>
 	 
 	</body>
 </html>
