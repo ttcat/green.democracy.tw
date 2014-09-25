@@ -110,11 +110,11 @@
 	<script type="text/javascript" src="/js/selectivizr-min.js"></script>
 	 
         <script type="text/javascript">
-            $(document).ready(function() {
+//            $(document).ready(function() {
             	function close_overlay() {
             	 	window.opener.$('#TB_closeWindowButton').trigger('click');
             	}
-        	});
+//        	});
 	 
 	 </script>
 	 
