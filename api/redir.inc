@@ -108,8 +108,6 @@
 	<script type="text/javascript" src="/js/jquery.stellar.min.js"></script>
 	<script type="text/javascript" src="/js/jquery.scrollUp.min.js"></script>
 	<script type="text/javascript" src="/js/selectivizr-min.js"></script>
-	
-	<script type="text/javascript" src="/js/main.js"></script>
- 
+	 
 	</body>
 </html>
