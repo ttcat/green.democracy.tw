@@ -112,7 +112,9 @@
         <script type="text/javascript">
 //            $(document).ready(function() {
             	function close_overlay() {
-            	 	window.opener.jQuery('#TB_closeWindowButton').trigger('click');
+            	 	
+            	 	window.parent.$('#TB_closeWindowButton').trigger('click');
+            	 	
             	}
 //        	});
 	 
