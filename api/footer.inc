@@ -20,6 +20,8 @@ if($news_string) {
   $news_date = date('m/d', strtotime($news_all[0]['node']['date']));
 }
 
+print_r($news_all[0]['node']);
+
 ?>
 			<!-- Start Column -->
 			<div class="fourth widget footer-news">
