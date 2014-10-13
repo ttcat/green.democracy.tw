@@ -30,6 +30,11 @@ if($u == 'redir' && empty($f)){
 	exit();
 }
 
+if($u == 'about' && empty($f)){
+	$f = 'about';
+	include('about.inc');
+	exit();
+}
 
 if(empty($found) && $u) {
   header("HTTP/1.0 404 Not Found");
