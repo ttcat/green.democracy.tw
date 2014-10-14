@@ -112,8 +112,7 @@
                 	
                 	
                 	<div class="clearfix">	
-
-
+						<img src="/images/dm.jpg" style="width:100%; max-width: 1753px;">
                 	</div>
 
 				<!-- add here-->
