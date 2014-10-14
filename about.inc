@@ -82,7 +82,8 @@
     	    	
     	        <nav id="nav-wrap">
     	        	<ul class="nav" id="nav">
-    	        	    	
+
+						<li><a href="/about">綠黨介紹</a></li>
     	            	<li class="nav-parent last donate"><a href="http://www.greenparty.org.tw/civicrm/contribute/transact?reset=1&id=4"><em class="fa fa-heart"></em> 捐款支持</a>
 
     	            	</li>
