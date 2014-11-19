@@ -14,7 +14,7 @@ global $value;
 if($u && $found) {
 
 	//個人資料
-	$string = http_request_contents("http://v.democracy.tw/{$u}/site.json", 60*60);
+	$string = http_request_contents("http://v.democracy.tw/{$u}/site.json", 1); //60*60);
 	if($string) { 
 	  $user = json_decode($string,true);
 	  $user = $user['nodes'][0]['node'];
