@@ -84,6 +84,8 @@ padding: 0em;
 .wrapper { width: 1140px; margin: 0 auto; padding: 1.5em; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 .numberCircle {
+	width: 40px;
+	height: 40px;	
 	border-radius: 50%;
 	behavior: url(/PIE/PIE.htc);
 	padding: 8px;
