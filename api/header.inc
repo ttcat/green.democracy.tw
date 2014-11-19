@@ -59,7 +59,7 @@ if(!$user['banner'])
     	    	<!--<a href="index.html" class="logo"><img src="/images/gp_badge.png?v2" alt="Logo" /> <span>綠黨政治代理人公約</span></a>-->
     	    	
     	    	<a <?php if($section != 'politician') { ?>href="/<?php echo $u?>"<?php } ?> class="logo"><img src="/images/gp_badge.png?v2" alt="Logo" /> <span id="logo-word"></span></a>
-    	        <span class="stickname" id="thisname"><?php echo $user['title']?></span>
+    	        <span class="stickname" id="thisname"><?php echo $user['number']?> <?php echo $user['title']?></span>
     	    	
     	        <nav id="nav-wrap">
     	        	<ul class="nav" id="nav">
