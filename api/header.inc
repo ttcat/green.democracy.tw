@@ -25,7 +25,7 @@ if(!$user['banner'])
     	<div class="feature-heading"><?php if($section != 'politician') { ?><a href="/<?php echo $u?>"><?php } ?>
 
     		<?php if($user['slogan']) { ?><p class="heading"><?php echo $user['slogan']?></p><?php } ?>
-	    		<p><?php echo $user['title']?>
+	    		<p><i class="numberCircle"><?php echo $user['number']?></i> <?php echo $user['title']?>
     					<?php if(!$detect->isMobile()) { ?><?php if($user['fb']) { ?><div class="fb-like main-like" data-href="<?php echo $user['fb']?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div><?php }  } ?>
 		    	<?php if($user['section'] or $user['detail']) { ?><ul class="heading-info">
 		    			<?php if($user['section']) { ?><li><?php echo $user['section']?></li><?php } ?>
@@ -59,7 +59,7 @@ if(!$user['banner'])
     	    	<!--<a href="index.html" class="logo"><img src="/images/gp_badge.png?v2" alt="Logo" /> <span>綠黨政治代理人公約</span></a>-->
     	    	
     	    	<a <?php if($section != 'politician') { ?>href="/<?php echo $u?>"<?php } ?> class="logo"><img src="/images/gp_badge.png?v2" alt="Logo" /> <span id="logo-word"></span></a>
-    	        <span class="stickname" id="thisname"><?php echo $user['number']?> <?php echo $user['title']?></span>
+    	        <span class="stickname" id="thisname"><?php echo $user['title']?></span>
     	    	
     	        <nav id="nav-wrap">
     	        	<ul class="nav" id="nav">
